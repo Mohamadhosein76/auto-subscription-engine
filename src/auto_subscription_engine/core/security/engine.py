@@ -727,7 +727,15 @@ def _rewrite_outputs(
                 reasons=["security_metadata_gap"], checks_complete=False,
             )
         entry = dict(original)
-        ip = bundle.resolved_ip or entry.get("resolved_ip")
+        # The security decision was evaluated against evidence_ip; the entry
+        # must carry the ASN of that same endpoint. resolved_ip stays None
+        # for hostname nodes (no runner-resolved pinning), so fall back to
+        # the evidence IP for ASN metadata only.
+        ip = (
+            bundle.resolved_ip
+            or entry.get("resolved_ip")
+            or evidence_ip.get(key)
+        )
         asn_info = asn_map.get(ip or "") or AsnInfo()
         dns_evidence = dns_map.get(key)
         probe = probes.get(key)
