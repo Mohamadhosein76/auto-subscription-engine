@@ -194,6 +194,10 @@ auto-subscription-engine --help
 
 ## Local pipeline
 
+<p align="center">
+  <img src=".github/assets/ase-pipeline.png" alt="ASE end-to-end pipeline: discovery, static-IP hunting, verification, scoring, scheduler, feed engine, multi-client delivery and operator probes" width="100%">
+</p>
+
 ### 1. Discover / normalize / deduplicate
 
 ```bash
