@@ -1,0 +1,345 @@
+# Production runtime, scoring, security, compatibility and publish configuration.
+#
+# All values are conservative defaults for a GitHub-hosted runner.
+# Everything here is non-sensitive and safe to publish.
+#
+# Pinned sing-box core. It is one member of the central
+# multi-core registry (not a privileged base core). Version AND archive
+# SHA-256 are fixed; binaries are downloaded at runtime and never committed.
+# Checksum verified against:
+#   https://github.com/SagerNet/sing-box/releases/download/v1.14.2/
+#     sing-box-1.14.2-linux-amd64.tar.gz
+singbox:
+  version: "1.14.2"
+  archive_sha256: "a684484d7477d1437282ee411f4d131d0340aaad60a7868841ebd5d87dd8a0c6"
+  url_template: "https://github.com/SagerNet/sing-box/releases/download/v{version}/sing-box-{version}-linux-amd64.tar.gz"
+  archive_binary_path: "sing-box-{version}-linux-amd64/sing-box"
+
+# Other pinned cores in the same central runtime registry. Every core is
+# pinned to an exact official release with an exact
+# archive SHA-256 (verified from the official release before pinning;
+# Xray additionally cross-checked against its official .dgst file):
+#
+# - xray v26.6.27 represents the Xray/v2rayNG runtime family.
+# - hiddify v4.1.0 represents the Hiddify-Core runtime family.
+# - mihomo v1.19.31 represents the Mihomo/Clash.Meta runtime family.
+#
+# No floating "latest" anywhere; binaries are never committed.
+cores:
+  xray:
+    version: "26.6.27"
+    archive_sha256: "b3e5902d06d6282fe53cfa2fc426058b9aeaa429b2c812e20887cd47f26d08bf"
+    url_template: "https://github.com/XTLS/Xray-core/releases/download/v{version}/Xray-linux-64.zip"
+    binary_path_in_archive: "xray"
+    format: "zip"
+  hiddify:
+    version: "4.1.0"
+    archive_sha256: "79f55725b9c1c0b3cad46a45ededb3c5be83d7a6236cc1dfa9bd78fb3c687e6f"
+    url_template: "https://github.com/hiddify/hiddify-core/releases/download/v{version}/hiddify-core-linux-amd64.tar.gz"
+    binary_path_in_archive: "hiddify-core-linux-amd64/hiddify-core"
+    format: "tar.gz"
+  mihomo:
+    version: "1.19.31"
+    archive_sha256: "d5e74bbddbdfff49a1aef7775bf5911da59f0d7196ed509a0ac914b3653dd5f1"
+    url_template: "https://github.com/MetaCubeX/mihomo/releases/download/v{version}/mihomo-linux-amd64-v{version}.gz"
+    binary_path_in_archive: "mihomo-linux-amd64"
+    format: "gz"
+
+# Layered verification engine. Endpoint preflight is
+# diagnostic; a node is LIVE only after at least one compatible pinned core
+# carries repeated application traffic through the tunnel. Domain configs are tested with
+# their original hostname; DNS-derived direct-IP variants are separate configs.
+verification:
+  connect_timeout_seconds: 3.0
+  preflight_concurrency: 200
+  max_addresses_per_node: 6
+  runtime_concurrency: 10
+  startup_timeout_seconds: 5.0
+  http_timeout_seconds: 8.0
+  # Each required target is tested twice. With 3 required targets this
+  # yields 6 required probes; at least 4/6 and >=67% must succeed.
+  repetitions: 2
+  min_success_ratio: 0.66
+  min_success_count: 4
+  min_round_success_ratio: 0.5
+  soft_deadline_seconds: 600.0
+  max_body_bytes: 65536
+  targets:
+    - url: "https://www.gstatic.com/generate_204"
+      expect_status: [200, 204]
+      kind: "egress"
+    - url: "https://www.msftconnecttest.com/connecttest.txt"
+      expect_status: [200]
+      expect_substring: "Microsoft"
+      kind: "egress"
+    - url: "https://example.com/"
+      expect_status: [200]
+      expect_substring: "Example Domain"
+      kind: "egress"
+    # Optional tunneled DoH diagnostic. It does not decide LIVE by itself,
+    # but records whether application-layer DNS service is reachable through
+    # the verified proxy path.
+    - url: "https://dns.google/resolve?name=example.com&type=A"
+      expect_status: [200]
+      expect_substring: "Status"
+      kind: "doh"
+      required: false
+
+# Adaptive candidate scheduler. Budgets are safety ceilings only;
+# persistent candidate intelligence decides which nodes receive work each run.
+scheduler:
+  preflight_budget: 1500
+  runtime_budget: 400
+
+  # Guaranteed budget slices before general fill. New/never-tested nodes keep
+  # exploration capacity, failed nodes get bounded recovery capacity, and
+  # DNS-derived direct-IP variants receive a resilience reserve.
+  exploration_share: 0.35
+  recovery_share: 0.20
+  direct_ip_share: 0.15
+
+  # Source caps are soft. Higher-quality sources can use a larger share, but
+  # low-quality sources cannot monopolize a run. If alternatives do not exist,
+  # the cap relaxes so single-source/offline runs still complete.
+  source_base_share: 0.15
+  source_quality_bonus_share: 0.20
+  source_quality_weight: 20.0
+
+  # Persistent retest cadence. Recovery uses exponential backoff, while good
+  # nodes are not wastefully re-tested every hourly run.
+  healthy_retest_minutes: 180
+  flaky_retest_minutes: 45
+  exploration_retry_minutes: 60
+  recovery_base_minutes: 30
+  recovery_max_hours: 12
+  stale_after_hours: 24
+  flaky_success_rate: 0.75
+
+  direct_ip_bonus: 12.0
+  preflight_latency_bonus: 10.0
+  allow_early_fill: true
+
+# Country detection (based on the resolved SERVER endpoint IP, never the
+# runner IP). Key-free public service; batch endpoint keeps us inside the
+# provider rate limit (15 batch requests/minute, 100 IPs per request).
+geo:
+  batch_url: "http://ip-api.com/batch?fields=status,country,countryCode,query"
+  single_url: "http://ip-api.com/json/{ip}?fields=status,country,countryCode"
+  timeout_seconds: 5.0
+  batch_size: 100
+  batch_rate_per_minute: 15
+  max_lookups: 1000
+
+# Centralized multidimensional scoring.  The preselection weights keep
+# the live-pipeline ranking stable before Security/Compatibility. Final global,
+# operator, client, reliability, freshness and security scorecards are attached
+# after those evidence-producing stages. Every weight set must sum to 100.
+scoring:
+  preselection_weights:
+    connectivity: 35.0
+    latency: 25.0
+    reliability: 25.0
+    stability: 15.0
+  global_weights:
+    connectivity: 30.0
+    latency: 20.0
+    reliability: 25.0
+    freshness: 10.0
+    security: 15.0
+  operator_weights:
+    connectivity: 45.0
+    reliability: 30.0
+    latency: 15.0
+    freshness: 10.0
+  client_weights:
+    runtime: 60.0
+    reliability: 20.0
+    latency: 20.0
+  # End-to-end latency normalization: <= min -> 1.0, >= max -> 0.0.
+  latency_min_ms: 150.0
+  latency_max_ms: 3000.0
+  # New nodes remain neutral until enough history exists.
+  min_history_samples: 3
+  # Freshness decays linearly from full credit to zero.
+  freshness_full_minutes: 60
+  freshness_zero_minutes: 1440
+
+# Final ranked LIVE output size and endpoint diversity.
+selection:
+  max_live_nodes: 300
+  per_host_limit: 3
+
+# Reliability history is committed to main (data/history.json) and
+# therefore persists between scheduled runs. Pruning keeps it bounded.
+history:
+  # Entries with no activity for this many days are dropped.
+  retention_days: 30
+  # Hard cap on stored fingerprints; least-recently-active are pruned first.
+  max_entries: 50000
+
+# Guarded publishing to public/ (committed to main).
+publish:
+  # A run with fewer LIVE nodes than this never overwrites the previous
+  # subscription (protects against empty/rubbish publishes).
+  min_live_nodes: 5
+  # Catastrophic-drop guard: if the new live count is below
+  # previous_count * (1 - max_drop_ratio), publish is skipped.
+  # 0.80 => a run must keep at least 20% of the previous node count.
+  # On a first publish (no previous output) only min_live_nodes applies.
+  max_drop_ratio: 0.80
+
+# Security Intelligence Layer.
+#
+# Position in the pipeline: AFTER real proxy validation, BEFORE publish.
+# Only LIVE nodes are deep-checked (tens, not thousands). Everything is
+# bounded, key-free, and Cloudflare-free. Only official free feeds are
+# used; only resolved endpoint IPs are ever sent to reputation/ASN
+# services (never credentials, never URIs).
+security:
+  enabled: true
+
+  feeds:
+    # Official feeds only. Spamhaus DROP data is (c) The Spamhaus Project
+    # and used with attribution (see README "Security sources").
+    spamhaus_drop: "https://www.spamhaus.org/drop/drop.txt"
+    spamhaus_dropv6: "https://www.spamhaus.org/drop/dropv6.txt"
+    spamhaus_asndrop: "https://www.spamhaus.org/drop/asndrop.json"
+    # Feodo Tracker "recommended" blocklist = currently active botnet C2
+    # only (the aggressive/historical lists have higher false positives
+    # and are deliberately NOT used).
+    feodo_recommended: "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
+    # Rate guard: at most one download per feed per day; the hourly run
+    # uses the committed cache in data/security/feeds/.
+    refresh_interval_hours: 24
+    # Beyond this age a feed is unusable: if it also cannot be fetched,
+    # the whole publish halts and the previous subscription is kept.
+    max_age_hours: 96
+    timeout_seconds: 20.0
+    retries: 2
+    max_bytes: 5242880
+
+  asn:
+    # Primary: Team Cymru IP-to-ASN (one polite bulk whois connection).
+    # Fallback: RIPEstat network-info API. Key-free, metadata-only.
+    whois_host: "whois.cymru.com"
+    whois_port: 43
+    fallback_url: "https://stat.ripe.net/data/network-info/data.json"
+    timeout_seconds: 10.0
+    retries: 1
+    concurrency: 4
+    cache_ttl_hours: 336        # 14 days per-IP cache
+    max_cache_entries: 20000
+    max_lookups_per_run: 5000
+
+  dns:
+    # Independent second resolver. Google Public DNS DoH on purpose:
+    # key-free and NOT Cloudflare (Cloudflare is banned project-wide).
+    doh_url: "https://dns.google/resolve"
+    timeout_seconds: 5.0
+    concurrency: 8
+
+  tls:
+    timeout_seconds: 8.0
+
+  content:
+    # HTTPS integrity endpoints: tiny, stable, independent operators,
+    # none on a Cloudflare edge. Three configured so one flaky site can
+    # never wrongly quarantine a node; two independent failures are
+    # required for a content-integrity anomaly.
+    endpoints:
+      - url: "https://www.google.com/robots.txt"
+        expect_status: 200
+        expect_substring: "User-agent"
+      - url: "https://www.wikipedia.org"
+        expect_status: 200
+        expect_substring: "Wikipedia"
+      - url: "https://example.com/"
+        expect_status: 200
+        expect_substring: "Example Domain"
+    timeout_seconds: 8.0
+    max_body_bytes: 65536
+    failure_threshold: 2
+
+  probe:
+    concurrency: 8
+    startup_timeout_seconds: 5.0
+
+  policy:
+    # ASN concentration is a diversity signal, NOT malice: at most this
+    # many published nodes per announcing ASN. Datacenter/cloud ASNs are
+    # ordinary metadata and never a block reason by themselves.
+    max_nodes_per_asn: 10
+    # Publish nodes with inconclusive probes only as
+    # ALLOW_WITH_WARNINGS + security_checks_complete=false.
+    quarantine_on_incomplete: false
+    # Project invariant: Cloudflare must be completely zero - not only as
+    # a dependency/service, but also as the final endpoint network. Any
+    # endpoint announced by one of these Cloudflare-owned ASNs is
+    # hard-blocked with risk score 100 (reason:
+    # cloudflare_network_forbidden) and can never be published.
+    forbidden_asns: [13335, 209242]
+    # Publishing requires a determined ASN: an endpoint whose ASN cannot
+    # be established cannot be proven non-Cloudflare and is QUARANTINEd
+    # instead of published. Defense-in-depth: an AS whose organisation
+    # name explicitly matches Cloudflare (precise word-boundary match -
+    # no weak substring matching) is blocked even when its ASN is not
+    # listed above.
+    require_asn_for_publish: true
+
+  # Security publishing guard: if fewer than this many nodes survive
+  # security filtering, publish is skipped and the previous healthy
+  # subscription is preserved.
+  min_publishable_nodes: 5
+
+# Multi-client and network compatibility layer.
+#
+# Position in the pipeline: AFTER the Security Deep Check, BEFORE the
+# guarded publish - exclusively on the small security-publishable LIVE
+# set. Every node is tested against each compatible available core:
+# sing-box, Xray-core, Hiddify-Core and Mihomo (real process, real local
+# proxy, real HTTPS through the tunnel with certificate verification).
+# The main subscription becomes the
+# UNIVERSAL feed: only nodes that pass every applicable core.
+compatibility:
+  enabled: true
+  # Runtime-test every core through the central client engine.
+  cores: [singbox, xray, hiddify, mihomo]
+  startup_timeout_seconds: 8.0
+  http_timeout_seconds: 8.0
+  # Bounded concurrency PER core; every process is killed after its
+  # test and the whole per-core stage respects the soft deadline.
+  concurrency_per_core: 8
+  soft_deadline_seconds_per_core: 420.0
+  # Publish guards (publisher side): an empty/universal-less run must
+  # never replace the previous compatible subscription.
+  # min_universal_nodes = PUBLISH guard only (below it the whole publish
+  #   is skipped and the previous public tree is preserved).
+  # min_feed_nodes = per-feed size unit AND the diversity floor for EVERY
+  #   feed (universal included): a soft diversity limit may only trim a
+  #   group while >= min_feed_nodes nodes from other groups are kept, so
+  #   no feed - and never the main subscription - can be hollowed out.
+  min_universal_nodes: 1
+  min_feed_nodes: 3
+  max_mobile_safe_nodes: 50
+  # Egress probes: at least two independent non-Cloudflare HTTPS
+  # destinations, at least one with body/content validation. TLS
+  # verification is always on.
+  test_urls:
+    - url: "https://www.gstatic.com/generate_204"
+      expect_status: [200, 204]
+    - url: "https://www.msftconnecttest.com/connecttest.txt"
+      expect_status: [200]
+      expect_substring: "Microsoft"
+  # Final-feed diversity (upgraded selector). The per-source limit is
+  # SOFT: it is enforced only while real alternatives exist, and it can
+  # never hollow out a feed (see compat.engine.apply_feed_diversity).
+  diversity:
+    per_asn_limit: 8
+    per_prefix_limit: 4
+    per_host_limit: 3
+    per_source_soft_limit: 0.50
+  # Conservative mobile/restricted-network feed heuristics (documented
+  # as "mobile-safe candidate", never an operator guarantee).
+  mobile_safe:
+    max_latency_ms: 1500.0
+    udp_share_cap: 0.2

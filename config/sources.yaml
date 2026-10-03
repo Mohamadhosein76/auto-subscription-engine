@@ -1,0 +1,34 @@
+# Public proxy subscription sources for the Auto Subscription Engine.
+#
+# Rules enforced by the central discovery engine (core/discovery/):
+#   - http/https URLs only; localhost/private hosts and embedded credentials
+#     are rejected at load time;
+#   - each source is fetched with a timeout, a limited retry count and a
+#     fixed User-Agent;
+#   - a failing source never breaks the whole pipeline (it is counted in
+#     stats.json instead).
+#
+# These are public community aggregators. Availability is volatile; the
+# discovery engine isolates failures and persists source-quality evidence.
+
+sources:
+  - name: epodonios-all
+    url: https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt
+
+  - name: mahdibland-eternity
+    url: https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt
+
+  - name: mahdibland-sub-merge-base64
+    url: https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_base64.txt
+
+  - name: aliilapro
+    url: https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/server.txt
+
+  - name: ermaozi
+    url: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+
+  - name: pawdroid
+    url: https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+
+  - name: freefq
+    url: https://raw.githubusercontent.com/freefq/free/master/v2

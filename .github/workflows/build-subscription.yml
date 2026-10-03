@@ -1,0 +1,391 @@
+name: Build Subscription
+
+# Fully automatic ASE verification and publication pipeline.
+#
+# Triggers:
+# - workflow_dispatch: manual runs.
+# - schedule: hourly at minute 17 (off-peak minute to reduce congestion).
+#   NOTE: GitHub scheduled workflows are subject to delays - the job may
+#   start later than the exact cron minute. This is normal and expected;
+#   GitHub documents that high-load periods can delay scheduled runs.
+#
+# Pipeline: structural -> preflight -> real proxy validation ->
+#   Security Deep Check (reputation/ASN/DNS/TLS/content, LIVE nodes
+#   only) -> security verify -> Multi-Core Client Compatibility
+#   (real Xray-core / Hiddify-Core / Mihomo runtime tests) -> compat
+#   verify -> guarded publish.
+#
+# The job commits published outputs (public/), the persistent
+# reliability history (data/history.json) and the bounded, verified
+# security feed cache (data/security/) back to main using the standard
+# GITHUB_TOKEN - no personal PAT, no external service, no VPS, no
+# Cloudflare.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+# Least privileges needed: write access to repository contents only
+# (required for the auto-commit of public/, data/history.json and
+# data/security/).
+permissions:
+  contents: write
+
+# Scheduled runs must never overlap: a new run waits instead of corrupting
+# the history/public output of the previous one.
+concurrency:
+  group: auto-subscription-publish
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Test, validate and publish subscription
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # Full history so the bounded fetch/rebase push retry can run.
+          fetch-depth: 0
+          # Default workflow token only - never a personal PAT.
+          token: ${{ github.token }}
+          persist-credentials: true
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Ensure no Cloudflare dependencies
+        run: |
+          if pip list --format=freeze | grep -iE '^(cloudflare|cloudflared|wrangler)'; then
+            echo "::error::A Cloudflare package was installed - this project must stay Cloudflare-free"
+            exit 1
+          fi
+          # Guard intent: project FILES must stay Cloudflare-free. The
+          # pip install above regenerates src/*.egg-info/ build artifacts
+          # in the worktree whose SOURCES.txt merely LISTS file paths -
+          # those are not project sources and must not be grepped
+          # (same self-defeating pattern fixed for the egg-info check
+          # in 9163533).
+          if grep -rEi --exclude-dir='*.egg-info' '([a-z0-9-]+\.)*((trycloudflare|cloudflare)\.[a-z]{2,}|cloudflared)' pyproject.toml src config; then
+            echo "::error::Cloudflare endpoint or package reference detected in project files"
+            exit 1
+          fi
+          if git ls-files | grep -qE '\.egg-info'; then
+            echo "::error::egg-info build artifact committed - repository must stay clean"
+            exit 1
+          fi
+          echo "OK: no Cloudflare dependencies or references"
+
+      - name: Run tests
+        run: python -m pytest -v
+
+      - name: Snapshot committed history baseline
+        run: |
+          # The meaningful-diff decision compares the freshly updated history
+          # and security cache against the committed ones; snapshot both
+          # before the pipeline runs.
+          mkdir -p "$RUNNER_TEMP/security-cache-baseline"
+          if [ -f data/history.json ]; then
+            cp data/history.json "$RUNNER_TEMP/history-baseline.json"
+            echo "baseline: committed history snapshot taken"
+          else
+            echo "baseline: no committed history yet (first publish)"
+          fi
+          if [ -d data/security ]; then
+            cp -r data/security/. "$RUNNER_TEMP/security-cache-baseline/"
+            echo "baseline: committed security cache snapshot taken"
+          else
+            echo "baseline: no committed security cache yet (first run)"
+          fi
+
+      - name: Run subscription pipeline
+        run: |
+          python -m auto_subscription_engine run \
+            --config config/sources.yaml \
+            --discovery-config config/discovery.yaml \
+            --discovery-state data/discovery.json \
+            --output-dir output \
+            --timeout 20 \
+            --retries 2
+
+      - name: Validate outputs
+        run: python -m auto_subscription_engine verify --output-dir output
+
+      - name: Install pinned cores (sing-box, xray, hiddify, mihomo)
+        # All four official releases, exact versions, exact archive
+        # checksums. A missing optional core does NOT abort the run -
+        # its client feed is simply not published this run.
+        run: |
+          python -m auto_subscription_engine cores-install \
+            --dest .core-bin \
+            --testing-config config/testing.yaml \
+            --summary-json output/cores_install.json
+
+      - name: Run real connectivity pipeline
+        run: |
+          python -m auto_subscription_engine live \
+            --config config/sources.yaml \
+            --discovery-config config/discovery.yaml \
+            --discovery-state data/discovery.json \
+            --ip-hunter-config config/ip_hunter.yaml \
+            --ip-history data/ip_history.json \
+            --testing-config config/testing.yaml \
+            --output-dir output \
+            --core-dir .core-bin \
+            --history data/history.json
+
+      - name: Validate live outputs
+        run: python -m auto_subscription_engine verify-live --output-dir output
+
+      - name: Security deep check (LIVE nodes only)
+        id: security
+        run: |
+          set +e
+          python -m auto_subscription_engine security-check \
+            --output-dir output \
+            --testing-config config/testing.yaml \
+            --core-dir .core-bin
+          code=$?
+          set -e
+          echo "security exit code: $code"
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          # Exit 4 = required security intelligence unavailable. The
+          # previous healthy public output must stay in place; publish
+          # is skipped and the job reports a clear red status.
+          if [ "$code" -eq 4 ]; then
+            echo "unavailable=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          exit "$code"
+
+      - name: Validate security-filtered outputs
+        # Deep pre-publish verification: zero BLOCK/QUARANTINE nodes in
+        # the published set, metadata schema valid, feeds usable.
+        run: |
+          python -m auto_subscription_engine verify-security \
+            --output-dir output \
+            --testing-config config/testing.yaml
+
+      - name: Multi-core client compatibility (real sing-box/xray/hiddify/mihomo)
+        # Universal Client & Network Compatibility layer: every
+        # security-publishable node is runtime-tested against every compatible
+        # pinned core: sing-box, Xray-core, Hiddify-Core and Mihomo. The main
+        # subscription is rewritten to the UNIVERSAL feed (all-core
+        # intersection); dedicated client/network feeds are produced.
+        run: |
+          python -m auto_subscription_engine compat-check \
+            --output-dir output \
+            --testing-config config/testing.yaml \
+            --core-dir .core-bin \
+            --history data/history.json \
+            --discovery-state data/discovery.json
+
+      - name: Validate compatibility outputs
+        run: |
+          python -m auto_subscription_engine verify-compat --output-dir output
+
+      - name: Multidimensional scoring (global/operator/client)
+        run: |
+          python -m auto_subscription_engine score-check \
+            --output-dir output \
+            --testing-config config/testing.yaml \
+            --history data/history.json \
+            --operator-state data/operator_probes.json \
+            --operator-config config/operator_probes.yaml
+
+      - name: Validate multidimensional scoring outputs
+        run: python -m auto_subscription_engine verify-score --output-dir output
+
+      - name: Build score-aware feeds
+        run: |
+          python -m auto_subscription_engine feed-build \
+            --output-dir output \
+            --config config/feeds.yaml
+
+      - name: Validate score-aware feeds
+        run: python -m auto_subscription_engine verify-feed --output-dir output
+
+      - name: Publish to public (guarded, transactional)
+        # Never runs when security intelligence was unavailable.
+        if: steps.security.outputs.unavailable != '1'
+        id: publish
+        run: |
+          BASELINE_ARGS=""
+          if [ -f "$RUNNER_TEMP/history-baseline.json" ]; then
+            BASELINE_ARGS="--history-baseline-file $RUNNER_TEMP/history-baseline.json"
+          fi
+          CACHE_BASELINE_ARGS=""
+          if [ -d "$RUNNER_TEMP/security-cache-baseline" ]; then
+            CACHE_BASELINE_ARGS="--security-cache-baseline-dir $RUNNER_TEMP/security-cache-baseline"
+          fi
+          set +e
+          python -m auto_subscription_engine publish \
+            --output-dir output \
+            --public-dir public \
+            --history data/history.json \
+            --testing-config config/testing.yaml \
+            --engine-commit "${GITHUB_SHA::7}" \
+            $BASELINE_ARGS $CACHE_BASELINE_ARGS
+          code=$?
+          set -e
+          echo "publish exit code: $code"
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          # Exit 3 = publish skipped by a safety guard (zero-live, min-live,
+          # drop-ratio). The job continues (history may still be committed),
+          # and the final step turns this into a clear red status.
+          if [ "$code" -eq 3 ]; then
+            echo "guarded=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          exit "$code"
+
+      - name: Validate published outputs
+        # On a guarded skip there may be no promoted public tree (e.g. first
+        # run finding zero LIVE nodes) - validation only applies to a publish.
+        if: steps.publish.outputs.guarded != '1'
+        run: python -m auto_subscription_engine verify-publish --public-dir public
+
+      - name: Production release gate
+        if: steps.publish.outputs.guarded != '1' && steps.security.outputs.unavailable != '1'
+        run: |
+          python -m auto_subscription_engine production-check \
+            --repo-root . \
+            --output-dir output \
+            --public-dir public \
+            --report output/production_health.json
+
+      - name: Auto-commit published subscription and history
+        run: |
+          COMMIT_MSG="$(python - <<'PY'
+          import json, pathlib
+          decision = pathlib.Path("output/publish_decision.json")
+          if decision.is_file():
+              print(json.loads(decision.read_text()).get("commit_message") or "")
+          PY
+          )"
+          if [ -z "$COMMIT_MSG" ]; then
+            if ! git diff --quiet -- data/discovery.json data/ip_history.json; then
+              COMMIT_MSG="chore(data): update discovery intelligence"
+            else
+              echo "No meaningful change - no commit (volatile timestamps only)."
+              exit 0
+            fi
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public data/history.json data/discovery.json data/ip_history.json data/security
+          # Belt-and-braces: never create an empty commit.
+          if git diff --cached --quiet; then
+            echo "Nothing staged - skipping commit."
+            exit 0
+          fi
+          git commit -m "$COMMIT_MSG"
+          # Fast-forward push only; never force. If the remote moved ahead
+          # (should not happen due to the concurrency group), retry with a
+          # bounded fetch + rebase loop.
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              pushed=1
+              break
+            fi
+            echo "push rejected (attempt $attempt) - fetching and rebasing"
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; exit 1; }
+          done
+          if [ "$pushed" -ne 1 ]; then
+            echo "::error::push to main failed after 3 bounded attempts (no force push used)"
+            exit 1
+          fi
+          echo "Pushed: $COMMIT_MSG"
+
+      - name: Enforce security unavailability status
+        if: steps.security.outputs.unavailable == '1'
+        run: |
+          echo "::error::Security intelligence unavailable - publish was skipped and the previous healthy subscription is preserved (security_data_unavailable)."
+          cat output/security_diagnostics.json 2>/dev/null || true
+          exit 1
+
+      - name: Enforce publish guard status
+        if: steps.publish.outputs.guarded == '1'
+        run: |
+          echo "::error::Publish was skipped by a safety guard - previous healthy subscription preserved. See output/publish_decision.json."
+          cat output/publish_decision.json
+          exit 1
+
+      - name: Upload subscription artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: subscription-output
+          path: |
+            output/subscription.txt
+            output/subscription_base64.txt
+            output/stats.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload live subscription artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: subscription-live-output
+          path: |
+            output/live_subscription.txt
+            output/live_subscription_base64.txt
+            output/live_nodes.json
+            output/live_stats.json
+            output/scorecards.json
+            output/live_diagnostics.json
+            output/security_diagnostics.json
+            output/compat_diagnostics.json
+            output/cores_install.json
+            output/publish_decision.json
+            output/best.txt
+            output/countries/
+            output/clients/
+            output/networks/
+            output/profiles/
+            output/operators/
+            output/feed_manifest.json
+            output/production_health.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload security diagnostics artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-diagnostics
+          path: |
+            output/security_diagnostics.json
+            output/compat_diagnostics.json
+            output/cores_install.json
+            data/security/feeds/
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload published public artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: published-public
+          path: |
+            public/
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Cleanup runtime binaries and temporary files
+        if: always()
+        shell: bash
+        run: |
+          rm -rf .core-bin public.staging
+          find . -maxdepth 3 -type f -name '*.tmp' -delete 2>/dev/null || true

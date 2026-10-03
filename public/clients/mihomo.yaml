@@ -1,0 +1,154 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+unified-delay: true
+proxies:
+- name: ase-node_b7764469
+  type: trojan
+  server: 78.47.146.151
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: ase-node_f139bebf
+  type: ss
+  server: 158.173.20.208
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: ase-node_894a5bcc
+  type: trojan
+  server: 199.232.78.188
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: ssl.fastly.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: '@rzea8pppooopppppppp'
+    headers:
+      Host: mitivpn---gb--s---mitivpn-1.global.ssl.fastly.net
+- name: ase-node_8a72b780
+  type: ss
+  server: 37.19.198.243
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: ase-node_478b546f
+  type: ss
+  server: 158.173.20.171
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: ase-node_8b8942d5
+  type: trojan
+  server: 3.255.76.207
+  port: 443
+  password: Trojan@82164024
+  udp: true
+  tls: true
+  sni: ie.tronsg.com
+- name: ase-node_ef545991
+  type: ss
+  server: 20.166.59.119
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: gJe7umStIck5Mieg
+  udp: true
+- name: ase-node_948aae6e
+  type: trojan
+  server: 165.215.250.14
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: ase-node_0342ab98
+  type: hysteria2
+  server: 144.31.212.253
+  port: 443
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: vps155-edge.kermemehori.ru
+- name: ase-node_a1b55a9c
+  type: vmess
+  server: 167.17.68.89
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_921e3f14
+  type: hysteria2
+  server: 86.107.50.185
+  port: 18333
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  sni: us3.xiaoliyu.cyou
+  skip-cert-verify: true
+- name: ase-node_a1c5d774
+  type: vmess
+  server: 45.32.57.118
+  port: 4433
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_36e03c79
+  type: vless
+  server: 155.254.60.222
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  udp: true
+  network: ws
+  ws-opts:
+    path: /platform106
+    headers:
+      Host: platform106.halalkhor.info
+- name: ase-node_66bf9e65
+  type: vmess
+  server: 119.236.62.104
+  port: 30807
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  udp: true
+proxy-groups:
+- name: PROXY
+  type: select
+  proxies:
+  - ase-node_b7764469
+  - ase-node_f139bebf
+  - ase-node_894a5bcc
+  - ase-node_8a72b780
+  - ase-node_478b546f
+  - ase-node_8b8942d5
+  - ase-node_ef545991
+  - ase-node_948aae6e
+  - ase-node_0342ab98
+  - ase-node_a1b55a9c
+  - ase-node_921e3f14
+  - ase-node_a1c5d774
+  - ase-node_36e03c79
+  - ase-node_66bf9e65
+rules:
+- MATCH,PROXY

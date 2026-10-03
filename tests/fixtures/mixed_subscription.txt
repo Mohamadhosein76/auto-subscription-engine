@@ -1,0 +1,25 @@
+# Auto Subscription Engine offline test fixture (plain text subscription).
+# Lines without a URI scheme delimiter are ignored by the decoder.
+#
+# Inventory (used by test_pipeline.py):
+#   3x vless (one duplicate pair by fingerprint), 1x vmess (base64 JSON),
+#   1x trojan, 2x ss (one duplicate pair), 2x hy2 (alias duplicate pair),
+#   1x vless localhost (invalid), 1x vless private IP (invalid),
+#   1x trojan non-numeric port (parse error), 1x socks5 (unknown protocol),
+#   1x empty vless payload (parse error) -> 14 URI lines total.
+
+vless://11111111-2222-3333-4444-555555555555@server1.example.com:443?encryption=none&security=tls&sni=cdn.example.com&type=ws&path=%2Fws#Fixture%20VLESS%201
+vless://11111111-2222-3333-4444-555555555555@server1.example.com:443?encryption=none&security=tls&sni=cdn.example.com&type=ws&path=%2Fws#Fixture%20VLESS%20duplicate
+vless://99999999-8888-7777-6666-555555555555@server1.example.com:443?encryption=none&security=tls&sni=cdn.example.com&type=ws&path=%2Fws#Fixture%20VLESS%20other-uuid
+vmess://eyJ2IjogIjIiLCAicHMiOiAiRml4dHVyZSBWTWVzcyIsICJhZGQiOiAic2VydmVyNi5leGFtcGxlLmNvbSIsICJwb3J0IjogIjg0NDMiLCAiaWQiOiAiYWFhYWFhYWEtYmJiYi1jY2NjLWRkZGQtZWVlZWVlZWVlZWVlIiwgImFpZCI6ICIwIiwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIiIsICJob3N0IjogIiIsICJwYXRoIjogIi92bWVzcyIsICJ0bHMiOiAidGxzIiwgInNuaSI6ICJzZXJ2ZXI2LmV4YW1wbGUuY29tIn0=
+trojan://trojan-pass@server2.example.com:443?sni=server2.example.com&type=tcp#Fixture%20Trojan
+ss://YWVzLTI1Ni1nY206cGFzc3dvcmQ=@server3.example.com:8388#Fixture%20SS
+ss://YWVzLTI1Ni1nY206cGFzc3dvcmQ=@server3.example.com:8388#Fixture%20SS%20duplicate
+hysteria2://hy2-pass@server4.example.com:36712/?sni=server4.example.com&insecure=1#Fixture%20HY2
+hy2://hy2-pass@server4.example.com:36712/?sni=server4.example.com&insecure=1#Fixture%20HY2%20alias
+vless://22222222-3333-4444-5555-666666666666@localhost:80?security=none#local-host
+vless://33333333-4444-5555-6666-777777777777@10.0.0.5:443?security=tls#private-ip
+trojan://bad-port@server5.example.com:notaport#bad-port
+socks5://1.2.3.4:1080#unknown-protocol
+vless://
+this line has no uri scheme and must be ignored by the decoder

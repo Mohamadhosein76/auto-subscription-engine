@@ -1,0 +1,15 @@
+{
+  "attribution": "Feodo Tracker recommended IP blocklist (c) abuse.ch https://feodotracker.abuse.ch/ - free for any use; currently active botnet C2 infrastructure only.",
+  "content_hash": "878043c06da9aacac9e92071b7e0b08a409fdb525a58b24387e4c9d58f5fe3a8",
+  "entries": [
+    "50.16.16.211"
+  ],
+  "entries_hash": "853a85cc51acc8d1b3a21a1194b560f511daabc0998f6f0dca8d41bd7c06c641",
+  "entry_count": 1,
+  "expires_at": "2026-10-04T15:57:28+00:00",
+  "fetched_at": "2026-09-30T15:57:28+00:00",
+  "schema_version": 1,
+  "source": "feodo_recommended",
+  "source_version": null,
+  "url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
+}

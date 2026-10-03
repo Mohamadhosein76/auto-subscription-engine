@@ -1,0 +1,13 @@
+# Repository text files use LF consistently across Linux/macOS/Windows.
+# This prevents whole-repository CRLF diffs when the project is zipped or
+# checked out on Windows while keeping binary assets untouched.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.gz binary
+*.tar binary

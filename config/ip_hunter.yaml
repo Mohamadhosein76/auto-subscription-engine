@@ -1,0 +1,38 @@
+# Static-IP Hunter — bounded DNS-derived direct-IP candidate generation.
+#
+# Safety rule: ASE never scans arbitrary IP ranges. It only creates IP-pinned
+# variants for hostnames already present in discovered proxy configurations.
+enabled: true
+
+resolution:
+  # Runner/system DNS gives the path the current CI host would normally use.
+  system: true
+
+  # Independent provider(s) reduce dependence on one resolver. Later operator
+  # probes can inject MCI/Irancell/Rightel DNS answers through the same API.
+  doh_resolvers:
+    - name: google
+      url: https://dns.google/resolve
+      timeout_seconds: 4.0
+
+variants:
+  include_ipv4: true
+  include_ipv6: true
+  prefer_ipv4: true
+  # Replacing server.example with an IP must not silently change TLS identity
+  # or HTTP/WebSocket virtual-host routing.
+  preserve_hostname_as_sni: true
+  preserve_http_host: true
+
+history:
+  include_recent: true
+  candidate_ttl_days: 7
+  retention_days: 30
+  max_hosts: 10000
+  max_ips_per_host: 24
+
+limits:
+  concurrency: 32
+  max_hostnames_per_run: 600
+  max_variants_total: 400
+  max_variants_per_node: 4

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auto-subscription-engine"
+version = "1.0.0"
+description = "Evidence-driven subscription discovery, verification, scoring, and guarded feed publication engine."
+readme = "README.md"
+requires-python = ">=3.12"
+# Minimal dependency set, each with a concrete technical reason:
+# - requests: robust HTTP client with explicit timeouts, retries, redirects and
+#   connection pooling; hand-rolling this on urllib is error-prone.
+# - PyYAML: validated project configuration and workflow-adjacent YAML parsing.
+dependencies = [
+    "requests>=2.31,<3",
+    "PyYAML>=6.0.1,<7",
+]
+
+[project.optional-dependencies]
+# - pytest: real unit/integration test suite (run in CI and locally).
+dev = [
+    "pytest>=8.0,<9",
+]
+
+[project.scripts]
+auto-subscription-engine = "auto_subscription_engine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = ["--strict-config", "--strict-markers"]

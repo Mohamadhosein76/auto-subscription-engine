@@ -1,0 +1,58 @@
+# Python bytecode / build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Generated pipeline outputs (commit policy is handled in Task 3)
+output/*
+!output/.gitkeep
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Task 2: secrets and runtime artifacts - never commit these.
+.env
+.env.*
+*.secret
+*.pem
+*.key
+
+# Task 2: runtime-only proxy core and caches (downloaded at CI time).
+.cache/
+.core-bin/
+bin/
+
+# Task 3: data/history.json IS committed (persistent reliability history),
+# and public/ IS committed (published subscription). Everything volatile
+# stays in output/, which remains ignored above. Publishing guards keep
+# secrets out of both committed locations (tested).
+
+# Task 4: data/security/ IS committed (persistent, verified feed and ASN
+# caches, bounded and credential-free) so the hourly workflow does not
+# re-download reputation feeds. The publish guard keeps secrets out.
+
+# Stage 8: local Go probe-agent build artifact
+/src/auto_subscription_engine/core/operator_probe/agent/ase-operator-probe
+
+# Stage 11 durable state/publish recovery artifacts (never committed)
+*.bak
+.public.old-*
+public.staging/

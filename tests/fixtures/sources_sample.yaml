@@ -1,0 +1,6 @@
+# Fixture source config for pipeline tests (fetch mode is monkeypatched).
+sources:
+  - name: source-a
+    url: https://source-a.invalid/subscription.txt
+  - name: source-b
+    url: https://source-b.invalid/subscription.txt

@@ -1,0 +1,13 @@
+feeds:
+  max_nodes_per_feed: 200
+  min_client_score: 50
+  min_operator_score: 65
+  min_operator_confidence: 50
+  require_fresh_operator_evidence: true
+  recommended_min_global: 60
+  secure_min_global: 50
+  secure_min_security: 80
+  min_fallback_nodes: 3
+  per_asn_limit: 8
+  per_prefix_limit: 4
+  per_source_soft_limit: 0.50

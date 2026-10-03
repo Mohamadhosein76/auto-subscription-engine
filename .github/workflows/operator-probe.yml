@@ -1,0 +1,125 @@
+name: Operator probe (self-hosted)
+
+on:
+  workflow_dispatch:
+    inputs:
+      operator_profile:
+        description: "Operator profile key: mci, irancell, rightel, fixed, or a configured custom profile"
+        required: true
+        type: string
+      runner_label:
+        description: "Exact self-hosted runner label physically connected to that network"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  probe:
+    # A probe is meaningful only on a runner physically attached to the target
+    # network. This workflow is manual until those runners are provisioned.
+    runs-on: [self-hosted, "${{ inputs.runner_label }}"]
+    environment: operator-${{ inputs.operator_profile }}
+    timeout-minutes: 45
+    concurrency:
+      # All operator profiles update one shared state file. Serializing every
+      # profile prevents cross-operator lost updates/rebase conflicts.
+      group: operator-probe-state
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Python package
+        run: python3 -m pip install -e .
+
+      - name: Verify or install pinned proxy cores
+        run: auto-subscription-engine cores-install --dest .core-bin --testing-config config/testing.yaml
+
+      - name: Build Go operator agent
+        working-directory: src/auto_subscription_engine/core/operator_probe/agent
+        run: go build -trimpath -o "$RUNNER_TEMP/ase-operator-probe" ./cmd/ase-operator-probe
+
+      - name: Assemble published candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat \
+            public/clients/v2rayng.txt \
+            public/clients/hiddify.txt \
+            public/clients/nekobox.txt \
+            public/clients/universal.txt \
+            public/networks/ipv4.txt \
+            public/networks/mobile-safe.txt \
+            > "$RUNNER_TEMP/operator-candidates.txt"
+
+      - name: Build signed expiring probe job
+        env:
+          ASE_OPERATOR_PROBE_SECRET: ${{ secrets.ASE_OPERATOR_PROBE_SECRET }}
+        run: |
+          auto-subscription-engine operator-probe-job \
+            --input "$RUNNER_TEMP/operator-candidates.txt" \
+            --operator-profile "${{ inputs.operator_profile }}" \
+            --output "$RUNNER_TEMP/operator-job.json" \
+            --runner-label "${{ inputs.runner_label }}"
+
+      - name: Run probe on this operator network
+        env:
+          ASE_OPERATOR_PROBE_SECRET: ${{ secrets.ASE_OPERATOR_PROBE_SECRET }}
+        run: |
+          "$RUNNER_TEMP/ase-operator-probe" run \
+            --job "$RUNNER_TEMP/operator-job.json" \
+            --output "$RUNNER_TEMP/operator-result.json" \
+            --core-dir .core-bin \
+            --testing-config config/testing.yaml \
+            --operator-profile "${{ inputs.operator_profile }}" \
+            --probe-id "${{ runner.name }}"
+
+      - name: Verify signature and ingest credential-free result
+        env:
+          ASE_OPERATOR_PROBE_SECRET: ${{ secrets.ASE_OPERATOR_PROBE_SECRET }}
+        run: |
+          auto-subscription-engine operator-probe-ingest \
+            --input "$RUNNER_TEMP/operator-result.json" \
+            --operator-profile "${{ inputs.operator_profile }}" \
+            --state data/operator_probes.json
+
+      - name: Persist operator intelligence only when changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data/operator_probes.json; then
+            echo "No operator intelligence change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/operator_probes.json
+          git commit -m "chore: update operator probe intelligence"
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              pushed=1
+              break
+            fi
+            echo "push rejected (attempt $attempt) - fetching and rebasing"
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}" || { git rebase --abort; exit 1; }
+          done
+          if [ "$pushed" -ne 1 ]; then
+            echo "::error::operator state push failed after 3 bounded attempts"
+            exit 1
+          fi
+
+      - name: Cleanup probe credentials and runtime binaries
+        if: always()
+        shell: bash
+        run: |
+          rm -f "$RUNNER_TEMP/operator-job.json" "$RUNNER_TEMP/operator-result.json"
+          rm -f "$RUNNER_TEMP/operator-candidates.txt" "$RUNNER_TEMP/ase-operator-probe"
+          rm -rf .core-bin

@@ -1,0 +1,19 @@
+# Discovery: bounded recursive source discovery and persistent source intelligence.
+discovery:
+  # Root sources are depth 0. Nested subscription/provider URLs may be
+  # followed up to this depth. This keeps discovery powerful but bounded.
+  max_depth: 2
+  # Absolute cap across roots + nested sources in one run.
+  max_sources: 64
+  # A single source cannot flood the graph with nested provider URLs.
+  max_nested_per_source: 16
+  # Hard memory/work cap before connectivity stages take over.
+  max_total_proxies: 50000
+  # Concurrent fetch worker ceiling. Result ordering remains deterministic
+  # regardless of completion order.
+  fetch_concurrency: 8
+  # Consecutive fetch failures trigger temporary quarantine. A successful
+  # fetch clears quarantine automatically.
+  quarantine_after_failures: 3
+  quarantine_base_minutes: 30
+  quarantine_max_hours: 24

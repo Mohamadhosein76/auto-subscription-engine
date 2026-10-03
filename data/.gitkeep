@@ -1,0 +1,5 @@
+# Task 2 reliability history directory.
+#
+# data/history.json is generated at runtime and gitignored for now.
+# Task 3 will add periodic persistence/commit of that file; the loader
+# here already supports reading an existing history from the repository.

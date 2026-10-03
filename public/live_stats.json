@@ -1,0 +1,372 @@
+{
+  "mode": "fetch",
+  "sources_total": 7,
+  "sources_success": 7,
+  "sources_failed": 0,
+  "configs_received": 15449,
+  "configs_unknown_protocol": 326,
+  "configs_invalid": 72,
+  "configs_valid": 15051,
+  "duplicates_removed": 3761,
+  "final_configs": 11290,
+  "count_by_protocol": {
+    "hysteria2": 55,
+    "ss": 2085,
+    "trojan": 783,
+    "vless": 4605,
+    "vmess": 3762
+  },
+  "invalid_reasons": {
+    "parse: invalid base64 payload": 16,
+    "parse: malformed legacy ss payload": 1,
+    "parse: missing method/password separator in ss userinfo": 7,
+    "parse: port is not numeric": 1,
+    "parse: unparseable URI: An IPv4 address cannot be in brackets": 1,
+    "parse: unparseable URI: Invalid IPv6 URL": 7,
+    "unknown protocol": 326,
+    "validate: invalid host format": 10,
+    "validate: local or private host": 24,
+    "validate: missing port": 1,
+    "validate: missing user id": 4
+  },
+  "sources": [
+    {
+      "name": "epodonios-all",
+      "url": "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
+      "ok": true,
+      "status_code": 200,
+      "error": null,
+      "uri_count": 7664,
+      "byte_count": 1830359
+    },
+    {
+      "name": "mahdibland-eternity",
+      "url": "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
+      "ok": true,
+      "status_code": 200,
+      "error": null,
+      "uri_count": 200,
+      "byte_count": 38750
+    },
+    {
+      "name": "mahdibland-sub-merge-base64",
+      "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_base64.txt",
+      "ok": true,
+      "status_code": 200,
+      "error": null,
+      "uri_count": 4244,
+      "byte_count": 1389492
+    },
+    {
+      "name": "aliilapro",
+      "url": "https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/server.txt",
+      "ok": true,
+      "status_code": 200,
+      "error": null,
+      "uri_count": 2717,
+      "byte_count": 948022
+    },
+    {
+      "name": "ermaozi",
+      "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
+      "ok": true,
+      "status_code": 200,
+      "error": null,
+      "uri_count": 589,
+      "byte_count": 99612
+    },
+    {
+      "name": "pawdroid",
+      "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+      "ok": true,
+      "status_code": 200,
+      "error": null,
+      "uri_count": 20,
+      "byte_count": 6304
+    },
+    {
+      "name": "freefq",
+      "url": "https://raw.githubusercontent.com/freefq/free/master/v2",
+      "ok": true,
+      "status_code": 200,
+      "error": null,
+      "uri_count": 15,
+      "byte_count": 6708
+    }
+  ],
+  "generated_at": "2026-10-01T07:13:13+00:00",
+  "pipeline": "live-connectivity",
+  "candidates_sampled": 1500,
+  "tcp_tested": 1500,
+  "tcp_passed": 685,
+  "tcp_failure_reasons": {
+    "dns_failure": 39,
+    "refused": 175,
+    "timeout": 601
+  },
+  "proxy_candidates": 400,
+  "proxy_tested": 400,
+  "proxy_not_tested": 0,
+  "proxy_live": 83,
+  "proxy_failure_reasons": {
+    "all_http_failed": 274,
+    "config_unsupported": 30,
+    "core_startup_failed": 13
+  },
+  "live_total": 61,
+  "live_selected": 61,
+  "median_tcp_latency_ms": 18.3,
+  "median_proxy_latency_ms": 466.5,
+  "countries_discovered": 17,
+  "count_by_country": {
+    "AM": 1,
+    "AT": 1,
+    "CA": 5,
+    "DE": 3,
+    "FI": 1,
+    "FR": 2,
+    "GB": 2,
+    "HK": 4,
+    "IE": 2,
+    "JP": 1,
+    "MY": 1,
+    "NL": 12,
+    "SG": 2,
+    "TH": 1,
+    "US": 22,
+    "ZA": 1
+  },
+  "count_by_protocol_live": {
+    "hysteria2": 3,
+    "ss": 30,
+    "trojan": 18,
+    "vless": 1,
+    "vmess": 9
+  },
+  "runtime_seconds": 105.0,
+  "status": "ok",
+  "history_entries": 1681,
+  "effective_config": {
+    "max_candidates": 1500,
+    "max_proxy_candidates": 400,
+    "max_live_nodes": 300,
+    "per_host_limit": 3,
+    "tcp_concurrency": 200,
+    "proxy_concurrency": 10,
+    "core_version": "1.14.2"
+  },
+  "pre_security_live_total": 83,
+  "security_checked": 83,
+  "security_publishable": 61,
+  "security_allowed": 6,
+  "security_allowed_with_warnings": 56,
+  "security_quarantined": 0,
+  "security_blocked": 21,
+  "cloudflare_nodes_blocked": 20,
+  "asn_unknown_quarantined": 0,
+  "spamhaus_drop_hits": 0,
+  "spamhaus_asndrop_hits": 1,
+  "feodo_hits": 0,
+  "dns_anomalies": 0,
+  "tls_anomalies": 1,
+  "content_integrity_failures": 0,
+  "unique_asns": 30,
+  "top_asns_by_count": [
+    {
+      "asn": 13335,
+      "count": 18
+    },
+    {
+      "asn": 47172,
+      "count": 11
+    },
+    {
+      "asn": 54113,
+      "count": 10
+    },
+    {
+      "asn": 16276,
+      "count": 6
+    },
+    {
+      "asn": 212238,
+      "count": 5
+    }
+  ],
+  "security_feed_status": "fresh",
+  "security_feed_age": 15.3,
+  "universal_count": 6,
+  "compatibility": {
+    "enabled": true,
+    "core_versions": {
+      "xray": "Xray 26.6.27 (Xray, Penetrates Everything.) 45cf289 (go1.26.4 linux/amd64)",
+      "hiddify": "hiddify-core version v4.1.0 hiddify-sing-box version 1.13.1",
+      "mihomo": "Mihomo Meta v1.19.31 linux amd64 with go1.26.8 Mon Sep 14 13:20:43 UTC 2026"
+    },
+    "cores_available": {
+      "xray": true,
+      "hiddify": true,
+      "mihomo": true
+    },
+    "singbox_pass": 61,
+    "xray_tested": 58,
+    "xray_pass": 55,
+    "hiddify_tested": 61,
+    "hiddify_pass": 59,
+    "mihomo_tested": 61,
+    "mihomo_pass": 56,
+    "universal_pass": 6,
+    "mobile_safe_count": 40,
+    "feed_counts": {
+      "universal": 6,
+      "v2rayng": 10,
+      "hiddify": 16,
+      "nekobox": 20,
+      "mihomo": 14,
+      "mobile-safe": 40,
+      "tcp": 58,
+      "udp": 3,
+      "ipv4": 52,
+      "ipv6": 0,
+      "port443": 30
+    },
+    "per_protocol_compatibility": {
+      "hysteria2": {
+        "total": 3,
+        "universal": 0,
+        "xray_pass": 0,
+        "hiddify_pass": 3,
+        "mihomo_pass": 3
+      },
+      "ss": {
+        "total": 32,
+        "universal": 29,
+        "xray_pass": 30,
+        "hiddify_pass": 30,
+        "mihomo_pass": 29
+      },
+      "trojan": {
+        "total": 29,
+        "universal": 16,
+        "xray_pass": 17,
+        "hiddify_pass": 18,
+        "mihomo_pass": 17
+      },
+      "vless": {
+        "total": 7,
+        "universal": 1,
+        "xray_pass": 1,
+        "hiddify_pass": 1,
+        "mihomo_pass": 1
+      },
+      "vmess": {
+        "total": 12,
+        "universal": 5,
+        "xray_pass": 7,
+        "hiddify_pass": 7,
+        "mihomo_pass": 6
+      }
+    },
+    "failure_reasons": {
+      "hiddify": {
+        "TLS_failure": 2
+      },
+      "mihomo": {
+        "TLS_failure": 5
+      },
+      "xray": {
+        "TLS_failure": 2,
+        "core_startup_failed": 1,
+        "unsupported_protocol": 3
+      }
+    },
+    "median_latency_ms": {
+      "hiddify": 455.7,
+      "mihomo": 456.7,
+      "singbox": 457.9,
+      "xray": 445.3
+    },
+    "source_quality": [
+      {
+        "source": "pawdroid",
+        "configs_seen": 71,
+        "tcp_passed": 35,
+        "proxy_passed": 13,
+        "compat_passed": 0,
+        "published": 13,
+        "quality": 0.56,
+        "no_history": false
+      },
+      {
+        "source": "mahdibland-eternity",
+        "configs_seen": 4,
+        "tcp_passed": 0,
+        "proxy_passed": 0,
+        "compat_passed": 0,
+        "published": 0,
+        "quality": 0.5,
+        "no_history": true
+      },
+      {
+        "source": "ermaozi",
+        "configs_seen": 326,
+        "tcp_passed": 116,
+        "proxy_passed": 29,
+        "compat_passed": 0,
+        "published": 29,
+        "quality": 0.475,
+        "no_history": false
+      },
+      {
+        "source": "epodonios-all",
+        "configs_seen": 6199,
+        "tcp_passed": 3879,
+        "proxy_passed": 613,
+        "compat_passed": 0,
+        "published": 613,
+        "quality": 0.411,
+        "no_history": false
+      },
+      {
+        "source": "aliilapro",
+        "configs_seen": 2132,
+        "tcp_passed": 1147,
+        "proxy_passed": 65,
+        "compat_passed": 0,
+        "published": 65,
+        "quality": 0.34,
+        "no_history": false
+      },
+      {
+        "source": "freefq",
+        "configs_seen": 20,
+        "tcp_passed": 10,
+        "proxy_passed": 0,
+        "compat_passed": 0,
+        "published": 0,
+        "quality": 0.3,
+        "no_history": false
+      },
+      {
+        "source": "mahdibland-sub-merge-base64",
+        "configs_seen": 6804,
+        "tcp_passed": 1797,
+        "proxy_passed": 0,
+        "compat_passed": 0,
+        "published": 0,
+        "quality": 0.3,
+        "no_history": false
+      }
+    ]
+  },
+  "singbox_pass": 61,
+  "xray_tested": 58,
+  "xray_pass": 55,
+  "hiddify_tested": 61,
+  "hiddify_pass": 59,
+  "mihomo_tested": 61,
+  "mihomo_pass": 56,
+  "mobile_safe_count": 40,
+  "publish_status": "published",
+  "engine_commit": "9632336"
+}

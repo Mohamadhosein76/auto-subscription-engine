@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05101d"/><stop offset="1" stop-color="#0a1b31"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .title{font:700 50px Inter,Segoe UI,Arial,sans-serif;fill:#e6f3ff}
+    .sub{font:400 22px Inter,Segoe UI,Arial,sans-serif;fill:#8fa9c4}
+    .h{font:700 25px Inter,Segoe UI,Arial,sans-serif;fill:#e6f3ff}
+    .t{font:500 18px Inter,Segoe UI,Arial,sans-serif;fill:#e6f3ff}
+    .m{font:400 15px Inter,Segoe UI,Arial,sans-serif;fill:#8fa9c4}
+    .tiny{font:600 13px Inter,Segoe UI,Arial,sans-serif;fill:#8fa9c4;letter-spacing:1px}
+  </style>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<path d="M0 130H1600M0 260H1600M0 390H1600M0 520H1600M0 650H1600M0 780H1600" stroke="#16314f" stroke-opacity=".23"/>
+<path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900" stroke="#16314f" stroke-opacity=".16"/>
+<rect x="56" y="44" width="10" height="70" rx="5" fill="url(#accent)"/>
+<text x="90" y="83" class="title">Scoring → Feed Engine → Atomic Publish</text>
+<text x="90" y="116" class="sub">Context stays contextual; failed runs preserve the last known-good public release</text>
+<rect x="70" y="200" width="320" height="110" rx="20" fill="#10253f" stroke="#22d3ee" stroke-width="2"/>
+<circle cx="102" cy="234" r="8" fill="#22d3ee" filter="url(#glow)"/>
+<text x="122" y="243" class="h">GLOBAL</text>
+<text x="98" y="278" class="m">connectivity · latency</text>
+<text x="98" y="303" class="m">reliability · freshness · security</text>
+<path d="M390 255 L515 435" stroke="#22d3ee" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M515 435 L512.4446267734609 417.2949140732645 L499.3027073226881 426.42124702519004 Z" fill="#22d3ee"/>
+<rect x="70" y="345" width="320" height="110" rx="20" fill="#10253f" stroke="#3b82f6" stroke-width="2"/>
+<circle cx="102" cy="379" r="8" fill="#3b82f6" filter="url(#glow)"/>
+<text x="122" y="388" class="h">CLIENT</text>
+<text x="98" y="423" class="m">runtime evidence</text>
+<text x="98" y="448" class="m">client-specific reliability</text>
+<path d="M390 400 L515 435" stroke="#3b82f6" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M515 435 L501.74961508873287 422.982209033967 L497.4355362804133 438.3896333493939 Z" fill="#3b82f6"/>
+<rect x="70" y="490" width="320" height="110" rx="20" fill="#10253f" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="102" cy="524" r="8" fill="#8b5cf6" filter="url(#glow)"/>
+<text x="122" y="533" class="h">OPERATOR</text>
+<text x="98" y="568" class="m">fresh physical evidence</text>
+<text x="98" y="593" class="m">confidence + latency</text>
+<path d="M390 545 L515 435" stroke="#8b5cf6" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M515 435 L497.70356057009974 439.5643381828903 L508.2736068883721 451.57575445365444 Z" fill="#8b5cf6"/>
+<rect x="70" y="635" width="320" height="110" rx="20" fill="#10253f" stroke="#fb7185" stroke-width="2"/>
+<circle cx="102" cy="669" r="8" fill="#fb7185" filter="url(#glow)"/>
+<text x="122" y="678" class="h">SECURITY</text>
+<text x="98" y="713" class="m">allow / warn / quarantine</text>
+<text x="98" y="738" class="m">risk evidence</text>
+<path d="M390 690 L515 435" stroke="#fb7185" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M515 435 L500.7741187458157 445.84547382744745 L515.1408503094474 452.8879892998159 Z" fill="#fb7185"/>
+<rect x="530" y="330" width="330" height="210" rx="20" fill="#10253f" stroke="#fbbf24" stroke-width="2"/>
+<circle cx="562" cy="364" r="8" fill="#fbbf24" filter="url(#glow)"/>
+<text x="582" y="373" class="h">FEED ENGINE</text>
+<text x="558" y="408" class="m">client feeds</text>
+<text x="558" y="433" class="m">quality profiles</text>
+<text x="558" y="458" class="m">network feeds</text>
+<text x="558" y="483" class="m">fresh operator feeds</text>
+<path d="M860 435 L965 435" stroke="#fbbf24" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M965 435 L949.0 427.0 L949.0 443.0 Z" fill="#fbbf24"/>
+<rect x="980" y="330" width="260" height="210" rx="20" fill="#10253f" stroke="#3b82f6" stroke-width="2"/>
+<circle cx="1012" cy="364" r="8" fill="#3b82f6" filter="url(#glow)"/>
+<text x="1032" y="373" class="h">STAGING</text>
+<text x="1008" y="408" class="m">render artifacts</text>
+<text x="1008" y="433" class="m">base64/native formats</text>
+<text x="1008" y="458" class="m">manifest</text>
+<path d="M1240 435 L1325 435" stroke="#3b82f6" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M1325 435 L1309.0 427.0 L1309.0 443.0 Z" fill="#3b82f6"/>
+<rect x="1340" y="330" width="200" height="210" rx="20" fill="#10253f" stroke="#34d399" stroke-width="2"/>
+<circle cx="1372" cy="364" r="8" fill="#34d399" filter="url(#glow)"/>
+<text x="1392" y="373" class="h">VERIFY</text>
+<text x="1368" y="408" class="m">feed checks</text>
+<text x="1368" y="433" class="m">public checks</text>
+<text x="1368" y="458" class="m">release gate</text>
+<path d="M1440 540 L1440 650" stroke="#34d399" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M1440 650 L1448.0 634.0 L1432.0 634.0 Z" fill="#34d399"/>
+<text x="1440.0" y="583.0" text-anchor="middle" class="tiny">PASS</text>
+<rect x="1195" y="665" width="345" height="120" rx="20" fill="#10253f" stroke="#22d3ee" stroke-width="2"/>
+<circle cx="1227" cy="699" r="8" fill="#22d3ee" filter="url(#glow)"/>
+<text x="1247" y="708" class="h">ATOMIC PUBLIC</text>
+<text x="1223" y="743" class="m">same filesystem rename</text>
+<text x="1223" y="768" class="m">fsync + crash recovery</text>
+<path d="M1340 725 L1160 725" stroke="#22d3ee" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M1160 725 L1176.0 733.0 L1176.0 717.0 Z" fill="#22d3ee"/>
+<rect x="760" y="665" width="380" height="120" rx="20" fill="#10253f" stroke="#8b5cf6" stroke-width="2"/>
+<circle cx="792" cy="699" r="8" fill="#8b5cf6" filter="url(#glow)"/>
+<text x="812" y="708" class="h">LAST KNOWN GOOD</text>
+<text x="788" y="743" class="m">primary + .bak state recovery</text>
+<text x="788" y="768" class="m">old public survives failed run</text>
+<rect x="70" y="750" width="620" height="70" rx="16" fill="#151727" stroke="#fb7185" stroke-width="2"/>
+<text x="380" y="793" text-anchor="middle" class="t">FAIL → NO PROMOTION · NO FORCE PUSH · PREVIOUS PUBLIC STAYS</text>
+</svg>
