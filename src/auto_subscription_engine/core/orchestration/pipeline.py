@@ -144,6 +144,10 @@ def collect_configs(options: RunOptions):
         "configs_unknown_protocol": unknown_count,
         "configs_invalid": invalid_count,
         "configs_valid": len(valid_configs),
+        # Discovery-stage duplicates never entered valid_configs (they are
+        # dropped before validation), so only dedup-stage removals may be
+        # subtracted from configs_valid to reconcile with final_configs.
+        "duplicates_removed_during_dedup": legacy_duplicates,
         "duplicates_removed": duplicates_removed,
         "final_configs": len(final_configs),
         "count_by_protocol": dict(sorted(Counter(c.protocol for c in final_configs).items())),

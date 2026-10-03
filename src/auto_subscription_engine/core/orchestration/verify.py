@@ -106,7 +106,10 @@ def verify_output_dir(output_dir: Path) -> list[str]:
         problems.append("stats.json count_by_protocol must be a mapping")
 
     configs_valid = stats.get("configs_valid")
-    duplicates_removed = stats.get("duplicates_removed")
+    # Discovery-stage duplicates are excluded from configs_valid upstream, so
+    # the reconciling counter is the dedup-stage removals, not the combined
+    # duplicates_removed total.
+    duplicates_removed = stats.get("duplicates_removed_during_dedup")
     if (
         isinstance(configs_valid, int)
         and isinstance(duplicates_removed, int)
@@ -114,7 +117,7 @@ def verify_output_dir(output_dir: Path) -> list[str]:
         and configs_valid - duplicates_removed != final_configs
     ):
         problems.append(
-            "stats.json inconsistency: configs_valid - duplicates_removed != final_configs"
+            "stats.json inconsistency: configs_valid - duplicates_removed_during_dedup != final_configs"
         )
 
     sources_total = stats.get("sources_total")
