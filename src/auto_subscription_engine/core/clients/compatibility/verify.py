@@ -11,6 +11,7 @@ from pathlib import Path
 from ...models import ParseError, UnknownProtocolError
 from ...models.fingerprint import normalize_config
 from ...protocols import parse_uri
+from ...security.policy import PUBLISHABLE_STATUSES
 from ...utils.identity import config_safe_id
 from ..builders.hiddify import build_hiddify_outbound
 from ..builders.mihomo import build_mihomo_proxy
@@ -66,9 +67,20 @@ def verify_compat_outputs(output_dir: Path) -> list[str]:
         expected_universal = all(value == "pass" for value in statuses.values())
         if bool(entry.get("universal_compatible")) != expected_universal:
             problems.append(f"{sid} universal_compatible disagrees with per-core evidence")
-    missing = sorted(set(meta) - seen)
+    # Security-blocked/quarantined nodes and ASN-diversity exclusions are
+    # deliberately withheld from the live subscription; only publishable,
+    # non-excluded nodes are required to appear in it.
+    required = {
+        sid
+        for sid, entry in meta.items()
+        if entry.get("security_status") in PUBLISHABLE_STATUSES
+        and not entry.get("asn_diversity_excluded")
+    }
+    missing = sorted(required - seen)
     if missing:
-        problems.append(f"live_nodes.json contains {len(missing)} nodes missing from live subscription")
+        problems.append(
+            f"live_nodes.json contains {len(missing)} publishable nodes missing from live subscription"
+        )
     compat = stats.get("compatibility")
     if not isinstance(compat, dict):
         problems.append("live_stats.json missing compatibility block")
