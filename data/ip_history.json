@@ -1,37 +1,147 @@
 {
   "hosts": {
+    "2nj8qyohuzwgcp8j.v.3dns.vip": {
+      "addresses": {
+        "47.237.102.137": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "3dtmmsfpalaqhi7b.v.3dns.vip": {
+      "addresses": {
+        "149.129.236.157": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "53vxovarmgcreasv.v.3dns.vip": {
+      "addresses": {
+        "47.89.244.218": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "63182sh8-4d7b.aws-agent.net": {
       "addresses": {
         "147.90.40.95": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "147.90.40.96": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "147.90.41.95": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        },
+        "147.90.41.96": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "638929396024910159.lisbon-drc-dcrabj.info": {
+      "addresses": {
+        "172.233.212.129": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
           "seen_count": 1
         },
-        "147.90.41.96": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        "172.233.212.151": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.233.212.224": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.233.212.90": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.234.31.13": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.237.146.49": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "6jizio8pxqaxbatz.v.3dns.vip": {
+      "addresses": {
+        "47.237.12.29": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -44,34 +154,112 @@
       "addresses": {
         "147.90.40.75": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "147.90.40.76": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "147.90.41.75": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        },
+        "147.90.41.76": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "8ntzyr5knivfabat.v.3dns.vip": {
+      "addresses": {
+        "43.108.49.168": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
           "seen_count": 1
-        },
-        "147.90.41.76": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        }
+      }
+    },
+    "adncdovlhr4m1p36.v.3dns.vip": {
+      "addresses": {
+        "47.238.94.29": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "agroup.de1.ilovegairport.com": {
+      "addresses": {
+        "3.68.232.79": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "arcturus.yokkastars.com": {
+      "addresses": {
+        "93.152.217.152": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "asaqyidza9wdq9kq.v.3dns.vip": {
+      "addresses": {
+        "47.236.116.101": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "assets-es.pleiades.codes": {
+      "addresses": {
+        "193.238.154.5": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -84,7 +272,46 @@
       "addresses": {
         "176.34.5.100": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "azw0eunyvdvre73k.v.3dns.vip": {
+      "addresses": {
+        "8.210.140.39": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "b-nl1.fpradius.com": {
+      "addresses": {
+        "85.137.250.138": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "b2n.ir": {
+      "addresses": {
+        "104.21.93.182": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -97,7 +324,60 @@
       "addresses": {
         "43.201.252.164": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "biyapain.biyapainbache.workers.dev": {
+      "addresses": {
+        "104.21.69.130": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.208.181": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::ac43:d0b5": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3036::6815:4582": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "bj1aa2zyjxyamyuk.v.3dns.vip": {
+      "addresses": {
+        "43.110.63.10": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -110,12 +390,12 @@
       "addresses": {
         "154.46.31.106": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -123,7 +403,33 @@
       "addresses": {
         "13.230.139.12": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "bwdf2fnt.xn--e1aatfr8bwa.online": {
+      "addresses": {
+        "13.143.134.185": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "c-2.mrcloudi.ir": {
+      "addresses": {
+        "104.18.152.231": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -132,11 +438,195 @@
         }
       }
     },
-    "bwdf2fnt.xn--e1aatfr8bwa.online": {
+    "ca-trojan.bonds.id": {
       "addresses": {
-        "13.143.134.185": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        "51.222.86.136": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "cd.dlclive.click": {
+      "addresses": {
+        "104.16.0.0": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.16.191.244": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.16.3.227": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.16.41.84": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.16.67.131": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.16.67.132": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.16.86.19": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.17.103.34": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.25.189.214": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.26.13.19": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.26.15.77": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.27.206.8": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "162.159.34.225": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "162.159.92.98": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "162.159.93.89": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "162.159.95.219": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "45.131.4.21": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "45.131.4.23": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "45.131.4.24": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "45.131.4.245": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -149,7 +639,125 @@
       "addresses": {
         "211.174.113.172": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "cf.130209.xyz": {
+      "addresses": {
+        "172.64.53.89": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "chatgpt.com": {
+      "addresses": {
+        "104.18.32.47": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.155.209": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:4408::ac40:9bd1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2a06:98c1:3101::6812:202f": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "chubby0.failspace.top": {
+      "addresses": {
+        "50.7.160.250": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "cloud.ghostdev.lk": {
+      "addresses": {
+        "173.234.15.84": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "cn.uxuan.cfd": {
+      "addresses": {
+        "104.21.93.88": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "cnamemc.ciscocdn1.live": {
+      "addresses": {
+        "103.224.212.210": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "cnamemk.ciscocdn1.live": {
+      "addresses": {
+        "103.224.212.210": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -162,7 +770,152 @@
       "addresses": {
         "54.249.36.167": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "conge.ggisopi.su": {
+      "addresses": {
+        "31.76.249.174": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "ddnl0.zazazuza.ru": {
+      "addresses": {
+        "89.125.96.91": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "89.125.96.92": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "89.125.96.93": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "de-28544235.sishka.network": {
+      "addresses": {
+        "89.125.112.8": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "de.monkora.org": {
+      "addresses": {
+        "2.58.66.143": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2.58.66.198": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "31.76.119.123": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "31.76.119.17": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "62.192.153.132": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "de1.lunairevpn.com": {
+      "addresses": {
+        "185.243.10.123": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "deak.nightfall.best": {
+      "addresses": {
+        "31.76.249.116": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "defrnode.jumpernode.site": {
+      "addresses": {
+        "64.118.158.51": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -175,12 +928,12 @@
       "addresses": {
         "13.125.69.162": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -188,12 +941,12 @@
       "addresses": {
         "213.182.204.136": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -201,12 +954,12 @@
       "addresses": {
         "52.192.217.187": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -214,12 +967,12 @@
       "addresses": {
         "43.207.198.39": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -425,16 +1178,137 @@
         }
       }
     },
-    "gift-catalog.aroonia.ir": {
+    "fbsv6.guardora.pro": {
       "addresses": {
-        "155.254.35.18": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        "78.159.246.110": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
           "seen_count": 1
+        }
+      }
+    },
+    "free-server.techsonic.dev": {
+      "addresses": {
+        "139.162.27.96": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "funagfr.alixxplay.com": {
+      "addresses": {
+        "13.214.201.206": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2406:da14:5bc:e900:ef6c:1fe0:28c5:7fe2": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google"
+          ],
+          "seen_count": 1
+        },
+        "2406:da18:7a9:7200:e849:19c9:8078:f9e1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "geo.shkola112.site": {
+      "addresses": {
+        "104.21.50.89": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.159.161": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::6815:3259": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3034::ac43:9fa1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "germa12.ggisopi.su": {
+      "addresses": {
+        "213.178.141.33": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "germanygem.site": {
+      "addresses": {
+        "45.133.251.231": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "gift-catalog.aroonia.ir": {
+      "addresses": {
+        "155.254.35.18": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
         }
       }
     },
@@ -442,12 +1316,12 @@
       "addresses": {
         "65.109.18.120": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -455,12 +1329,12 @@
       "addresses": {
         "178.236.251.64": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -468,7 +1342,47 @@
       "addresses": {
         "18.143.92.167": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "guanwang.awsno.com": {
+      "addresses": {
+        "104.21.41.92": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.190.164": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3037::6815:295c": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3037::ac43:bea4": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -481,7 +1395,100 @@
       "addresses": {
         "44.255.123.205": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "hinet1.2yly.com": {
+      "addresses": {
+        "118.167.235.241": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "hk1.sanfen001.pics": {
+      "addresses": {
+        "104.21.91.112": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.215.250": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::6815:5b70": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::ac43:d7fa": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "hk2.sanfen001.pics": {
+      "addresses": {
+        "104.21.91.112": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.215.250": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::6815:5b70": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::ac43:d7fa": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -503,11 +1510,20 @@
         }
       }
     },
-    "integral-rodent.rooster465.autos": {
+    "hn.xiaohouzi.club": {
       "addresses": {
-        "54.199.66.128": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        "104.219.250.37": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2.59.170.20": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -516,11 +1532,280 @@
         }
       }
     },
+    "hy2-latvia2.unlimited-access.ru": {
+      "addresses": {
+        "2a05:541:126:20::1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "85.159.228.22": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "hy2.123266.xyz": {
+      "addresses": {
+        "155.248.209.237": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "hy2.561891.xyz": {
+      "addresses": {
+        "142.249.37.90": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "id-nl-01.mintrocket.org": {
+      "addresses": {
+        "109.176.202.7": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "ie.monkora.org": {
+      "addresses": {
+        "86.54.83.75": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "india.letsconnectpoint.com": {
+      "addresses": {
+        "5.253.42.159": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "integral-rodent.rooster465.autos": {
+      "addresses": {
+        "54.199.66.128": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
     "intense-sole.rooster465.autos": {
       "addresses": {
         "18.176.61.69": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "jgzt1997.qivfelo.ir": {
+      "addresses": {
+        "5.75.171.12": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "jp.iamnotagoodman.com": {
+      "addresses": {
+        "172.237.129.108": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.237.129.236": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.237.129.242": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "jp.sofast.live": {
+      "addresses": {
+        "106.13.255.15": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google"
+          ],
+          "seen_count": 1
+        },
+        "106.13.255.207": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "jumpernode.site": {
+      "addresses": {
+        "103.232.213.74": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "kashgsgsiajsh.apple.gymyoga.ir": {
+      "addresses": {
+        "65.109.180.220": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "kbondxw9lifci4h4.v.3dns.vip": {
+      "addresses": {
+        "47.238.141.170": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "knenakhesxnzh259.v.3dns.vip": {
+      "addresses": {
+        "43.165.174.76": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "kqov7ukadknxb8a3.v.3dns.vip": {
+      "addresses": {
+        "8.211.161.129": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "kr1.sanfen001.pics": {
+      "addresses": {
+        "104.21.91.112": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.215.250": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::6815:5b70": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::ac43:d7fa": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -546,7 +1831,33 @@
       "addresses": {
         "3.253.106.233": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "main-fawn.rooster465.autos": {
+      "addresses": {
+        "3.35.207.188": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "md2.univesalsrv.com": {
+      "addresses": {
+        "89.35.14.31": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -555,11 +1866,11 @@
         }
       }
     },
-    "main-fawn.rooster465.autos": {
+    "media.qeshmdiar.ir": {
       "addresses": {
-        "3.35.207.188": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        "91.107.152.149": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -581,11 +1892,413 @@
         }
       }
     },
+    "milan.adaspoloandco.com": {
+      "addresses": {
+        "57.131.21.102": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "mortxzaaz98-production.up.railway.app": {
+      "addresses": {
+        "69.46.46.62": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "nice.iranapplecenter.com": {
+      "addresses": {
+        "167.82.76.31": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "notdirect.howhealthyistoomajreally.homes": {
+      "addresses": {
+        "103.224.182.211": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.taipeicitygovernment.net.ua": {
+      "addresses": {
+        "2001:b030:1420:ff02::1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff00::1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff01::1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1453:ff03::1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:240c:ff1c::1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.128.151": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.135.193": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.152.229": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.130": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.31": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "p1tun4.greewebservices.ir": {
+      "addresses": {
+        "95.38.38.59": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "p2real22.greewebservices.ir": {
+      "addresses": {
+        "131.123.40.30": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "p2real4.greewebservices.ir": {
+      "addresses": {
+        "131.123.35.108": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "pl-waw.dontblockmepls.com": {
+      "addresses": {
+        "31.77.13.19": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "pl.monkora.org": {
+      "addresses": {
+        "31.56.188.171": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "77.83.246.202": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "pl.srv.vbuste-bot.com": {
+      "addresses": {
+        "144.31.4.193": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "pl4.moritech.net": {
+      "addresses": {
+        "144.31.5.3": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform101.golnamakcert.top": {
+      "addresses": {
+        "64.176.15.134": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform102.golnamakcert.top": {
+      "addresses": {
+        "64.176.10.89": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform103.golnamakcert.top": {
+      "addresses": {
+        "64.176.5.68": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform106.golnamakcert.top": {
+      "addresses": {
+        "64.176.25.168": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform107.golnamakcert.top": {
+      "addresses": {
+        "64.176.22.185": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform108.golnamakcert.top": {
+      "addresses": {
+        "64.176.24.232": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform109.golnamakcert.top": {
+      "addresses": {
+        "64.176.2.25": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform115.golnamakcert.top": {
+      "addresses": {
+        "64.176.21.217": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform117.golnamakcert.top": {
+      "addresses": {
+        "64.176.7.121": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "platform118.golnamakcert.top": {
+      "addresses": {
+        "64.176.19.77": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "play.qeshmdiyar.ir": {
+      "addresses": {
+        "91.107.152.149": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "pleased-albacore.rooster465.autos": {
       "addresses": {
         "63.178.198.94": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "prep.wwwinternetvideo.click": {
+      "addresses": {
+        "144.31.50.236": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -598,7 +2311,33 @@
       "addresses": {
         "3.34.131.153": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "promoted-rattler.rooster465.autos": {
+      "addresses": {
+        "52.192.45.137": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "psf-3.weedly.top": {
+      "addresses": {
+        "199.232.131.119": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -607,11 +2346,24 @@
         }
       }
     },
-    "promoted-rattler.rooster465.autos": {
+    "qp.lichao0223.cn": {
       "addresses": {
-        "52.192.45.137": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        "45.159.50.233": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "r8f4n-g05.jp02-e3-vm0.entry.fr0528.art": {
+      "addresses": {
+        "13.196.177.190": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -633,6 +2385,106 @@
         }
       }
     },
+    "rel2.pasmazy.ir": {
+      "addresses": {
+        "31.77.156.107": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "render.com": {
+      "addresses": {
+        "216.24.57.1": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "rs1.fpradius.com": {
+      "addresses": {
+        "31.77.143.42": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "sakura.proxy.rlwy.net": {
+      "addresses": {
+        "66.33.22.221": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "sbgfgov.vip6.wogacnmnagfwgov.com": {
+      "addresses": {
+        "134.175.113.147": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "server.slavkiti.monster": {
+      "addresses": {
+        "107.181.151.39": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "sg2-8sb.6121999.dpdns.org": {
+      "addresses": {
+        "146.235.16.130": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2603:c024:4517:e220:5e70:409b:163d:faff": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "sg4.dexlos.com": {
       "addresses": {
         "46.137.199.87": {
@@ -646,11 +2498,186 @@
         }
       }
     },
+    "shining-piranha.rooster465.autos": {
+      "addresses": {
+        "44.250.170.23": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "silversbgfgov.vip31.wogbcnmnagfwgov.com": {
+      "addresses": {
+        "49.232.135.68": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "sin-a-02.auuas.com": {
+      "addresses": {
+        "18.142.105.173": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2406:da18:1734:2b00:6468:8e75:d1d0:4166": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "singanew.click": {
+      "addresses": {
+        "176.97.117.18": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "slowkd.sadiepinki.com": {
+      "addresses": {
+        "212.46.33.5": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "212.46.33.90": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "staging.lastilhame.monster": {
+      "addresses": {
+        "107.181.151.241": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "strong-haddock.rooster465.autos": {
       "addresses": {
         "185.244.208.69": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "superjinx-production-d80d.up.railway.app": {
+      "addresses": {
+        "69.46.46.74": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "support.zoom.us": {
+      "addresses": {
+        "170.114.45.6": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "170.114.46.6": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2407:30c0:180::6": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2407:30c0:181::6": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "surstreming.vvzzkontaktezzvv.garden": {
+      "addresses": {
+        "5.157.10.148": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "sw-01.vacvps.com": {
+      "addresses": {
+        "2.26.101.134": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -663,7 +2690,20 @@
       "addresses": {
         "172.232.153.125": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "syj2ggugmwbwqwqx.v.3dns.vip": {
+      "addresses": {
+        "8.217.17.141": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -676,7 +2716,33 @@
       "addresses": {
         "181.215.18.196": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "telegramx.khp25.com": {
+      "addresses": {
+        "181.215.18.110": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "tk1.high-speed-test-56424.me": {
+      "addresses": {
+        "32.189.233.34": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -685,11 +2751,55 @@
         }
       }
     },
-    "telegramx.khp25.com": {
+    "tr3.wba-pn.ru": {
       "addresses": {
-        "181.215.18.110": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        "72.56.250.71": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "trackydev.site": {
+      "addresses": {
+        "140.245.120.16": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "trus.moonfree.top": {
+      "addresses": {
+        "172.236.108.16": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.239.193.153": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.239.194.103": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -702,7 +2812,205 @@
       "addresses": {
         "114.41.9.217": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "uae.unixzone.us": {
+      "addresses": {
+        "84.235.244.108": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "uk1.trojanvh.xyz": {
+      "addresses": {
+        "103.224.212.216": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "ul-mexico1.09vpn.com": {
+      "addresses": {
+        "45.134.9.133": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "usa-3.letsconnectpoint.com": {
+      "addresses": {
+        "96.126.176.78": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "usatimewebnew.space": {
+      "addresses": {
+        "72.56.41.232": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "v10.hdacd.com": {
+      "addresses": {
+        "58.153.50.53": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "vpn-tw-002.fastervpn.world": {
+      "addresses": {
+        "160.187.100.109": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "wivnyxqlo7tuwfo9.v.3dns.vip": {
+      "addresses": {
+        "47.88.60.65": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "www.5199dy.com": {
+      "addresses": {
+        "172.64.146.235": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.158.170": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.229.154": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.229.85": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.229.96": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.34.243": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.40.208": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.52.115": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.53.164": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.53.65": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -715,34 +3023,234 @@
       "addresses": {
         "104.18.8.83": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "104.18.9.83": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "2606:4700::6812:853": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        },
+        "2606:4700::6812:953": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "www.canva.com": {
+      "addresses": {
+        "104.16.102.112": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
           ],
           "seen_count": 1
         },
-        "2606:4700::6812:953": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+        "104.16.103.112": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700::6810:6670": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700::6810:6770": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "www.gossipglove.com": {
+      "addresses": {
+        "104.18.0.55": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.18.1.55": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700::6812:137": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700::6812:37": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "www.large-files.info": {
+      "addresses": {
+        "104.21.60.29": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.190.248": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3030::ac43:bef8": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3033::6815:3c1d": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "www.medium.com": {
+      "addresses": {
+        "162.159.152.4": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "162.159.153.4": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:7::a29f:9804": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:7::a29f:9904": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "www.multiplydose.com": {
+      "addresses": {
+        "104.18.10.110": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.18.11.110": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700::6812:a6e": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700::6812:b6e": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
@@ -755,17 +3263,45 @@
       "addresses": {
         "162.159.140.229": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
+            "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "172.66.0.227": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
-            "google"
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "xn--memeshupshop-vl56koa410enom.rekmiva.ir": {
+      "addresses": {
+        "78.47.48.44": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "xsru1.ddnsfree.com": {
+      "addresses": {
+        "147.45.175.81": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
           ],
           "seen_count": 1
         }
@@ -776,6 +3312,81 @@
         "138.199.48.82": {
           "first_seen": "2026-10-03T21:36:37+00:00",
           "last_seen": "2026-10-03T21:36:37+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "185.156.47.97": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "z9ffbx3zs2q5o0bg.v.3dns.vip": {
+      "addresses": {
+        "8.209.229.2": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "zi.you.usdtvfk.top": {
+      "addresses": {
+        "104.21.17.218": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.178.88": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3032::6815:11da": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3032::ac43:b258": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "zula.ir": {
+      "addresses": {
+        "194.50.216.61": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
             "google",
             "system"
