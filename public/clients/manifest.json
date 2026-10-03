@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "clients": [
+    {
+      "client": "v2rayng",
+      "core": "xray",
+      "artifact": "v2rayng.txt",
+      "format": "uri",
+      "mapped_core_runtime_verified": true,
+      "gui_import_verified": false,
+      "core_status": "available",
+      "count": 24
+    },
+    {
+      "client": "hiddify",
+      "core": "hiddify",
+      "artifact": "hiddify.txt",
+      "format": "uri",
+      "mapped_core_runtime_verified": true,
+      "gui_import_verified": false,
+      "core_status": "available",
+      "count": 44
+    },
+    {
+      "client": "nekobox",
+      "core": "singbox",
+      "artifact": "nekobox.txt",
+      "format": "uri",
+      "mapped_core_runtime_verified": true,
+      "gui_import_verified": false,
+      "core_status": "available",
+      "count": 44
+    },
+    {
+      "client": "singbox",
+      "core": "singbox",
+      "artifact": "singbox.json",
+      "format": "singbox-json",
+      "mapped_core_runtime_verified": true,
+      "gui_import_verified": false,
+      "core_status": "available",
+      "count": 44
+    },
+    {
+      "client": "mihomo",
+      "core": "mihomo",
+      "artifact": "mihomo.yaml",
+      "format": "mihomo-yaml",
+      "mapped_core_runtime_verified": true,
+      "gui_import_verified": false,
+      "core_status": "available",
+      "count": 43
+    }
+  ],
+  "planned_not_published": [
+    "loon",
+    "quantumultx",
+    "shadowrocket",
+    "stash",
+    "surge"
+  ],
+  "policy": "a client feed is published only when its serializer exists and its mapped core is runtime-validated; GUI import is not claimed by CI and planned clients are never inferred from URI importability"
+}

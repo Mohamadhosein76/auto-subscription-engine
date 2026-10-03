@@ -1,0 +1,18 @@
+{
+  "client_counts": {
+    "hiddify": 0,
+    "mihomo": 0,
+    "nekobox": 0,
+    "singbox": 0,
+    "v2rayng": 0
+  },
+  "fresh_evidence_nodes": 0,
+  "operator": "mci",
+  "policy": {
+    "min_operator_confidence": 50,
+    "min_operator_score": 65,
+    "require_fresh": true
+  },
+  "schema_version": 1,
+  "universal_nodes": 0
+}

@@ -1,0 +1,454 @@
+{
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_8fc1c914",
+      "server": "158.173.24.73",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_0a31c96f",
+      "server": "169.197.143.116",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_47943055",
+      "server": "44.255.123.205",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "happy-gibbon.rooster465.autos"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_4b7fda03",
+      "server": "129.213.91.185",
+      "server_port": 35013,
+      "password": "4291c983-c520-46ac-82cc-48f14bef573f",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_57741046",
+      "server": "167.17.68.89",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "none",
+      "alter_id": 0
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_61001baf",
+      "server": "74.201.177.54",
+      "server_port": 14680,
+      "method": "aes-128-gcm",
+      "password": "1377d5cfafc9279a904deb3bfa4f3de2"
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_aae5ea68",
+      "server": "169.197.142.22",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_d99b4030",
+      "server": "158.51.123.42",
+      "server_port": 22324,
+      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_bfd355fe",
+      "server": "138.199.48.82",
+      "server_port": 9443,
+      "method": "aes-256-gcm",
+      "password": "eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_ceec8cd9",
+      "server": "98.89.22.134",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_835dd244",
+      "server": "149.22.87.204",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_8b297b97",
+      "server": "141.164.45.187",
+      "server_port": 9090,
+      "method": "aes-256-gcm",
+      "password": "Y6R9pAtvxxzmGC"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_55a9bc0e",
+      "server": "77.74.123.103",
+      "server_port": 8443,
+      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
+      "tls": {
+        "enabled": true,
+        "server_name": "grape-test-italy.dynuddns.net"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_ed4d4654",
+      "server": "hk2.xiaoliyu.cyou",
+      "server_port": 4433,
+      "password": "19f72087-4591-4d72-930b-2697078ec2be",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk2.xiaoliyu.cyou",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_17af1cd6",
+      "server": "51.222.200.165",
+      "server_port": 5000,
+      "method": "aes-256-gcm",
+      "password": "Y6R9pAtvxxzmGC"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_93161c2e",
+      "server": "144.31.232.216",
+      "server_port": 443,
+      "password": "06e88dd6-e264-4981-8c26-d7ab17348ab2",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi01.clgate.network"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_e89b3980",
+      "server": "212.192.15.177",
+      "server_port": 4433,
+      "password": "19f72087-4591-4d72-930b-2697078ec2be",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk2.xiaoliyu.cyou",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_fc97ae09",
+      "server": "62.210.7.139",
+      "server_port": 60111,
+      "password": "github.com/Alvin9999-newpac/fanqiang",
+      "tls": {
+        "enabled": true,
+        "server_name": "t.me",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_ff82ef34",
+      "server": "152.67.75.161",
+      "server_port": 443,
+      "password": "3a702d4d1de4949005d8431220e040fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "c13f29db6a638ad2b211b9ce2669ef27"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_11ca2d97",
+      "server": "54.199.66.128",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "integral-rodent.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_5a1e56f6",
+      "server": "52.192.217.187",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "evolving-platypus.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_6f8bd3df",
+      "server": "52.192.45.137",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "promoted-rattler.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_7d10bb22",
+      "server": "43.207.198.39",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "fancy-javelin.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_98cae2ea",
+      "server": "13.230.139.12",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "brief-glider.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_ac617b98",
+      "server": "176.34.5.100",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "assuring-skink.rooster465.autos"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_bc1cfeed",
+      "server": "54.249.36.167",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "comic-poodle.rooster465.autos"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_821783cb",
+      "server": "222.167.245.240",
+      "server_port": 28015,
+      "password": "e19b5aa3-16c9-435a-8bc9-76f2f6ddff43",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-test-udp-traffic.kaneki.cfd"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_280ff574",
+      "server": "84.247.155.196",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_b2ec5e82",
+      "server": "141.164.45.187",
+      "server_port": 5498,
+      "method": "aes-256-gcm",
+      "password": "lGqs95QkFHo2NV"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_cbe90bd0",
+      "server": "132.243.175.144",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_b9940ff3",
+      "server": "108.181.121.226",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WSyL4XTwNsdv"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_073e2ba5",
+      "server": "140.174.184.5",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qItG8SueYQcP"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_c153c87f",
+      "server": "51.222.155.32",
+      "server_port": 5003,
+      "method": "aes-256-gcm",
+      "password": "g5MeD6Ft3CWlJId"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_5a4a3d88",
+      "server": "77.232.139.128",
+      "server_port": 11592,
+      "password": "033dc6b532",
+      "tls": {
+        "enabled": true,
+        "server_name": "srv-8718e6.frd21.ru"
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "eba1b4766d2a26d6c167e2d2e9efabf4"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_f4e81623",
+      "server": "45.87.41.18",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_2c0c9bfa",
+      "server": "64.188.119.177",
+      "server_port": 28015,
+      "password": "e19b5aa3-16c9-435a-8bc9-76f2f6ddff43",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-test-udp-trf.kaneki.cfd"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_a4aef789",
+      "server": "185.114.72.31",
+      "server_port": 2053,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_20c804b5",
+      "server": "103.160.63.199",
+      "server_port": 31348,
+      "method": "chacha20-ietf-poly1305",
+      "password": "8C5valhOd8vfwaTXUSZ6Zyb0Ip34lRR5z7P8az"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_141ef553",
+      "server": "142.249.37.90",
+      "server_port": 44356,
+      "password": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2.561891.xyz"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_f429d0bd",
+      "server": "103.115.109.49",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/oneclickvpnkeys",
+        "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_4538898a",
+      "server": "51.222.141.125",
+      "server_port": 445,
+      "method": "aes-256-gcm",
+      "password": "zDNVedRFPQexG9v"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_718d8b52",
+      "server": "51.79.64.198",
+      "server_port": 8119,
+      "method": "aes-256-gcm",
+      "password": "cdBIDV42DCwnfIN"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_756dfbb8",
+      "server": "211.174.113.172",
+      "server_port": 49642,
+      "method": "aes-256-gcm",
+      "password": "ac9c0a7b"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_af8ab7b6",
+      "server": "51.222.12.127",
+      "server_port": 445,
+      "method": "aes-256-gcm",
+      "password": "zDNVedRFPQexG9v"
+    }
+  ]
+}

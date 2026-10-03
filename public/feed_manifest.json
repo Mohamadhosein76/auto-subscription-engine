@@ -1,0 +1,104 @@
+{
+  "engine": "score-aware-feed-v2",
+  "feed_counts": {
+    "clients/hiddify": 44,
+    "clients/mihomo": 43,
+    "clients/nekobox": 44,
+    "clients/singbox": 44,
+    "clients/universal": 21,
+    "clients/v2rayng": 24,
+    "networks/direct-ip": 45,
+    "networks/ipv4": 45,
+    "networks/ipv6": 0,
+    "networks/mobile-safe": 29,
+    "networks/port443": 15,
+    "networks/tcp": 34,
+    "networks/udp": 12,
+    "profiles/max-compat": 46,
+    "profiles/recommended": 17,
+    "profiles/secure": 46
+  },
+  "legacy_main_policy": "universal-score-ranked",
+  "operators": {
+    "fixed": {
+      "client_counts": {
+        "hiddify": 0,
+        "mihomo": 0,
+        "nekobox": 0,
+        "singbox": 0,
+        "v2rayng": 0
+      },
+      "fresh_evidence_nodes": 0,
+      "operator": "fixed",
+      "policy": {
+        "min_operator_confidence": 50,
+        "min_operator_score": 65,
+        "require_fresh": true
+      },
+      "schema_version": 1,
+      "universal_nodes": 0
+    },
+    "irancell": {
+      "client_counts": {
+        "hiddify": 0,
+        "mihomo": 0,
+        "nekobox": 0,
+        "singbox": 0,
+        "v2rayng": 0
+      },
+      "fresh_evidence_nodes": 0,
+      "operator": "irancell",
+      "policy": {
+        "min_operator_confidence": 50,
+        "min_operator_score": 65,
+        "require_fresh": true
+      },
+      "schema_version": 1,
+      "universal_nodes": 0
+    },
+    "mci": {
+      "client_counts": {
+        "hiddify": 0,
+        "mihomo": 0,
+        "nekobox": 0,
+        "singbox": 0,
+        "v2rayng": 0
+      },
+      "fresh_evidence_nodes": 0,
+      "operator": "mci",
+      "policy": {
+        "min_operator_confidence": 50,
+        "min_operator_score": 65,
+        "require_fresh": true
+      },
+      "schema_version": 1,
+      "universal_nodes": 0
+    },
+    "rightel": {
+      "client_counts": {
+        "hiddify": 0,
+        "mihomo": 0,
+        "nekobox": 0,
+        "singbox": 0,
+        "v2rayng": 0
+      },
+      "fresh_evidence_nodes": 0,
+      "operator": "rightel",
+      "policy": {
+        "min_operator_confidence": 50,
+        "min_operator_score": 65,
+        "require_fresh": true
+      },
+      "schema_version": 1,
+      "universal_nodes": 0
+    }
+  },
+  "schema_version": 1,
+  "thresholds": {
+    "min_client_score": 50,
+    "min_operator_confidence": 50,
+    "min_operator_score": 65,
+    "recommended_min_global": 60,
+    "secure_min_security": 80
+  }
+}
