@@ -17,6 +17,11 @@ class FeedPolicy:
     secure_min_global: int = 50
     secure_min_security: int = 80
     min_fallback_nodes: int = 3
+    # Platform feeds (platforms/<family>/) use a stricter, client-aware
+    # gate: no fallback, a platform-specific client-score threshold and a
+    # runtime-evidence freshness window (see config/feeds.yaml).
+    platform_min_client_score: int = 55
+    platform_runtime_evidence_max_age_hours: float = 26.0
     per_asn_limit: int = 8
     per_prefix_limit: int = 4
     per_source_soft_limit: float = 0.50
@@ -34,6 +39,10 @@ class FeedPolicy:
             secure_min_global=int(raw.get("secure_min_global", 50)),
             secure_min_security=int(raw.get("secure_min_security", 80)),
             min_fallback_nodes=int(raw.get("min_fallback_nodes", 3)),
+            platform_min_client_score=int(raw.get("platform_min_client_score", 55)),
+            platform_runtime_evidence_max_age_hours=float(
+                raw.get("platform_runtime_evidence_max_age_hours", 26.0)
+            ),
             per_asn_limit=int(raw.get("per_asn_limit", 8)),
             per_prefix_limit=int(raw.get("per_prefix_limit", 4)),
             per_source_soft_limit=float(raw.get("per_source_soft_limit", 0.50)),
@@ -45,6 +54,7 @@ class FeedPolicy:
         for name in (
             "min_client_score", "min_operator_score", "min_operator_confidence",
             "recommended_min_global", "secure_min_global", "secure_min_security",
+            "platform_min_client_score",
         ):
             value = getattr(self, name)
             if not 0 <= value <= 100:

@@ -136,6 +136,16 @@ probes on that network.
 | v2rayN | Windows | `platforms/windows/v2rayn.txt` | shared URI format | Xray-core | Format Supported + Runtime Verified |
 | Shadowrocket, Stash, Loon, Surge, Quantumult X | — | — | — | — | Planned (deliberately not publishable without native serialization + runtime evidence) |
 
+**Evidence boundary (important):** CI runtime verification is NOT Android
+or Windows GUI device validation. A node can pass server-side runtime
+verification and still fail on a specific ISP/device/client combination —
+platform feeds therefore apply a stricter, client-aware gate (client
+runtime status pass + platform score threshold + evidence from the current
+run, no fallback) and their manifests record
+`device_validation: manual_observation_only`. Real device observations are
+recorded as manual observations only, never as automated evidence, and
+operator compatibility is only ever proven by physical probes on that
+network.
 Status meanings: **Runtime Verified** = the client's runtime core carried
 real application traffic through the tunnel on the verification runner.
 **Format Supported** = a real serializer produces the artifact but no

@@ -8,6 +8,19 @@ feeds:
   secure_min_global: 50
   secure_min_security: 80
   min_fallback_nodes: 3
+
+  # Platform feeds (platforms/<family>/) gate. These feeds are
+  # client-aware and stricter than the client feeds:
+  # - no fallback: a node below platform_min_client_score never enters a
+  #   platform feed, even when that would shrink the feed (quality >
+  #   quantity);
+  # - freshness: the node's client compatibility evidence must come from
+  #   the current verification run (compat_verified_at within
+  #   platform_runtime_evidence_max_age_hours); carried-over metadata from
+  #   earlier runs does not qualify;
+  # - device/operator validation is NEVER claimed here (see manifest).
+  platform_min_client_score: 55
+  platform_runtime_evidence_max_age_hours: 26.0
   per_asn_limit: 8
   per_prefix_limit: 4
   per_source_soft_limit: 0.50

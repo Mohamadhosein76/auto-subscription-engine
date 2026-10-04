@@ -132,12 +132,14 @@ CLIENTS: dict[str, ClientSpec] = {
 PLATFORM_FAMILIES: tuple[str, ...] = ("android", "windows")
 
 #: Windows-only client aliases: the client imports an existing registry
-#: artifact's format (same serializer, same runtime-core evidence), so it
-#: is served by mirroring that artifact under ``platforms/windows/``. No
-#: separate scoring entry exists — no duplicated evidence is created.
+#: client's artifact format (same serializer, same runtime-core evidence),
+#: so it is served by mirroring that client's qualified set under
+#: ``platforms/windows/``. Key = alias artifact, value = (source client
+#: registry key, evidence status). No separate scoring entry exists — no
+#: duplicated evidence is created.
 WINDOWS_CLIENT_ALIASES: dict[str, tuple[str, str]] = {
     # v2rayN imports the v2rayNG-family URI feed; runtime evidence: Xray.
-    "v2rayn.txt": ("v2rayng.txt", "runtime_core_verified"),
+    "v2rayn.txt": ("v2rayng", "runtime_core_verified"),
 }
 
 # These names are intentionally *not* publishable yet.  Stage 7 records the

@@ -1,6 +1,8 @@
 """Deep offline verification for Stage-10 feed outputs."""
 from __future__ import annotations
 import base64
+
+from ..clients.registry import CLIENTS, WINDOWS_CLIENT_ALIASES
 import json
 from pathlib import Path
 import yaml
@@ -62,6 +64,55 @@ def verify_feed_outputs(output_dir: Path) -> list[str]:
             sid = _safe_id(uri)
             if not sid or (meta.get(sid) or {}).get(field) != "pass":
                 problems.append(f"clients/{client}.txt contains a node without {field}=pass")
+
+    # Platform feeds (platforms/<family>/): client-aware qualified
+    # subsets. Every published platform node must carry a passing client
+    # runtime status, fresh (current-run) compatibility evidence, and be a
+    # subset of the corresponding client feed. Windows client aliases map
+    # to their source client's evidence.
+    platforms_dir = root / "platforms"
+    if platforms_dir.is_dir():
+        status_fields = {
+            "v2rayng": "xray_compatible", "hiddify": "hiddify_compatible",
+            "nekobox": "singbox_compatible", "singbox": "singbox_compatible",
+            "mihomo": "mihomo_compatible",
+        }
+        for family_dir in sorted(p for p in platforms_dir.iterdir() if p.is_dir()):
+            if not (family_dir / "manifest.json").is_file():
+                problems.append(
+                    f"missing platforms manifest: platforms/{family_dir.name}/manifest.json"
+                )
+                continue
+            for txt in sorted(family_dir.glob("*.txt")):
+                if txt.name.endswith("_base64.txt"):
+                    continue
+                client_key = txt.stem
+                if client_key.endswith("_base64"):
+                    continue
+                source_client = client_key
+                for alias_artifact, (alias_source, _status) in WINDOWS_CLIENT_ALIASES.items():
+                    if txt.name == alias_artifact:
+                        source_client = alias_source
+                field = status_fields.get(source_client)
+                source_artifact = CLIENTS[source_client].artifact if source_client in CLIENTS else txt.name
+                client_uris = set(_uris(root / "clients" / source_artifact))
+                for uri in _uris(txt):
+                    sid = _safe_id(uri)
+                    node = meta.get(sid) or {}
+                    if field and node.get(field) != "pass":
+                        problems.append(
+                            f"platforms/{family_dir.name}/{txt.name} contains a node without {field}=pass"
+                        )
+                        continue
+                    if not isinstance(node.get("compat_verified_at"), str):
+                        problems.append(
+                            f"platforms/{family_dir.name}/{txt.name} contains a node without fresh (current-run) runtime evidence"
+                        )
+                        continue
+                    if uri not in client_uris:
+                        problems.append(
+                            f"platforms/{family_dir.name}/{txt.name} node is not in clients/{source_artifact}"
+                        )
 
     for operator_dir in sorted((root / "operators").glob("*")):
         if not operator_dir.is_dir():

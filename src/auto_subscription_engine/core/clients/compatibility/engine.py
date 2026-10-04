@@ -64,6 +64,12 @@ STAGE_STATUS_UNAVAILABLE = "cores_unavailable"
 
 #: Statuses a core can report for one node.
 STATUS_PASS = "pass"
+
+
+def _utc_now_iso() -> str:
+    from datetime import datetime, timezone
+
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
 STATUS_FAIL = "fail"
 STATUS_UNSUPPORTED = "unsupported"
 STATUS_UNAVAILABLE = "unavailable"
@@ -806,6 +812,11 @@ def _rewrite_live_outputs(
         entry["xray_compatible"] = statuses.get("xray", {}).get("status")
         entry["hiddify_compatible"] = statuses.get("hiddify", {}).get("status")
         entry["mihomo_compatible"] = statuses.get("mihomo", {}).get("status")
+        # Evidence timestamp: platform feeds only publish nodes whose
+        # client compatibility was measured in the CURRENT run. Entries
+        # carried over from earlier runs stay without this stamp and are
+        # treated as stale by the platform feed gate.
+        entry["compat_verified_at"] = _utc_now_iso()
         entry["universal_compatible"] = bool(evaluation["universal"])
         entry["compatibility_score"] = int(evaluation["score"])
         profile: NetworkProfile = evaluation["profile"]

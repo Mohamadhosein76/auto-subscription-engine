@@ -27,6 +27,32 @@ evidence, no new compatibility claims.
 3. Base64 variants exist for every `.txt` feed (`*_base64.txt`) for clients
    that require Base64 subscription bodies.
 
+## Real-device observation (manual, recorded honestly)
+
+```text
+Platform:            Android
+Client:              Hiddify (real device)
+Observation:         most published configs showed failed/red state;
+                     approximately 4 configs were usable at the time
+Status:              manual_device_observation
+```
+
+This is a **manual** observation. It is NOT automated device measurement
+and it is not fed into scoring. Automated device probing does not exist
+yet; until it does, every platform manifest records
+`device_validation: manual_observation_only`.
+
+## CI runtime verification != Android GUI device validation
+
+A node can pass server-side runtime verification (real tunneled HTTPS
+through Hiddify-Core on the CI runner) and still fail on a specific
+ISP/device/client combination. The dominant cause: verification runs from
+GitHub datacenters, while device reachability depends on the local
+network — direct-IP endpoints on non-standard ports are frequently
+unreachable from Iranian ISPs, while CDN-fronted endpoints usually work.
+Operator compatibility is a separate dimension and is only ever proven by
+physical probes on that network.
+
 ## Evidence boundaries (important)
 
 - `runtime_core_verified` means the pinned core that represents the client's

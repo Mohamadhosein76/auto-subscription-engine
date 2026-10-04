@@ -1,13 +1,25 @@
-"""Android platform feed contract tests (format level; no device claims)."""
+"""Android platform feed contract tests (format level; no device claims).
+
+Runs the REAL feed stage against a minimal post-compat fixture, then
+asserts the platform gate: fresh qualifying evidence only, no stale
+nodes, honest evidence boundary in the manifest.
+"""
 
 from __future__ import annotations
 
 import json
+from pathlib import Path
 
-import pytest
+from feed_fixture import VLESS_A, STALE_VLESS, build_feed_output
 
 from auto_subscription_engine.core.clients.registry import CLIENTS, PLATFORM_FAMILIES
-from auto_subscription_engine.core.feeds.engine import _write_platform_feeds
+from auto_subscription_engine.core.feeds import FeedOptions, run_feed_stage
+
+
+def _run(tmp_path: Path) -> Path:
+    out = build_feed_output(tmp_path)
+    run_feed_stage(FeedOptions(output_dir=out, config_path=Path("config/feeds.yaml")))
+    return out
 
 
 def test_android_clients_are_registered():
@@ -27,46 +39,33 @@ def test_platform_families_do_not_mix_device_claims():
 
 
 def test_android_feed_tree_is_written(tmp_path):
-    clients = tmp_path / "clients"
-    clients.mkdir()
-    (clients / "v2rayng.txt").write_text("vless://a@b:1#x\n", encoding="utf-8", newline="\n")
-    import base64
-
-    (clients / "v2rayng_base64.txt").write_text(
-        base64.b64encode(b"vless://a@b:1#x\n").decode(), encoding="ascii", newline="\n"
-    )
-    (clients / "mihomo.yaml").write_text("proxies: []\n", encoding="utf-8", newline="\n")
-
-    counts: dict = {}
-    _write_platform_feeds(tmp_path, counts)
-
-    android = tmp_path / "platforms" / "android"
-    assert (android / "v2rayng.txt").read_bytes() == (clients / "v2rayng.txt").read_bytes()
-    assert (android / "v2rayng_base64.txt").is_file()
-    assert (android / "mihomo.yaml").is_file()
+    out = _run(tmp_path)
+    android = out / "platforms" / "android"
+    assert (android / "v2rayng.txt").is_file()
+    assert (android / "hiddify.txt").is_file()
     manifest = json.loads((android / "manifest.json").read_text(encoding="utf-8"))
     assert manifest["platform"] == "android"
-    assert manifest["clients"]["v2rayng"]["device_evidence"] == "device_validation_unknown"
-    assert "device" not in manifest["evidence_boundary"].lower() or "unknown" in manifest["evidence_boundary"]
+    assert manifest["device_validation"] == "manual_observation_only"
+    assert manifest["operator_validation"] == "unknown"
+    hiddify = manifest["clients"]["hiddify"]
+    assert hiddify["runtime_core"] == "hiddify"
+    assert hiddify["device_evidence"] == "device_validation_unknown"
+    assert "fresh" in hiddify["selection_policy"]
 
 
-def test_windows_tree_carries_v2rayn_alias(tmp_path):
-    clients = tmp_path / "clients"
-    clients.mkdir()
-    body = "vless://a@b:1#x\n"
-    (clients / "v2rayng.txt").write_text(body, encoding="utf-8", newline="\n")
-    import base64
+def test_stale_evidence_never_enters_platform_feed(tmp_path):
+    out = _run(tmp_path)
+    android = out / "platforms" / "android"
+    for artifact in ("v2rayng.txt", "hiddify.txt", "nekobox.txt"):
+        body = (android / artifact).read_text(encoding="utf-8")
+        assert STALE_VLESS not in body, f"stale node leaked into {artifact}"
+        assert VLESS_A in body, f"fresh node missing from {artifact}"
 
-    (clients / "v2rayng_base64.txt").write_text(
-        base64.b64encode(body.encode()).decode(), encoding="ascii", newline="\n"
-    )
-    counts: dict = {}
-    _write_platform_feeds(tmp_path, counts)
 
-    windows = tmp_path / "platforms" / "windows"
-    assert (windows / "v2rayn.txt").read_bytes() == (clients / "v2rayng.txt").read_bytes()
-    manifest = json.loads((windows / "manifest.json").read_text(encoding="utf-8"))
-    v2rayn = manifest["clients"]["v2rayn"]
-    assert v2rayn["mirrors"] == "clients/v2rayng.txt"
-    assert v2rayn["runtime_core"] == "xray"
-    assert v2rayn["device_evidence"] == "device_validation_unknown"
+def test_platform_feed_is_not_larger_than_client_feed(tmp_path):
+    out = _run(tmp_path)
+    client_body = (out / "clients" / "hiddify.txt").read_text(encoding="utf-8")
+    platform_body = (out / "platforms" / "android" / "hiddify.txt").read_text(encoding="utf-8")
+    client_lines = {x for x in client_body.splitlines() if x}
+    platform_lines = {x for x in platform_body.splitlines() if x}
+    assert platform_lines <= client_lines, "platform feed must be a qualified subset"

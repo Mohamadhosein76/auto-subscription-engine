@@ -78,7 +78,7 @@ def run_feed_stage(options: FeedOptions) -> dict[str, Any]:
             write_singbox_configs(clients_dir / spec.artifact, [c.config for c in selected])
         feed_counts[f"clients/{client}"] = len(selected)
 
-    _write_platform_feeds(output_dir, feed_counts)
+    _write_platform_feeds(output_dir, feed_counts, client_sets, candidates, policy)
 
     recommended_pool = [c for c in universal if _score(c, "global") >= policy.recommended_min_global]
     recommended = _with_fallback(recommended_pool, universal, policy, score_kind="global")
@@ -309,21 +309,72 @@ def _write_uri_feed(path: Path, candidates: list[FeedCandidate]) -> None:
     path.with_name(path.stem + "_base64.txt").write_text(encoded + "\n", encoding="ascii", newline="\n")
 
 
-def _write_platform_feeds(output_dir: Path, feed_counts: dict[str, int]) -> None:
-    """Mirror client feeds into ``platforms/<family>/`` trees.
+def _write_platform_feeds(
+    output_dir: Path,
+    feed_counts: dict[str, int],
+    client_sets: dict[str, list],
+    candidates: list,
+    policy,
+) -> None:
+    """Write client-aware, stricter platform feeds under ``platforms/<family>/``.
 
-    The mirrored bytes are exactly the published client artifacts (same
-    serializer, same runtime-core evidence — no new compatibility claims).
-    Windows-only client aliases (e.g. v2rayN importing the v2rayNG-family
-    URI feed) are served through ``WINDOWS_CLIENT_ALIASES``. Each platform
-    directory carries a manifest stating the evidence boundary honestly:
-    format/runtime support is real, device validation is unknown.
+    Gate (per client, per platform family — never a generic alias):
+
+    - the node passed the client's runtime-core compatibility test
+      (hiddify_compatible == "pass" for Hiddify, etc.) — already enforced
+      by the client selection in ``run_feed_stage``;
+    - the client score meets ``platform_min_client_score`` (stricter than
+      the client feeds and applied WITHOUT the fallback path);
+    - the compatibility evidence is FRESH: measured in the current run
+      (``compat_verified_at`` within
+      ``platform_runtime_evidence_max_age_hours``). Carried-over metadata
+      from earlier runs never qualifies;
+    - no fallback exists at platform level: if only a few nodes qualify,
+      the feed is small (quality over quantity — feed size is not a KPI).
+
+    Device validation and operator compatibility are NEVER claimed here.
+    Each platform directory carries a manifest stating the selection
+    policy and evidence boundary honestly.
     """
     import shutil
+    from datetime import datetime, timezone
 
     platforms_dir = output_dir / "platforms"
     _reset_dir(platforms_dir)
     clients_dir = output_dir / "clients"
+    max_age = policy.platform_runtime_evidence_max_age_hours
+    now = datetime.now(timezone.utc)
+
+    def _fresh(metadata: dict) -> bool:
+        stamp = metadata.get("compat_verified_at")
+        if not isinstance(stamp, str):
+            return False
+        try:
+            verified_at = datetime.fromisoformat(stamp)
+        except ValueError:
+            return False
+        if verified_at.tzinfo is None:
+            verified_at = verified_at.replace(tzinfo=timezone.utc)
+        age_hours = (now - verified_at).total_seconds() / 3600.0
+        return 0 <= age_hours <= max_age
+
+    def _platform_qualified(client: str, pool: list) -> list:
+        threshold = policy.platform_min_client_score
+        return [
+            c for c in pool
+            if _client_score(c, client) is not None
+            and int(_client_score(c, client) or 0) >= threshold
+            and _fresh(c.metadata)
+        ]
+
+    def _serialize(fmt: str, path: Path, rows: list) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if fmt == "uri":
+            _write_uri_feed(path, rows)
+        elif fmt == "mihomo-yaml":
+            write_mihomo_configs(path, [c.config for c in rows])
+        elif fmt == "singbox-json":
+            write_singbox_configs(path, [c.config for c in rows])
 
     for family in PLATFORM_FAMILIES:
         family_dir = platforms_dir / family
@@ -332,47 +383,78 @@ def _write_platform_feeds(output_dir: Path, feed_counts: dict[str, int]) -> None
         for client, spec in CLIENTS.items():
             if family not in spec.platforms:
                 continue
-            src = clients_dir / spec.artifact
-            if not src.is_file():
-                continue
-            dst = family_dir / spec.artifact
-            shutil.copyfile(src, dst)
-            _copy_feed_b64(src, dst)
-            feed_counts[f"platforms/{family}/{client}"] = _feed_entry_count(dst, spec.format)
+            qualified = _platform_qualified(client, client_sets.get(client, []))
+            artifact = family_dir / spec.artifact
+            if qualified:
+                _serialize(spec.format, artifact, qualified)
+                if spec.format == "uri":
+                    # regenerate the b64 pair from the FINAL bytes
+                    body = artifact.read_text(encoding="utf-8")
+                    import base64 as _b64
+                    artifact.with_name(artifact.stem + "_base64.txt").write_text(
+                        _b64.b64encode(body.encode("utf-8")).decode("ascii") + "\n",
+                        encoding="ascii", newline="\n",
+                    )
+            count = len(qualified)
+            feed_counts[f"platforms/{family}/{client}"] = count
             entries[client] = {
                 "artifact": spec.artifact,
                 "format": spec.format,
                 "runtime_core": spec.core,
                 "runtime_core_verified": spec.runtime_verified,
                 "device_evidence": spec.device_evidence,
-                "nodes": feed_counts[f"platforms/{family}/{client}"],
+                "nodes": count,
+                "selection_policy": (
+                    f"client_status=pass AND client_score>={policy.platform_min_client_score} "
+                    f"AND runtime evidence fresh (<={max_age:g}h); no fallback"
+                ),
             }
         if family == "windows":
-            for artifact, (source_artifact, status) in WINDOWS_CLIENT_ALIASES.items():
-                src = clients_dir / source_artifact
-                if not src.is_file():
-                    continue
-                dst = family_dir / artifact
-                shutil.copyfile(src, dst)
-                _copy_feed_b64(src, dst)
-                count = _feed_entry_count(dst, "uri")
-                feed_counts[f"platforms/windows/{artifact[:-4]}"] = count
-                entries[artifact[:-4]] = {
-                    "artifact": artifact,
+            for artifact_name, (source_client, status) in WINDOWS_CLIENT_ALIASES.items():
+                qualified = _platform_qualified(
+                    source_client, client_sets.get(source_client, [])
+                )
+                artifact = family_dir / artifact_name
+                if qualified:
+                    _serialize("uri", artifact, qualified)
+                    if artifact.exists():
+                        body = artifact.read_text(encoding="utf-8")
+                        import base64 as _b64
+                        artifact.with_name(artifact.stem + "_base64.txt").write_text(
+                            _b64.b64encode(body.encode("utf-8")).decode("ascii") + "\n",
+                            encoding="ascii", newline="\n",
+                        )
+                count = len(qualified)
+                feed_counts[f"platforms/windows/{artifact_name[:-4]}"] = count
+                entries[artifact_name[:-4]] = {
+                    "artifact": artifact_name,
                     "format": "uri",
-                    "runtime_core": "xray",
+                    "runtime_core": CLIENTS[source_client].core,
                     "runtime_core_verified": True,
-                    "device_evidence": "device_validation_unknown",
+                    "device_evidence": CLIENTS[source_client].device_evidence,
                     "evidence_status": status,
-                    "mirrors": f"clients/{source_artifact}",
+                    "mirrors_client": source_client,
                     "nodes": count,
+                    "selection_policy": (
+                        f"same gate as {source_client}: platform score and freshness"
+                    ),
                 }
         manifest = {
-            "schema_version": 1,
+            "schema_version": 2,
             "platform": family,
+            "generated_at": now.isoformat(timespec="seconds"),
+            "runtime_evidence_max_age_hours": max_age,
+            "selection_policy": (
+                "client serializer supported AND client runtime core compatible "
+                "AND real tunneled HTTPS probe passed AND client score >= "
+                "platform threshold AND evidence fresh; no fallback"
+            ),
+            "device_validation": "manual_observation_only",
+            "operator_validation": "unknown",
             "evidence_boundary": (
-                "format_supported + runtime_core_verified; "
-                "device_validation_unknown — no device is tested here"
+                "CI runtime verification is NOT Android/Windows GUI device "
+                "validation; a node can pass server-side runtime verification "
+                "and still fail on a specific ISP/device/client combination"
             ),
             "clients": dict(sorted(entries.items())),
         }

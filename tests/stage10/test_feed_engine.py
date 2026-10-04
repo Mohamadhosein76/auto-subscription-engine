@@ -26,6 +26,11 @@ def _build_output(tmp_path: Path) -> Path:
     rows = []
     scores = [92, 75, 58, 45]
     security = [95, 85, 82, 55]
+    from datetime import datetime, timedelta, timezone
+
+    verified_at = (datetime.now(timezone.utc) - timedelta(minutes=5)).isoformat(
+        timespec="seconds"
+    )
     for i, (uri, global_score, sec) in enumerate(zip(URIS, scores, security)):
         cfg = normalize_config(parse_uri(uri))
         sid = config_safe_id(cfg)
@@ -46,6 +51,7 @@ def _build_output(tmp_path: Path) -> Path:
             "hiddify_compatible": "pass",
             "singbox_compatible": "pass",
             "mihomo_compatible": "pass",
+            "compat_verified_at": verified_at,
             "network_profile": {
                 "direct_ip": i != 1,
                 "ipv4": True,
