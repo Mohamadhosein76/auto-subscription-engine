@@ -434,6 +434,13 @@
       "prefix": "13.212.0.0/15",
       "source": "cymru_whois"
     },
+    "13.212.91.154": {
+      "as_name": "AMAZON-02 - Amazon.com, Inc., US",
+      "asn": 16509,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "13.212.0.0/15",
+      "source": "cymru_whois"
+    },
     "13.230.139.12": {
       "as_name": "AMAZON-02 - Amazon.com, Inc., US",
       "asn": 16509,
@@ -798,10 +805,24 @@
       "prefix": "15.204.128.0/17",
       "source": "cymru_whois"
     },
+    "15.204.97.195": {
+      "as_name": "OVH - OVH SAS, FR",
+      "asn": 16276,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "15.204.0.0/17",
+      "source": "cymru_whois"
+    },
     "15.204.97.214": {
       "as_name": "OVH - OVH SAS, FR",
       "asn": 16276,
       "looked_up_at": "2026-09-29T18:07:15+00:00",
+      "prefix": "15.204.0.0/17",
+      "source": "cymru_whois"
+    },
+    "15.204.97.219": {
+      "as_name": "OVH - OVH SAS, FR",
+      "asn": 16276,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
       "prefix": "15.204.0.0/17",
       "source": "cymru_whois"
     },
@@ -1106,6 +1127,20 @@
       "prefix": "169.197.143.0/24",
       "source": "cymru_whois"
     },
+    "169.40.42.104": {
+      "as_name": "Inception - Inception Hosting Limited, GB",
+      "asn": 205502,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "169.40.42.0/24",
+      "source": "cymru_whois"
+    },
+    "169.40.42.15": {
+      "as_name": "Inception - Inception Hosting Limited, GB",
+      "asn": 205502,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "169.40.42.0/24",
+      "source": "cymru_whois"
+    },
     "169.40.42.168": {
       "as_name": "Inception - Inception Hosting Limited, GB",
       "asn": 205502,
@@ -1117,6 +1152,27 @@
       "as_name": "Inception - Inception Hosting Limited, GB",
       "asn": 205502,
       "looked_up_at": "2026-10-04T07:48:53+00:00",
+      "prefix": "169.40.42.0/24",
+      "source": "cymru_whois"
+    },
+    "169.40.42.182": {
+      "as_name": "Inception - Inception Hosting Limited, GB",
+      "asn": 205502,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "169.40.42.0/24",
+      "source": "cymru_whois"
+    },
+    "169.40.42.184": {
+      "as_name": "Inception - Inception Hosting Limited, GB",
+      "asn": 205502,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "169.40.42.0/24",
+      "source": "cymru_whois"
+    },
+    "169.40.42.223": {
+      "as_name": "Inception - Inception Hosting Limited, GB",
+      "asn": 205502,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
       "prefix": "169.40.42.0/24",
       "source": "cymru_whois"
     },
@@ -1174,6 +1230,13 @@
       "asn": 63023,
       "looked_up_at": "2026-10-03T22:26:34+00:00",
       "prefix": "172.111.38.0/24",
+      "source": "cymru_whois"
+    },
+    "172.235.38.85": {
+      "as_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud, SG",
+      "asn": 63949,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "172.235.32.0/19",
       "source": "cymru_whois"
     },
     "172.236.139.236": {
@@ -1342,6 +1405,13 @@
       "asn": 16509,
       "looked_up_at": "2026-10-03T21:48:43+00:00",
       "prefix": "18.176.0.0/15",
+      "source": "cymru_whois"
+    },
+    "185.103.110.68": {
+      "as_name": "CREANOVA-AS - Oy Crea Nova Hosting Solution Ltd, FI",
+      "asn": 51765,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "185.103.110.0/24",
       "source": "cymru_whois"
     },
     "185.114.72.31": {
@@ -1589,6 +1659,13 @@
       "prefix": "195.58.144.0/24",
       "source": "cymru_whois"
     },
+    "198.55.102.59": {
+      "as_name": "AS-COLOCROSSING - HostPapa, US",
+      "asn": 36352,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "198.55.102.0/24",
+      "source": "cymru_whois"
+    },
     "198.57.27.190": {
       "as_name": "AS-GLOBALTELEHOST - GLOBALTELEHOST Corp., CA",
       "asn": 62563,
@@ -1771,6 +1848,13 @@
       "prefix": "216.105.168.0/24",
       "source": "cymru_whois"
     },
+    "216.106.183.35": {
+      "as_name": "AS-GLOBALTELEHOST - GTHost, US",
+      "asn": 63023,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "216.106.183.0/24",
+      "source": "cymru_whois"
+    },
     "216.106.185.141": {
       "as_name": "AS-GLOBALTELEHOST - GTHost, US",
       "asn": 63023,
@@ -1797,6 +1881,13 @@
       "asn": 63023,
       "looked_up_at": "2026-10-04T00:55:49+00:00",
       "prefix": "216.152.152.0/24",
+      "source": "cymru_whois"
+    },
+    "217.217.225.33": {
+      "as_name": "LumaDock-AS - LUMADOCK LTD, GB",
+      "asn": 203919,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "217.217.225.0/24",
       "source": "cymru_whois"
     },
     "219.77.98.79": {
@@ -1937,6 +2028,13 @@
       "asn": 16509,
       "looked_up_at": "2026-10-04T02:54:42+00:00",
       "prefix": "34.208.0.0/12",
+      "source": "cymru_whois"
+    },
+    "34.242.77.118": {
+      "as_name": "AMAZON-02 - Amazon.com, Inc., US",
+      "asn": 16509,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "34.240.0.0/13",
       "source": "cymru_whois"
     },
     "34.29.203.135": {
@@ -2478,6 +2576,13 @@
       "prefix": "66.163.117.0/24",
       "source": "cymru_whois"
     },
+    "66.23.204.210": {
+      "as_name": "DEDICATED - Dedicated.com, US",
+      "asn": 63018,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
+      "prefix": "66.23.204.0/24",
+      "source": "cymru_whois"
+    },
     "66.90.104.42": {
       "as_name": "FDCSERVERS - FDCservers.net, US",
       "asn": 30058,
@@ -2664,6 +2769,13 @@
       "as_name": "Greenhost - Greenhost BV, NL",
       "asn": 47172,
       "looked_up_at": "2026-10-04T00:55:49+00:00",
+      "prefix": "82.38.31.0/24",
+      "source": "cymru_whois"
+    },
+    "82.38.31.18": {
+      "as_name": "Greenhost - Greenhost BV, NL",
+      "asn": 47172,
+      "looked_up_at": "2026-10-04T13:30:36+00:00",
       "prefix": "82.38.31.0/24",
       "source": "cymru_whois"
     },
