@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import json
-import os
 from pathlib import Path
 
 import yaml
 
+from ...platform.paths import set_owner_only_permissions
 from .singbox import UnsupportedNodeError, build_node_config
 from ..compatibility.classify import classify_network
 from ..compatibility.matrix import NodeFeatures, capabilities_for, universal_eligible
@@ -16,13 +16,13 @@ from .xray import build_xray_config
 from .hiddify import build_hiddify_config
 from .mihomo import build_mihomo_config
 
-# -- writers (0600 config files, credentials never in argv) -----------------
+# -- writers (owner-only config files, credentials never in argv) ------------
 
 
 def write_json_config(config: dict, workdir: Path) -> Path:
     path = Path(workdir) / "config.json"
-    path.write_text(json.dumps(config, indent=2, ensure_ascii=False), encoding="utf-8")
-    os.chmod(path, 0o600)
+    path.write_text(json.dumps(config, indent=2, ensure_ascii=False), encoding="utf-8", newline="\n")
+    set_owner_only_permissions(path)
     return path
 
 
@@ -30,9 +30,9 @@ def write_yaml_config(config: dict, workdir: Path) -> Path:
     path = Path(workdir) / "config.yaml"
     path.write_text(
         yaml.safe_dump(config, sort_keys=False, allow_unicode=True),
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
-    os.chmod(path, 0o600)
+    set_owner_only_permissions(path)
     return path
 
 

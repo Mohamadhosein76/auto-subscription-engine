@@ -18,6 +18,7 @@ from auto_subscription_engine.core.clients.install import (
     specs_from_config,
     verify_installed,
 )
+from auto_subscription_engine.core.platform.executable import binary_file_name
 
 
 def make_tar_gz(path: Path, member: str, payload: bytes) -> None:
@@ -84,10 +85,11 @@ def test_tar_gz_install_extracts_single_binary(tmp_path):
     spec = make_spec(tmp_path, "tar.gz", archive, "pkg-9.9.9/binary")
     dest = tmp_path / "core-bin"
     binary = install_core_binary(dest, spec, session=fake_session(archive))
+    installed_name = binary_file_name(spec.key, spec.platform)
     assert binary.is_file()
     assert binary.read_bytes() == payload
-    assert binary.name == "hiddify-core"
-    assert (dest / "hiddify-core.ok").is_file()
+    assert binary.name == installed_name
+    assert (dest / f"{installed_name}.ok").is_file()
 
 
 def test_zip_install(tmp_path):
@@ -106,7 +108,7 @@ def test_gz_install(tmp_path):
     spec = make_spec(tmp_path, "gz", archive, "mihomo-linux-amd64")
     binary = install_core_binary(tmp_path / "out", spec, session=fake_session(archive))
     assert binary.read_bytes() == payload
-    assert binary.name == "mihomo"
+    assert binary.name == binary_file_name("mihomo", spec.platform)
 
 
 def test_checksum_mismatch_refuses(tmp_path):
@@ -116,7 +118,7 @@ def test_checksum_mismatch_refuses(tmp_path):
     bad = CoreBinarySpec(**{**spec.__dict__, "archive_sha256": "0" * 64})
     with pytest.raises(ChecksumError):
         install_core_binary(tmp_path / "out", bad, session=fake_session(archive))
-    assert not (tmp_path / "out" / "hiddify-core").exists()
+    assert not (tmp_path / "out" / binary_file_name("hiddify", bad.platform)).exists()
 
 
 def test_max_archive_size_enforced(tmp_path):
@@ -133,8 +135,9 @@ def test_install_is_idempotent(tmp_path):
     make_tar_gz(archive, "x/b", b"payload-1")
     spec = make_spec(tmp_path, "tar.gz", archive, "x/b")
     dest = tmp_path / "out"
+    installed_name = binary_file_name(spec.key, spec.platform)
     first = install_core_binary(dest, spec, session=fake_session(archive))
-    marker = (dest / "hiddify-core.ok").read_text(encoding="utf-8")
+    marker = (dest / f"{installed_name}.ok").read_text(encoding="utf-8")
     # a second call with the SAME marker must skip the download entirely
     class ExplodingSession:
         def get(self, *args, **kwargs):
@@ -142,7 +145,7 @@ def test_install_is_idempotent(tmp_path):
 
     second = install_core_binary(dest, spec, session=ExplodingSession())
     assert first == second
-    assert (dest / "hiddify-core.ok").read_text(encoding="utf-8") == marker
+    assert (dest / f"{installed_name}.ok").read_text(encoding="utf-8") == marker
 
 
 def test_verify_installed(tmp_path):
@@ -150,9 +153,10 @@ def test_verify_installed(tmp_path):
     make_tar_gz(archive, "x/b", b"data")
     spec = make_spec(tmp_path, "tar.gz", archive, "x/b")
     dest = tmp_path / "out"
+    installed_name = binary_file_name(spec.key, spec.platform)
     assert verify_installed(dest, spec) is None
     install_core_binary(dest, spec, session=fake_session(archive))
-    assert verify_installed(dest, spec) == dest / "hiddify-core"
+    assert verify_installed(dest, spec) == dest / installed_name
 
 
 def test_specs_from_config_validates_digest(tmp_path):
@@ -167,4 +171,4 @@ def test_specs_from_config_validates_digest(tmp_path):
             "format": "zip",
         }
     })
-    assert specs["xray"].binary_name == "xray"
+    assert specs["xray"].binary_name == binary_file_name("xray", specs["xray"].platform)

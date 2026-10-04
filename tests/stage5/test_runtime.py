@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import sys
 import subprocess
 from pathlib import Path
 
@@ -36,6 +37,14 @@ def workdir_root(tmp_path):
 
 @pytest.fixture()
 def ok_core(tmp_path):
+    if os.name != "posix":
+        source = FIXTURES / "fake_core_ok.py"
+        target = tmp_path / "ok-core.cmd"
+        target.write_text(
+            f'@"{sys.executable}" "{source}" %*' + chr(13) + chr(10),
+            encoding="utf-8",
+        )
+        return target
     target = tmp_path / "ok-core"
     target.write_bytes((FIXTURES / "fake_core_ok.py").read_bytes())
     target.chmod(0o755)
@@ -44,6 +53,14 @@ def ok_core(tmp_path):
 
 @pytest.fixture()
 def exit_core(tmp_path):
+    if os.name != "posix":
+        source = FIXTURES / "fake_core_exit.py"
+        target = tmp_path / "exit-core.cmd"
+        target.write_text(
+            f'@"{sys.executable}" "{source}" %*' + chr(13) + chr(10),
+            encoding="utf-8",
+        )
+        return target
     target = tmp_path / "exit-core"
     target.write_bytes((FIXTURES / "fake_core_exit.py").read_bytes())
     target.chmod(0o755)
@@ -52,6 +69,14 @@ def exit_core(tmp_path):
 
 @pytest.fixture()
 def hang_core(tmp_path):
+    if os.name != "posix":
+        source = FIXTURES / "fake_core_hang.py"
+        target = tmp_path / "hang-core.cmd"
+        target.write_text(
+            f'@"{sys.executable}" "{source}" %*' + chr(13) + chr(10),
+            encoding="utf-8",
+        )
+        return target
     target = tmp_path / "hang-core"
     target.write_bytes((FIXTURES / "fake_core_hang.py").read_bytes())
     target.chmod(0o755)
@@ -176,7 +201,10 @@ def test_credentials_never_appear_in_process_argv(local_http_server, ok_core, wo
     popen_kwargs = {}
 
     def popen_with_env(argv, **kwargs):
-        popen_kwargs.update(kwargs)
+        # Record only the core launch itself; cleanup helpers spawned
+        # later (e.g. taskkill during teardown) use their own flags.
+        if "ok-core" in str(argv[0]):
+            popen_kwargs.update(kwargs)
         kwargs.setdefault("env", env)
         return original_popen(argv, **kwargs)
 
@@ -187,7 +215,10 @@ def test_credentials_never_appear_in_process_argv(local_http_server, ok_core, wo
     assert SECRET_IDENTITY not in argv_text
     assert "super-secret-password-42" not in argv_text
     assert "-c" in argv_text
-    assert popen_kwargs.get("start_new_session") is (os.name == "posix")
+    assert popen_kwargs.get("start_new_session") is (os.name == "posix") or (
+        os.name != "posix"
+        and popen_kwargs.get("creationflags", 0) & 0x00000200  # CREATE_NEW_PROCESS_GROUP
+    )
 
 
 def test_deadline_excludes_unstarted_candidates(local_http_server, ok_core, workdir_root):

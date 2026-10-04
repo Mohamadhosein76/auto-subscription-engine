@@ -627,13 +627,13 @@ def _rewrite_outputs(
 
     publishable_uris = [bundle.uri for bundle in capped if bundle.uri]
     body = "\n".join(publishable_uris) + ("\n" if publishable_uris else "")
-    (output_dir / "live_subscription.txt").write_text(body, encoding="utf-8")
+    (output_dir / "live_subscription.txt").write_text(body, encoding="utf-8", newline="\n")
     encoded = base64.b64encode(body.encode("utf-8")).decode("ascii")
-    (output_dir / "live_subscription_base64.txt").write_text(encoded + "\n", encoding="ascii")
+    (output_dir / "live_subscription_base64.txt").write_text(encoded + "\n", encoding="ascii", newline="\n")
 
     best_uris = [bundle.uri for bundle in selected if bundle.uri]
     best_body = "\n".join(best_uris) + ("\n" if best_uris else "")
-    (output_dir / "best.txt").write_text(best_body, encoding="utf-8")
+    (output_dir / "best.txt").write_text(best_body, encoding="utf-8", newline="\n")
 
     # countries/: exactly the security-filtered selected set.
     countries_dir = output_dir / "countries"
@@ -648,7 +648,7 @@ def _rewrite_outputs(
         by_country.setdefault(code, []).append(bundle.uri)
     for code, uris in sorted(by_country.items()):
         (countries_dir / f"{code}.txt").write_text(
-            "\n".join(uris) + "\n", encoding="utf-8"
+            "\n".join(uris) + "\n", encoding="utf-8", newline="\n"
         )
 
     # live_nodes.json: every LIVE node stays listed, enriched with
@@ -758,7 +758,7 @@ def _rewrite_outputs(
         enriched.append(entry)
     (output_dir / "live_nodes.json").write_text(
         json.dumps(enriched, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
 
     # stats: publishable counts + full security statistics block. The
@@ -849,7 +849,7 @@ def _rewrite_outputs(
     stats.update(stats_updates)
     (output_dir / "live_stats.json").write_text(
         json.dumps(stats, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
 
     _write_diagnostics(
@@ -951,7 +951,7 @@ def _write_diagnostics(
         })
     (output_dir / "security_diagnostics.json").write_text(
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
 
 
@@ -965,7 +965,7 @@ def _write_unavailable_diagnostics(output_dir: Path, reason: str, now) -> None:
     }
     (Path(output_dir) / "security_diagnostics.json").write_text(
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
 
 

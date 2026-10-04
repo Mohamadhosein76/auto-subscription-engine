@@ -27,10 +27,10 @@ def write_outputs(
     uris = [config.original_uri for config in configs]
     body = "\n".join(uris) + ("\n" if uris else "")
 
-    (output_dir / "subscription.txt").write_text(body, encoding="utf-8")
+    (output_dir / "subscription.txt").write_text(body, encoding="utf-8", newline="\n")
 
     encoded = base64.b64encode(body.encode("utf-8")).decode("ascii")
-    (output_dir / "subscription_base64.txt").write_text(encoded + "\n", encoding="ascii")
+    (output_dir / "subscription_base64.txt").write_text(encoded + "\n", encoding="ascii", newline="\n")
 
     stats_text = json.dumps(stats, indent=2, ensure_ascii=False)
-    (output_dir / "stats.json").write_text(stats_text + "\n", encoding="utf-8")
+    (output_dir / "stats.json").write_text(stats_text + "\n", encoding="utf-8", newline="\n")

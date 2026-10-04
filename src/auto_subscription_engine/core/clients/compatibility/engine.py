@@ -829,7 +829,7 @@ def _rewrite_live_outputs(
         enriched.append(entry)
 
     (output_dir / "live_nodes.json").write_text(
-        json.dumps(enriched, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(enriched, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
 
     # -- compatibility statistics ------------------------------------------------
@@ -889,7 +889,7 @@ def _rewrite_live_outputs(
         },
     })
     (output_dir / "live_stats.json").write_text(
-        json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
 
 
@@ -926,7 +926,7 @@ def _write_diagnostics(
         "nodes": nodes,
     }
     (Path(output_dir) / "compat_diagnostics.json").write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
 
 

@@ -209,11 +209,21 @@ def test_probe_endpoint_inconclusive_on_dead_local_port():
     port = sock.getsockname()[1]
     sock.close()
     probe = probe_endpoint(
-        "127.0.0.1", port, url="https://example.com/", timeout=0.5, max_body_bytes=1024
+        # 2s: Windows loopback can deliver the RST slower than 0.5s,
+        # which would misclassify the refused connect as a probe timeout.
+        "127.0.0.1", port, url="https://example.com/", timeout=2.0, max_body_bytes=1024
     )
     assert not probe.tls_ok
     assert probe.inconclusive
-    assert probe.tls_error in ("transport_error", "proxy_connect_failed")
+    assert probe.tls_error in (
+        "transport_error",
+        "proxy_connect_failed",
+        # Some Windows stacks silently drop connects to a released
+        # loopback port (firewall/AV), surfacing as a timeout instead of
+        # a refused connect. Both are dead-port outcomes and must stay
+        # inconclusive — the invariant this test guards.
+        "probe_timeout",
+    )
 
 
 # ---------------------------------------------------------------------------

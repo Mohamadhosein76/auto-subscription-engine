@@ -71,6 +71,15 @@ def _fake_port(config):
 
 
 def install_fake_core(tmp_path: Path, name: str) -> Path:
+    if os.name != "posix":
+        # Windows cannot execute shebang scripts directly; install a
+        # cmd shim that runs the script under the current interpreter.
+        source = FIXTURES / name
+        target = tmp_path / (Path(name).stem + ".cmd")
+        target.write_text(
+            f'@"{sys.executable}" "{source}" %*' + "\r\n", encoding="utf-8"
+        )
+        return target
     target = tmp_path / name
     target.write_bytes((FIXTURES / name).read_bytes())
     target.chmod(0o755)
@@ -190,7 +199,12 @@ def test_config_file_permissions(tmp_path, fake_ok_core):
     tester = make_tester(fake_ok_core, tmp_path)
     tester.config_writer = writer
     tester.test_node(make_config())
-    assert seen_modes == [0o600]
+    if os.name == "posix":
+        assert seen_modes == [0o600]
+    else:
+        # Windows has no POSIX permission bits; the write must still
+        # succeed and the file must stay readable.
+        assert seen_modes and all(mode & 0o400 for mode in seen_modes)
 
 
 def test_process_killed_after_timeout(tmp_path, fake_hang_core):

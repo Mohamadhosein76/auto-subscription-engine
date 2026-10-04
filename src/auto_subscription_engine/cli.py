@@ -904,7 +904,7 @@ def _cmd_cores_install(args: argparse.Namespace) -> int:
     if args.summary_json is not None:
         args.summary_json.parent.mkdir(parents=True, exist_ok=True)
         args.summary_json.write_text(
-            json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+            json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
         )
     missing = [key for key, item in summary["cores"].items() if not item.get("ok")]
     available = [key for key, item in summary["cores"].items() if item.get("ok")]

@@ -305,10 +305,12 @@ def build_node_config(
 
 
 def write_node_config(config: dict, workdir: Path) -> Path:
-    """Write the node config into ``workdir`` with 0600 permissions."""
+    """Write the node config into ``workdir`` with owner-only permissions."""
     workdir = Path(workdir)
     path = workdir / "config.json"
     text = json.dumps(config, indent=2, ensure_ascii=False)
-    path.write_text(text, encoding="utf-8")
-    os.chmod(path, 0o600)
+    path.write_text(text, encoding="utf-8", newline="\n")
+    from ...platform.paths import set_owner_only_permissions
+
+    set_owner_only_permissions(path)
     return path

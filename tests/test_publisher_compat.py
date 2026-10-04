@@ -41,7 +41,7 @@ FAKE_URIS = [
 
 def _write_uri_feed(path: Path, uris: list[str]) -> None:
     body = "\n".join(uris) + ("\n" if uris else "")
-    path.write_text(body, encoding="utf-8")
+    path.write_text(body, encoding="utf-8", newline="\n")
     encoded = base64.b64encode(body.encode("utf-8")).decode("ascii")
     path.with_name(path.stem + "_base64.txt").write_text(
         encoded + "\n", encoding="ascii"
@@ -88,12 +88,12 @@ def build_output(
     universal = FAKE_URIS[:4] if universal is None else universal
 
     body = "\n".join(universal) + ("\n" if universal else "")
-    (out / "live_subscription.txt").write_text(body, encoding="utf-8")
+    (out / "live_subscription.txt").write_text(body, encoding="utf-8", newline="\n")
     (out / "live_subscription_base64.txt").write_text(
         base64.b64encode(body.encode("utf-8")).decode("ascii") + "\n",
         encoding="ascii",
     )
-    (out / "best.txt").write_text("\n".join(FAKE_URIS) + "\n", encoding="utf-8")
+    (out / "best.txt").write_text("\n".join(FAKE_URIS) + "\n", encoding="utf-8", newline="\n")
 
     nodes = [
         {

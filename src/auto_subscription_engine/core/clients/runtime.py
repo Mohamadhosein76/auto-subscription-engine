@@ -6,9 +6,7 @@ client-compatibility stage now use this one lifecycle primitive.
 """
 from __future__ import annotations
 
-import os
 import shutil
-import signal
 import socket
 import subprocess
 import tempfile
@@ -18,6 +16,7 @@ from pathlib import Path
 
 from ..utils.redaction import redact_stderr
 from ..models import ParsedConfig
+from ..platform import core_process_kwargs, is_posix, terminate_process_tree
 from .builders.adapters import BUILDERS
 from .builders.singbox import UnsupportedNodeError, allocate_port
 from .compatibility.audit import node_features
@@ -136,7 +135,8 @@ class CoreRuntimeManager:
         root = self.workdir_root or Path(tempfile.gettempdir())
         root.mkdir(parents=True, exist_ok=True)
         workdir = Path(tempfile.mkdtemp(prefix=f"ase-core-{core}-", dir=root))
-        workdir.chmod(0o700)
+        if is_posix():
+            workdir.chmod(0o700)
         process: subprocess.Popen | None = None
         try:
             config_path = writer(node_config, workdir)
@@ -145,9 +145,9 @@ class CoreRuntimeManager:
                 argv,
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.PIPE,
-                # Put each core in its own process group so cleanup also
+                # Each core runs detached in its own group/tree so cleanup
                 # terminates helper/child processes spawned by that core.
-                start_new_session=(os.name == "posix"),
+                **core_process_kwargs(),
             )
             port = int(port_getter(node_config))
             if not self._wait_ready(port, process):
@@ -201,34 +201,5 @@ class CoreRuntimeManager:
 
     @staticmethod
     def _terminate_process(process: subprocess.Popen) -> None:
-        """Terminate the complete core process group, never leaving helpers behind."""
-        if process.poll() is not None:
-            return
-        try:
-            if os.name == "posix":
-                try:
-                    os.killpg(process.pid, signal.SIGTERM)
-                except ProcessLookupError:
-                    return
-            else:
-                process.terminate()
-            try:
-                process.wait(timeout=2)
-                return
-            except subprocess.TimeoutExpired:
-                pass
-            if os.name == "posix":
-                try:
-                    os.killpg(process.pid, signal.SIGKILL)
-                except ProcessLookupError:
-                    pass
-            else:
-                process.kill()
-            process.wait(timeout=5)
-        except Exception:  # noqa: BLE001 - cleanup is best-effort and idempotent
-            try:
-                if process.poll() is None:
-                    process.kill()
-                    process.wait(timeout=2)
-            except Exception:  # noqa: BLE001
-                pass
+        """Terminate the complete core process tree, never leaving helpers behind."""
+        terminate_process_tree(process)

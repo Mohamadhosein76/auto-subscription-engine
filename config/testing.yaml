@@ -3,47 +3,80 @@
 # All values are conservative defaults for a GitHub-hosted runner.
 # Everything here is non-sensitive and safe to publish.
 #
-# Pinned sing-box core. It is one member of the central
-# multi-core registry (not a privileged base core). Version AND archive
-# SHA-256 are fixed; binaries are downloaded at runtime and never committed.
-# Checksum verified against:
-#   https://github.com/SagerNet/sing-box/releases/download/v1.14.2/
-#     sing-box-1.14.2-linux-amd64.tar.gz
+# Central multi-core runtime registry. Every core is pinned per platform
+# (canonical ids from core.platform.detection) to an exact official
+# release with an exact archive SHA-256, verified from the official
+# release before pinning (Xray additionally cross-checked against its
+# official .dgst file). Windows artifacts were downloaded from the same
+# official releases and checksum-pinned; each binary was executed
+# (--version / version) on Windows before pinning. Binaries are downloaded
+# at runtime and never committed. No floating "latest" anywhere.
 singbox:
   version: "1.14.2"
-  archive_sha256: "a684484d7477d1437282ee411f4d131d0340aaad60a7868841ebd5d87dd8a0c6"
-  url_template: "https://github.com/SagerNet/sing-box/releases/download/v{version}/sing-box-{version}-linux-amd64.tar.gz"
-  archive_binary_path: "sing-box-{version}-linux-amd64/sing-box"
+  platforms:
+    linux-amd64:
+      archive_sha256: "a684484d7477d1437282ee411f4d131d0340aaad60a7868841ebd5d87dd8a0c6"
+      url_template: "https://github.com/SagerNet/sing-box/releases/download/v{version}/sing-box-{version}-linux-amd64.tar.gz"
+      binary_path_in_archive: "sing-box-{version}-linux-amd64/sing-box"
+      format: "tar.gz"
+    windows-amd64:
+      archive_sha256: "c2d8bfff918755808781dfdeeb8581b6c91eb3a243d9a7b55483cfc0c0684d32"
+      url_template: "https://github.com/SagerNet/sing-box/releases/download/v{version}/sing-box-{version}-windows-amd64.zip"
+      binary_path_in_archive: "sing-box-{version}-windows-amd64/sing-box.exe"
+      format: "zip"
 
-# Other pinned cores in the same central runtime registry. Every core is
-# pinned to an exact official release with an exact
-# archive SHA-256 (verified from the official release before pinning;
-# Xray additionally cross-checked against its official .dgst file):
+# Other pinned cores in the same central runtime registry:
 #
 # - xray v26.6.27 represents the Xray/v2rayNG runtime family.
-# - hiddify v4.1.0 represents the Hiddify-Core runtime family.
+# - hiddify v4.1.0 represents the Hiddify-Core runtime family. The
+#   Windows artifact is hiddify-lib-windows-amd64.tar.gz which ships the
+#   runtime as HiddifyCli.exe plus hiddify-core.dll/libcronet.dll (there
+#   is no hiddify-core.exe at this version); all three members are pinned
+#   and extracted together.
 # - mihomo v1.19.31 represents the Mihomo/Clash.Meta runtime family.
-#
-# No floating "latest" anywhere; binaries are never committed.
 cores:
   xray:
     version: "26.6.27"
-    archive_sha256: "b3e5902d06d6282fe53cfa2fc426058b9aeaa429b2c812e20887cd47f26d08bf"
-    url_template: "https://github.com/XTLS/Xray-core/releases/download/v{version}/Xray-linux-64.zip"
-    binary_path_in_archive: "xray"
-    format: "zip"
+    platforms:
+      linux-amd64:
+        archive_sha256: "b3e5902d06d6282fe53cfa2fc426058b9aeaa429b2c812e20887cd47f26d08bf"
+        url_template: "https://github.com/XTLS/Xray-core/releases/download/v{version}/Xray-linux-64.zip"
+        binary_path_in_archive: "xray"
+        format: "zip"
+      windows-amd64:
+        archive_sha256: "97f16a0701dbf931c9c4375399f8188e31615fdd5c863be5c612f946acd4dd01"
+        url_template: "https://github.com/XTLS/Xray-core/releases/download/v{version}/Xray-windows-64.zip"
+        binary_path_in_archive: "xray.exe"
+        format: "zip"
   hiddify:
     version: "4.1.0"
-    archive_sha256: "79f55725b9c1c0b3cad46a45ededb3c5be83d7a6236cc1dfa9bd78fb3c687e6f"
-    url_template: "https://github.com/hiddify/hiddify-core/releases/download/v{version}/hiddify-core-linux-amd64.tar.gz"
-    binary_path_in_archive: "hiddify-core-linux-amd64/hiddify-core"
-    format: "tar.gz"
+    platforms:
+      linux-amd64:
+        archive_sha256: "79f55725b9c1c0b3cad46a45ededb3c5be83d7a6236cc1dfa9bd78fb3c687e6f"
+        url_template: "https://github.com/hiddify/hiddify-core/releases/download/v{version}/hiddify-core-linux-amd64.tar.gz"
+        binary_path_in_archive: "hiddify-core-linux-amd64/hiddify-core"
+        format: "tar.gz"
+      windows-amd64:
+        archive_sha256: "fc610e67d9fdf23da7cc10633f38806d7081a1c120157d1fbe5ac8cc41b315b4"
+        url_template: "https://github.com/hiddify/hiddify-core/releases/download/v{version}/hiddify-lib-windows-amd64.tar.gz"
+        binary_path_in_archive: "HiddifyCli.exe"
+        extra_members:
+          - "hiddify-core.dll"
+          - "libcronet.dll"
+        format: "tar.gz"
   mihomo:
     version: "1.19.31"
-    archive_sha256: "d5e74bbddbdfff49a1aef7775bf5911da59f0d7196ed509a0ac914b3653dd5f1"
-    url_template: "https://github.com/MetaCubeX/mihomo/releases/download/v{version}/mihomo-linux-amd64-v{version}.gz"
-    binary_path_in_archive: "mihomo-linux-amd64"
-    format: "gz"
+    platforms:
+      linux-amd64:
+        archive_sha256: "d5e74bbddbdfff49a1aef7775bf5911da59f0d7196ed509a0ac914b3653dd5f1"
+        url_template: "https://github.com/MetaCubeX/mihomo/releases/download/v{version}/mihomo-linux-amd64-v{version}.gz"
+        binary_path_in_archive: "mihomo-linux-amd64"
+        format: "gz"
+      windows-amd64:
+        archive_sha256: "38b2420799d9e7cde77ec1a19c7150dd17ca77f7fb82d9f62cb8763a307eee67"
+        url_template: "https://github.com/MetaCubeX/mihomo/releases/download/v{version}/mihomo-windows-amd64-v{version}.zip"
+        binary_path_in_archive: "mihomo-windows-amd64.exe"
+        format: "zip"
 
 # Layered verification engine. Endpoint preflight is
 # diagnostic; a node is LIVE only after at least one compatible pinned core

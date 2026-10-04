@@ -82,5 +82,5 @@ def build_probe_job(
 def write_signed_probe_job(job: ProbeJob, path: Path, *, key_id: str, secret: str) -> None:
     envelope = sign_payload(job.to_dict(), kind="probe_job", key_id=key_id, secret=secret)
     output = Path(path)
-    output.write_text(json.dumps(envelope, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    output.write_text(json.dumps(envelope, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
     output.chmod(0o600)

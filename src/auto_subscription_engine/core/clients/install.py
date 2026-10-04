@@ -6,43 +6,57 @@ Installs the four real proxy cores used by the engine:
 core       binary        client family represented
 =========  ============  =============================================
 sing-box   sing-box      sing-box / NekoBox family (live pipeline)
-xray       xray          v2rayNG / v2rayN (Xray-core)
+xray       xray(.exe)    v2rayNG / v2rayN (Xray-core)
 hiddify    hiddify-core  Hiddify (sing-box fork, version reported by
-                         the binary itself)
-mihomo     mihomo        Clash Meta / Mihomo / Clash.Meta family
+                         the binary itself; on Windows the artifact is
+                         HiddifyCli.exe + its DLLs)
+mihomo     mihomo(.exe)  Clash Meta / Mihomo / Clash.Meta family
 =========  ============  =============================================
 
-Supply-chain rules enforced for every core:
+Cross-platform rule: every core declares per-platform artifacts in
+``config/testing.yaml`` (``platforms.<platform>`` with the canonical ids
+from ``core.platform.detection``).  The legacy flat single-artifact schema
+is still accepted and is treated as the running platform's artifact.
+
+Supply-chain rules enforced for every core and every platform:
 
 - official GitHub release only (pinned URL template, no floating latest);
-- exact version AND exact archive SHA-256 pinned in config/testing.yaml;
+- exact version AND exact archive SHA-256 pinned per platform in
+  config/testing.yaml;
 - download size cap enforced while streaming;
 - checksum verified with a constant-time comparison *before* extraction;
-- safe extraction of exactly one known member (no traversal);
+- safe extraction of only known members (validated names, no traversal);
 - the binary is written into a gitignored runtime dir, never committed;
 - archives are removed after extraction (temp cleanup);
-- per-core identity marker makes re-installation idempotent.
+- per-core, per-platform identity marker makes re-installation idempotent;
+- no official checksum -> fail closed (the artifact is never installed
+  insecurely).
 
-If any core cannot be installed/verified, the compatibility engine
-simply reports that core as ``unavailable``: the affected client feed is
-NOT published (previous-good preservation) and the universal feed is
-never produced from unverified cores.
+If a core cannot be installed/verified on the running platform, the
+compatibility engine simply reports that core as ``unavailable``: the
+affected client feed is NOT published (previous-good preservation) and
+the universal feed is never produced from unverified cores.
 """
 
 from __future__ import annotations
 
-import gzip
 import hashlib
 import hmac
 import logging
 import os
-import tarfile
 import tempfile
-import zipfile
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import requests
+
+from ..platform import (
+    binary_file_name,
+    current_platform,
+    extract_members,
+    validate_member_name,
+)
+from ..platform.executable import ensure_executable
 
 logger = logging.getLogger(__name__)
 
@@ -52,6 +66,8 @@ _DOWNLOAD_CHUNK = 256 * 1024
 
 #: Canonical core keys used across the engine.
 CORE_KEYS = ("singbox", "xray", "hiddify", "mihomo")
+
+_ARCHIVE_FORMATS = ("tar.gz", "tar.xz", "tar", "zip", "gz")
 
 
 class CoreInstallError(Exception):
@@ -64,15 +80,19 @@ class ChecksumError(CoreInstallError):
 
 @dataclass(frozen=True)
 class CoreBinarySpec:
-    """Pinned identity of one core binary archive.
+    """Pinned identity of one core binary archive for one platform.
 
     ``format`` is one of:
 
-    - ``tar.gz``: gzipped tar containing ``binary_path_in_archive``;
-    - ``zip``:   zip archive containing ``binary_path_in_archive``;
+    - ``tar.gz`` / ``tar.xz`` / ``tar``: tar archive containing the
+      pinned member(s);
+    - ``zip``:   zip archive containing the pinned member(s);
     - ``gz``:    single-member gzip whose decompressed stream IS the
                  binary (``binary_path_in_archive`` names the extracted
                  file to write).
+
+    ``extra_members`` lists additional required archive members (e.g. the
+    Windows hiddify DLLs) installed flat next to the binary.
     """
 
     key: str
@@ -82,59 +102,137 @@ class CoreBinarySpec:
     binary_path_in_archive: str
     format: str
     max_bytes: int = MAX_ARCHIVE_BYTES
+    platform: str = ""
+    extra_members: tuple[str, ...] = field(default=())
+
+    def __post_init__(self) -> None:
+        if not self.platform:
+            object.__setattr__(self, "platform", current_platform())
 
     @property
     def binary_name(self) -> str:
-        """File name the extracted binary is installed as."""
-        return {"singbox": "sing-box", "xray": "xray", "hiddify": "hiddify-core",
-                "mihomo": "mihomo"}[self.key]
+        """File name the extracted binary is installed as (platform-aware)."""
+        return binary_file_name(self.key, self.platform)
+
+    @property
+    def marker_expected(self) -> str:
+        return (
+            f"{self.key}\n{self.version}\n{self.archive_sha256}\n{self.platform}\n"
+        )
 
 
-def specs_from_config(cores_cfg: dict) -> dict[str, CoreBinarySpec]:
-    """Build the pinned spec mapping from the ``cores`` testing config."""
+def _normalize_members(raw: dict) -> tuple[str, ...]:
+    members = raw.get("extra_members") or raw.get("additional_members") or []
+    if isinstance(members, str):
+        members = [members]
+    return tuple(str(m) for m in members)
+
+
+def _spec_from_platform_entry(
+    key: str,
+    version: str,
+    platform_id: str,
+    entry: dict,
+) -> CoreBinarySpec:
+    fmt = str(entry.get("format", "tar.gz"))
+    if fmt not in _ARCHIVE_FORMATS:
+        raise CoreInstallError(
+            f"core {key}/{platform_id}: unsupported archive format {fmt!r}"
+        )
+    digest = str(entry.get("archive_sha256", "")).strip().lower()
+    if len(digest) != 64 or any(ch not in "0123456789abcdef" for ch in digest):
+        raise CoreInstallError(
+            f"core {key}/{platform_id}: pinned archive_sha256 is not a SHA-256"
+        )
+    member = str(
+        entry.get("binary_path_in_archive") or entry.get("archive_binary_path") or ""
+    )
+    member = member.format(version=version)
+    validate_member_name(member)
+    return CoreBinarySpec(
+        key=key,
+        version=version,
+        archive_sha256=digest,
+        url_template=str(entry["url_template"]),
+        binary_path_in_archive=member,
+        format=fmt,
+        platform=platform_id,
+        max_bytes=int(entry.get("max_bytes", MAX_ARCHIVE_BYTES)),
+        extra_members=_normalize_members(entry),
+    )
+
+
+def specs_from_config(
+    cores_cfg: dict,
+    *,
+    platform_id: str | None = None,
+) -> dict[str, CoreBinarySpec]:
+    """Build the pinned spec mapping from the ``cores`` testing config.
+
+    Two schemas are accepted per core:
+
+    - ``platforms:`` mapping of canonical platform id -> artifact entry
+      (the cross-platform schema); or
+    - the legacy flat artifact, treated as the artifact for
+      ``platform_id`` (default: the running platform).
+
+    A core whose platform entry is missing is simply omitted: the caller
+    reports that core as unavailable (fail closed, no insecure fallback).
+    """
+    platform_id = platform_id or current_platform()
     specs: dict[str, CoreBinarySpec] = {}
-    for key in ("singbox", "xray", "hiddify", "mihomo"):
+    for key in CORE_KEYS:
         raw = cores_cfg.get(key)
         if not isinstance(raw, dict) or not raw.get("version"):
             continue
-        fmt = str(raw.get("format", "tar.gz"))
-        if fmt not in ("tar.gz", "zip", "gz"):
-            raise CoreInstallError(f"core {key}: unsupported archive format {fmt!r}")
-        digest = str(raw.get("archive_sha256", "")).strip().lower()
-        if len(digest) != 64 or any(ch not in "0123456789abcdef" for ch in digest):
-            raise CoreInstallError(f"core {key}: pinned archive_sha256 is not a SHA-256")
         version = str(raw["version"])
-        member = str(raw.get("binary_path_in_archive") or raw.get("archive_binary_path") or "")
-        member = member.format(version=version)
-        specs[key] = CoreBinarySpec(
-            key=key,
-            version=version,
-            archive_sha256=digest,
-            url_template=str(raw["url_template"]),
-            binary_path_in_archive=member,
-            format=fmt,
-            max_bytes=int(raw.get("max_bytes", MAX_ARCHIVE_BYTES)),
-        )
+        # A malformed digest is always a hard error, even when the entry
+        # would otherwise be skipped (fail closed, never silently ignore).
+        digest_raw = str(raw.get("archive_sha256", "")).strip().lower()
+        if digest_raw and (
+            len(digest_raw) != 64
+            or any(ch not in "0123456789abcdef" for ch in digest_raw)
+        ):
+            raise CoreInstallError(
+                f"core {key}: pinned archive_sha256 is not a SHA-256"
+            )
+        platforms = raw.get("platforms")
+        if isinstance(platforms, dict) and platforms:
+            entry = platforms.get(platform_id)
+            if not isinstance(entry, dict) or not entry.get("url_template"):
+                # No pinned artifact for this platform: fail closed.
+                logger.info(
+                    "core %s has no pinned artifact for platform %s", key, platform_id
+                )
+                continue
+            specs[key] = _spec_from_platform_entry(key, version, platform_id, entry)
+        else:
+            if not raw.get("url_template"):
+                continue
+            specs[key] = _spec_from_platform_entry(key, version, platform_id, raw)
     return specs
 
 
-
-def specs_from_testing_config(testing_cfg: dict) -> dict[str, CoreBinarySpec]:
+def specs_from_testing_config(
+    testing_cfg: dict,
+    *,
+    platform_id: str | None = None,
+) -> dict[str, CoreBinarySpec]:
     """Build all four pinned core specs from the full testing config.
 
     ``singbox`` historically lived in its own top-level section while the
-    other cores lived under ``cores``.  Stage 7 keeps the file format stable
-    but normalizes both locations into one installer model.
+    other cores lived under ``cores``.  The file format stays stable but
+    both locations normalize into one installer model.
     """
     combined: dict = {}
     singbox = testing_cfg.get("singbox")
     if isinstance(singbox, dict):
-        combined["singbox"] = {**singbox, "format": singbox.get("format", "tar.gz")}
+        combined["singbox"] = dict(singbox)
     cores = testing_cfg.get("cores")
     if isinstance(cores, dict):
         combined.update(cores)
-    specs = specs_from_config(combined)
-    return specs
+    return specs_from_config(combined, platform_id=platform_id)
+
 
 def install_core_binary(
     dest_dir: Path,
@@ -149,18 +247,19 @@ def install_core_binary(
 
     binary_path = dest_dir / spec.binary_name
     marker_path = dest_dir / f"{spec.binary_name}.ok"
-    expected_marker = f"{spec.key}\n{spec.version}\n{spec.archive_sha256}\n"
 
-    if binary_path.is_file() and marker_path.is_file():
-        try:
-            if marker_path.read_text(encoding="utf-8") == expected_marker:
-                logger.info("pinned core %s %s already installed", spec.key, spec.version)
-                return binary_path
-        except OSError:
-            pass
+    if _marker_matches(marker_path, spec):
+        logger.info(
+            "pinned core %s %s already installed for %s",
+            spec.key, spec.version, spec.platform,
+        )
+        return binary_path
 
     url = spec.url_template.format(version=spec.version)
-    logger.info("downloading pinned core %s %s from official release", spec.key, spec.version)
+    logger.info(
+        "downloading pinned core %s %s (%s) from official release",
+        spec.key, spec.version, spec.platform,
+    )
     fd, archive_name = tempfile.mkstemp(dir=str(dest_dir), suffix=".archive")
     os.close(fd)
     archive_path = Path(archive_name)
@@ -193,95 +292,125 @@ def install_core_binary(
                 f"expected {spec.archive_sha256}, got {actual}"
             )
 
-        _extract_member(archive_path, spec, binary_path)
+        _extract_spec(archive_path, spec, dest_dir, binary_path)
     finally:
         try:
             archive_path.unlink()
         except OSError:
             pass
 
-    marker_path.write_text(expected_marker, encoding="utf-8")
-    logger.info("core %s %s installed (checksum verified)", spec.key, spec.version)
+    ensure_executable(binary_path)
+    marker_path.write_text(spec.marker_expected, encoding="utf-8", newline="\n")
+    logger.info(
+        "core %s %s installed for %s (checksum verified)",
+        spec.key, spec.version, spec.platform,
+    )
     return binary_path
 
 
-def _extract_member(archive_path: Path, spec: CoreBinarySpec, dest: Path) -> None:
-    """Extract exactly one known member (path-safe, size-capped)."""
-    if spec.format == "tar.gz":
-        _extract_tar_gz(archive_path, spec.binary_path_in_archive, dest, spec.max_bytes)
-    elif spec.format == "zip":
-        _extract_zip(archive_path, spec.binary_path_in_archive, dest, spec.max_bytes)
-    else:
-        _extract_gz(archive_path, dest, spec.max_bytes)
-    dest.chmod(0o755)
-
-
-def _extract_tar_gz(archive_path: Path, member_name: str, dest: Path, max_bytes: int) -> None:
+def _extract_spec(
+    archive_path: Path,
+    spec: CoreBinarySpec,
+    dest_dir: Path,
+    binary_path: Path,
+) -> None:
+    """Extract the pinned binary plus any required extra members."""
     try:
-        with tarfile.open(archive_path, "r:gz") as tar:
-            member = tar.getmember(member_name)
-            if not member.isfile():
-                raise CoreInstallError(f"archive member is not a file: {member_name}")
-            extracted = tar.extractfile(member)
-            if extracted is None:
-                raise CoreInstallError(f"cannot read archive member: {member_name}")
-            data = extracted.read(max_bytes)
-    except (tarfile.TarError, KeyError) as exc:
-        raise CoreInstallError(
-            f"cannot extract '{member_name}' from core archive: {type(exc).__name__}"
-        ) from exc
-    dest.write_bytes(data)
+        extract_members(
+            archive_path,
+            (spec.binary_path_in_archive, *spec.extra_members),
+            dest_dir,
+            max_bytes=spec.max_bytes,
+            fmt=spec.format,
+        )
+    except Exception as exc:  # noqa: BLE001 - normalize into CoreInstallError
+        raise CoreInstallError(str(exc)) from exc
+    # Members install flat under their archive basename; the binary must
+    # carry the platform-correct install name (e.g. xray -> xray.exe on
+    # Windows, hiddify-core -> HiddifyCli.exe), so rename when they differ.
+    raw_name = Path(spec.binary_path_in_archive).name
+    if raw_name != binary_path.name:
+        extracted = dest_dir / raw_name
+        if extracted.is_file():
+            extracted.replace(binary_path)
 
 
-def _extract_zip(archive_path: Path, member_name: str, dest: Path, max_bytes: int) -> None:
+def _marker_matches(marker_path: Path, spec: CoreBinarySpec) -> bool:
+    if not marker_path.is_file():
+        return False
     try:
-        with zipfile.ZipFile(archive_path) as archive:
-            info = archive.getinfo(member_name)
-            if info.is_dir():
-                raise CoreInstallError(f"archive member is a directory: {member_name}")
-            if info.file_size > max_bytes:
-                raise CoreInstallError(f"archive member exceeds {max_bytes} bytes")
-            data = archive.read(member_name, pwd=None)
-    except (zipfile.BadZipFile, KeyError) as exc:
-        raise CoreInstallError(
-            f"cannot extract '{member_name}' from core archive: {type(exc).__name__}"
-        ) from exc
-    dest.write_bytes(data)
-
-
-def _extract_gz(archive_path: Path, dest: Path, max_bytes: int) -> None:
-    """Decompress a single-member gzip stream (the binary itself)."""
+        if marker_path.read_text(encoding="utf-8") == spec.marker_expected:
+            return True
+    except OSError:
+        pass
+    # Legacy marker (pre-cross-platform): key, version, sha256 — accept it
+    # only when the binary file exists; the platform line was implicit.
     try:
-        with gzip.open(archive_path, "rb") as stream:
-            data = stream.read(max_bytes)
-    except (OSError, gzip.BadGzipFile, EOFError) as exc:
-        raise CoreInstallError(
-            f"cannot decompress core archive: {type(exc).__name__}"
-        ) from exc
-    dest.write_bytes(data)
+        legacy = f"{spec.key}\n{spec.version}\n{spec.archive_sha256}\n"
+        if marker_path.read_text(encoding="utf-8") == legacy:
+            return True
+    except OSError:
+        pass
+    return False
 
 
-def verify_installed(dest_dir: Path, spec: CoreBinarySpec) -> Path | None:
+def verify_installed(
+    dest_dir: Path,
+    spec: CoreBinarySpec,
+) -> Path | None:
     """Return the binary path when the pinned core is installed+verified."""
     dest_dir = Path(dest_dir)
     binary_path = dest_dir / spec.binary_name
     marker_path = dest_dir / f"{spec.binary_name}.ok"
-    expected_marker = f"{spec.key}\n{spec.version}\n{spec.archive_sha256}\n"
-    if binary_path.is_file() and marker_path.is_file():
-        try:
-            if marker_path.read_text(encoding="utf-8") == expected_marker:
-                return binary_path
-        except OSError:
-            pass
+    if binary_path.is_file() and _marker_matches(marker_path, spec):
+        return binary_path
     return None
 
 
-def verified_core_paths(dest_dir: Path, testing_cfg: dict) -> dict[str, Path]:
-    """Return checksum-marker-verified core binaries available in ``dest_dir``."""
-    specs = specs_from_testing_config(testing_cfg)
+def verified_core_paths(
+    dest_dir: Path,
+    testing_cfg: dict,
+    *,
+    platform_id: str | None = None,
+) -> dict[str, Path]:
+    """Return checksum-marker-verified core binaries available for ``platform_id``."""
+    specs = specs_from_testing_config(testing_cfg, platform_id=platform_id)
     found: dict[str, Path] = {}
     for key, spec in specs.items():
         path = verify_installed(dest_dir, spec)
         if path is not None:
             found[key] = path
     return found
+
+
+def install_available_cores(
+    dest_dir: Path,
+    testing_cfg: dict,
+    *,
+    platform_id: str | None = None,
+    session: requests.Session | None = None,
+) -> dict[str, Path]:
+    """Install every core pinned for ``platform_id``; skip-and-log failures.
+
+    Mirrors the compatibility engine's availability model: a core that
+    cannot be installed is simply unavailable on this platform; its client
+    feed is not published from here.
+    """
+    platform_id = platform_id or current_platform()
+    specs = specs_from_testing_config(testing_cfg, platform_id=platform_id)
+    installed: dict[str, Path] = {}
+    for key in CORE_KEYS:
+        spec = specs.get(key)
+        if spec is None:
+            logger.warning(
+                "core %s is not pinned for platform %s - reported unavailable",
+                key, platform_id,
+            )
+            continue
+        try:
+            installed[key] = install_core_binary(
+                dest_dir, spec, session=session
+            )
+        except CoreInstallError as exc:
+            logger.warning("core %s unavailable on %s: %s", key, platform_id, exc)
+    return installed

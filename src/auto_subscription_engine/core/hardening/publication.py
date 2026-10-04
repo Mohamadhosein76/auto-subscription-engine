@@ -430,7 +430,7 @@ def _stage_public(options: PublishOptions, stats: dict) -> list[str]:
     public_stats["history_entries"] = count_history_entries(options.history_path)
     (staging / "live_stats.json").write_text(
         json.dumps(public_stats, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
     staged.append("live_stats.json")
 
@@ -448,7 +448,7 @@ def _stage_public(options: PublishOptions, stats: dict) -> list[str]:
         "core_version": core_version,
     }
     (staging / "status.json").write_text(
-        json.dumps(status, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(status, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
     staged.append("status.json")
 
@@ -492,7 +492,7 @@ def _stage_public(options: PublishOptions, stats: dict) -> list[str]:
             if feed_file.suffix == ".txt":
                 encoded = base64.b64encode(new_bytes).decode("ascii")
                 b64_name = feed_file.stem + FEED_B64_SUFFIX
-                (dst_dir / b64_name).write_text(encoded + "\n", encoding="ascii")
+                (dst_dir / b64_name).write_text(encoded + "\n", encoding="ascii", newline="\n")
                 staged.append(f"{sub_name}/{b64_name}")
 
     # Operator feeds are evidence-fresh by construction. Never preserve stale
@@ -895,7 +895,7 @@ def _write_decision(output_dir: Path, result: PublishResult) -> None:
         }
         (output_dir / "publish_decision.json").write_text(
             json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
-            encoding="utf-8",
+            encoding="utf-8",newline="\n"
         )
     except OSError as exc:  # never fail a publish because of a log file
         logger.warning("cannot write publish_decision.json: %s", exc)

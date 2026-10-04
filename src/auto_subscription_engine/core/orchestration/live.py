@@ -630,13 +630,13 @@ def _write_live_outputs(
 
     ranked_uris = [node.config.original_uri for node in ranked]
     ranked_body = "\n".join(ranked_uris) + ("\n" if ranked_uris else "")
-    (output_dir / "live_subscription.txt").write_text(ranked_body, encoding="utf-8")
+    (output_dir / "live_subscription.txt").write_text(ranked_body, encoding="utf-8", newline="\n")
     encoded = base64.b64encode(ranked_body.encode("utf-8")).decode("ascii")
-    (output_dir / "live_subscription_base64.txt").write_text(encoded + "\n", encoding="ascii")
+    (output_dir / "live_subscription_base64.txt").write_text(encoded + "\n", encoding="ascii", newline="\n")
 
     best_uris = [node.config.original_uri for node in selected]
     best_body = "\n".join(best_uris) + ("\n" if best_uris else "")
-    (output_dir / "best.txt").write_text(best_body, encoding="utf-8")
+    (output_dir / "best.txt").write_text(best_body, encoding="utf-8", newline="\n")
 
     nodes_payload = []
     for node in ranked:
@@ -688,11 +688,11 @@ def _write_live_outputs(
         })
     (output_dir / "live_nodes.json").write_text(
         json.dumps(nodes_payload, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
     (output_dir / "live_stats.json").write_text(
         json.dumps(stats, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
 
     diagnostics = {
@@ -706,7 +706,7 @@ def _write_live_outputs(
     }
     (output_dir / "live_diagnostics.json").write_text(
         json.dumps(diagnostics, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+        encoding="utf-8",newline="\n"
     )
 
     countries_dir = output_dir / "countries"
@@ -716,7 +716,7 @@ def _write_live_outputs(
         by_country.setdefault(node.country_code, []).append(node.config.original_uri)
     for code, uris in sorted(by_country.items()):
         (countries_dir / f"{code}.txt").write_text(
-            "\n".join(uris) + "\n", encoding="utf-8"
+            "\n".join(uris) + "\n", encoding="utf-8", newline="\n"
         )
 
 

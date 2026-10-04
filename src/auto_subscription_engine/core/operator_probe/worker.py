@@ -128,7 +128,7 @@ def main(argv: list[str] | None = None) -> int:
         probe_id=args.probe_id,
         operator_profile=args.operator_profile,
     )
-    args.output.write_text(json.dumps(payload, sort_keys=True, separators=(",", ":")) + "\n", encoding="utf-8")
+    args.output.write_text(json.dumps(payload, sort_keys=True, separators=(",", ":")) + "\n", encoding="utf-8", newline="\n")
     return 0
 
 

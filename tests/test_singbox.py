@@ -19,6 +19,7 @@ from auto_subscription_engine.core.clients.builders.singbox import (
     build_outbound,
     write_node_config,
 )
+from auto_subscription_engine.core.platform.executable import binary_file_name
 from auto_subscription_engine.core.clients.install import (
     ChecksumError,
     CoreInstallError,
@@ -144,7 +145,12 @@ def test_write_node_config_permissions(tmp_path):
     config = build_node_config(make_config("ss", {}, "m:p"), listen_port=1)
     path = write_node_config(config, tmp_path)
     mode = stat.S_IMODE(path.stat().st_mode)
-    assert mode == 0o600
+    if os.name == "posix":
+        assert mode == 0o600
+    else:
+        # Windows has no POSIX permission bits; the call must at least
+        # succeed and the file must stay readable.
+        assert mode & 0o400
     parsed = json.loads(path.read_text(encoding="utf-8"))
     assert parsed["outbounds"][0]["method"] == "m"
 
@@ -215,10 +221,11 @@ def test_install_core_verifies_checksum_and_is_idempotent(tmp_path):
     dest = tmp_path / "core-bin"
     session = FakeSession([data])
     binary = install_core_binary(dest, spec, session=session)
-    assert binary.name == "sing-box"
+    installed_name = binary_file_name("singbox", spec.platform)
+    assert binary.name == installed_name
     assert binary.read_bytes() == payload
     assert os.access(binary, os.X_OK)
-    assert (dest / "sing-box.ok").is_file()
+    assert (dest / f"{installed_name}.ok").is_file()
 
     # Second call: marker matches -> no second download.
     install_core_binary(dest, spec, session=session)

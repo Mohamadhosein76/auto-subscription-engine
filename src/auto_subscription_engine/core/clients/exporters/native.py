@@ -21,9 +21,9 @@ from ..registry import CLIENTS, PLANNED_CLIENTS
 def write_uri_feed(path: Path, uris: list[str]) -> None:
     path = Path(path)
     body = "\n".join(uris) + ("\n" if uris else "")
-    path.write_text(body, encoding="utf-8")
+    path.write_text(body, encoding="utf-8", newline="\n")
     encoded = base64.b64encode(body.encode("utf-8")).decode("ascii")
-    path.with_name(path.stem + "_base64.txt").write_text(encoded + "\n", encoding="ascii")
+    path.with_name(path.stem + "_base64.txt").write_text(encoded + "\n", encoding="ascii", newline="\n")
 
 
 def write_mihomo_configs(path: Path, configs: list) -> int:
@@ -53,7 +53,7 @@ def write_mihomo_configs(path: Path, configs: list) -> int:
         "rules": ["MATCH,PROXY"],
     }
     Path(path).write_text(
-        yaml.safe_dump(payload, sort_keys=False, allow_unicode=True), encoding="utf-8"
+        yaml.safe_dump(payload, sort_keys=False, allow_unicode=True), encoding="utf-8", newline="\n"
     )
     return len(proxies)
 
@@ -75,7 +75,7 @@ def write_singbox_configs(path: Path, configs: list) -> int:
         outbounds.append(outbound)
     payload = {"outbounds": outbounds}
     Path(path).write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
     return len(outbounds)
 
@@ -118,5 +118,5 @@ def write_client_manifest(path: Path, *, feed_counts: dict[str, int], core_statu
         ),
     }
     Path(path).write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )

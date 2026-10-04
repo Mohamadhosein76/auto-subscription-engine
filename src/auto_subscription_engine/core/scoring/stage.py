@@ -87,9 +87,9 @@ def run_scoring_stage(options: ScoringOptions) -> dict[str, Any]:
             if dim.score is not None:
                 client_scored[key] = client_scored.get(key, 0) + 1
 
-    nodes_path.write_text(json.dumps(nodes, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    nodes_path.write_text(json.dumps(nodes, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     (output_dir / "scorecards.json").write_text(
-        json.dumps(cards, indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(cards, indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
     scoring_stats = {
         "schema_version": 1,
@@ -103,7 +103,7 @@ def run_scoring_stage(options: ScoringOptions) -> dict[str, Any]:
         "operator_stale_after_minutes": operator_cfg.policy.stale_after_minutes,
     }
     stats["scoring_v2"] = scoring_stats
-    stats_path.write_text(json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    stats_path.write_text(json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     return scoring_stats
 
 

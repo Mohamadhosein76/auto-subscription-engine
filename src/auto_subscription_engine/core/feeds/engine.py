@@ -149,7 +149,7 @@ def run_feed_stage(options: FeedOptions) -> dict[str, Any]:
                 "require_fresh": policy.require_fresh_operator_evidence,
             },
         }
-        (op_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        (op_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
         operator_summary[operator] = manifest
 
     core_statuses = ((stats.get("compatibility") or {}).get("cores_available") or {})
@@ -177,7 +177,7 @@ def run_feed_stage(options: FeedOptions) -> dict[str, Any]:
         },
     }
     (output_dir / "feed_manifest.json").write_text(
-        json.dumps(manifest, indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(manifest, indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
 
     stats["universal_count"] = len(universal)
@@ -188,7 +188,7 @@ def run_feed_stage(options: FeedOptions) -> dict[str, Any]:
         "operator_fresh_counts": {k: int(v["fresh_evidence_nodes"]) for k, v in operator_summary.items()},
     }
     (output_dir / "live_stats.json").write_text(
-        json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
     )
     return manifest
 
@@ -302,21 +302,21 @@ def _mobile_safe(candidate: FeedCandidate) -> bool:
 def _write_uri_feed(path: Path, candidates: list[FeedCandidate]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     body = "\n".join(c.uri for c in candidates) + ("\n" if candidates else "")
-    path.write_text(body, encoding="utf-8")
+    path.write_text(body, encoding="utf-8", newline="\n")
     encoded = base64.b64encode(body.encode("utf-8")).decode("ascii")
-    path.with_name(path.stem + "_base64.txt").write_text(encoded + "\n", encoding="ascii")
+    path.with_name(path.stem + "_base64.txt").write_text(encoded + "\n", encoding="ascii", newline="\n")
 
 
 def _write_main_subscription(output_dir: Path, candidates: list[FeedCandidate]) -> None:
     body = "\n".join(c.uri for c in candidates) + ("\n" if candidates else "")
-    (output_dir / "live_subscription.txt").write_text(body, encoding="utf-8")
+    (output_dir / "live_subscription.txt").write_text(body, encoding="utf-8", newline="\n")
     encoded = base64.b64encode(body.encode("utf-8")).decode("ascii")
-    (output_dir / "live_subscription_base64.txt").write_text(encoded + "\n", encoding="ascii")
+    (output_dir / "live_subscription_base64.txt").write_text(encoded + "\n", encoding="ascii", newline="\n")
 
 
 def _write_best(output_dir: Path, candidates: list[FeedCandidate]) -> None:
     body = "\n".join(c.uri for c in candidates) + ("\n" if candidates else "")
-    (output_dir / "best.txt").write_text(body, encoding="utf-8")
+    (output_dir / "best.txt").write_text(body, encoding="utf-8", newline="\n")
 
 
 def _write_countries(output_dir: Path, candidates: list[FeedCandidate]) -> None:
@@ -328,7 +328,7 @@ def _write_countries(output_dir: Path, candidates: list[FeedCandidate]) -> None:
         groups[code].append(candidate)
     for code, rows in sorted(groups.items()):
         body = "\n".join(c.uri for c in rows) + "\n"
-        (root / f"{code}.txt").write_text(body, encoding="utf-8")
+        (root / f"{code}.txt").write_text(body, encoding="utf-8", newline="\n")
 
 
 def _reset_dir(path: Path) -> None:
