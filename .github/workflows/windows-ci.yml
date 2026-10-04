@@ -81,3 +81,4 @@ jobs:
           auto-subscription-engine status --public-dir public --max-age-hours 100000
           $null = auto-subscription-engine diagnose "not-a-uri" 2>$null
           if ($LASTEXITCODE -eq 0) { throw "diagnose must fail on unparsable URI" }
+          exit 0
