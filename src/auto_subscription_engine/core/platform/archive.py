@@ -26,6 +26,8 @@ def validate_member_name(name: str) -> str:
     if win.drive or name.startswith("\\\\"):
         raise ArchiveError(f"unsafe archive member (drive/UNC path): {name!r}")
     posix = PurePosixPath(name.replace("\\", "/"))
+    if posix.is_absolute() or name.startswith("/") or name.startswith("\\"):
+        raise ArchiveError(f"unsafe archive member (absolute path): {name!r}")
     parts = [part for part in posix.parts if part not in ("/",)]
     if not parts:
         raise ArchiveError(f"unsafe archive member: {name!r}")

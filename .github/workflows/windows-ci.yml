@@ -1,0 +1,82 @@
+# Windows-native CI for the Auto Subscription Engine.
+#
+# Runs the full unit suite plus the platform contract tests on a real
+# windows-latest runner (Phase 23/26: no monkeypatch-only verification),
+# installs the pinned Windows cores from their official checksum-pinned
+# releases and smoke-runs each binary.
+name: Windows CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "config/**"
+      - "tests/**"
+      - ".github/workflows/windows-ci.yml"
+
+concurrency:
+  group: windows-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    name: Native Windows tests + core smoke
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Full test suite
+        run: python -m pytest -q
+
+      - name: Platform detection contract tests (real Windows)
+        run: python -m pytest -q tests/platform_contracts -v
+
+      - name: compileall
+        run: python -m compileall -q src
+
+      - name: Core manifest validation
+        run: |
+          python - <<'PY'
+          import yaml
+          from auto_subscription_engine.core.clients.install import specs_from_testing_config
+          cfg = yaml.safe_load(open("config/testing.yaml", encoding="utf-8"))
+          specs = specs_from_testing_config(cfg, platform_id="windows-amd64")
+          assert set(specs) == {"singbox", "xray", "hiddify", "mihomo"}, specs
+          print("windows core manifests OK:", sorted(specs))
+          PY
+
+      - name: Windows core installer smoke (official, checksum-pinned)
+        run: python -m auto_subscription_engine cores-install --core-bin .core-bin-ci
+
+      - name: Core binary smoke (real --version on Windows)
+        run: |
+          & .core-bin-ci\xray.exe version | Select-Object -First 1
+          & .core-bin-ci\sing-box.exe version | Select-Object -First 1
+          & .core-bin-ci\mihomo.exe -v | Select-Object -First 1
+          & .core-bin-ci\HiddifyCli.exe version | Select-Object -First 1
+
+      - name: CLI smoke (status + diagnose on unparsable input)
+        run: |
+          auto-subscription-engine --help
+          auto-subscription-engine status --public-dir public --max-age-hours 100000
+          $null = auto-subscription-engine diagnose "not-a-uri" 2>$null
+          if ($LASTEXITCODE -eq 0) { throw "diagnose must fail on unparsable URI" }

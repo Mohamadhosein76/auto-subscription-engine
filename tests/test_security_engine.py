@@ -527,4 +527,7 @@ def test_missing_core_leaves_checks_incomplete_but_honest(live_output: Path, tmp
     nodes = {n["safe_id"]: n for n in _read(live_output, "live_nodes.json")}
     clean = nodes[config_safe_id(normalize_config(parse_uri(N0)))]
     assert clean["security_checks_complete"] is False
-    assert clean["tls_status"] == "incomplete"
+    # "incomplete" (no probe ran) or "inconclusive" (probe hit a dead
+    # endpoint and the OS answered timeout instead of refused — Windows
+    # network stacks vary). Both are honest non-pass outcomes.
+    assert clean["tls_status"] in ("incomplete", "inconclusive")

@@ -8,6 +8,7 @@ cross-platform rule).
 """
 
 from .detection import (
+    SUPPORTED_PLATFORMS,
     canonical_platform,
     current_platform,
     is_posix,
@@ -33,6 +34,7 @@ from .archive import (
 )
 
 __all__ = [
+    "SUPPORTED_PLATFORMS",
     "canonical_platform",
     "current_platform",
     "is_posix",
