@@ -33,6 +33,11 @@ https://raw.githubusercontent.com/Mohamadhosein76/auto-subscription-engine/main/
 | Mobile-safe candidates | `networks/mobile-safe.txt` | conservative measured/heuristic network profile — **not an operator guarantee** |
 | Published status | `status.json` | safe publication status metadata |
 
+> **Snapshot freshness:** bundled `public/` files are snapshots. For fresh
+> feeds run the pipeline or use the current GitHub-hosted feeds. Check
+> `public/status.json` (`generated_at`, `last_successful_publish`,
+> `source_commit`, `node_count`) or run `auto-subscription-engine status`.
+
 The complete client/profile/network/operator feed contract is documented in **[docs/FEEDS.md](docs/FEEDS.md)**.
 
 Direct stable URLs kept for the public contract:
@@ -58,6 +63,104 @@ https://raw.githubusercontent.com/Mohamadhosein76/auto-subscription-engine/main/
 برای v2rayNG می‌توانید از `clients/v2rayng.txt` یا Base64 آن، برای Hiddify از `clients/hiddify.txt` و برای NekoBox از `clients/nekobox.txt` استفاده کنید. این نام‌ها به **evidence هسته‌ی runtime متناظر** اشاره می‌کنند؛ به معنی تست دستی همه نسخه‌های GUI/دستگاه‌ها نیستند.
 
 ---
+
+## Windows Quick Start (native, PowerShell)
+
+ASE runs natively on Windows 10/11 — no WSL required. See
+**[docs/WINDOWS_SUPPORT.md](docs/WINDOWS_SUPPORT.md)** for the full
+validation record.
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -e ".[dev]"
+
+auto-subscription-engine --help
+auto-subscription-engine cores-install     # pinned Windows cores (checksum-verified)
+auto-subscription-engine status            # feed freshness + staleness warning
+auto-subscription-engine diagnose "<config-uri>" --runtime
+```
+
+The full local refresh sequence (identical on Windows and Linux):
+
+```text
+auto-subscription-engine run            # discovery + normalize + dedup
+auto-subscription-engine cores-install  # pinned runtime cores
+auto-subscription-engine live           # real connectivity verification
+auto-subscription-engine security-check
+auto-subscription-engine compat-check
+auto-subscription-engine score-check
+auto-subscription-engine feed-build
+auto-subscription-engine publish
+```
+
+## Android Quick Start
+
+Android feed files are mirrored under `platforms/android/` (byte-identical
+to the canonical `clients/` artifacts). See
+**[docs/ANDROID_CLIENTS.md](docs/ANDROID_CLIENTS.md)**.
+
+| Client | Subscription URL (after the base URL above) |
+|---|---|
+| v2rayNG | `platforms/android/v2rayng.txt` |
+| Hiddify | `platforms/android/hiddify.txt` |
+| NekoBox | `platforms/android/nekobox.txt` |
+| sing-box | `platforms/android/singbox.json` |
+| Mihomo/Clash-compatible | `platforms/android/mihomo.yaml` |
+
+Base64 variants exist for every `.txt` feed. Runtime-core evidence applies;
+device-level GUI validation is `device_validation_unknown` — no device is
+tested here, and operator compatibility is only ever proven by physical
+probes on that network.
+
+## Windows Client Quick Start
+
+| Client | Subscription URL (after the base URL above) |
+|---|---|
+| Hiddify | `platforms/windows/hiddify.txt` |
+| NekoBox | `platforms/windows/nekobox.txt` |
+| sing-box | `platforms/windows/singbox.json` |
+| Mihomo / Clash.Meta | `platforms/windows/mihomo.yaml` |
+| v2rayN | `platforms/windows/v2rayn.txt` (v2rayNG-family URI feed; same Xray runtime evidence) |
+
+## Client support matrix
+
+| Client | Platform | Output | Serializer | Runtime Core | Status |
+|---|---|---|---|---|---|
+| v2rayNG | Android | `clients/v2rayng.txt` | native URI | Xray-core | Runtime Verified |
+| Hiddify | Android + Windows | `clients/hiddify.txt` | native URI | Hiddify-Core | Runtime Verified |
+| NekoBox | Android + Windows | `clients/nekobox.txt` | native URI | sing-box | Runtime Verified |
+| sing-box | Android + Windows | `clients/singbox.json` | native JSON | sing-box | Runtime Verified |
+| Mihomo / Clash.Meta | Android + Windows | `clients/mihomo.yaml` | native YAML | Mihomo | Runtime Verified |
+| v2rayN | Windows | `platforms/windows/v2rayn.txt` | shared URI format | Xray-core | Format Supported + Runtime Verified |
+| Shadowrocket, Stash, Loon, Surge, Quantumult X | — | — | — | — | Planned (deliberately not publishable without native serialization + runtime evidence) |
+
+Status meanings: **Runtime Verified** = the client's runtime core carried
+real application traffic through the tunnel on the verification runner.
+**Format Supported** = a real serializer produces the artifact but no
+separate runtime evidence exists. **Device Evidence Unknown** = no device
+test has been run (never claimed). Operator compatibility is a separate
+dimension requiring self-hosted physical probes.
+
+## Protocol support matrix
+
+Generated from the central capability registry (`core/clients/registry.py`)
+— do not edit by hand.
+
+| Protocol | sing-box | xray | hiddify | mihomo |
+|---|---|---|---|---|
+| VLESS | ✓ | ✓ | ✓ | ✓ |
+| VMess | ✓ | ✓ | ✓ | ✓ |
+| Trojan | ✓ | ✓ | ✓ | ✓ |
+| Shadowsocks | ✓ | ✓ | ✓ | ✓ (+obfs/v2ray-plugin) |
+| Hysteria2 | ✓ | — | ✓ | ✓ |
+| TUIC | ✓ | — | ✓ | ✓ |
+
+Transports: TCP/WebSocket/gRPC supported across the matrix; XHTTP on
+VLESS for xray and mihomo. Reality follows each core's VLESS support.
+A "✓" means the runtime core can be *tested* for that protocol; a node is
+only published after real tunneled traffic passes.
 
 ## Why ASE is different
 
