@@ -537,6 +537,35 @@ def build_parser() -> argparse.ArgumentParser:
     probe_job_parser.add_argument("--runner-label", default=None, help="optional self-hosted runner label; must match the configured profile")
     probe_job_parser.add_argument("--limit", type=int, default=None, help="override max candidates per job")
 
+    status_parser = subparsers.add_parser(
+        "status",
+        help="show published feed freshness (age, node count, staleness warning)",
+    )
+    status_parser.add_argument(
+        "--public-dir", type=Path, default=Path("public"),
+        help="directory holding status.json (default: public/)",
+    )
+    status_parser.add_argument(
+        "--max-age-hours", type=float, default=25.0,
+        help="warn when the last successful publish is older than this (default: 25)",
+    )
+    diagnose_parser = subparsers.add_parser(
+        "diagnose",
+        help="diagnose one config URI stage by stage (never prints credentials)",
+    )
+    diagnose_parser.add_argument("uri", help="the config URI to diagnose")
+    diagnose_parser.add_argument(
+        "--core-bin", type=Path, default=Path(".core-bin"),
+        help="directory with checksum-verified cores for runtime diagnosis",
+    )
+    diagnose_parser.add_argument(
+        "--runtime", action="store_true",
+        help="run the full runtime probe when pinned cores are installed",
+    )
+    diagnose_parser.add_argument(
+        "--testing-config", type=Path, default=Path("config/testing.yaml"),
+        help="testing config path for core manifests",
+    )
     probe_ingest_parser = subparsers.add_parser(
         "operator-probe-ingest",
         help="verify and ingest one signed operator-probe result",
@@ -593,6 +622,10 @@ def main(argv: list[str] | None = None) -> int:
         return _cmd_verify_feed(args)
     if args.command == "production-check":
         return _cmd_production_check(args)
+    if args.command == "status":
+        return _cmd_status(args)
+    if args.command == "diagnose":
+        return _cmd_diagnose(args)
     if args.command == "operator-probe-job":
         return _cmd_operator_probe_job(args)
     if args.command == "operator-probe-ingest":
@@ -1110,6 +1143,187 @@ def _cmd_operator_probe_ingest(args: argparse.Namespace) -> int:
         return _EXIT_ERROR
     print("OPERATOR_PROBE_JSON=" + json.dumps(summary, sort_keys=True))
     return _EXIT_OK
+
+
+def _cmd_status(args: argparse.Namespace) -> int:
+    """Show published feed freshness (Phase 18 freshness guard)."""
+    import datetime as _dt
+
+    status_path = Path(args.public_dir) / "status.json"
+    if not status_path.is_file():
+        print(f"no status.json found in {args.public_dir}")
+        return _EXIT_ERROR
+    try:
+        status = json.loads(status_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        print(f"status.json unreadable: {exc}")
+        return _EXIT_ERROR
+
+    published = str(status.get("last_successful_publish") or status.get("generated_at") or "")
+    node_count = status.get("node_count", status.get("live_nodes", "?"))
+    print(f"status:            {status.get('status', 'unknown')}")
+    print(f"last publish:      {published or 'unknown'}")
+    print(f"source commit:     {status.get('source_commit', status.get('engine_version', 'unknown'))}")
+    print(f"node count:        {node_count}")
+    print(f"engine version:    {status.get('engine_version', 'unknown')}")
+    print(f"core versions:     {status.get('core_version', 'unknown')}")
+
+    age_hours = None
+    if published:
+        try:
+            stamp = _dt.datetime.fromisoformat(published.replace("Z", "+00:00"))
+            age_hours = (_dt.datetime.now(_dt.timezone.utc) - stamp).total_seconds() / 3600.0
+        except ValueError:
+            pass
+    if age_hours is None:
+        print("feed age:          UNKNOWN (unparseable timestamp)")
+        print("WARNING: feed freshness cannot be determined.")
+        return _EXIT_ERROR
+    print(f"feed age:          {age_hours:.1f} hours")
+    if age_hours > float(args.max_age_hours):
+        print(
+            f"WARNING: feed is STALE ({age_hours:.1f}h > {args.max_age_hours:g}h). "
+            "Bundled public files are snapshots; for fresh feeds run the "
+            "pipeline or use the current GitHub-hosted feeds."
+        )
+        return _EXIT_ERROR
+    return _EXIT_OK
+
+
+def _cmd_diagnose(args: argparse.Namespace) -> int:
+    """Stage-by-stage diagnosis of one config URI; never prints credentials."""
+    import socket
+    import ssl
+    import time as _time
+
+    from .core.models.fingerprint import normalize_config
+    from .core.network.address import is_ip_literal
+    from .core.models import ParseError, UnknownProtocolError
+    from .core.protocols import parse_uri
+    from .core.utils.identity import config_safe_id
+
+    try:  # the compat package exposes these from several modules
+        from .core.clients.compatibility.audit import node_features as _nf
+        from .core.clients.compatibility.matrix import capabilities_for as _cf
+        node_features, capabilities_for = _nf, _cf
+    except Exception:  # noqa: BLE001 - fall back to the shortcut import
+        pass
+
+    print("diagnose: credentials are masked; only structural facts are shown")
+    try:
+        config = normalize_config(parse_uri(args.uri))
+    except (ParseError, UnknownProtocolError, ValueError) as exc:
+        print("PARSE_FAIL: the URI could not be parsed as a supported config")
+        print(f"  reason: {type(exc).__name__}")
+        return 1
+    label = f"{config_safe_id(config)} ({config.protocol})"
+    print(f"parsed:            {label}")
+
+    host = str(config.host or "")
+    host_kind = "ip-literal" if is_ip_literal(host) else "hostname"
+    print(f"host kind:         {host_kind}")
+
+    port = int(config.port or 0)
+    if not host or not port:
+        print("PARSE_FAIL: missing host or port")
+        return 1
+
+    resolved_ip = host
+    if host_kind == "hostname":
+        try:
+            resolved_ip = socket.getaddrinfo(host, port, socket.AF_UNSPEC, socket.SOCK_STREAM)[0][4][0]
+            print(f"dns status:        OK ({resolved_ip} via system resolver)")
+        except OSError as exc:
+            print(f"DNS_FAIL: cannot resolve {host} ({type(exc).__name__})")
+            return 1
+    else:
+        print("dns status:        not needed (ip-literal)")
+
+    t0 = _time.perf_counter()
+    try:
+        sock = socket.create_connection((host, port), timeout=6)
+        tcp_ms = (_time.perf_counter() - t0) * 1000
+        print(f"tcp status:        OK ({tcp_ms:.0f} ms)")
+    except OSError as exc:
+        print(f"TCP_FAIL: no TCP connection to {host}:{port} ({type(exc).__name__})")
+        print("  -> the endpoint is unreachable from THIS network; other networks may differ")
+        return 1
+
+    tls_configs = {"trojan", "vless", "vmess", "ss"}
+    needs_tls = config.protocol in tls_configs and str(
+        getattr(config, "tls", "") or ""
+    ).lower() not in {"none", "false", ""}
+    if needs_tls:
+        sni = str(getattr(config, "sni", "") or host)
+        try:
+            ctx = ssl.create_default_context()
+            with ctx.wrap_socket(sock, server_hostname=sni) as tls_sock:
+                cert = tls_sock.getpeercert()
+            print(f"tls status:        OK (sni={sni}, subject={cert.get('subject')})")
+        except (ssl.SSLError, OSError) as exc:
+            print(f"TLS_FAIL: TLS handshake failed ({type(exc).__name__}: {exc})")
+            sock.close()
+            return 1
+    else:
+        print("tls status:        not applicable for this transport")
+
+    caps = capabilities_for(node_features(config))
+    supported = [core for core, cap in caps.items() if cap is not None and cap.supported]
+    print(f"client support:    {', '.join(supported) if supported else 'none'}")
+    if not supported:
+        print("CLIENT_UNSUPPORTED: no installed runtime core supports this config")
+        sock.close()
+        return 1
+
+    if not args.runtime:
+        print("runtime:           skipped (use --runtime with installed cores)")
+        sock.close()
+        return 0
+
+    from .core.clients.install import verified_core_paths
+    from .core.verification.runtime import CoreRuntimeRunner
+    from .core.verification.policy import VerificationPolicy
+
+    try:
+        testing_cfg = load_testing_config(Path(args.testing_config))
+    except Exception as exc:  # noqa: BLE001
+        print(f"CORE_START_FAIL: cannot load testing config ({type(exc).__name__})")
+        sock.close()
+        return 1
+    core_paths = verified_core_paths(Path(args.core_bin), testing_cfg)
+    if not core_paths:
+        print(
+            f"CORE_START_FAIL: no checksum-verified cores in {args.core_bin} "
+            "(run: auto-subscription-engine cores-install)"
+        )
+        sock.close()
+        return 1
+    policy = VerificationPolicy.from_mapping({
+        "repetitions": 1,
+        "min_success_ratio": 1.0,
+        "min_success_count": 1,
+        "startup_timeout_seconds": 8.0,
+        "http_timeout_seconds": 6.0,
+        "targets": [{"url": "https://www.gstatic.com/generate_204", "expect_status": [204]}],
+    })
+    runner = CoreRuntimeRunner(core_paths=core_paths, policy=policy)
+    try:
+        result = runner.probe_node(config)
+    finally:
+        runner.cleanup()
+    if result.passed:
+        print(f"runtime:           PROXY_TUNNEL_OK via {result.runtime_core} "
+              f"({result.success_count} probes, p50 {result.proxy_latency_ms or -1:.0f} ms)")
+        return 0
+    reason = result.failure_reason or "runtime_failed"
+    code = {
+        "core_startup_failed": "CORE_START_FAIL",
+        "core_startup_timeout": "CORE_START_FAIL",
+        "core_unavailable": "CLIENT_UNSUPPORTED",
+    }.get(reason.split(":")[0], "PROXY_TUNNEL_FAIL")
+    print(f"{code}: {reason}")
+    return 1
+
 
 
 if __name__ == "__main__":

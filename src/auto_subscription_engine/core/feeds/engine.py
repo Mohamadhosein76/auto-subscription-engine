@@ -14,7 +14,7 @@ from typing import Any, Iterable
 
 from ..utils.identity import config_safe_id
 from ..clients.exporters.native import write_client_manifest, write_mihomo_configs, write_singbox_configs
-from ..clients.registry import CLIENTS
+from ..clients.registry import CLIENTS, PLATFORM_FAMILIES, WINDOWS_CLIENT_ALIASES
 from ..models import ParseError, UnknownProtocolError
 from ..models.fingerprint import normalize_config
 from ..protocols import parse_uri
@@ -77,6 +77,8 @@ def run_feed_stage(options: FeedOptions) -> dict[str, Any]:
         elif spec.format == "singbox-json":
             write_singbox_configs(clients_dir / spec.artifact, [c.config for c in selected])
         feed_counts[f"clients/{client}"] = len(selected)
+
+    _write_platform_feeds(output_dir, feed_counts)
 
     recommended_pool = [c for c in universal if _score(c, "global") >= policy.recommended_min_global]
     recommended = _with_fallback(recommended_pool, universal, policy, score_kind="global")
@@ -305,6 +307,105 @@ def _write_uri_feed(path: Path, candidates: list[FeedCandidate]) -> None:
     path.write_text(body, encoding="utf-8", newline="\n")
     encoded = base64.b64encode(body.encode("utf-8")).decode("ascii")
     path.with_name(path.stem + "_base64.txt").write_text(encoded + "\n", encoding="ascii", newline="\n")
+
+
+def _write_platform_feeds(output_dir: Path, feed_counts: dict[str, int]) -> None:
+    """Mirror client feeds into ``platforms/<family>/`` trees.
+
+    The mirrored bytes are exactly the published client artifacts (same
+    serializer, same runtime-core evidence — no new compatibility claims).
+    Windows-only client aliases (e.g. v2rayN importing the v2rayNG-family
+    URI feed) are served through ``WINDOWS_CLIENT_ALIASES``. Each platform
+    directory carries a manifest stating the evidence boundary honestly:
+    format/runtime support is real, device validation is unknown.
+    """
+    import shutil
+
+    platforms_dir = output_dir / "platforms"
+    _reset_dir(platforms_dir)
+    clients_dir = output_dir / "clients"
+
+    for family in PLATFORM_FAMILIES:
+        family_dir = platforms_dir / family
+        family_dir.mkdir(parents=True, exist_ok=True)
+        entries: dict[str, Any] = {}
+        for client, spec in CLIENTS.items():
+            if family not in spec.platforms:
+                continue
+            src = clients_dir / spec.artifact
+            if not src.is_file():
+                continue
+            dst = family_dir / spec.artifact
+            shutil.copyfile(src, dst)
+            _copy_feed_b64(src, dst)
+            feed_counts[f"platforms/{family}/{client}"] = _feed_entry_count(dst, spec.format)
+            entries[client] = {
+                "artifact": spec.artifact,
+                "format": spec.format,
+                "runtime_core": spec.core,
+                "runtime_core_verified": spec.runtime_verified,
+                "device_evidence": spec.device_evidence,
+                "nodes": feed_counts[f"platforms/{family}/{client}"],
+            }
+        if family == "windows":
+            for artifact, (source_artifact, status) in WINDOWS_CLIENT_ALIASES.items():
+                src = clients_dir / source_artifact
+                if not src.is_file():
+                    continue
+                dst = family_dir / artifact
+                shutil.copyfile(src, dst)
+                _copy_feed_b64(src, dst)
+                count = _feed_entry_count(dst, "uri")
+                feed_counts[f"platforms/windows/{artifact[:-4]}"] = count
+                entries[artifact[:-4]] = {
+                    "artifact": artifact,
+                    "format": "uri",
+                    "runtime_core": "xray",
+                    "runtime_core_verified": True,
+                    "device_evidence": "device_validation_unknown",
+                    "evidence_status": status,
+                    "mirrors": f"clients/{source_artifact}",
+                    "nodes": count,
+                }
+        manifest = {
+            "schema_version": 1,
+            "platform": family,
+            "evidence_boundary": (
+                "format_supported + runtime_core_verified; "
+                "device_validation_unknown — no device is tested here"
+            ),
+            "clients": dict(sorted(entries.items())),
+        }
+        (family_dir / "manifest.json").write_text(
+            json.dumps(manifest, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+            encoding="utf-8", newline="\n",
+        )
+
+
+def _copy_feed_b64(source: Path, dest: Path) -> None:
+    """Regenerate the base64 pair for a mirrored .txt feed from its bytes."""
+    b64_src = source.with_name(source.stem + "_base64.txt")
+    if not source.suffix == ".txt" or not b64_src.is_file():
+        return
+    dest.with_name(dest.stem + "_base64.txt").write_text(
+        b64_src.read_text(encoding="ascii"), encoding="ascii", newline="\n"
+    )
+
+
+def _feed_entry_count(path: Path, fmt: str) -> int:
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError:
+        return 0
+    if fmt == "mihomo-yaml":
+        return text.count("\n- name:") + text.count("\n- {name:")
+    if fmt == "singbox-json":
+        try:
+            data = json.loads(text)
+        except ValueError:
+            return 0
+        return len(data.get("outbounds") or [])
+    return sum(1 for line in text.splitlines() if line.strip())
 
 
 def _write_main_subscription(output_dir: Path, candidates: list[FeedCandidate]) -> None:

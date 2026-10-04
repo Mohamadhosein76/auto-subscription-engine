@@ -43,6 +43,11 @@ class ClientSpec:
     artifact: str
     format: str
     runtime_verified: bool = True
+    #: OS families that consume this client's feed ("android", "windows").
+    platforms: frozenset[str] = frozenset()
+    #: Device-level evidence boundary. The engine never claims a device
+    #: test it did not run, so every registry client starts here.
+    device_evidence: str = "device_validation_unknown"
 
 
 _TCPISH = frozenset({"tcp", "ws", "grpc", "h2", "httpupgrade"})
@@ -100,11 +105,39 @@ CORES: dict[str, CoreSpec] = {
 }
 
 CLIENTS: dict[str, ClientSpec] = {
-    "v2rayng": ClientSpec("v2rayng", "xray", "v2rayng.txt", "uri"),
-    "hiddify": ClientSpec("hiddify", "hiddify", "hiddify.txt", "uri"),
-    "nekobox": ClientSpec("nekobox", "singbox", "nekobox.txt", "uri"),
-    "singbox": ClientSpec("singbox", "singbox", "singbox.json", "singbox-json"),
-    "mihomo": ClientSpec("mihomo", "mihomo", "mihomo.yaml", "mihomo-yaml"),
+    "v2rayng": ClientSpec(
+        "v2rayng", "xray", "v2rayng.txt", "uri",
+        platforms=frozenset({"android"}),
+    ),
+    "hiddify": ClientSpec(
+        "hiddify", "hiddify", "hiddify.txt", "uri",
+        platforms=frozenset({"android", "windows"}),
+    ),
+    "nekobox": ClientSpec(
+        "nekobox", "singbox", "nekobox.txt", "uri",
+        platforms=frozenset({"android", "windows"}),
+    ),
+    "singbox": ClientSpec(
+        "singbox", "singbox", "singbox.json", "singbox-json",
+        platforms=frozenset({"android", "windows"}),
+    ),
+    "mihomo": ClientSpec(
+        "mihomo", "mihomo", "mihomo.yaml", "mihomo-yaml",
+        platforms=frozenset({"android", "windows"}),
+    ),
+}
+
+#: Platform families that receive mirrored feed trees under
+#: ``platforms/<family>/``. Order is also the documentation order.
+PLATFORM_FAMILIES: tuple[str, ...] = ("android", "windows")
+
+#: Windows-only client aliases: the client imports an existing registry
+#: artifact's format (same serializer, same runtime-core evidence), so it
+#: is served by mirroring that artifact under ``platforms/windows/``. No
+#: separate scoring entry exists — no duplicated evidence is created.
+WINDOWS_CLIENT_ALIASES: dict[str, tuple[str, str]] = {
+    # v2rayN imports the v2rayNG-family URI feed; runtime evidence: Xray.
+    "v2rayn.txt": ("v2rayng.txt", "runtime_core_verified"),
 }
 
 # These names are intentionally *not* publishable yet.  Stage 7 records the

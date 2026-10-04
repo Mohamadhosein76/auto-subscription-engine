@@ -435,14 +435,21 @@ def _stage_public(options: PublishOptions, stats: dict) -> list[str]:
     staged.append("live_stats.json")
 
     # status.json: tiny health marker for the last successful publish.
+    # Freshness contract: generated_at + source_commit + node_count make
+    # bundled snapshots distinguishable from live feeds.
     core_version = "unknown"
     effective = stats.get("effective_config")
     if isinstance(effective, dict):
         core_version = str(effective.get("core_version", "unknown"))
+    published_at = options.run_started_at or datetime.now(timezone.utc).isoformat(
+        timespec="seconds"
+    )
     status = {
         "status": "ok",
-        "last_successful_publish": options.run_started_at
-        or datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "last_successful_publish": published_at,
+        "source_commit": options.engine_commit or "unknown",
+        "node_count": int(stats.get("live_selected", 0)),
         "live_nodes": int(stats.get("live_selected", 0)),
         "engine_version": options.engine_commit or "unknown",
         "core_version": core_version,
@@ -504,6 +511,40 @@ def _stage_public(options: PublishOptions, stats: dict) -> list[str]:
         for path in sorted(operators_dst.rglob("*")):
             if path.is_file():
                 staged.append(path.relative_to(staging).as_posix())
+
+    # platforms/: per-OS mirrors of the client feeds (same bytes, same
+    # evidence). Staged with the same previous-good preservation per feed.
+    platforms_src = output_dir / "platforms"
+    if platforms_src.is_dir():
+        prev_platforms = Path(options.public_dir) / "platforms"
+        for family_dir in sorted(p for p in platforms_src.iterdir() if p.is_dir()):
+            dst_family = staging / "platforms" / family_dir.name
+            dst_family.mkdir(parents=True, exist_ok=True)
+            prev_family = prev_platforms / family_dir.name
+            for feed_file in sorted(family_dir.iterdir()):
+                if feed_file.name.endswith(FEED_B64_SUFFIX):
+                    continue
+                if feed_file.name == "manifest.json":
+                    (dst_family / feed_file.name).write_bytes(feed_file.read_bytes())
+                    staged.append(f"platforms/{family_dir.name}/manifest.json")
+                    continue
+                new_bytes = feed_file.read_bytes()
+                if _feed_is_empty(new_bytes):
+                    prev_file = prev_family / feed_file.name
+                    if prev_file.is_file() and not _feed_is_empty(prev_file.read_bytes()):
+                        new_bytes = prev_file.read_bytes()
+                if not new_bytes:
+                    continue
+                (dst_family / feed_file.name).write_bytes(new_bytes)
+                rel = f"platforms/{family_dir.name}/{feed_file.name}"
+                staged.append(rel)
+                if feed_file.suffix == ".txt":
+                    encoded = base64.b64encode(new_bytes).decode("ascii")
+                    b64_name = feed_file.stem + FEED_B64_SUFFIX
+                    (dst_family / b64_name).write_text(
+                        encoded + "\n", encoding="ascii", newline="\n"
+                    )
+                    staged.append(f"platforms/{family_dir.name}/{b64_name}")
 
     feed_manifest = output_dir / "feed_manifest.json"
     if feed_manifest.is_file():
@@ -688,8 +729,8 @@ def verify_public_dir(public_dir: Path) -> list[str]:
             except (ValueError, UnicodeDecodeError):
                 problems.append("clients/universal_base64.txt is not valid base64")
 
-    # Client/network feed base64 files must match their txt files.
-    for sub_name in ("clients", "networks", "profiles", "operators"):
+    # Client/network/platform feed base64 files must match their txt files.
+    for sub_name in ("clients", "networks", "profiles", "operators", "platforms"):
         sub_dir = public_dir / sub_name
         if not sub_dir.is_dir():
             continue
