@@ -5,258 +5,216 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_5bd76e08
-  type: hysteria2
-  server: 130.49.161.70
-  port: 443
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  sni: hy2.aspidnet.xyz
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: ase-node_12bc706b
-  type: ss
-  server: 140.82.63.79
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: ZoZtfPOyVvmKARUN
-  udp: true
-- name: ase-node_1c30cb91
+- name: ase-node_12c3fc04
   type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: none
-  udp: true
-- name: ase-node_495cd2cc
-  type: ss
-  server: 15.204.247.175
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  udp: true
-- name: ase-node_4eb3f050
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_937875f2
-  type: hysteria2
-  server: 155.248.209.237
-  port: 33333
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
-- name: ase-node_cacaa012
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_e78e4083
-  type: ss
-  server: 37.19.198.236
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: ase-node_ec2b8f2a
-  type: ss
-  server: 198.98.53.130
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-  udp: true
-- name: ase-node_eec73959
-  type: hysteria2
-  server: 216.151.165.219
-  port: 1655
-  password: 91be3262-93f4-46c5-aa33-ecac2368e8d6
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: ase-node_fb3e2f82
-  type: vmess
-  server: 172.111.38.100
+  server: 198.57.27.190
   port: 22324
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   udp: true
-- name: ase-node_1d4726ce
-  type: vless
-  server: 66.90.105.211
-  port: 2083
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+- name: ase-node_1e6205dd
+  type: vmess
+  server: 38.107.226.227
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
+- name: ase-node_23537fa6
+  type: vmess
+  server: 134.195.198.214
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_38a034e3
+  type: vmess
+  server: 216.152.152.187
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_4729c619
+  type: vmess
+  server: 38.91.107.49
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_48e54292
+  type: vmess
+  server: 38.107.226.227
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: none
+  udp: true
+- name: ase-node_54d916e4
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_5a52e34e
+  type: vmess
+  server: 167.88.62.124
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_7a4cf607
+  type: vmess
+  server: 198.57.27.190
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: none
+  udp: true
+- name: ase-node_969ae859
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_b5af032f
+  type: ss
+  server: 37.19.198.244
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: ase-node_da1b3b95
+  type: vmess
+  server: 167.88.63.59
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_ebd22f41
+  type: vmess
+  server: 172.111.38.100
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: none
+  udp: true
+- name: ase-node_f17b1c58
+  type: ss
+  server: 108.181.57.93
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: RSo52SbxW40r
+  udp: true
+- name: ase-node_f466d6b8
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  udp: true
+- name: ase-node_51ca9a8e
+  type: vmess
+  server: 129.146.143.80
+  port: 48111
+  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_1149c91f
+  type: vless
+  server: 143.246.208.113
+  port: 443
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  udp: true
+  tls: true
+  servername: assets-fr4.pleiades.codes
   network: grpc
   grpc-opts:
-    grpc-service-name: vless
-- name: ase-node_33a39cd6
+    grpc-service-name: cdn.v1.AssetService
+- name: ase-node_333a3b32
   type: ss
-  server: 108.181.118.10
-  port: 8388
+  server: 20.107.219.181
+  port: 443
   cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
+  password: 2fGnKgP8k8EHFuvj
   udp: true
-- name: ase-node_6a3dc857
-  type: vless
-  server: 66.90.104.42
-  port: 2083
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: ase-node_82db8d51
+- name: ase-node_ae3b797d
   type: ss
-  server: 173.244.56.9
+  server: 20.238.125.195
   port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: ase-node_d0accfec
-  type: ss
-  server: 173.244.56.6
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: ase-node_568b6070
-  type: hysteria2
-  server: 77.74.123.102
-  port: 8443
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-test-italy.dynuddns.net
-- name: ase-node_59860de4
-  type: ss
-  server: 149.22.95.183
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: ase-node_241424b2
-  type: ss
-  server: 109.201.152.181
-  port: 443
-  cipher: aes-128-cfb
-  password: shadowsocks
-  udp: true
-- name: ase-node_3dc57f90
-  type: ss
-  server: 141.98.101.181
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-- name: ase-node_46c340b7
-  type: ss
-  server: 108.181.58.239
-  port: 8388
   cipher: chacha20-ietf-poly1305
-  password: CJmTCCx7Ltud
+  password: jUg9wluj5iOiY9sI
   udp: true
-- name: ase-node_94858ef2
+- name: ase-node_90ac153d
   type: ss
-  server: 51.77.225.200
+  server: 139.84.166.47
   port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: zRZNBszYyWo5
-  udp: true
-- name: ase-node_db1f716f
-  type: ss
-  server: 149.102.149.207
-  port: 80
   cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
+  password: GEdoeeqLZtkJRgSa
   udp: true
-- name: ase-node_09b371cf
-  type: ss
-  server: 82.38.31.214
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: ase-node_8e50a79b
+  type: vmess
+  server: 89.41.172.85
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
   udp: true
-- name: ase-node_4b49a2e5
+- name: ase-node_06c5d52a
   type: ss
-  server: 82.38.31.192
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  udp: true
-- name: ase-node_53e5ac9e
-  type: ss
-  server: 82.38.31.3
+  server: 82.38.31.61
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-- name: ase-node_a928dc9f
+- name: ase-node_16da41a9
   type: ss
-  server: 82.38.31.176
+  server: 82.38.31.48
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: ase-node_385cddce
+  type: ss
+  server: 82.38.31.219
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
   udp: true
-- name: ase-node_b5c70197
+- name: ase-node_3ec2a5e7
   type: ss
-  server: 209.46.102.22
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 1hhrqrokj3ag
-  udp: true
-- name: ase-node_f3fccb5c
-  type: ss
-  server: 8.209.74.72
-  port: 20001
-  cipher: chacha20-ietf-poly1305
-  password: PWpjPo3tqhPN4yRZ
-  udp: true
-- name: ase-node_6b146081
-  type: vmess
-  server: 31.76.11.83
-  port: 23325
-  uuid: 3dff544a-379e-41f9-95d9-4b95a8e4026e
-  alterId: 0
-  cipher: none
-  udp: true
-- name: ase-node_198bc1d9
-  type: vless
-  server: 50.7.160.250
+  server: 82.38.31.174
   port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: chubby0.failspace.top
-  alpn:
-  - h2
-  client-fingerprint: chrome
-- name: ase-node_58919b1a
-  type: vless
-  server: 50.7.160.250
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: chubby0.failspace.top
-  alpn:
-  - h2
-  client-fingerprint: chrome
-- name: ase-node_0763654b
-  type: ss
-  server: 51.195.126.38
-  port: 8388
   cipher: chacha20-ietf-poly1305
-  password: 2YdE4lFOid5a
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-- name: ase-node_e3a3f7b6
+- name: ase-node_9be424e6
+  type: ss
+  server: 193.29.139.212
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: QCXDxuDlTTMD7jtgHUjIoj
+  udp: true
+- name: ase-node_d2a1ab46
+  type: ss
+  server: 193.29.139.179
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: ase-node_14d19347
   type: trojan
-  server: 199.232.78.160
+  server: 167.82.76.27
   port: 443
   password: mitivpn
   udp: true
@@ -269,103 +227,262 @@ proxies:
   ws-opts:
     path: /---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP
     headers:
+      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
+- name: ase-node_c8bd51fc
+  type: trojan
+  server: 199.232.78.160
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: ssl.fastly.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
       Host: mitivpn---deb--s---mitivpn-2.global.ssl.fastly.net
-- name: ase-node_d420acaf
+- name: ase-node_03fc46af
+  type: trojan
+  server: 167.82.76.27
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: ssl.fastly.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
+- name: ase-node_48e6d55d
+  type: trojan
+  server: 63.178.198.94
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: pleased-albacore.rooster465.autos
+  skip-cert-verify: true
+- name: ase-node_bd8c2ed5
+  type: trojan
+  server: 167.82.76.27
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: ssl.fastly.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/des---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
+    headers:
+      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
+- name: ase-node_e419b43e
+  type: vless
+  server: 45.131.212.231
+  port: 443
+  uuid: 19513b1b-d29a-4f3e-ba9a-888261e4e048
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: sellflow.org
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- name: ase-node_a072a82f
   type: hysteria2
-  server: 160.187.100.109
+  server: 138.2.89.249
+  port: 443
+  password: d042d150716709bb778cc73889cddb02
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: 309502c4a8df10b46fb976d4a8c43f42
+- name: ase-node_0ba6fbf2
+  type: trojan
+  server: 167.82.76.7
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: ssl.fastly.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: mitivpn---deb--s---mitivpn-4.global.ssl.fastly.net
+- name: ase-node_76d9b817
+  type: ss
+  server: 139.180.220.175
+  port: 8388
+  cipher: aes-256-gcm
+  password: qpSevKaUXYQKvSjp
+  udp: true
+- name: ase-node_a44c44a2
+  type: trojan
+  server: 82.117.245.125
+  port: 2053
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: ase-node_f240f8c3
+  type: trojan
+  server: 185.255.179.166
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: ase-node_c84fca3b
+  type: trojan
+  server: 212.227.144.37
+  port: 8443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  alpn:
+  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: ase-node_d8aab0ee
+  type: trojan
+  server: 185.220.100.168
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: ase-node_c269feff
+  type: ss
+  server: 139.84.247.164
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: tfAcRikawhNoZAhu
+  udp: true
+- name: ase-node_e4bf564c
+  type: ss
+  server: 102.37.156.224
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: aduB9HGxQHjA2SBMRjkHX6
+  udp: true
+- name: ase-node_c76d1a1a
+  type: trojan
+  server: 18.143.92.167
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: glowing-marmoset.rooster465.autos
+  skip-cert-verify: true
+- name: ase-node_bbd086f1
+  type: trojan
+  server: 185.244.208.69
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: strong-haddock.rooster465.autos
+  skip-cert-verify: true
+- name: ase-node_b95ce5ef
+  type: hysteria2
+  server: hy2.123266.xyz
+  port: 33333
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  sni: hy2.123266.xyz
+- name: ase-node_48af9eda
+  type: hysteria2
+  server: vpn-tw-002.fastervpn.world
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 127.0.0.1
   skip-cert-verify: true
-- name: ase-node_9cd490a2
+- name: ase-node_06ba0dc2
   type: hysteria2
-  server: 138.2.73.238
-  port: 50160
-  password: f87376e17da040ed04c9665ce8972930
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: ase-node_a28d813f
-  type: ss
-  server: 15.204.246.107
-  port: 8888
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  udp: true
-- name: ase-node_03c361b3
-  type: vmess
-  server: 134.175.113.147
-  port: 11206
-  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
-  alterId: 2
-  cipher: auto
-  udp: true
-- name: ase-node_6e521868
-  type: ss
-  server: 15.204.247.124
-  port: 2375
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: ase-node_94167694
-  type: vmess
-  server: 58.153.50.53
-  port: 30807
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  udp: true
-- name: ase-node_e855c6bb
-  type: vmess
-  server: 49.232.135.68
-  port: 11231
-  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
-  alterId: 2
-  cipher: auto
-  udp: true
+  server: hy2.561891.xyz
+  port: 44356
+  password: dongtaiwang.com
+  sni: hy2.561891.xyz
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_5bd76e08
-  - ase-node_12bc706b
-  - ase-node_1c30cb91
-  - ase-node_495cd2cc
-  - ase-node_4eb3f050
-  - ase-node_937875f2
-  - ase-node_cacaa012
-  - ase-node_e78e4083
-  - ase-node_ec2b8f2a
-  - ase-node_eec73959
-  - ase-node_fb3e2f82
-  - ase-node_1d4726ce
-  - ase-node_33a39cd6
-  - ase-node_6a3dc857
-  - ase-node_82db8d51
-  - ase-node_d0accfec
-  - ase-node_568b6070
-  - ase-node_59860de4
-  - ase-node_241424b2
-  - ase-node_3dc57f90
-  - ase-node_46c340b7
-  - ase-node_94858ef2
-  - ase-node_db1f716f
-  - ase-node_09b371cf
-  - ase-node_4b49a2e5
-  - ase-node_53e5ac9e
-  - ase-node_a928dc9f
-  - ase-node_b5c70197
-  - ase-node_f3fccb5c
-  - ase-node_6b146081
-  - ase-node_198bc1d9
-  - ase-node_58919b1a
-  - ase-node_0763654b
-  - ase-node_e3a3f7b6
-  - ase-node_d420acaf
-  - ase-node_9cd490a2
-  - ase-node_a28d813f
-  - ase-node_03c361b3
-  - ase-node_6e521868
-  - ase-node_94167694
-  - ase-node_e855c6bb
+  - ase-node_12c3fc04
+  - ase-node_1e6205dd
+  - ase-node_23537fa6
+  - ase-node_38a034e3
+  - ase-node_4729c619
+  - ase-node_48e54292
+  - ase-node_54d916e4
+  - ase-node_5a52e34e
+  - ase-node_7a4cf607
+  - ase-node_969ae859
+  - ase-node_b5af032f
+  - ase-node_da1b3b95
+  - ase-node_ebd22f41
+  - ase-node_f17b1c58
+  - ase-node_f466d6b8
+  - ase-node_51ca9a8e
+  - ase-node_1149c91f
+  - ase-node_333a3b32
+  - ase-node_ae3b797d
+  - ase-node_90ac153d
+  - ase-node_8e50a79b
+  - ase-node_06c5d52a
+  - ase-node_16da41a9
+  - ase-node_385cddce
+  - ase-node_3ec2a5e7
+  - ase-node_9be424e6
+  - ase-node_d2a1ab46
+  - ase-node_14d19347
+  - ase-node_c8bd51fc
+  - ase-node_03fc46af
+  - ase-node_48e6d55d
+  - ase-node_bd8c2ed5
+  - ase-node_e419b43e
+  - ase-node_a072a82f
+  - ase-node_0ba6fbf2
+  - ase-node_76d9b817
+  - ase-node_a44c44a2
+  - ase-node_f240f8c3
+  - ase-node_c84fca3b
+  - ase-node_d8aab0ee
+  - ase-node_c269feff
+  - ase-node_e4bf564c
+  - ase-node_c76d1a1a
+  - ase-node_bbd086f1
+  - ase-node_b95ce5ef
+  - ase-node_48af9eda
+  - ase-node_06ba0dc2
 rules:
 - MATCH,PROXY
