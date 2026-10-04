@@ -56,3 +56,6 @@ bin/
 *.bak
 .public.old-*
 public.staging/
+
+# Windows core QA downloads (never commit binaries)
+.core-bin-win/
