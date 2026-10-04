@@ -1,0 +1,49 @@
+{
+  "clients": {
+    "hiddify": {
+      "artifact": "hiddify.txt",
+      "device_evidence": "device_validation_unknown",
+      "format": "uri",
+      "nodes": 53,
+      "runtime_core": "hiddify",
+      "runtime_core_verified": true
+    },
+    "mihomo": {
+      "artifact": "mihomo.yaml",
+      "device_evidence": "device_validation_unknown",
+      "format": "mihomo-yaml",
+      "nodes": 48,
+      "runtime_core": "mihomo",
+      "runtime_core_verified": true
+    },
+    "nekobox": {
+      "artifact": "nekobox.txt",
+      "device_evidence": "device_validation_unknown",
+      "format": "uri",
+      "nodes": 49,
+      "runtime_core": "singbox",
+      "runtime_core_verified": true
+    },
+    "singbox": {
+      "artifact": "singbox.json",
+      "device_evidence": "device_validation_unknown",
+      "format": "singbox-json",
+      "nodes": 49,
+      "runtime_core": "singbox",
+      "runtime_core_verified": true
+    },
+    "v2rayn": {
+      "artifact": "v2rayn.txt",
+      "device_evidence": "device_validation_unknown",
+      "evidence_status": "runtime_core_verified",
+      "format": "uri",
+      "mirrors": "clients/v2rayng.txt",
+      "nodes": 32,
+      "runtime_core": "xray",
+      "runtime_core_verified": true
+    }
+  },
+  "evidence_boundary": "format_supported + runtime_core_verified; device_validation_unknown — no device is tested here",
+  "platform": "windows",
+  "schema_version": 1
+}
