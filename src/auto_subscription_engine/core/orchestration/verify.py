@@ -123,14 +123,16 @@ def verify_output_dir(output_dir: Path) -> list[str]:
     sources_total = stats.get("sources_total")
     sources_success = stats.get("sources_success")
     sources_failed = stats.get("sources_failed")
+    sources_skipped = stats.get("sources_skipped") or 0
     if (
         isinstance(sources_total, int)
         and isinstance(sources_success, int)
         and isinstance(sources_failed, int)
-        and sources_total != sources_success + sources_failed
+        and sources_total
+        != sources_success + sources_failed + sources_skipped
     ):
         problems.append(
-            "stats.json inconsistency: sources_total != sources_success + sources_failed"
+            "stats.json inconsistency: sources_total != sources_success + sources_failed + sources_skipped"
         )
 
     return problems

@@ -134,12 +134,20 @@ def collect_configs(options: RunOptions):
         for report in source_reports
         if not report["ok"] and report.get("skipped_reason") is None
     )
+    # Quarantined/skipped sources are neither successes nor failures; they
+    # are counted separately so sources_total reconciles exactly.
+    sources_skipped = sum(
+        1
+        for report in source_reports
+        if not report["ok"] and report.get("skipped_reason") is not None
+    )
 
     stats: dict[str, object] = {
         "mode": mode,
         "sources_total": sources_total,
         "sources_success": sources_success,
         "sources_failed": sources_failed,
+        "sources_skipped": sources_skipped,
         "configs_received": configs_received,
         "configs_unknown_protocol": unknown_count,
         "configs_invalid": invalid_count,
