@@ -1,5 +1,18 @@
 {
   "hosts": {
+    "014dd758-tmm5c0-tpda83-1lkbs.sg7.hyhuawei.com": {
+      "addresses": {
+        "172.236.139.236": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "01505e69-tmm5c0-tu0ezx-1m7l4.los.hyhuawei.com": {
       "addresses": {
         "64.32.13.203": {
@@ -65,6 +78,32 @@
         }
       }
     },
+    "23.149.28.8.sslip.io": {
+      "addresses": {
+        "23.149.28.8": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "24f1571a-tmm5c0-tug19l-1go3q.hk3.hyhuawei.com": {
+      "addresses": {
+        "112.120.221.250": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "28bae527-tmm5c0-u5ip77-duku.hk3.hyhuawei.com": {
       "addresses": {
         "112.120.221.250": {
@@ -96,6 +135,19 @@
         "47.237.102.137": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "35172c9b-tmm5c0-u10a65-1os43.los.hyhuawei.com": {
+      "addresses": {
+        "64.32.13.203": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -160,39 +212,39 @@
       "addresses": {
         "147.90.40.95": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         },
         "147.90.40.96": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         },
         "147.90.41.95": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         },
         "147.90.41.96": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         }
       }
     },
@@ -267,6 +319,19 @@
         }
       }
     },
+    "6ecfa763-tmm5c0-tqruo0-1pqhp.sg7.hyhuawei.com": {
+      "addresses": {
+        "172.236.139.236": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "6jizio8pxqaxbatz.v.3dns.vip": {
       "addresses": {
         "47.237.12.29": {
@@ -280,43 +345,69 @@
         }
       }
     },
+    "6r6e6e6ryrfyfyydur6r6f6r6r6r6d6d6e6s6d6s6d7d7d7e6s.poki-pakipon.ir": {
+      "addresses": {
+        "179.237.75.190": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "7d0a2gz0-7a0c.aws-agent.net": {
       "addresses": {
         "147.90.40.75": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         },
         "147.90.40.76": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         },
         "147.90.41.75": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         },
         "147.90.41.76": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
+        }
+      }
+    },
+    "8aea7579-tmm5c0-tzxeoy-hns7.sg7.hyhuawei.com": {
+      "addresses": {
+        "172.236.139.236": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -333,16 +424,68 @@
         }
       }
     },
-    "accurate-frog.rooster465.autos": {
+    "a6edadd7-tmm5c0-txfm0f-1qxa1.hk3.hyhuawei.com": {
       "addresses": {
-        "54.250.237.143": {
-          "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+        "112.120.221.250": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 1
+        }
+      }
+    },
+    "accurate-cat.rooster465.autos": {
+      "addresses": {
+        "54.180.128.171": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "accurate-frog.rooster465.autos": {
+      "addresses": {
+        "54.250.237.143": {
+          "first_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 3
+        }
+      }
+    },
+    "ace-starling.rooster465.autos": {
+      "addresses": {
+        "185.244.208.13": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "actual-squid.rooster465.autos": {
+      "addresses": {
+        "3.120.109.26": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -416,16 +559,42 @@
         }
       }
     },
-    "arcturus.yokkastars.com": {
+    "alive-flea.rooster465.autos": {
       "addresses": {
-        "93.152.217.152": {
-          "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+        "63.186.227.164": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 1
+        }
+      }
+    },
+    "api-working.gazladder.com": {
+      "addresses": {
+        "62.152.59.185": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "arcturus.yokkastars.com": {
+      "addresses": {
+        "93.152.217.152": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 4
         }
       }
     },
@@ -494,6 +663,19 @@
         }
       }
     },
+    "b08d347f-tmm5c0-tu0ezx-1m7l4.hk3.hyhuawei.com": {
+      "addresses": {
+        "112.120.221.250": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "b2n.ir": {
       "addresses": {
         "104.21.93.182": {
@@ -524,39 +706,65 @@
       "addresses": {
         "104.21.65.243": {
           "first_seen": "2026-10-04T00:41:39+00:00",
-          "last_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         },
         "172.67.195.84": {
           "first_seen": "2026-10-04T00:41:39+00:00",
-          "last_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         },
         "2606:4700:3032::ac43:c354": {
           "first_seen": "2026-10-04T00:41:39+00:00",
-          "last_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         },
         "2606:4700:3036::6815:41f3": {
           "first_seen": "2026-10-04T00:41:39+00:00",
-          "last_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
+        }
+      }
+    },
+    "bbbnhj.131.pp.ua": {
+      "addresses": {
+        "135.181.41.169": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "bbbnnmj.131.pp.ua": {
+      "addresses": {
+        "135.181.41.169": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -617,12 +825,12 @@
       "addresses": {
         "43.110.63.10": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         }
       }
     },
@@ -652,16 +860,29 @@
         }
       }
     },
-    "bwdf2fnt.xn--e1aatfr8bwa.online": {
+    "brief-warthog.rooster465.autos": {
       "addresses": {
-        "13.143.134.185": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+        "13.193.101.187": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 1
+        }
+      }
+    },
+    "bwdf2fnt.xn--e1aatfr8bwa.online": {
+      "addresses": {
+        "13.143.134.185": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 6
         }
       }
     },
@@ -688,6 +909,32 @@
             "system"
           ],
           "seen_count": 3
+        }
+      }
+    },
+    "capable-jay.rooster465.autos": {
+      "addresses": {
+        "54.169.137.148": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "careful-penguin.rooster465.autos": {
+      "addresses": {
+        "3.249.220.51": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -888,6 +1135,19 @@
         }
       }
     },
+    "central-jawfish.rooster465.autos": {
+      "addresses": {
+        "3.34.192.47": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "cf.130209.xyz": {
       "addresses": {
         "172.64.53.89": {
@@ -898,6 +1158,46 @@
             "system"
           ],
           "seen_count": 4
+        }
+      }
+    },
+    "chat.openai.com": {
+      "addresses": {
+        "104.18.37.228": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.64.150.28": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:4402::6812:25e4": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:4409::ac40:961c": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -945,12 +1245,12 @@
       "addresses": {
         "50.7.160.250": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -1019,16 +1319,29 @@
         }
       }
     },
-    "concrete-aardvark.rooster465.autos": {
+    "communal-sunbird.rooster465.autos": {
       "addresses": {
-        "13.231.247.130": {
-          "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+        "43.203.195.137": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 1
+        }
+      }
+    },
+    "concrete-aardvark.rooster465.autos": {
+      "addresses": {
+        "13.231.247.130": {
+          "first_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 3
         }
       }
     },
@@ -1037,6 +1350,19 @@
         "31.76.249.174": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "cz-musicc.moritech.net": {
+      "addresses": {
+        "31.76.7.45": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -1093,48 +1419,48 @@
       "addresses": {
         "2.58.66.143": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "2.58.66.198": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "31.76.119.123": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "31.76.119.17": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "62.192.153.132": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -1155,7 +1481,20 @@
       "addresses": {
         "202.61.205.86": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 3
+        }
+      }
+    },
+    "deak.nightfall.best": {
+      "addresses": {
+        "31.76.249.116": {
+          "first_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -1164,11 +1503,11 @@
         }
       }
     },
-    "deak.nightfall.best": {
+    "definite-ladybird.rooster465.autos": {
       "addresses": {
-        "31.76.249.116": {
-          "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+        "52.78.195.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -1194,12 +1533,12 @@
       "addresses": {
         "52.78.203.191": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -1207,12 +1546,52 @@
       "addresses": {
         "54.254.59.149": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
+        }
+      }
+    },
+    "dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev": {
+      "addresses": {
+        "104.21.29.250": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.150.22": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3034::6815:1dfa": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3034::ac43:9616": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -1221,6 +1600,45 @@
         "87.107.190.242": {
           "first_seen": "2026-10-04T00:41:39+00:00",
           "last_seen": "2026-10-04T00:41:39+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "e96c3741-tmm5c0-tw2fdz-1s824.hk3.hyhuawei.com": {
+      "addresses": {
+        "112.120.221.250": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "eager-louse.rooster465.autos": {
+      "addresses": {
+        "89.39.70.180": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "eager-platypus.rooster465.autos": {
+      "addresses": {
+        "3.38.166.184": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -1242,6 +1660,19 @@
         }
       }
     },
+    "ec439ce1-tmm5c0-u1dz9j-12hj8.sg7.hyhuawei.com": {
+      "addresses": {
+        "172.236.139.236": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "els.mangshe.xyz": {
       "addresses": {
         "45.140.168.217": {
@@ -1255,16 +1686,81 @@
         }
       }
     },
-    "engaging-toucan.rooster465.autos": {
+    "emerging-baboon.rooster465.autos": {
       "addresses": {
-        "13.125.69.162": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+        "18.203.81.6": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 1
+        }
+      }
+    },
+    "emerging-weevil.rooster465.autos": {
+      "addresses": {
+        "193.169.239.14": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "eminent-dogfish.rooster465.autos": {
+      "addresses": {
+        "43.203.235.186": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "engaged-ram.rooster465.autos": {
+      "addresses": {
+        "43.207.113.142": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "engaging-toucan.rooster465.autos": {
+      "addresses": {
+        "13.125.69.162": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 6
+        }
+      }
+    },
+    "enhanced-crayfish.rooster465.autos": {
+      "addresses": {
+        "3.36.55.102": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -1272,12 +1768,12 @@
       "addresses": {
         "213.182.204.136": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         }
       }
     },
@@ -1285,12 +1781,25 @@
       "addresses": {
         "54.180.236.195": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
+        }
+      }
+    },
+    "evolving-kangaroo.rooster465.autos": {
+      "addresses": {
+        "54.180.9.248": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -1304,6 +1813,19 @@
             "system"
           ],
           "seen_count": 5
+        }
+      }
+    },
+    "excited-ghoul.rooster465.autos": {
+      "addresses": {
+        "43.202.40.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -1337,201 +1859,201 @@
       "addresses": {
         "116.202.107.93": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "128.140.119.77": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "128.140.124.189": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "138.201.117.173": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "2.28.14.250": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "2.28.35.95": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "23.88.33.122": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "46.224.76.228": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "46.224.97.220": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "46.225.147.25": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "46.225.159.171": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "49.12.212.19": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "49.12.222.176": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "49.12.247.134": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "49.13.87.100": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "78.46.163.229": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "78.47.37.165": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "88.99.32.105": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "91.99.127.242": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "91.99.209.29": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "91.99.222.80": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "91.99.223.99": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         }
       }
     },
@@ -1539,7 +2061,59 @@
       "addresses": {
         "78.159.246.110": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "fc05feb7-tmm5c0-tpv2b9-1o8ak.hk3.hyhuawei.com": {
+      "addresses": {
+        "112.120.221.250": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "fit-marten.rooster465.autos": {
+      "addresses": {
+        "52.78.7.106": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "flexible-titmouse.rooster465.autos": {
+      "addresses": {
+        "3.35.231.219": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "fr.test3.net": {
+      "addresses": {
+        "51.159.59.186": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -1552,7 +2126,20 @@
       "addresses": {
         "139.162.27.96": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "free-v7-09.elbrusway.online": {
+      "addresses": {
+        "64.188.66.196": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -1584,6 +2171,32 @@
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
           "resolvers": [
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "funky-platypus.rooster465.autos": {
+      "addresses": {
+        "43.201.46.44": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "funny-hawk.rooster465.autos": {
+      "addresses": {
+        "18.183.164.31": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
             "system"
           ],
           "seen_count": 1
@@ -1660,12 +2273,12 @@
       "addresses": {
         "155.254.35.18": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         }
       }
     },
@@ -1673,12 +2286,12 @@
       "addresses": {
         "65.109.18.120": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         }
       }
     },
@@ -1686,12 +2299,12 @@
       "addresses": {
         "178.236.251.64": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         }
       }
     },
@@ -1721,12 +2334,12 @@
       "addresses": {
         "18.143.92.167": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         }
       }
     },
@@ -1743,52 +2356,65 @@
         }
       }
     },
+    "growing-oyster.rooster465.autos": {
+      "addresses": {
+        "91.199.84.204": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "gsg192i.zxom.eu.org": {
       "addresses": {
         "34.142.158.62": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         },
         "34.142.242.182": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         },
         "34.158.39.186": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         },
         "34.21.189.192": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         },
         "34.87.21.131": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -1836,12 +2462,12 @@
       "addresses": {
         "34.220.15.24": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -1877,6 +2503,19 @@
             "system"
           ],
           "seen_count": 5
+        }
+      }
+    },
+    "helped-jennet.rooster465.autos": {
+      "addresses": {
+        "34.216.104.24": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -1977,12 +2616,12 @@
       "addresses": {
         "212.192.15.177": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         }
       }
     },
@@ -1990,21 +2629,21 @@
       "addresses": {
         "104.219.250.37": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "2.59.170.20": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         }
       }
     },
@@ -2034,12 +2673,12 @@
       "addresses": {
         "13.212.81.3": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -2069,12 +2708,12 @@
       "addresses": {
         "155.248.209.237": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         }
       }
     },
@@ -2082,12 +2721,12 @@
       "addresses": {
         "142.249.37.90": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         }
       }
     },
@@ -2117,11 +2756,37 @@
         }
       }
     },
+    "included-hedgehog.rooster465.autos": {
+      "addresses": {
+        "13.212.187.247": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "india.letsconnectpoint.com": {
       "addresses": {
         "5.253.42.159": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "innocent-rattler.rooster465.autos": {
+      "addresses": {
+        "52.78.76.194": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -2134,12 +2799,12 @@
       "addresses": {
         "54.199.66.128": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         }
       }
     },
@@ -2147,12 +2812,12 @@
       "addresses": {
         "18.176.61.69": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 5
+          "seen_count": 6
         }
       }
     },
@@ -2160,12 +2825,25 @@
       "addresses": {
         "56.10.9.77": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
+        }
+      }
+    },
+    "inviting-rabbit.rooster465.autos": {
+      "addresses": {
+        "3.36.52.203": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -2191,11 +2869,37 @@
         }
       }
     },
+    "iranserver.com": {
+      "addresses": {
+        "91.247.174.1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "jgzt1997.qivfelo.ir": {
       "addresses": {
         "5.75.171.12": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "joint-ewe.rooster465.autos": {
+      "addresses": {
+        "52.221.222.185": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -2255,6 +2959,32 @@
         }
       }
     },
+    "jp01a.roc-taiwan.net.ua": {
+      "addresses": {
+        "133.242.146.108": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "jp02a.roc-taiwan.net.ua": {
+      "addresses": {
+        "133.242.205.220": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "jp04a.roc-taiwan.net.ua": {
       "addresses": {
         "153.127.8.129": {
@@ -2265,6 +2995,19 @@
             "system"
           ],
           "seen_count": 3
+        }
+      }
+    },
+    "jp05a.roc-taiwan.org.ua": {
+      "addresses": {
+        "133.125.42.51": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -2291,6 +3034,28 @@
             "system"
           ],
           "seen_count": 1
+        },
+        "45.202.245.59": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "just-alpaca.rooster465.autos": {
+      "addresses": {
+        "185.244.208.25": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -2298,12 +3063,12 @@
       "addresses": {
         "65.109.180.220": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2324,12 +3089,12 @@
       "addresses": {
         "3.39.225.215": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -2416,12 +3181,51 @@
       "addresses": {
         "13.125.197.117": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
+        }
+      }
+    },
+    "live-drake.rooster465.autos": {
+      "addresses": {
+        "35.89.158.227": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "living-hagfish.rooster465.autos": {
+      "addresses": {
+        "13.124.56.133": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "los2.playstone.info": {
+      "addresses": {
+        "45.63.60.28": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -2503,12 +3307,12 @@
       "addresses": {
         "3.75.93.113": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -2516,12 +3320,25 @@
       "addresses": {
         "217.217.225.33": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
+        }
+      }
+    },
+    "mighty-lemming.rooster465.autos": {
+      "addresses": {
+        "52.220.181.28": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -2551,11 +3368,102 @@
         }
       }
     },
+    "moved-bluegill.rooster465.autos": {
+      "addresses": {
+        "3.36.76.91": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "mr-amir-production-e40d.up.railway.app": {
+      "addresses": {
+        "69.46.46.44": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "national-dingo.rooster465.autos": {
+      "addresses": {
+        "50.112.83.226": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "new-antelope.rooster465.autos": {
+      "addresses": {
+        "54.255.212.245": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "next-turkey.rooster465.autos": {
+      "addresses": {
+        "43.203.121.129": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "nice.iranapplecenter.com": {
       "addresses": {
         "167.82.76.31": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "nl-4.tr202507.com": {
+      "addresses": {
+        "194.124.216.109": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "nnnmjju.131.pp.ua": {
+      "addresses": {
+        "135.181.41.169": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -2581,12 +3489,12 @@
       "addresses": {
         "3.35.168.225": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -2594,12 +3502,683 @@
       "addresses": {
         "54.238.153.132": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
+        }
+      }
+    },
+    "official.seoulcityhall.com.ua": {
+      "addresses": {
+        "123.140.124.25": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.taipeicitygovernment.cn.ua": {
+      "addresses": {
+        "2001:b030:1420:ff02::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff00::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff01::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1453:ff03::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:240c:ff1c::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.128.151": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.135.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.152.229": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.130": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.31": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.taipeicitygovernment.co.ua": {
+      "addresses": {
+        "2001:b030:1420:ff02::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff00::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff01::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1453:ff03::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:240c:ff1c::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.128.151": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.135.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.152.229": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.130": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.31": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.taipeicitygovernment.com.ua": {
+      "addresses": {
+        "2001:b030:1420:ff02::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff00::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff01::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1453:ff03::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:240c:ff1c::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.128.151": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.135.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.152.229": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.130": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.31": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.taipeicitygovernment.dp.ua": {
+      "addresses": {
+        "2001:b030:1420:ff02::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff00::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff01::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1453:ff03::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:240c:ff1c::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.128.151": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.135.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.152.229": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.130": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.31": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.taipeicitygovernment.if.ua": {
+      "addresses": {
+        "2001:b030:1420:ff02::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff00::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff01::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1453:ff03::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:240c:ff1c::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.128.151": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.135.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.152.229": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.130": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.31": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.taipeicitygovernment.ivano-frankivsk.ua": {
+      "addresses": {
+        "2001:b030:1420:ff02::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff00::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff01::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1453:ff03::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:240c:ff1c::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.128.151": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.135.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.152.229": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.130": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.31": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.taipeicitygovernment.kiev.ua": {
+      "addresses": {
+        "2001:b030:1420:ff02::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff00::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1424:ff01::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:1453:ff03::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2001:b030:240c:ff1c::1": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.128.151": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "220.128.135.193": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.152.229": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.130": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "60.250.80.31": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -2697,16 +4276,94 @@
         }
       }
     },
-    "optimum-snapper.rooster465.autos": {
+    "official.tokyometropolis.ivano-frankivsk.ua": {
       "addresses": {
-        "43.201.100.203": {
-          "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+        "152.175.36.18": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 1
+        }
+      }
+    },
+    "official.tokyometropolis.kharkov.ua": {
+      "addresses": {
+        "152.175.38.179": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.tokyometropolis.kherson.ua": {
+      "addresses": {
+        "152.175.36.141": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.tokyometropolis.kiev.ua": {
+      "addresses": {
+        "152.175.38.59": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.tokyometropolis.kyiv.ua": {
+      "addresses": {
+        "152.175.36.33": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "official.tokyometropolis.odesa.ua": {
+      "addresses": {
+        "152.175.36.134": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "optimum-snapper.rooster465.autos": {
+      "addresses": {
+        "43.201.100.203": {
+          "first_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 3
         }
       }
     },
@@ -2714,12 +4371,12 @@
       "addresses": {
         "43.207.89.91": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -2779,12 +4436,12 @@
       "addresses": {
         "31.77.13.19": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2792,21 +4449,21 @@
       "addresses": {
         "31.56.188.171": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "77.83.246.202": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2853,12 +4510,12 @@
       "addresses": {
         "64.176.10.89": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2866,12 +4523,12 @@
       "addresses": {
         "64.176.5.68": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2892,12 +4549,12 @@
       "addresses": {
         "64.176.22.185": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2905,12 +4562,12 @@
       "addresses": {
         "64.176.24.232": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2918,12 +4575,12 @@
       "addresses": {
         "64.176.2.25": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2931,12 +4588,12 @@
       "addresses": {
         "64.176.21.217": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2944,12 +4601,12 @@
       "addresses": {
         "64.176.7.121": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -2996,12 +4653,12 @@
       "addresses": {
         "144.31.50.236": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -3015,6 +4672,19 @@
             "system"
           ],
           "seen_count": 5
+        }
+      }
+    },
+    "pro-crane.rooster465.autos": {
+      "addresses": {
+        "89.39.70.120": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -3036,6 +4706,19 @@
         "199.232.131.119": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "pure-ram.rooster465.autos": {
+      "addresses": {
+        "47.128.146.47": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -3074,12 +4757,12 @@
       "addresses": {
         "185.141.219.10": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         }
       }
     },
@@ -3087,12 +4770,12 @@
       "addresses": {
         "52.221.218.179": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -3113,12 +4796,12 @@
       "addresses": {
         "216.24.57.1": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         }
       }
     },
@@ -3127,6 +4810,126 @@
         "31.77.143.42": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "s1.hazz.win": {
+      "addresses": {
+        "104.21.24.68": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.217.89": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3030::6815:1844": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3035::ac43:d959": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "s3.hazz.win": {
+      "addresses": {
+        "104.21.24.68": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.217.89": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3030::6815:1844": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3035::ac43:d959": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "s4.hazz.win": {
+      "addresses": {
+        "104.21.24.68": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.217.89": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3030::6815:1844": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3035::ac43:d959": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -3161,11 +4964,64 @@
         }
       }
     },
+    "series-v1.samanehha.co": {
+      "addresses": {
+        "104.21.12.87": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.131.245": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3035::6815:c57": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3036::ac43:83f5": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "server.slavkiti.monster": {
       "addresses": {
         "107.181.151.39": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 2
+        }
+      }
+    },
+    "sg1-trojan.bonds.id": {
+      "addresses": {
+        "103.253.24.212": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -3200,12 +5056,12 @@
       "addresses": {
         "46.137.199.87": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         }
       }
     },
@@ -3237,6 +5093,15 @@
     },
     "sin-a-02.auuas.com": {
       "addresses": {
+        "18.141.166.175": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
         "18.142.105.173": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
@@ -3249,6 +5114,15 @@
         "2406:da18:1734:2b00:6468:8e75:d1d0:4166": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2406:da18:1c51:fc00:fe5b:4a9:3e57:eb18": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -3292,6 +5166,45 @@
         }
       }
     },
+    "smiling-fowl.rooster465.autos": {
+      "addresses": {
+        "52.78.158.178": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "smooth-lark.rooster465.autos": {
+      "addresses": {
+        "13.125.211.246": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "square-gnat.rooster465.autos": {
+      "addresses": {
+        "54.245.10.59": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "staging.lastilhame.monster": {
       "addresses": {
         "107.181.151.241": {
@@ -3305,16 +5218,55 @@
         }
       }
     },
-    "strong-haddock.rooster465.autos": {
+    "star-moray.rooster465.autos": {
       "addresses": {
-        "185.244.208.69": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T00:41:39+00:00",
+        "43.202.1.241": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 1
+        }
+      }
+    },
+    "strong-haddock.rooster465.autos": {
+      "addresses": {
+        "185.244.208.69": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 4
+        }
+      }
+    },
+    "stunning-mastodon.rooster465.autos": {
+      "addresses": {
+        "13.212.181.141": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "summary-firefly.rooster465.autos": {
+      "addresses": {
+        "43.201.100.128": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -3375,39 +5327,39 @@
       "addresses": {
         "170.114.45.6": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "170.114.46.6": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "2407:30c0:180::6": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         },
         "2407:30c0:181::6": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -3502,11 +5454,46 @@
         }
       }
     },
+    "thorough-foxhound.rooster465.autos": {
+      "addresses": {
+        "54.254.196.251": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "tk1.high-speed-test-56424.me": {
       "addresses": {
         "32.189.233.34": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "44.255.41.67": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "tough-hermit.rooster465.autos": {
+      "addresses": {
+        "54.180.239.104": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -3532,12 +5519,12 @@
       "addresses": {
         "140.245.120.16": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -3551,6 +5538,32 @@
             "system"
           ],
           "seen_count": 3
+        }
+      }
+    },
+    "trs12.bolab.net": {
+      "addresses": {
+        "153.125.148.41": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "trs16.bolab.net": {
+      "addresses": {
+        "153.127.215.49": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -3638,6 +5651,46 @@
         }
       }
     },
+    "tw01.henet.top": {
+      "addresses": {
+        "104.21.5.27": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "172.67.132.199": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3030::ac43:84c7": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "2606:4700:3031::6815:51b": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
     "uae.unixzone.us": {
       "addresses": {
         "84.235.244.108": {
@@ -3721,12 +5774,12 @@
       "addresses": {
         "54.213.238.59": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -3740,6 +5793,19 @@
             "system"
           ],
           "seen_count": 3
+        }
+      }
+    },
+    "us2.trojanvh.xyz": {
+      "addresses": {
+        "103.224.212.216": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -3817,12 +5883,25 @@
       "addresses": {
         "160.187.100.109": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
+        }
+      }
+    },
+    "vvbgh.131.pp.ua": {
+      "addresses": {
+        "135.181.41.169": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -3843,12 +5922,12 @@
       "addresses": {
         "54.65.177.190": {
           "first_seen": "2026-10-04T02:40:48+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 2
+          "seen_count": 3
         }
       }
     },
@@ -3857,6 +5936,19 @@
         "47.88.60.65": {
           "first_seen": "2026-10-03T22:14:11+00:00",
           "last_seen": "2026-10-03T22:14:11+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        }
+      }
+    },
+    "worthy-labrador.rooster465.autos": {
+      "addresses": {
+        "52.78.235.153": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
@@ -3963,39 +6055,39 @@
       "addresses": {
         "104.18.8.83": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "104.18.9.83": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "2606:4700::6812:853": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         },
         "2606:4700::6812:953": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T02:40:48+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 4
+          "seen_count": 5
         }
       }
     },
@@ -4043,39 +6135,61 @@
       "addresses": {
         "104.18.0.55": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         },
         "104.18.1.55": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         },
         "2606:4700::6812:137": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         },
         "2606:4700::6812:37": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
+        }
+      }
+    },
+    "www.hcaptcha.com": {
+      "addresses": {
+        "104.19.229.21": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.19.230.21": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -4163,39 +6277,61 @@
       "addresses": {
         "104.18.10.110": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         },
         "104.18.11.110": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         },
         "2606:4700::6812:a6e": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         },
         "2606:4700::6812:b6e": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
+        }
+      }
+    },
+    "www.speedtest.net": {
+      "addresses": {
+        "104.17.147.22": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
+        },
+        "104.17.148.22": {
+          "first_seen": "2026-10-04T07:34:51+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 1
         }
       }
     },
@@ -4203,21 +6339,21 @@
       "addresses": {
         "162.159.140.229": {
           "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-04T00:41:39+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
+          "resolvers": [
+            "google",
+            "system"
+          ],
+          "seen_count": 4
+        },
+        "172.66.0.227": {
+          "first_seen": "2026-10-03T21:36:37+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
           "seen_count": 3
-        },
-        "172.66.0.227": {
-          "first_seen": "2026-10-03T21:36:37+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
-          "resolvers": [
-            "google",
-            "system"
-          ],
-          "seen_count": 2
         }
       }
     },
@@ -4238,12 +6374,12 @@
       "addresses": {
         "147.45.175.81": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-03T22:14:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 1
+          "seen_count": 2
         }
       }
     },
@@ -4326,12 +6462,12 @@
       "addresses": {
         "194.50.216.61": {
           "first_seen": "2026-10-03T22:14:11+00:00",
-          "last_seen": "2026-10-04T06:54:11+00:00",
+          "last_seen": "2026-10-04T07:34:51+00:00",
           "resolvers": [
             "google",
             "system"
           ],
-          "seen_count": 3
+          "seen_count": 4
         }
       }
     },
