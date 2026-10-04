@@ -4,44 +4,54 @@
       "artifact": "hiddify.txt",
       "device_evidence": "device_validation_unknown",
       "format": "uri",
-      "nodes": 28,
+      "nodes": 22,
       "runtime_core": "hiddify",
-      "runtime_core_verified": true
+      "runtime_core_verified": true,
+      "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
     },
     "mihomo": {
       "artifact": "mihomo.yaml",
       "device_evidence": "device_validation_unknown",
       "format": "mihomo-yaml",
-      "nodes": 30,
+      "nodes": 25,
       "runtime_core": "mihomo",
-      "runtime_core_verified": true
+      "runtime_core_verified": true,
+      "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
     },
     "nekobox": {
       "artifact": "nekobox.txt",
       "device_evidence": "device_validation_unknown",
       "format": "uri",
-      "nodes": 27,
+      "nodes": 23,
       "runtime_core": "singbox",
-      "runtime_core_verified": true
+      "runtime_core_verified": true,
+      "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
     },
     "singbox": {
       "artifact": "singbox.json",
       "device_evidence": "device_validation_unknown",
       "format": "singbox-json",
-      "nodes": 27,
+      "nodes": 23,
       "runtime_core": "singbox",
-      "runtime_core_verified": true
+      "runtime_core_verified": true,
+      "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
     },
     "v2rayng": {
       "artifact": "v2rayng.txt",
       "device_evidence": "device_validation_unknown",
       "format": "uri",
-      "nodes": 21,
+      "nodes": 16,
       "runtime_core": "xray",
-      "runtime_core_verified": true
+      "runtime_core_verified": true,
+      "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
     }
   },
-  "evidence_boundary": "format_supported + runtime_core_verified; device_validation_unknown — no device is tested here",
+  "device_validation": "manual_observation_only",
+  "evidence_boundary": "CI runtime verification is NOT Android/Windows GUI device validation; a node can pass server-side runtime verification and still fail on a specific ISP/device/client combination",
+  "generated_at": "2026-10-04T08:13:53+00:00",
+  "operator_validation": "unknown",
   "platform": "android",
-  "schema_version": 1
+  "runtime_evidence_max_age_hours": 26.0,
+  "schema_version": 2,
+  "selection_policy": "client serializer supported AND client runtime core compatible AND real tunneled HTTPS probe passed AND client score >= platform threshold AND evidence fresh; no fallback"
 }
