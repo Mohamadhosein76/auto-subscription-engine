@@ -1,348 +1,157 @@
 {
   "outbounds": [
     {
-      "type": "vmess",
-      "tag": "ase-node_79c4b030",
-      "server": "129.146.77.248",
-      "server_port": 39495,
-      "uuid": "f836c736-87fc-4fde-aabc-00857ecdff3e",
-      "security": "auto",
-      "alter_id": 0,
-      "transport": {
-        "type": "ws",
-        "path": "/cctv13.m3u8"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_504af26e",
-      "server": "guided-ferret.rooster465.autos",
+      "type": "vless",
+      "tag": "ase-node_b269af38",
+      "server": "172.86.105.224",
       "server_port": 443,
-      "password": "UX82473651",
+      "uuid": "71e9e770-bfc6-11f1-8b5c-54db13ea7d40",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "guided-ferret.rooster465.autos"
+        "server_name": "www.nvidia.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "n25FmewpAEsvLl9Vr0bRFcz044f4IE7orWeWOzu8rwk"
+        }
       }
     },
     {
-      "type": "trojan",
-      "tag": "ase-node_d3b12b1d",
-      "server": "happy-gibbon.rooster465.autos",
+      "type": "vless",
+      "tag": "ase-node_f8d5c6c3",
+      "server": "172.86.105.222",
       "server_port": 443,
-      "password": "UX82473651",
+      "uuid": "67a544a2-bfc6-11f1-9c3e-52540030ba36",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "happy-gibbon.rooster465.autos"
+        "server_name": "www.nvidia.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "n25FmewpAEsvLl9Vr0bRFcz044f4IE7orWeWOzu8rwk"
+        }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_e7a43b9a",
-      "server": "98.88.252.127",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_e5f80d28",
-      "server": "3.95.209.183",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
     },
     {
       "type": "vmess",
-      "tag": "ase-node_b6c18b33",
-      "server": "216.106.183.35",
-      "server_port": 22324,
-      "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+      "tag": "ase-node_43b32e66",
+      "server": "129.146.143.80",
+      "server_port": 48111,
+      "uuid": "d4603cc2-e0ee-4651-83f5-1db5b7168177",
       "security": "auto",
       "alter_id": 0
     },
     {
-      "type": "vless",
-      "tag": "ase-node_7fd07935",
-      "server": "169.40.42.235",
+      "type": "shadowsocks",
+      "tag": "ase-node_2414edb1",
+      "server": "4.231.217.136",
       "server_port": 443,
-      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "short_id": "c39cc7310a"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_de3cf901",
-      "server": "66.163.115.23",
-      "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "security": "auto",
-      "alter_id": 0,
-      "tls": {
-        "enabled": true,
-        "server_name": "aidrivercat.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/linkvws",
-        "headers": {
-          "Host": "aidrivercat.org"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_0a1fc31e",
-      "server": "4dfe79ca-tmm5c0-tpftcp-13x18.hk3.hyhuawei.com",
-      "server_port": 443,
-      "password": "e4499a62-0cfe-11eb-ad8c-f23c9164ca5d",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_0de0933e",
-      "server": "61b2ab79-tmm5c0-u1q5od-t6fv.hk3.hyhuawei.com",
-      "server_port": 443,
-      "password": "af7ddbb2-3567-11ec-bd7c-f23c913c8d2b",
-      "tls": {
-        "enabled": true,
-        "server_name": "61b2ab79-tmm5c0-u1q5od-t6fv.hk3.hyhuawei.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_4defd220",
-      "server": "116.49.85.111",
-      "server_port": 443,
-      "password": "af7ddbb2-3567-11ec-bd7c-f23c913c8d2b",
-      "tls": {
-        "enabled": true,
-        "server_name": "61b2ab79-tmm5c0-u1q5od-t6fv.hk3.hyhuawei.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_51b40860",
-      "server": "116.49.85.111",
-      "server_port": 443,
-      "password": "e4499a62-0cfe-11eb-ad8c-f23c9164ca5d",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
+      "method": "chacha20-ietf-poly1305",
+      "password": "vKzNmQJnP07Ys7Fp"
     },
     {
       "type": "shadowsocks",
-      "tag": "ase-node_f1509190",
-      "server": "150.251.158.144",
-      "server_port": 8388,
-      "method": "aes-256-gcm",
-      "password": "uWG3nisqPwqvMEA1"
+      "tag": "ase-node_a563a0df",
+      "server": "4.231.217.136",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "AfLrkuAPIRjQooe0"
     },
     {
       "type": "shadowsocks",
-      "tag": "ase-node_20405e8a",
-      "server": "15.237.255.137",
+      "tag": "ase-node_8cc42cc0",
+      "server": "82.38.31.159",
       "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_5706e075",
-      "server": "ru1.xiaoliyu.cyou",
-      "server_port": 18333,
-      "password": "19f72087-4591-4d72-930b-2697078ec2be",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.xiaoliyu.cyou",
-        "insecure": true
-      }
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "trojan",
-      "tag": "ase-node_073e978d",
-      "server": "dynamic-imp.rooster465.autos",
+      "tag": "ase-node_b0112b89",
+      "server": "167.82.76.7",
       "server_port": 443,
-      "password": "UX82473651",
+      "password": "mitivpn",
       "tls": {
         "enabled": true,
-        "server_name": "dynamic-imp.rooster465.autos"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_f6648078",
-      "server": "us3.xiaoliyu.cyou",
-      "server_port": 18333,
-      "password": "19f72087-4591-4d72-930b-2697078ec2be",
-      "tls": {
-        "enabled": true,
-        "server_name": "us3.xiaoliyu.cyou",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_79af08e9",
-      "server": "85.17.145.65",
-      "server_port": 12068,
-      "uuid": "05caca6c-9e97-4c0f-8edf-7b88a6e572c5",
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_c87d66ba",
-      "server": "meet-goshawk.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "meet-goshawk.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_0987f8c1",
-      "server": "neutral-quail.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "neutral-quail.rooster465.autos"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_211df3d6",
-      "server": "43.203.172.96",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "neutral-quail.rooster465.autos"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_05dadc72",
-      "server": "87.192.47.10",
-      "server_port": 52006,
-      "uuid": "bc659d88-a1e0-4c65-a49a-7b51b26a7a7f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "grok.setlisting.ru",
+        "server_name": "ssl.fastly.com",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_376afa58",
-      "server": "real-cardinal.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "real-cardinal.rooster465.autos"
-      }
-    },
-    {
-      "type": "tuic",
-      "tag": "ase-node_a6c5085f",
-      "server": "36.227.223.234",
-      "server_port": 8080,
-      "uuid": "D7286728-678E-443B-B76B-B699654C66DD",
-      "password": "D7286728-678E-443B-B76B-B699654C66DD",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw1.dexlos.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "tuic",
-      "tag": "ase-node_0a4ed1a4",
-      "server": "tw1.dexlos.com",
-      "server_port": 8080,
-      "uuid": "D7286728-678E-443B-B76B-B699654C66DD",
-      "password": "D7286728-678E-443B-B76B-B699654C66DD",
-      "congestion_control": "bbr",
-      "udp_relay_mode": "native",
-      "tls": {
-        "enabled": true,
-        "server_name": "tw1.dexlos.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/NLSus---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11",
+        "headers": {
+          "Host": "mitivpn---deb--s---mitivpn-4.global.ssl.fastly.net"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "ase-node_69376e6d",
-      "server": "148.113.5.44",
+      "tag": "ase-node_4133961f",
+      "server": "130.17.25.67",
       "server_port": 443,
-      "uuid": "72ea5a91-ffcc-43d2-9297-5993c3abf186",
+      "uuid": "1c5ed2e1-56da-41ab-9a78-159d9892ec17",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "github.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI",
-          "short_id": "221873918e0bb74d"
+          "public_key": "lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q",
+          "short_id": "9e4eced6e98ed4d4"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "ase-node_99179b24",
-      "server": "195.58.144.56",
-      "server_port": 11907,
-      "uuid": "07cb07b9-0c4d-46c1-a15a-b147511b6b07",
+      "type": "shadowsocks",
+      "tag": "ase-node_8ec0f2d2",
+      "server": "20.164.42.112",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "1RraE1yLC8LRqmeb"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_92738d14",
+      "server": "20.164.42.112",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "TbHBHzOwUCHadLwt"
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_b049d673",
+      "server": "47.243.65.243",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "security": "auto",
+      "alter_id": 0,
       "tls": {
         "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+        "server_name": "lcv8v9l7OyamxxfZ.v.3dns.vip"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "Host": "lcv8v9l7OyamxxfZ.v.3dns.vip"
         }
       }
     }
