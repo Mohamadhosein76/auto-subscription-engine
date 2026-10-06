@@ -5,293 +5,103 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_98b7bfeb
-  type: trojan
-  server: 167.82.76.7
+- name: ase-node_7dbc35ac
+  type: vless
+  server: 154.17.1.248
   port: 443
-  password: mitivpn
+  uuid: ab1249da-9ac8-44c7-89a3-2d337ab25cb2
   udp: true
+  flow: xtls-rprx-vision
   tls: true
-  sni: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP
-    headers:
-      Host: mitivpn---deb--s---mitivpn-4.global.ssl.fastly.net
-- name: ase-node_7f3dab1f
-  type: ss
-  server: 100.48.94.91
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: ase-node_e2d0b8c3
+  servername: gust.sigy.me
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: vQKxWxae-2n1Bz9MGUiFQMVk0-D7X5f3QVgaTJ5wBkM
+    short-id: 0271bcb88c1551ae
+- name: ase-node_c1b9a1c1
   type: hysteria2
-  server: nl-hy-test.tcp-reset-club.net
-  port: 443
-  password: 529f1911-04d5-4427-94b9-c851fd459a27
-  sni: tcp-reset-club.net
-- name: ase-node_1f5407ec
+  server: 51.77.217.70
+  port: 8447
+  password: capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: ChY5QQQT3ZtUdNT8
+- name: ase-node_2cddf97f
   type: ss
-  server: 15.237.215.103
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: ase-node_65917be9
-  type: hysteria2
-  server: 109.235.49.234
-  port: 443
-  password: 529f1911-04d5-4427-94b9-c851fd459a27
-  sni: tcp-reset-club.net
-- name: ase-node_7beab277
-  type: ss
-  server: 35.181.55.52
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: ase-node_7ce51838
-  type: vmess
-  server: 186.190.211.147
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: none
-  udp: true
-- name: ase-node_82e4b4f2
-  type: ss
-  server: 149.102.132.184
-  port: 443
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
-  udp: true
-- name: ase-node_6ab78d00
-  type: ss
-  server: 20.101.46.229
+  server: 20.223.236.165
   port: 443
   cipher: chacha20-ietf-poly1305
-  password: y7KeRTzmH0vXT2kp
+  password: CNL3mxdfZKiPKizL
   udp: true
-- name: ase-node_7c74bd60
-  type: hysteria2
-  server: 103.126.51.50
-  port: 8443
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: ocober-romania-new.yyuyy.com
-  skip-cert-verify: true
-- name: ase-node_e41141bf
-  type: vmess
-  server: 31.76.11.83
-  port: 50551
-  uuid: 57160c16-b7db-40d8-bd06-ced30edd4df6
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_f7c6efc4
-  type: ss
-  server: c3.nastuh.link
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: y7KeRTzmH0vXT2kp
-  udp: true
-- name: ase-node_81ff92fe
-  type: trojan
-  server: 167.82.76.7
-  port: 443
-  password: mitivpn
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: mitivpn---deb--s---mitivpn-4.global.ssl.fastly.net
-- name: ase-node_f7ab2da9
-  type: ss
-  server: 213.183.63.60
-  port: 9066
-  cipher: aes-256-cfb
-  password: 2KUaE2a8NWTvuCZ3
-  udp: true
-- name: ase-node_cfc39138
-  type: trojan
-  server: 167.82.76.27
-  port: 443
-  password: mitivpn
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/des---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
-    headers:
-      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
-- name: ase-node_9478f70e
-  type: hysteria2
-  server: streambox.wwwinternetvideo.click
-  port: 443
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
-  sni: streambox.wwwinternetvideo.click
-  skip-cert-verify: true
-- name: ase-node_bc7104ae
-  type: trojan
-  server: 167.82.76.27
-  port: 443
-  password: mitivpn
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
-- name: ase-node_96c90a35
+- name: ase-node_d8160094
   type: vless
-  server: 199.232.239.239
+  server: 2.27.39.233
   port: 443
-  uuid: 31608e93-a701-4604-b8de-c55baa393937
-  udp: true
-  tls: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /?ed=2056/?TELEGRAM--BYA--CHANEL---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCAN---@GHOFLSHCANfp=firefox
-    headers:
-      Host: uol258ehdmsohzh.global.ssl.fastly.net
-- name: ase-node_9ee8e790
-  type: trojan
-  server: 199.232.78.160
-  port: 443
-  password: mitivpn
-  udp: true
-  tls: true
-  sni: ssl.fastly.com
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    headers:
-      Host: mitivpn---deb--s---mitivpn-2.global.ssl.fastly.net
-- name: ase-node_1dea3854
-  type: ss
-  server: 141.164.45.187
-  port: 8008
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-  udp: true
-- name: ase-node_b6e75a2e
-  type: ss
-  server: 155.117.5.167
-  port: 40973
-  cipher: 2022-blake3-aes-256-gcm
-  password: hZycIr9ffe++4mxk+rkZHPgFXY1nmfb23fIeZNS3HeI=:HNUZ1NG1sNLqEe6v7XAY39JLPBTA2vAB9PGvS9VZGEA=
-  udp: true
-- name: ase-node_5ad242de
-  type: trojan
-  server: 45.32.52.173
-  port: 8886
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  udp: true
-  tls: true
-  sni: 45.32.52.173
-  skip-cert-verify: true
-- name: ase-node_eea711df
-  type: hysteria2
-  server: 217.60.33.215
-  port: 443
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
-  sni: streambox.wwwinternetvideo.click
-  skip-cert-verify: true
-- name: ase-node_0eafe812
-  type: ss
-  server: ay6axoz5ad92.unfixablity.com
-  port: 40973
-  cipher: 2022-blake3-aes-256-gcm
-  password: hZycIr9ffe++4mxk+rkZHPgFXY1nmfb23fIeZNS3HeI=:HNUZ1NG1sNLqEe6v7XAY39JLPBTA2vAB9PGvS9VZGEA=
-  udp: true
-- name: ase-node_37f81b4a
-  type: vless
-  server: 157.228.155.238
-  port: 443
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
   udp: true
   flow: xtls-rprx-vision
   tls: true
   servername: addons.mozilla.org
   client-fingerprint: chrome
   reality-opts:
-    public-key: 5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I
-    short-id: 6f76ad09
-- name: ase-node_74a90c4f
-  type: ss
-  server: 43.207.154.28
-  port: 35601
-  cipher: chacha20-ietf-poly1305
-  password: 4c8fced0-8987-4504-b8cf-15aca9cbb82e
+    public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
+    short-id: f3c023cc
+- name: ase-node_dfd03d38
+  type: trojan
+  server: 63.178.198.94
+  port: 443
+  password: UX82473651
   udp: true
-- name: ase-node_a5ae775c
-  type: ss
-  server: 13.208.187.243
-  port: 35601
-  cipher: chacha20-ietf-poly1305
-  password: 4c8fced0-8987-4504-b8cf-15aca9cbb82e
+  tls: true
+  sni: pleased-albacore.rooster465.autos
+  client-fingerprint: chrome
+- name: ase-node_a0e73f0f
+  type: trojan
+  server: 92.118.150.146
+  port: 443
+  password: Trojan@82164024
   udp: true
-- name: ase-node_1463bcd9
-  type: ss
-  server: gw.lydwan.com
-  port: 35601
-  cipher: chacha20-ietf-poly1305
-  password: 4c8fced0-8987-4504-b8cf-15aca9cbb82e
+  tls: true
+  sni: pl.tronsg.com
+- name: ase-node_3d96dc81
+  type: vless
+  server: 117.55.233.87
+  port: 443
+  uuid: f49d04d6-aaa7-4013-b323-bc35b78230db
   udp: true
-- name: ase-node_3e061f5b
-  type: hysteria2
-  server: 86.107.50.226
-  port: 18333
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: us3.xiaoliyu.cyou
-  skip-cert-verify: true
+  tls: true
+  servername: s3ws.ragingbull.de5.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /wsrb7k2m
+    headers:
+      Host: s3ws.ragingbull.de5.net
+- name: ase-node_5a72cc8d
+  type: vless
+  server: 157.228.128.59
+  port: 443
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
+    short-id: 06e00e7c
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_98b7bfeb
-  - ase-node_7f3dab1f
-  - ase-node_e2d0b8c3
-  - ase-node_1f5407ec
-  - ase-node_65917be9
-  - ase-node_7beab277
-  - ase-node_7ce51838
-  - ase-node_82e4b4f2
-  - ase-node_6ab78d00
-  - ase-node_7c74bd60
-  - ase-node_e41141bf
-  - ase-node_f7c6efc4
-  - ase-node_81ff92fe
-  - ase-node_f7ab2da9
-  - ase-node_cfc39138
-  - ase-node_9478f70e
-  - ase-node_bc7104ae
-  - ase-node_96c90a35
-  - ase-node_9ee8e790
-  - ase-node_1dea3854
-  - ase-node_b6e75a2e
-  - ase-node_5ad242de
-  - ase-node_eea711df
-  - ase-node_0eafe812
-  - ase-node_37f81b4a
-  - ase-node_74a90c4f
-  - ase-node_a5ae775c
-  - ase-node_1463bcd9
-  - ase-node_3e061f5b
+  - ase-node_7dbc35ac
+  - ase-node_c1b9a1c1
+  - ase-node_2cddf97f
+  - ase-node_d8160094
+  - ase-node_dfd03d38
+  - ase-node_a0e73f0f
+  - ase-node_3d96dc81
+  - ase-node_5a72cc8d
 rules:
 - MATCH,PROXY
