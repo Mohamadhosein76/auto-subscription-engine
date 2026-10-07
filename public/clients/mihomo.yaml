@@ -5,179 +5,83 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_68e48ee5
+- name: ase-node_06a77e57
   type: ss
-  server: 107.21.80.138
+  server: 34.228.79.192
   port: 443
   cipher: aes-256-cfb
   password: amazonskr05
   udp: true
-- name: ase-node_3b96538b
-  type: hysteria2
-  server: 51.44.167.227
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-fr-001.fastervpn.world
-  skip-cert-verify: true
-- name: ase-node_5a8c97fc
-  type: hysteria2
-  server: 162.249.126.39
-  port: 8443
-  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
-  sni: hop-germany-september.dynuddns.com
-  skip-cert-verify: true
-- name: ase-node_ab12e773
-  type: hysteria2
-  server: 77.74.123.107
-  port: 8443
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-test-italy.dynuddns.net
-  skip-cert-verify: true
-- name: ase-node_52961376
-  type: hysteria2
-  server: 103.126.51.46
-  port: 8443
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: ocober-romania-new.yyuyy.com
-  skip-cert-verify: true
-- name: ase-node_0cc0380b
-  type: vless
-  server: platform102.golnamakcert.top
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  udp: true
-  network: ws
-  ws-opts:
-    path: /platform102
-    headers:
-      Host: platform102.halalkhor.info
-- name: ase-node_2068c5e1
-  type: vless
-  server: 64.176.10.42
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  udp: true
-  network: ws
-  ws-opts:
-    path: /platform115
-    headers:
-      Host: platform115.halalkhor.info
-- name: ase-node_d266d699
-  type: vless
-  server: platform117.golnamakcert.top
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  udp: true
-  network: ws
-  ws-opts:
-    path: /platform117
-    headers:
-      Host: platform117.halalkhor.info
-- name: ase-node_d62181fe
-  type: vless
-  server: 64.176.25.167
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  udp: true
-  network: ws
-  ws-opts:
-    path: /platform102
-    headers:
-      Host: platform102.halalkhor.info
-- name: ase-node_26889bc6
-  type: hysteria2
-  server: 8.211.175.236
-  port: 8443
-  password: u63SxILNwtrQZ7Y1ZrFaZfsA
-  sni: bing.com
-  skip-cert-verify: true
-- name: ase-node_08433f13
-  type: vless
-  server: assets-es.pleiades.codes
-  port: 443
-  uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
-  udp: true
-  tls: true
-  servername: assets-es.pleiades.codes
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: cdn.v1.AssetService
-- name: ase-node_8cc4bc1c
-  type: hysteria2
-  server: 86.107.50.172
-  port: 18333
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: us3.xiaoliyu.cyou
-  skip-cert-verify: true
-- name: ase-node_8125099a
-  type: vmess
-  server: 145.239.55.210
-  port: 80
-  uuid: e5e563fb-cf72-4250-bfff-fa0385301061
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: ase-node_c2d4115a
-  type: hysteria2
-  server: 52.78.59.52
-  port: 443
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: ase-node_2f1edc5c
+- name: ase-node_7465df5a
   type: ss
-  server: 52.78.59.52
-  port: 8443
+  server: 57.129.113.16
+  port: 8388
   cipher: chacha20-ietf-poly1305
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  password: NcAXc0UZI6yQJE1p8QmOv8
   udp: true
-- name: ase-node_8d1410b2
-  type: trojan
-  server: nl.zhabulik.ru
+- name: ase-node_3200e267
+  type: vless
+  server: 177.1.192.74
   port: 443
-  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
   udp: true
+  flow: xtls-rprx-vision
   tls: true
-  sni: nl.zhabulik.ru
-- name: ase-node_d8d65936
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
+  reality-opts:
+    public-key: qC0g7Y0pwyLFTGAPG2zfZNuo64Cda695wdKgLU4KkF8
+    short-id: 770618b6
+- name: ase-node_83e96514
   type: vmess
   server: 57.128.164.21
   port: 80
   uuid: 10029c03-5d2f-4185-aab2-cbf91eef7361
   alterId: 0
-  cipher: auto
+  cipher: none
   udp: true
   network: ws
   ws-opts:
-    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==
     headers:
       Host: https.http.www.net.com.ramseyv2.ir.
+- name: ase-node_bd549805
+  type: ss
+  server: 103.107.52.106
+  port: 52351
+  cipher: aes-256-gcm
+  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
+  udp: true
+- name: ase-node_35da42c5
+  type: ss
+  server: pphfree2.mvpnpvpn.de5.net
+  port: 52351
+  cipher: aes-256-gcm
+  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
+  udp: true
+- name: ase-node_1c484bad
+  type: vless
+  server: 157.228.160.166
+  port: 443
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
+  reality-opts:
+    public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+    short-id: 3cef317b
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_68e48ee5
-  - ase-node_3b96538b
-  - ase-node_5a8c97fc
-  - ase-node_ab12e773
-  - ase-node_52961376
-  - ase-node_0cc0380b
-  - ase-node_2068c5e1
-  - ase-node_d266d699
-  - ase-node_d62181fe
-  - ase-node_26889bc6
-  - ase-node_08433f13
-  - ase-node_8cc4bc1c
-  - ase-node_8125099a
-  - ase-node_c2d4115a
-  - ase-node_2f1edc5c
-  - ase-node_8d1410b2
-  - ase-node_d8d65936
+  - ase-node_06a77e57
+  - ase-node_7465df5a
+  - ase-node_3200e267
+  - ase-node_83e96514
+  - ase-node_bd549805
+  - ase-node_35da42c5
+  - ase-node_1c484bad
 rules:
 - MATCH,PROXY
