@@ -5,103 +5,360 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_7dbc35ac
+- name: ase-node_bcea24b8
+  type: ss
+  server: 45.76.9.57
+  port: 8393
+  cipher: aes-256-gcm
+  password: 618a13eda4b4d208a4bcdc85fcb8996df812d59dd48419f75ae3f5f5b46a94fb
+  udp: true
+- name: ase-node_1253811d
   type: vless
-  server: 154.17.1.248
+  server: 104.243.33.154
+  port: 45299
+  uuid: 261f011c-e97a-4d72-b596-e6329b50b47b
+  udp: true
+- name: ase-node_8e8439e5
+  type: hysteria2
+  server: 13.38.44.64
   port: 443
-  uuid: ab1249da-9ac8-44c7-89a3-2d337ab25cb2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 'off'
+  skip-cert-verify: true
+- name: ase-node_d544bf97
+  type: hysteria2
+  server: 13.36.234.11
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-fr-001.fastervpn.world
+  skip-cert-verify: true
+- name: ase-node_c32ce594
+  type: hysteria2
+  server: 77.74.123.98
+  port: 8443
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  sni: grape-test-italy.dynuddns.net
+  skip-cert-verify: true
+- name: ase-node_e1e82447
+  type: hysteria2
+  server: 162.249.126.37
+  port: 8443
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  sni: hop-germany-september.dynuddns.com
+  skip-cert-verify: true
+- name: ase-node_390eade9
+  type: hysteria2
+  server: 103.126.51.51
+  port: 8443
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  sni: ocober-romania-new.yyuyy.com
+  skip-cert-verify: true
+- name: ase-node_2445cfb3
+  type: ss
+  server: 18.159.149.158
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: ase-node_8d9986c9
+  type: hysteria2
+  server: 13.124.117.110
+  port: 443
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: ase-node_ec4fd575
+  type: vless
+  server: 46.225.255.204
+  port: 39100
+  uuid: '@ZhilaVPN'
+  udp: true
+- name: ase-node_93afa58e
+  type: trojan
+  server: 46.8.100.93
+  port: 443
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
+  udp: true
+  tls: true
+  sni: nl.zhabulik.ru
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ase-node_432541db
+  type: ss
+  server: 176.32.39.52
+  port: 10550
+  cipher: aes-256-gcm
+  password: 8ad9d72a5571df86
+  udp: true
+- name: ase-node_97d93f74
+  type: trojan
+  server: 46.8.100.93
+  port: 443
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
+  udp: true
+  tls: true
+  sni: nl.zhabulik.ru
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_ca26665e
+  type: ss
+  server: 194.87.68.140
+  port: 10771
+  cipher: aes-256-gcm
+  password: 81a20429165df87e
+  udp: true
+- name: ase-node_e6f38c30
+  type: vless
+  server: 157.228.160.166
+  port: 443
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: gust.sigy.me
-  client-fingerprint: firefox
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
   reality-opts:
-    public-key: vQKxWxae-2n1Bz9MGUiFQMVk0-D7X5f3QVgaTJ5wBkM
-    short-id: 0271bcb88c1551ae
-- name: ase-node_c1b9a1c1
-  type: hysteria2
-  server: 51.77.217.70
-  port: 8447
-  password: capadmbd5f18bd:jX4BuciLLIqLvzJZsHpoXtc2
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: ChY5QQQT3ZtUdNT8
-- name: ase-node_2cddf97f
-  type: ss
-  server: 20.223.236.165
+    public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+    short-id: 3cef317b
+- name: ase-node_16332d5f
+  type: trojan
+  server: fi.zhabulik.ru
   port: 443
-  cipher: chacha20-ietf-poly1305
-  password: CNL3mxdfZKiPKizL
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
   udp: true
-- name: ase-node_d8160094
+  tls: true
+  sni: fi.zhabulik.ru
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_6f6b788b
+  type: trojan
+  server: fmwf6gbnad0a.dop16.com
+  port: 443
+  password: 2e631f0c-226a-484b-9e7c-d6c9c444ef13
+  udp: true
+  tls: true
+  sni: fmwf6gbnad0a.dop16.com
+  alpn:
+  - http/1.1
+- name: ase-node_6fda368c
+  type: trojan
+  server: fi.zhabulik.ru
+  port: 443
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
+  udp: true
+  tls: true
+  sni: fi.zhabulik.ru
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_8696fc01
+  type: vless
+  server: 157.228.150.34
+  port: 443
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: randomized
+  reality-opts:
+    public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+    short-id: 3cef317b
+- name: ase-node_8aaa7ca8
   type: vless
   server: 2.27.39.233
   port: 443
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  uuid: e60a2499-c5bf-4ad6-86b0-8af0bd3c0bbf
   udp: true
   flow: xtls-rprx-vision
   tls: true
   servername: addons.mozilla.org
-  client-fingerprint: chrome
+  client-fingerprint: randomized
   reality-opts:
     public-key: 5tMM2VdgddmxOKhdNa3b7i_aXno1g-_61SzkppS2UXQ
     short-id: f3c023cc
-- name: ase-node_dfd03d38
+- name: ase-node_b325998f
   type: trojan
-  server: 63.178.198.94
+  server: 31.76.103.140
   port: 443
-  password: UX82473651
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
   udp: true
   tls: true
-  sni: pleased-albacore.rooster465.autos
+  sni: fi.zhabulik.ru
+  alpn:
+  - h2
+  - http/1.1
   client-fingerprint: chrome
-- name: ase-node_a0e73f0f
+- name: ase-node_42c981cc
+  type: ss
+  server: 13.124.117.110
+  port: 8443
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  udp: true
+- name: ase-node_9f30df7c
   type: trojan
-  server: 92.118.150.146
+  server: 13.143.167.3
   port: 443
-  password: Trojan@82164024
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
   udp: true
   tls: true
-  sni: pl.tronsg.com
-- name: ase-node_3d96dc81
+  sni: pl.zhabulik.ru
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_2430afe5
+  type: trojan
+  server: nl.zhabulik.ru
+  port: 443
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
+  udp: true
+  tls: true
+  sni: nl.zhabulik.ru
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_cb7c757f
+  type: trojan
+  server: 139.180.146.200
+  port: 8886
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  udp: true
+  tls: true
+  sni: 139.180.146.200
+  skip-cert-verify: true
+- name: ase-node_cedb4a73
+  type: trojan
+  server: pl.zhabulik.ru
+  port: 443
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
+  udp: true
+  tls: true
+  sni: pl.zhabulik.ru
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_fc1cdc28
   type: vless
-  server: 117.55.233.87
+  server: 45.192.201.140
   port: 443
-  uuid: f49d04d6-aaa7-4013-b323-bc35b78230db
+  uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
   udp: true
   tls: true
-  servername: s3ws.ragingbull.de5.net
+  servername: argo6.5671234.xyz
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /e8e2cecb6188f7fb
+    headers:
+      Host: argo6.5671234.xyz
+- name: ase-node_73edb410
+  type: vless
+  server: 45.89.190.245
+  port: 8443
+  uuid: 053682f4-c584-46df-ad81-069dec5f64f0
+  udp: true
+  tls: true
+  servername: de.gokonstantin.com
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /cdnws
+    headers:
+      Host: de.gokonstantin.com
+- name: ase-node_73f8ff3a
+  type: vless
+  server: 149.50.105.60
+  port: 443
+  uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3
+  udp: true
+  tls: true
+  servername: bab-6.site
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /wsrb7k2m
+    path: /vws/
     headers:
-      Host: s3ws.ragingbull.de5.net
-- name: ase-node_5a72cc8d
-  type: vless
-  server: 157.228.128.59
+      Host: bab-6.site
+- name: ase-node_1eadaa11
+  type: trojan
+  server: 46.8.100.93
   port: 443
-  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+  password: WFer-5gN21nfHbVB2N8s71Z74EPUfzVj
   udp: true
-  flow: xtls-rprx-vision
   tls: true
-  servername: addons.mozilla.org
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: QnxkyscHouhaLDJHT47beyenVd4LHi62yfJIeRV01Ws
-    short-id: 06e00e7c
+  sni: nl.zhabulik.ru
+  skip-cert-verify: true
+- name: ase-node_30cec768
+  type: vmess
+  server: 38.107.234.57
+  port: 80
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: viber.com
+- name: ase-node_56dc1aba
+  type: tuic
+  server: 118.168.214.242
+  port: 8080
+  uuid: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  password: 8A9905B7-801B-41AF-BFC9-2034212770F6
+  udp-relay-mode: native
+  congestion-controller: bbr
+  sni: tw3.dexlos.com
+  alpn:
+  - h3
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_7dbc35ac
-  - ase-node_c1b9a1c1
-  - ase-node_2cddf97f
-  - ase-node_d8160094
-  - ase-node_dfd03d38
-  - ase-node_a0e73f0f
-  - ase-node_3d96dc81
-  - ase-node_5a72cc8d
+  - ase-node_bcea24b8
+  - ase-node_1253811d
+  - ase-node_8e8439e5
+  - ase-node_d544bf97
+  - ase-node_c32ce594
+  - ase-node_e1e82447
+  - ase-node_390eade9
+  - ase-node_2445cfb3
+  - ase-node_8d9986c9
+  - ase-node_ec4fd575
+  - ase-node_93afa58e
+  - ase-node_432541db
+  - ase-node_97d93f74
+  - ase-node_ca26665e
+  - ase-node_e6f38c30
+  - ase-node_16332d5f
+  - ase-node_6f6b788b
+  - ase-node_6fda368c
+  - ase-node_8696fc01
+  - ase-node_8aaa7ca8
+  - ase-node_b325998f
+  - ase-node_42c981cc
+  - ase-node_9f30df7c
+  - ase-node_2430afe5
+  - ase-node_cb7c757f
+  - ase-node_cedb4a73
+  - ase-node_fc1cdc28
+  - ase-node_73edb410
+  - ase-node_73f8ff3a
+  - ase-node_1eadaa11
+  - ase-node_30cec768
+  - ase-node_56dc1aba
 rules:
 - MATCH,PROXY
