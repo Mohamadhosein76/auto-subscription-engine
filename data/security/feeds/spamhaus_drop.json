@@ -1,6 +1,6 @@
 {
   "attribution": "Spamhaus DROP/DROPv6/ASN-DROP data (c) The Spamhaus Project Ltd. https://www.spamhaus.org/drop/ - used in accordance with the Spamhaus data usage policy (attribution retained).",
-  "content_hash": "5797977c12bc508bf33ebb66461289f732d6c5050d0017a09c4d1a84ff1a34f1",
+  "content_hash": "684034dc95438be5bbeb23bea3fe26298b5d0a8926e8ff7f1bf0a3514df3712a",
   "entries": [
     "1.10.16.0/20",
     "1.19.0.0/16",
@@ -1432,6 +1432,7 @@
     "45.80.158.0/24",
     "45.80.248.0/23",
     "45.80.37.0/24",
+    "45.81.154.0/24",
     "45.83.28.0/24",
     "45.83.31.0/24",
     "45.87.249.0/24",
@@ -1673,10 +1674,10 @@
     "96.31.94.0/24",
     "98.98.195.0/24"
   ],
-  "entries_hash": "2457565cb65ae909eba4029e18a0016b314402192e44104e2c843e55007a7dd5",
-  "entry_count": 1670,
-  "expires_at": "2026-10-11T22:12:29+00:00",
-  "fetched_at": "2026-10-07T22:12:29+00:00",
+  "entries_hash": "d7a137fd624fb32561b278f629e353b4880abcfbacff370c90995c30bcd8edf6",
+  "entry_count": 1671,
+  "expires_at": "2026-10-12T22:19:44+00:00",
+  "fetched_at": "2026-10-08T22:19:44+00:00",
   "schema_version": 1,
   "source": "spamhaus_drop",
   "source_version": null,

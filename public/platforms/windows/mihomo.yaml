@@ -5,195 +5,123 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_3d53387f
-  type: hysteria2
-  server: 138.2.21.246
-  port: 5443
-  password: my_super_password_123
-  sni: open.2ml.cc.cd
-- name: ase-node_c412bf9f
-  type: hysteria2
-  server: 31.76.104.160
-  port: 9443
-  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  sni: onecloudstream.com
-  skip-cert-verify: true
-- name: ase-node_f036122c
-  type: hysteria2
-  server: 31.76.104.162
-  port: 9443
-  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  sni: onecloudstream.com
-  skip-cert-verify: true
-- name: ase-node_4bc1a568
-  type: hysteria2
-  server: 31.76.104.155
-  port: 9443
-  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  sni: onecloudstream.com
-  skip-cert-verify: true
-- name: ase-node_d9cd9d64
-  type: hysteria2
-  server: lv02.gotosvo.com
-  port: 9443
-  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
-  sni: onecloudstream.com
-  skip-cert-verify: true
-- name: ase-node_2b278f2a
-  type: ss
-  server: 82.38.31.36
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: ase-node_35d03d66
-  type: ss
-  server: 82.38.31.157
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: ase-node_84ef6ed2
-  type: ss
-  server: 82.38.31.156
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: ase-node_ed408bea
-  type: ss
-  server: 82.38.31.69
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: ase-node_9a98fd4d
-  type: ss
-  server: 3.75.231.76
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: ase-node_65d4562a
-  type: hysteria2
-  server: 77.74.123.108
-  port: 8443
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-test-italy.dynuddns.net
-  skip-cert-verify: true
-- name: ase-node_c78fe13e
+- name: ase-node_171312f3
   type: vmess
-  server: 31.76.11.83
-  port: 55969
-  uuid: 049a57b9-4913-4f9f-9cda-a861989ee59d
+  server: 67.220.85.46
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: none
   udp: true
-- name: ase-node_9c4c922a
+- name: ase-node_ed6baffb
+  type: vless
+  server: 104.243.33.154
+  port: 45299
+  uuid: 261f011c-e97a-4d72-b596-e6329b50b47b
+  udp: true
+- name: ase-node_28be8741
+  type: vless
+  server: 15.204.97.209
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: ase-node_fbc2ab45
   type: trojan
-  server: 3.112.245.255
+  server: 18.168.148.212
   port: 443
-  password: UX82473651
+  password: Trojan@82164024
   udp: true
   tls: true
-  sni: dynamic-imp.rooster465.autos
+  sni: gb.tronsg.com
+- name: ase-node_20f6e570
+  type: ss
+  server: 31.76.11.83
+  port: 42800
+  cipher: chacha20-ietf-poly1305
+  password: adzpq0ltVHdCxO2lsW5N9C8H5B9hXnD7YyXZfP5aulw=
+  udp: true
+- name: ase-node_4bddf53d
+  type: vless
+  server: 82.39.171.142
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
   client-fingerprint: chrome
-- name: ase-node_efe12235
-  type: hysteria2
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: ase-node_0e5e7623
+  type: vless
+  server: 94.237.89.82
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+- name: ase-node_e8c29b78
+  type: ss
   server: 54.169.240.70
-  port: 443
+  port: 8443
+  cipher: chacha20-ietf-poly1305
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: ase-node_ef413aaf
+  udp: true
+- name: ase-node_c5da8354
   type: trojan
-  server: 3.39.225.215
+  server: 78.47.146.151
   port: 443
-  password: UX82473651
+  password: humanity
   udp: true
   tls: true
-  sni: kind-stork.rooster465.autos
+  sni: www.pleadcourt.org
   client-fingerprint: chrome
-- name: ase-node_5278a103
-  type: trojan
-  server: 3.75.93.113
-  port: 443
-  password: UX82473651
-  udp: true
-  tls: true
-  sni: meet-goshawk.rooster465.autos
-  client-fingerprint: chrome
-- name: ase-node_452849b0
-  type: vmess
-  server: 57.129.132.223
-  port: 80
-  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
-  alterId: 0
-  cipher: auto
-  udp: true
   network: ws
   ws-opts:
-    path: /vmess/
-    headers:
-      Host: viber.com
-- name: ase-node_78406bf7
+    path: /assignment
+- name: ase-node_df17ce6a
   type: trojan
-  server: main-fawn.rooster465.autos
+  server: 34.242.77.118
   port: 443
   password: UX82473651
   udp: true
   tls: true
-  sni: main-fawn.rooster465.autos
+  sni: sacred-anemone.rooster465.autos
   client-fingerprint: chrome
-- name: ase-node_c3d5e334
-  type: trojan
-  server: 56.10.9.77
+- name: ase-node_2d2faae3
+  type: vless
+  server: 94.237.47.168
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+- name: ase-node_7ef52b3a
+  type: ss
+  server: 51.124.237.47
   port: 443
-  password: UX82473651
-  udp: true
-  tls: true
-  sni: inviting-ferret.rooster465.autos
-  client-fingerprint: chrome
-- name: ase-node_be258de2
-  type: vmess
-  server: v10.hdacd.com
-  port: 30807
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  udp: true
-- name: ase-node_e112a7b6
-  type: vmess
-  server: 119.236.14.204
-  port: 30807
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
+  cipher: chacha20-ietf-poly1305
+  password: y7KeRTzmH0vXT2kp
   udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_3d53387f
-  - ase-node_c412bf9f
-  - ase-node_f036122c
-  - ase-node_4bc1a568
-  - ase-node_d9cd9d64
-  - ase-node_2b278f2a
-  - ase-node_35d03d66
-  - ase-node_84ef6ed2
-  - ase-node_ed408bea
-  - ase-node_9a98fd4d
-  - ase-node_65d4562a
-  - ase-node_c78fe13e
-  - ase-node_9c4c922a
-  - ase-node_efe12235
-  - ase-node_ef413aaf
-  - ase-node_5278a103
-  - ase-node_452849b0
-  - ase-node_78406bf7
-  - ase-node_c3d5e334
-  - ase-node_be258de2
-  - ase-node_e112a7b6
+  - ase-node_171312f3
+  - ase-node_ed6baffb
+  - ase-node_28be8741
+  - ase-node_fbc2ab45
+  - ase-node_20f6e570
+  - ase-node_4bddf53d
+  - ase-node_0e5e7623
+  - ase-node_e8c29b78
+  - ase-node_c5da8354
+  - ase-node_df17ce6a
+  - ase-node_2d2faae3
+  - ase-node_7ef52b3a
 rules:
 - MATCH,PROXY

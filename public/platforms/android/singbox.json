@@ -1,190 +1,106 @@
 {
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "ase-node_3d53387f",
-      "server": "138.2.21.246",
-      "server_port": 5443,
-      "password": "my_super_password_123",
-      "tls": {
-        "enabled": true,
-        "server_name": "open.2ml.cc.cd"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_c412bf9f",
-      "server": "31.76.104.160",
-      "server_port": 9443,
-      "password": "e3c3b722-1264-4cdc-a97c-b0a1bb73cd67",
-      "tls": {
-        "enabled": true,
-        "server_name": "onecloudstream.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_f036122c",
-      "server": "31.76.104.162",
-      "server_port": 9443,
-      "password": "e3c3b722-1264-4cdc-a97c-b0a1bb73cd67",
-      "tls": {
-        "enabled": true,
-        "server_name": "onecloudstream.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_4bc1a568",
-      "server": "31.76.104.155",
-      "server_port": 9443,
-      "password": "e3c3b722-1264-4cdc-a97c-b0a1bb73cd67",
-      "tls": {
-        "enabled": true,
-        "server_name": "onecloudstream.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_d9cd9d64",
-      "server": "lv02.gotosvo.com",
-      "server_port": 9443,
-      "password": "e3c3b722-1264-4cdc-a97c-b0a1bb73cd67",
-      "tls": {
-        "enabled": true,
-        "server_name": "onecloudstream.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_2b278f2a",
-      "server": "82.38.31.36",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_35d03d66",
-      "server": "82.38.31.157",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_84ef6ed2",
-      "server": "82.38.31.156",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_ed408bea",
-      "server": "82.38.31.69",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_9a98fd4d",
-      "server": "3.75.231.76",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
       "type": "vmess",
-      "tag": "ase-node_fa8442c6",
-      "server": "91.107.169.224",
-      "server_port": 80,
-      "uuid": "d4b69108-f756-48af-a331-e8356bc95eb4",
-      "security": "auto",
-      "alter_id": 0,
-      "transport": {
-        "type": "httpupgrade",
-        "path": "/",
-        "host": "google.whatsapp.snapp.torob.basalam.dns-look.space."
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_65d4562a",
-      "server": "77.74.123.108",
-      "server_port": 8443,
-      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
-      "tls": {
-        "enabled": true,
-        "server_name": "grape-test-italy.dynuddns.net",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_c78fe13e",
-      "server": "31.76.11.83",
-      "server_port": 55969,
-      "uuid": "049a57b9-4913-4f9f-9cda-a861989ee59d",
+      "tag": "ase-node_171312f3",
+      "server": "67.220.85.46",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "none",
       "alter_id": 0
     },
     {
-      "type": "trojan",
-      "tag": "ase-node_6f54ef9a",
-      "server": "musical-terrier.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
+      "type": "vless",
+      "tag": "ase-node_ed6baffb",
+      "server": "104.243.33.154",
+      "server_port": 45299,
+      "uuid": "261f011c-e97a-4d72-b596-e6329b50b47b"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_28be8741",
+      "server": "15.204.97.209",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "musical-terrier.rooster465.autos",
+        "server_name": "fuck.rkn",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
         }
       }
     },
     {
       "type": "trojan",
-      "tag": "ase-node_9c4c922a",
-      "server": "3.112.245.255",
+      "tag": "ase-node_fbc2ab45",
+      "server": "18.168.148.212",
       "server_port": 443,
-      "password": "UX82473651",
+      "password": "Trojan@82164024",
       "tls": {
         "enabled": true,
-        "server_name": "dynamic-imp.rooster465.autos",
+        "server_name": "gb.tronsg.com"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_20f6e570",
+      "server": "31.76.11.83",
+      "server_port": 42800,
+      "method": "chacha20-ietf-poly1305",
+      "password": "adzpq0ltVHdCxO2lsW5N9C8H5B9hXnD7YyXZfP5aulw="
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_4bddf53d",
+      "server": "82.39.171.142",
+      "server_port": 443,
+      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "short_id": "c39cc7310a"
         }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "ase-node_efe12235",
+      "type": "vless",
+      "tag": "ase-node_0e5e7623",
+      "server": "94.237.89.82",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_e8c29b78",
       "server": "54.169.240.70",
-      "server_port": 443,
-      "password": "7e68e32f-8015-4f37-9082-70e8b0b58043",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
-      }
+      "server_port": 8443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "7e68e32f-8015-4f37-9082-70e8b0b58043"
     },
     {
       "type": "trojan",
-      "tag": "ase-node_057f25b5",
-      "server": "13.230.91.226",
+      "tag": "ase-node_df17ce6a",
+      "server": "34.242.77.118",
       "server_port": 443,
       "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "musical-terrier.rooster465.autos",
+        "server_name": "sacred-anemone.rooster465.autos",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -192,76 +108,54 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "ase-node_ef413aaf",
-      "server": "3.39.225.215",
+      "type": "vless",
+      "tag": "ase-node_1883206f",
+      "server": "94.237.59.147",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_2d2faae3",
+      "server": "94.237.47.168",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_ad26acf7",
+      "server": "179.254.166.40",
       "server_port": 443,
-      "password": "UX82473651",
+      "uuid": "318c935d-c195-41d3-99ad-9bbcfdab3386",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "kind-stork.rooster465.autos",
+        "server_name": "de2.srv.vbuste.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "randomized"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08",
+          "short_id": "4be4110078ebed4a"
         }
       }
     },
     {
-      "type": "trojan",
-      "tag": "ase-node_5278a103",
-      "server": "3.75.93.113",
+      "type": "vless",
+      "tag": "ase-node_ac743dae",
+      "server": "94.237.113.236",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_7ef52b3a",
+      "server": "51.124.237.47",
       "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "meet-goshawk.rooster465.autos",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_78406bf7",
-      "server": "main-fawn.rooster465.autos",
-      "server_port": 443,
-      "password": "UX82473651",
-      "tls": {
-        "enabled": true,
-        "server_name": "main-fawn.rooster465.autos",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_6c94494e",
-      "server": "82.157.183.92",
-      "server_port": 11244,
-      "uuid": "605956ee-544d-308e-8b90-51e67c6ea8da",
-      "security": "auto",
-      "alter_id": 2
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_be258de2",
-      "server": "v10.hdacd.com",
-      "server_port": 30807,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-      "security": "auto",
-      "alter_id": 2
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_e112a7b6",
-      "server": "119.236.14.204",
-      "server_port": 30807,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-      "security": "auto",
-      "alter_id": 2
+      "method": "chacha20-ietf-poly1305",
+      "password": "y7KeRTzmH0vXT2kp"
     }
   ]
 }
