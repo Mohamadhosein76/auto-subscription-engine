@@ -5,29 +5,22 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_015e0c5c
-  type: vmess
-  server: 163.192.32.102
-  port: 12330
-  uuid: 68adffea-4146-4f92-b2f9-955cd634c274
-  alterId: 0
-  cipher: auto
+- name: ase-node_65bbd866
+  type: ss
+  server: 66.23.204.218
+  port: 10675
+  cipher: aes-128-gcm
+  password: 2591a42af498878e47d881cd1ed1fa9d
   udp: true
-  tls: true
-  servername: p05.rghvf.sbs
-- name: ase-node_a28903e3
-  type: vmess
-  server: 163.192.32.102
-  port: 12330
-  uuid: 68adffea-4146-4f92-b2f9-955cd634c274
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: p05.rghvf.sbs
-- name: ase-node_2dbdae80
+- name: ase-node_42341e71
+  type: hysteria2
+  server: 173.249.210.76
+  port: 8443
+  password: Q3mAdf68GvbGEGqTAXkWjg
+  skip-cert-verify: true
+- name: ase-node_a03044de
   type: vless
-  server: 169.40.42.75
+  server: 169.40.42.90
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
@@ -38,267 +31,297 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-- name: ase-node_1ecf4dda
+- name: ase-node_385825cd
   type: ss
-  server: 82.38.31.170
+  server: 144.48.107.10
+  port: 19142
+  cipher: aes-128-gcm
+  password: 645af07ee09c066da207ad26d78322c2
+  udp: true
+- name: ase-node_cf52cf1a
+  type: vless
+  server: 185.200.199.75
+  port: 8444
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  udp: true
+  tls: true
+  servername: github.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+  network: grpc
+  grpc-opts:
+    grpc-service-name: ''
+- name: ase-node_712a043e
+  type: vless
+  server: 15.204.97.195
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  alpn:
+  - networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: ase-node_b91ce6df
+  type: hysteria2
+  server: 208.69.78.217
+  port: 33130
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: ase-node_da1776aa
+  type: vless
+  server: 170.168.4.59
+  port: 17170
+  uuid: 3eec23c1-2a0d-4d53-afa5-62745a1f5ffe
+  udp: true
+  tls: true
+  servername: northerntrail.gazette.help
+  alpn:
+  - h2
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: trail-grpc
+- name: ase-node_03ecf350
+  type: ss
+  server: 193.29.139.235
   port: 443
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-- name: ase-node_a6aa79ca
+- name: ase-node_2988d151
+  type: ss
+  server: 193.29.139.202
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: ase-node_63ce7f0a
+  type: ss
+  server: 82.38.31.28
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: ase-node_435f7ae9
+  type: ss
+  server: 82.38.31.211
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
+- name: ase-node_ac512721
   type: trojan
-  server: 13.230.76.132
+  server: cuddly-sheepdog.rooster465.autos
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: cuddly-sheepdog.rooster465.autos
+- name: ase-node_f6274bdf
+  type: vmess
+  server: 57.129.132.223
+  port: 80
+  uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3
+  alterId: 0
+  cipher: none
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: google.com
+- name: ase-node_d3bb712f
+  type: vless
+  server: 94.183.238.15
+  port: 443
+  uuid: 5edbcb44-8d04-4fa7-a587-bc5d60c24ca1
+  udp: true
+  tls: true
+  servername: ger-02.letsgodance.site
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /xh
+    mode: auto
+    host: ger-02.letsgodance.site
+- name: ase-node_59c483d3
+  type: trojan
+  server: allowed-poodle.rooster465.autos
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: allowed-poodle.rooster465.autos
+  skip-cert-verify: true
+- name: ase-node_7a0e3053
+  type: trojan
+  server: 3.112.29.244
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: evident-ant.rooster465.autos
+  skip-cert-verify: true
+- name: ase-node_e572928d
+  type: trojan
+  server: 13.114.99.222
+  port: 443
+  password: UX82473651
+  udp: true
+  tls: true
+  sni: allowed-poodle.rooster465.autos
+  skip-cert-verify: true
+- name: ase-node_fd7fc006
+  type: trojan
+  server: equipped-stingray.rooster465.autos
   port: 443
   password: UX82473651
   udp: true
   tls: true
   sni: equipped-stingray.rooster465.autos
   client-fingerprint: chrome
-- name: ase-node_4505e075
-  type: vmess
-  server: 129.146.143.80
-  port: 48111
-  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_b2e67c8e
+- name: ase-node_c75a9847
   type: trojan
-  server: 3.74.47.221
+  server: evident-ant.rooster465.autos
   port: 443
   password: UX82473651
   udp: true
   tls: true
-  sni: cuddly-sheepdog.rooster465.autos
-- name: ase-node_9147de4c
+  sni: evident-ant.rooster465.autos
+  skip-cert-verify: true
+- name: ase-node_220a47df
   type: vless
-  server: 94.103.168.57
-  port: 2087
-  uuid: ecbe8dbc-44f7-4275-8a6c-b0976a7bb5c8
+  server: 196.240.125.5
+  port: 8443
+  uuid: 8de76932-518a-4ac8-ac92-be6b1f17ddd8
   udp: true
+  flow: xtls-rprx-vision
   tls: true
-  servername: spp1.localip.ir
-  alpn:
-  - h2
-  network: xhttp
-  xhttp-opts:
-    path: /retasokrer
-    mode: stream-one
-    host: spp1.localip.ir
-- name: ase-node_1311e825
+  servername: nl.alpheratzz.org
+- name: ase-node_bd4078bc
   type: trojan
-  server: 3.34.192.47
+  server: central-jawfish.rooster465.autos
   port: 443
   password: UX82473651
   udp: true
   tls: true
   sni: central-jawfish.rooster465.autos
   client-fingerprint: chrome
-- name: ase-node_3be943f3
+- name: ase-node_63b2a502
   type: trojan
-  server: 3.35.214.220
+  server: glorious-lark.rooster465.autos
   port: 443
   password: UX82473651
   udp: true
   tls: true
   sni: glorious-lark.rooster465.autos
   client-fingerprint: chrome
-- name: ase-node_60bff378
+- name: ase-node_1d7c9840
   type: vless
-  server: 51.255.166.202
-  port: 443
-  uuid: e3k67dwms3
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: e3k67dwms3-51255166202-direct.tavafog.com
-  client-fingerprint: chrome
-- name: ase-node_0eb2aa7e
-  type: vless
-  server: 49.12.2.68
-  port: 1222
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  udp: true
-  tls: true
-  servername: www.forvo.com
-  skip-cert-verify: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-- name: ase-node_7157515e
-  type: trojan
-  server: 54.179.60.162
-  port: 443
-  password: UX82473651
-  udp: true
-  tls: true
-  sni: intense-wildcat.rooster465.autos
-- name: ase-node_aca00cdc
-  type: trojan
-  server: 13.229.59.187
-  port: 443
-  password: UX82473651
-  udp: true
-  tls: true
-  sni: inspired-hound.rooster465.autos
-- name: ase-node_b125616f
-  type: hysteria2
-  server: rb.mangshe.xyz
-  port: 2060
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: ase-node_eef9db67
-  type: trojan
-  server: 52.221.222.185
-  port: 443
-  password: UX82473651
-  udp: true
-  tls: true
-  sni: joint-ewe.rooster465.autos
-- name: ase-node_f900e52a
-  type: vless
-  server: 144.31.215.227
-  port: 443
-  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: cdn-de.bulkavpn.top
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LEoyslGYLVf2XWq9Bkq8Hod-EsB3ZoTlvR5AKK3rciQ
-    short-id: c885e8f8
-- name: ase-node_48e01b53
-  type: vless
-  server: 162.248.77.80
-  port: 443
-  uuid: 85fe968d-fbb5-40dc-8422-30635eccb149
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: portal.citygrainla.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
-    short-id: 051f20c2344a2dfd
-- name: ase-node_81ae79e4
-  type: vless
-  server: 144.31.215.227
-  port: 443
-  uuid: 91d734be-a3d0-4d50-83ab-74cf7b6966fa
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: cdn-de.bulkavpn.top
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: LEoyslGYLVf2XWq9Bkq8Hod-EsB3ZoTlvR5AKK3rciQ
-    short-id: c885e8f8
-- name: ase-node_f1fd0ea5
-  type: vless
-  server: 168.222.43.212
+  server: 140.233.177.218
   port: 2053
   uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
   udp: true
-- name: ase-node_cfea777c
-  type: trojan
-  server: 79.98.37.18
-  port: 2097
-  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
-  udp: true
-  tls: true
-  sni: stoniy.fytpn.com
-- name: ase-node_6b30d925
+- name: ase-node_ea38c55e
   type: vless
-  server: 177.1.192.81
-  port: 443
-  uuid: 5ac49a12-f275-44b4-b11d-26505f3f268e
+  server: 196.240.125.251
+  port: 8443
+  uuid: 8de76932-518a-4ac8-ac92-be6b1f17ddd8
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: addons.mozilla.org
+  servername: nl.alpheratzz.org
+- name: ase-node_0c8bb71c
+  type: vless
+  server: 136.148.223.212
+  port: 25119
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.samsung.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: JNr60Nnq_sdeAz5jd25bxNDx_c9CeYLu7DRbQH3P5xk
-    short-id: 85766a81
-- name: ase-node_1af17772
+    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
+    short-id: 10f517
+- name: ase-node_460f53fe
   type: vless
-  server: 43.247.132.85
-  port: 41563
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: iosapps.itunes.apple.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc
-    short-id: 25c79e5856c7
-- name: ase-node_c8f38099
-  type: trojan
-  server: 222.167.245.248
-  port: 2097
-  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
-  udp: true
-  tls: true
-  sni: pol2.fytpn.com
-- name: ase-node_409b9bbf
-  type: vless
-  server: 43.247.132.42
-  port: 41563
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: iosapps.itunes.apple.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc
-    short-id: 25c79e5856c7
-- name: ase-node_ef5b454b
-  type: vless
-  server: 31.76.35.27
+  server: 149.28.158.128
   port: 443
-  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+  uuid: d90087c3-54f5-4283-a13f-615260c8b0c7
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: addons.mozilla.org
+  servername: googleapis.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: P-r-oVr8MTTCILgRxk8YuB9OKVojYw3MkH_ERUXzX3s
-    short-id: b76a6309
+    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
+- name: ase-node_2ba96293
+  type: vmess
+  server: 43.165.132.91
+  port: 36011
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_1e675b06
+  type: vless
+  server: 143.20.156.116
+  port: 443
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_015e0c5c
-  - ase-node_a28903e3
-  - ase-node_2dbdae80
-  - ase-node_1ecf4dda
-  - ase-node_a6aa79ca
-  - ase-node_4505e075
-  - ase-node_b2e67c8e
-  - ase-node_9147de4c
-  - ase-node_1311e825
-  - ase-node_3be943f3
-  - ase-node_60bff378
-  - ase-node_0eb2aa7e
-  - ase-node_7157515e
-  - ase-node_aca00cdc
-  - ase-node_b125616f
-  - ase-node_eef9db67
-  - ase-node_f900e52a
-  - ase-node_48e01b53
-  - ase-node_81ae79e4
-  - ase-node_f1fd0ea5
-  - ase-node_cfea777c
-  - ase-node_6b30d925
-  - ase-node_1af17772
-  - ase-node_c8f38099
-  - ase-node_409b9bbf
-  - ase-node_ef5b454b
+  - ase-node_65bbd866
+  - ase-node_42341e71
+  - ase-node_a03044de
+  - ase-node_385825cd
+  - ase-node_cf52cf1a
+  - ase-node_712a043e
+  - ase-node_b91ce6df
+  - ase-node_da1776aa
+  - ase-node_03ecf350
+  - ase-node_2988d151
+  - ase-node_63ce7f0a
+  - ase-node_435f7ae9
+  - ase-node_ac512721
+  - ase-node_f6274bdf
+  - ase-node_d3bb712f
+  - ase-node_59c483d3
+  - ase-node_7a0e3053
+  - ase-node_e572928d
+  - ase-node_fd7fc006
+  - ase-node_c75a9847
+  - ase-node_220a47df
+  - ase-node_bd4078bc
+  - ase-node_63b2a502
+  - ase-node_1d7c9840
+  - ase-node_ea38c55e
+  - ase-node_0c8bb71c
+  - ase-node_460f53fe
+  - ase-node_2ba96293
+  - ase-node_1e675b06
 rules:
 - MATCH,PROXY

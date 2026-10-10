@@ -4,7 +4,7 @@
       "artifact": "hiddify.txt",
       "device_evidence": "device_validation_unknown",
       "format": "uri",
-      "nodes": 27,
+      "nodes": 25,
       "runtime_core": "hiddify",
       "runtime_core_verified": true,
       "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
@@ -13,7 +13,7 @@
       "artifact": "mihomo.yaml",
       "device_evidence": "device_validation_unknown",
       "format": "mihomo-yaml",
-      "nodes": 26,
+      "nodes": 29,
       "runtime_core": "mihomo",
       "runtime_core_verified": true,
       "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
@@ -22,7 +22,7 @@
       "artifact": "nekobox.txt",
       "device_evidence": "device_validation_unknown",
       "format": "uri",
-      "nodes": 25,
+      "nodes": 26,
       "runtime_core": "singbox",
       "runtime_core_verified": true,
       "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
@@ -31,7 +31,7 @@
       "artifact": "singbox.json",
       "device_evidence": "device_validation_unknown",
       "format": "singbox-json",
-      "nodes": 25,
+      "nodes": 26,
       "runtime_core": "singbox",
       "runtime_core_verified": true,
       "selection_policy": "client_status=pass AND client_score>=55 AND runtime evidence fresh (<=26h); no fallback"
@@ -42,7 +42,7 @@
       "evidence_status": "runtime_core_verified",
       "format": "uri",
       "mirrors_client": "v2rayng",
-      "nodes": 32,
+      "nodes": 23,
       "runtime_core": "xray",
       "runtime_core_verified": true,
       "selection_policy": "same gate as v2rayng: platform score and freshness"
@@ -50,7 +50,7 @@
   },
   "device_validation": "manual_observation_only",
   "evidence_boundary": "CI runtime verification is NOT Android/Windows GUI device validation; a node can pass server-side runtime verification and still fail on a specific ISP/device/client combination",
-  "generated_at": "2026-10-10T07:23:16+00:00",
+  "generated_at": "2026-10-10T13:58:40+00:00",
   "operator_validation": "unknown",
   "platform": "windows",
   "runtime_evidence_max_age_hours": 26.0,
