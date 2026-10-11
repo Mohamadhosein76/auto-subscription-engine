@@ -1,201 +1,345 @@
 {
   "outbounds": [
     {
+      "type": "shadowsocks",
+      "tag": "ase-node_ac401dec",
+      "server": "205.209.126.205",
+      "server_port": 19049,
+      "method": "aes-128-gcm",
+      "password": "e72a793d634d99748cf908d21fd935c3"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_f2da0ac5",
+      "server": "188.166.175.137",
+      "server_port": 443,
+      "uuid": "40992c2a-513e-4837-9594-23411fd42afd",
+      "transport": {
+        "type": "http",
+        "path": "/"
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "ase-node_083dfd99",
-      "server": "23.162.200.198",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "tag": "ase-node_70256f4f",
+      "server": "31.76.11.83",
+      "server_port": 22266,
+      "uuid": "2d8f57bd-12b5-41ad-a806-6501753c264c",
       "security": "auto",
       "alter_id": 0
     },
     {
       "type": "shadowsocks",
-      "tag": "ase-node_6344b6b5",
-      "server": "5.188.181.201",
-      "server_port": 9029,
-      "method": "aes-256-cfb",
-      "password": "dU3DSNS8wYPXzEKw"
+      "tag": "ase-node_18af839f",
+      "server": "82.38.31.175",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "shadowsocks",
-      "tag": "ase-node_6622610d",
-      "server": "5.188.181.201",
-      "server_port": 9001,
-      "method": "aes-256-cfb",
-      "password": "UkXRsXvR6buDMG2Y"
+      "tag": "ase-node_fa5f52e5",
+      "server": "82.38.31.171",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_8e74691e",
+      "server": "185.103.110.66",
+      "server_port": 18280,
+      "method": "aes-128-gcm",
+      "password": "f9300a9bf39ae0347c3a3bfbc4dd7754"
     },
     {
       "type": "trojan",
-      "tag": "ase-node_73eabe31",
-      "server": "148.253.212.42",
+      "tag": "ase-node_fe1f0be1",
+      "server": "cuddly-sheepdog.rooster465.autos",
       "server_port": 443,
-      "password": "humanity",
+      "password": "UX82473651",
       "tls": {
         "enabled": true,
-        "server_name": "www.pleadcourt.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.pleadcourt.org"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_799c5445",
-      "server": "185.230.44.62",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.pleadcourt.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.pleadcourt.org"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_93fde1bd",
-      "server": "46.62.164.121",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.pleadcourt.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.pleadcourt.org"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_b31faa63",
-      "server": "94.158.219.126",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.pleadcourt.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.pleadcourt.org"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_fe6b04c1",
-      "server": "46.62.204.134",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.pleadcourt.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.pleadcourt.org"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_9b4c7ddc",
-      "server": "192.145.30.27",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.pleadcourt.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.pleadcourt.org"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_fd87d296",
-      "server": "46.62.230.149",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.pleadcourt.org"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.pleadcourt.org"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "ase-node_4e177a02",
-      "server": "144.31.182.130",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "wWw.Volumeroot.cOm."
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.volumerOot.coM."
-        }
+        "server_name": "cuddly-sheepdog.rooster465.autos"
       }
     },
     {
       "type": "vless",
-      "tag": "ase-node_ccb7979b",
-      "server": "185.143.234.132",
-      "server_port": 2052,
-      "uuid": "ff766b85-d50f-47b7-9b63-6ca4ea128f3f",
+      "tag": "ase-node_cfce36fa",
+      "server": "140.225.208.50",
+      "server_port": 2083,
+      "uuid": "e3c3b722-1264-4cdc-a97c-b0a1bb73cd67",
+      "tls": {
+        "enabled": true,
+        "server_name": "speedtestmark.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/wp-content4",
+        "path": "/vless-ws"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_fd18910d",
+      "server": "188.226.181.61",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.pleadcourt.org",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
         "headers": {
-          "Host": "mail.loyalsmile.net"
+          "Host": "www.pleadcourt.org"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "ase-node_eea4bcf5",
+      "server": "20.71.90.237",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "y7KeRTzmH0vXT2kp"
+    },
+    {
       "type": "vless",
-      "tag": "ase-node_e3a61678",
-      "server": "185.143.233.132",
-      "server_port": 2052,
-      "uuid": "ff766b85-d50f-47b7-9b63-6ca4ea128f3f",
-      "transport": {
-        "type": "ws",
-        "path": "/wp-content4",
-        "headers": {
-          "Host": "mail.loyalsmile.net"
-        }
+      "tag": "ase-node_e0443237",
+      "server": "140.233.177.88",
+      "server_port": 8080,
+      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_5fe8d0f6",
+      "server": "194.68.44.42",
+      "server_port": 64546,
+      "method": "chacha20-ietf-poly1305",
+      "password": "U83u9OGpvSatIUW7LsWffr"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_733b5adc",
+      "server": "172.96.160.250",
+      "server_port": 22069,
+      "method": "aes-256-gcm",
+      "password": "bd962c9a-d6f2-4561-bd80-34206c4d5279"
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_fc5cd196",
+      "server": "actual-squid.rooster465.autos",
+      "server_port": 443,
+      "password": "UX82473651",
+      "tls": {
+        "enabled": true,
+        "server_name": "actual-squid.rooster465.autos"
       }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_b0e5c606",
+      "server": "35.158.96.132",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn-de-002.fastervpn.world",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_b4e45fa0",
+      "server": "94.198.54.132",
+      "server_port": 443,
+      "password": "f317b5d6-d399-4d3d-a051-89d674ae953c",
+      "tls": {
+        "enabled": true,
+        "server_name": "msk.frkn.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_7d9ce69b",
+      "server": "188.241.241.33",
+      "server_port": 443,
+      "password": "267b3a79-81f2-42ac-a409-c23b05b6329d",
+      "tls": {
+        "enabled": true,
+        "server_name": "dehy.bbobr.win",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_d512f514",
+      "server": "112.118.24.99",
+      "server_port": 30829,
+      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+      "security": "auto",
+      "alter_id": 2
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_e0ac6226",
+      "server": "15.164.245.92",
+      "server_port": 443,
+      "password": "7e68e32f-8015-4f37-9082-70e8b0b58043",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_82c8ea58",
+      "server": "208.69.78.217",
+      "server_port": 33044,
+      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn.local",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "mbQXP2ASuHbF6ZPq"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_b79c40fe",
+      "server": "208.69.78.217",
+      "server_port": 33025,
+      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn.local",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "mbQXP2ASuHbF6ZPq"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_ca5eb655",
+      "server": "208.69.78.217",
+      "server_port": 33089,
+      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn.local",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "mbQXP2ASuHbF6ZPq"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_ee36b28d",
+      "server": "208.69.78.217",
+      "server_port": 33174,
+      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn.local",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "mbQXP2ASuHbF6ZPq"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_ee0c4c7f",
+      "server": "15.164.245.92",
+      "server_port": 8443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "7e68e32f-8015-4f37-9082-70e8b0b58043"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_75ef9aa5",
+      "server": "ruot.ayucloudservices.nl",
+      "server_port": 22073,
+      "method": "aes-256-gcm",
+      "password": "bd962c9a-d6f2-4561-bd80-34206c4d5279"
+    },
+    {
+      "type": "tuic",
+      "tag": "ase-node_909a8538",
+      "server": "tw5.dexlos.com",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw5.dexlos.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "tuic",
+      "tag": "ase-node_e4c69fa9",
+      "server": "118.167.14.51",
+      "server_port": 8080,
+      "uuid": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "password": "8A9905B7-801B-41AF-BFC9-2034212770F6",
+      "congestion_control": "bbr",
+      "udp_relay_mode": "native",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw5.dexlos.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_4dc5be2b",
+      "server": "172.96.160.250",
+      "server_port": 22073,
+      "method": "aes-256-gcm",
+      "password": "bd962c9a-d6f2-4561-bd80-34206c4d5279"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_dca2e465",
+      "server": "ruot.ayucloudservices.nl",
+      "server_port": 22069,
+      "method": "aes-256-gcm",
+      "password": "bd962c9a-d6f2-4561-bd80-34206c4d5279"
     }
   ]
 }
