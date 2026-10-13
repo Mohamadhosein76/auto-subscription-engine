@@ -5,46 +5,165 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_50b52915
-  type: vless
-  server: 191.101.157.251
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: ase-node_cb966c89
+  type: hysteria2
+  server: 208.69.78.217
+  port: 21175
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: ase-node_df99147a
+  type: ss
+  server: 70.34.212.124
+  port: 8388
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
   udp: true
-- name: ase-node_ba51e7de
-  type: vless
-  server: 191.101.157.6
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_d19884a7
-  type: vless
-  server: 191.101.157.115
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_91964274
-  type: vless
-  server: 168.222.49.154
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_31d736c5
+- name: ase-node_2ac29c48
   type: trojan
-  server: 155.138.138.2
-  port: 443
-  password: Trojan@82164024
+  server: 109.206.241.10
+  port: 449
+  password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
   udp: true
   tls: true
-  sni: ca.tronsg.com
+  skip-cert-verify: true
+- name: ase-node_fc5e5dbf
+  type: vmess
+  server: 145.239.55.210
+  port: 80
+  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+- name: ase-node_c8d1450d
+  type: vless
+  server: 103.193.173.51
+  port: 39485
+  uuid: 25b3faeb-89b0-4dff-b0a3-0e70997dc962
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.icloud.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: pzmFiyOtVaKJpJlXYC_hJcDw0hiPvPZ661uZn4NO0Xs
+    short-id: b9
+- name: ase-node_128e1464
+  type: vmess
+  server: 54.37.131.126
+  port: 80
+  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: ase-node_8f249c1b
+  type: vless
+  server: 1.162.160.212
+  port: 32134
+  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: buylite.music.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
+    short-id: 6c6c7c97
+- name: ase-node_0ee9e07c
+  type: vless
+  server: 206.1.102.81
+  port: 17915
+  uuid: 439628ee-ef8e-4a3e-ba0f-091b7376dcb8
+  udp: true
+  tls: true
+  servername: googol.wookshop.ir
+- name: ase-node_602b1806
+  type: hysteria2
+  server: 37.9.4.112
+  port: 17701
+  password: 56ff50da-a238-4646-95ab-dd159634bd87
+  sni: ru03.arpanet-cdn.com
+  obfs: salamander
+  obfs-password: 588c76723192f87cfe6d6786816177cd2bd9773acdc545928d7d1d5e8338d4ce
+- name: ase-node_5910cd32
+  type: vless
+  server: 13.214.197.140
+  port: 32134
+  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: buylite.music.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
+    short-id: 6c6c7c97
+- name: ase-node_e779f233
+  type: hysteria2
+  server: sweedenqfds777.qcloud.surf
+  port: 21223
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: ase-node_6d132c18
+  type: hysteria2
+  server: 13.143.174.197
+  port: 21223
+  password: 8bd04756-3beb-4348-82c9-d35453df50ce
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: ase-node_875a596d
+  type: vless
+  server: 185.45.192.252
+  port: 27631
+  uuid: 3084f0d9-cb7e-425d-8d8f-7b5e3b5570c6
+  udp: true
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ydFMrFC_HRlVDj7e4jVGx1XZCuogpHZ82K3j-Kns0AE
+- name: ase-node_e194059f
+  type: vless
+  server: 65.49.217.49
+  port: 25469
+  uuid: 3d838129-8aef-4e8e-ac46-3f950fe98276
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: owC470odZmynnyt2s8g5_VLPUwXpTw2puWtJOGwBWxM
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_50b52915
-  - ase-node_ba51e7de
-  - ase-node_d19884a7
-  - ase-node_91964274
-  - ase-node_31d736c5
+  - ase-node_cb966c89
+  - ase-node_df99147a
+  - ase-node_2ac29c48
+  - ase-node_fc5e5dbf
+  - ase-node_c8d1450d
+  - ase-node_128e1464
+  - ase-node_8f249c1b
+  - ase-node_0ee9e07c
+  - ase-node_602b1806
+  - ase-node_5910cd32
+  - ase-node_e779f233
+  - ase-node_6d132c18
+  - ase-node_875a596d
+  - ase-node_e194059f
 rules:
 - MATCH,PROXY
