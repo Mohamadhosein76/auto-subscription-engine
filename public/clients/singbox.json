@@ -1,218 +1,63 @@
 {
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "ase-node_f04b42db",
-      "server": "51.15.19.206",
-      "server_port": 8443,
-      "password": "HowdyHysteria2023w0W",
-      "tls": {
-        "enabled": true,
-        "server_name": "viber.com",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "HysteriaHowdy"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_3b1f4fca",
-      "server": "3.71.108.98",
+      "type": "trojan",
+      "tag": "ase-node_18437ef6",
+      "server": "ca.tronsg.com",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "password": "Trojan@82164024",
       "tls": {
         "enabled": true,
-        "server_name": "vpn-de-002.fastervpn.world",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_227548e9",
-      "server": "18.198.189.91",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-de-002.fastervpn.world",
-        "insecure": true
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_c07e7d8c",
-      "server": "4.210.66.165",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "8qKJlc2Z6lo64bUq"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_f9fefe0f",
-      "server": "51.124.229.141",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "y7KeRTzmH0vXT2kp"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_0fe1c3af",
-      "server": "vpn-au-001.fastervpn.world",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_9bc925b8",
-      "server": "13.210.146.48",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_aee5899a",
-      "server": "82.38.31.54",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_e595d836",
-      "server": "3.25.106.65",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_502eb80b",
-      "server": "31.76.11.83",
-      "server_port": 22266,
-      "uuid": "2d8f57bd-12b5-41ad-a806-6501753c264c",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_a80a2d83",
-      "server": "32.236.157.157",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_e4f7de03",
-      "server": "13.238.161.167",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_f79f6dd8",
-      "server": "130.49.189.250",
-      "server_port": 28152,
-      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
-      "tls": {
-        "enabled": true,
-        "server_name": "alb1337.zaebalsanoproxyklinus.lol",
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_a1d1497f",
-      "server": "168.138.43.75",
-      "server_port": 80,
-      "uuid": "11c3627f-31e8-4695-dfbd-34076e2f1f5d",
-      "security": "auto",
-      "alter_id": 0,
-      "transport": {
-        "type": "ws",
-        "path": "/cctv13.m3u8"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_1783cc5a",
-      "server": "vpn-de-002.fastervpn.world",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-de-002.fastervpn.world",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_b718567c",
-      "server": "130.49.189.250",
-      "server_port": 28152,
-      "password": "f83ce3c4-07d9-4895-bd14-cb74abbcab37",
-      "tls": {
-        "enabled": true,
-        "server_name": "alb1337.zaebalsanoproxyklinus.lol"
+        "server_name": "ca.tronsg.com"
       }
     },
     {
       "type": "vless",
-      "tag": "ase-node_31450c50",
-      "server": "212.74.39.209",
+      "tag": "ase-node_50b52915",
+      "server": "191.101.157.251",
       "server_port": 2053,
       "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
     },
     {
-      "type": "hysteria2",
-      "tag": "ase-node_4d1ffc1a",
-      "server": "alb1337.zaebalsanoproxyklinus.lol",
-      "server_port": 28152,
-      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
-      "tls": {
-        "enabled": true,
-        "server_name": "alb1337.zaebalsanoproxyklinus.lol",
-        "alpn": [
-          "h3"
-        ]
-      }
+      "type": "vless",
+      "tag": "ase-node_ba51e7de",
+      "server": "191.101.157.6",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
     },
     {
-      "type": "hysteria2",
-      "tag": "ase-node_a1067b2f",
-      "server": "alb1337.zaebalsanoproxyklinus.lol",
-      "server_port": 28152,
-      "password": "f83ce3c4-07d9-4895-bd14-cb74abbcab37",
+      "type": "vless",
+      "tag": "ase-node_d19884a7",
+      "server": "191.101.157.115",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_91964274",
+      "server": "168.222.49.154",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_0fe820ac",
+      "server": "31.76.227.58",
+      "server_port": 443,
+      "uuid": "0cf8e402-e801-4aeb-9b7a-00a933f9f1c1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "alb1337.zaebalsanoproxyklinus.lol"
+        "server_name": "assets-mi-27.spbstudentlife.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "kInywP138eVlHbS7wodX2Q_R1OC0JdViypEeguSvpQ0",
+          "short_id": "33e6fe7545082926"
+        }
       }
     }
   ]
