@@ -1,56 +1,76 @@
 {
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "ase-node_cb966c89",
-      "server": "208.69.78.217",
-      "server_port": 21175,
-      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
+      "type": "vless",
+      "tag": "ase-node_1df9da04",
+      "server": "15.204.97.219",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vpn.local",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "mbQXP2ASuHbF6ZPq"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_df99147a",
-      "server": "70.34.212.124",
-      "server_port": 8388,
-      "method": "aes-256-gcm",
-      "password": "AxIYWtskJWIIaefW"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_8a4164d8",
-      "server": "77.90.10.175",
-      "server_port": 8086,
-      "method": "2022-blake3-aes-256-gcm",
-      "password": "f2Nq5YLnyclPaWR8my7/Vdd3ZX8URncXZNly5+HcUSs=:dQ6WYcPpGX5xIxUVPAR8w1A9eY6kEVoKKW3HleJ6o8Y="
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_fc5e5dbf",
-      "server": "145.239.55.210",
-      "server_port": 80,
-      "uuid": "067fcd63-b215-4abd-8529-ae929a9971a9",
-      "security": "auto",
-      "alter_id": 0,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.fortresshost.ir."
+        "server_name": "fuck.rkn",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "ase-node_87dcf0db",
+      "server": "20.107.216.3",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "8qKJlc2Z6lo64bUq"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_974777c6",
+      "server": "13.135.199.253",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_9f0cc0d2",
+      "server": "finkawwwbroy5.qcloud.surf",
+      "server_port": 20326,
+      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "finkawwwbroy5.qcloud.surf"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_303925a6",
+      "server": "88.198.91.100",
+      "server_port": 443,
+      "uuid": "cd14445a-a30a-4973-b68a-0437a9379b2c",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_7ee0375b",
+      "server": "qcloudge1.exitvpn.shop",
+      "server_port": 20270,
+      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "qcloudge1.exitvpn.shop"
+      }
+    },
+    {
       "type": "vless",
-      "tag": "ase-node_c8d1450d",
+      "tag": "ase-node_3d08da49",
       "server": "103.193.173.51",
       "server_port": 39485,
       "uuid": "25b3faeb-89b0-4dff-b0a3-0e70997dc962",
@@ -70,25 +90,20 @@
       }
     },
     {
-      "type": "vmess",
-      "tag": "ase-node_128e1464",
-      "server": "54.37.131.126",
-      "server_port": 80,
-      "uuid": "6deef9ad-1357-443d-f95c-cb18952c20b3",
-      "security": "auto",
-      "alter_id": 0,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "google.whatsapp.snapp.torob.basalam.hesanid8.ir."
-        }
+      "type": "hysteria2",
+      "tag": "ase-node_cce8470f",
+      "server": "177.3.220.103",
+      "server_port": 20326,
+      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
+      "tls": {
+        "enabled": true,
+        "server_name": "finkawwwbroy5.qcloud.surf"
       }
     },
     {
       "type": "vless",
-      "tag": "ase-node_8f249c1b",
-      "server": "1.162.160.212",
+      "tag": "ase-node_a2afd07f",
+      "server": "13.251.110.152",
       "server_port": 32134,
       "uuid": "5b01dc2d-6892-49b8-8289-3f73a32e00e4",
       "flow": "xtls-rprx-vision",
@@ -107,113 +122,22 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "ase-node_0ee9e07c",
-      "server": "206.1.102.81",
-      "server_port": 17915,
-      "uuid": "439628ee-ef8e-4a3e-ba0f-091b7376dcb8",
-      "tls": {
-        "enabled": true,
-        "server_name": "googol.wookshop.ir"
-      }
+      "type": "shadowsocks",
+      "tag": "ase-node_dd31ff73",
+      "server": "94.184.42.18",
+      "server_port": 8880,
+      "method": "chacha20-ietf-poly1305",
+      "password": "AWVyUgWWLc4G47GNo_bx2w"
     },
     {
       "type": "hysteria2",
-      "tag": "ase-node_602b1806",
-      "server": "37.9.4.112",
-      "server_port": 17701,
-      "password": "56ff50da-a238-4646-95ab-dd159634bd87",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru03.arpanet-cdn.com"
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "588c76723192f87cfe6d6786816177cd2bd9773acdc545928d7d1d5e8338d4ce"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_5910cd32",
-      "server": "13.214.197.140",
-      "server_port": 32134,
-      "uuid": "5b01dc2d-6892-49b8-8289-3f73a32e00e4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "buylite.music.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4",
-          "short_id": "6c6c7c97"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_e779f233",
-      "server": "sweedenqfds777.qcloud.surf",
-      "server_port": 21223,
+      "tag": "ase-node_b5a5cdb3",
+      "server": "177.3.222.231",
+      "server_port": 20270,
       "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
       "tls": {
         "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "ase-node_6d132c18",
-      "server": "13.143.174.197",
-      "server_port": 21223,
-      "password": "8bd04756-3beb-4348-82c9-d35453df50ce",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_875a596d",
-      "server": "185.45.192.252",
-      "server_port": 27631,
-      "uuid": "3084f0d9-cb7e-425d-8d8f-7b5e3b5570c6",
-      "tls": {
-        "enabled": true,
-        "server_name": "addons.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ydFMrFC_HRlVDj7e4jVGx1XZCuogpHZ82K3j-Kns0AE"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_e194059f",
-      "server": "65.49.217.49",
-      "server_port": 25469,
-      "uuid": "3d838129-8aef-4e8e-ac46-3f950fe98276",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "addons.mozilla.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "owC470odZmynnyt2s8g5_VLPUwXpTw2puWtJOGwBWxM"
-        }
+        "server_name": "qcloudge1.exitvpn.shop"
       }
     }
   ]
