@@ -1,103 +1,118 @@
 {
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "ase-node_04f3d41a",
-      "server": "185.164.175.81",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+      "type": "vless",
+      "tag": "ase-node_567c6a05",
+      "server": "169.40.42.202",
+      "server_port": 443,
+      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "short_id": "c39cc7310a"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_f36d18f9",
+      "server": "208.69.78.217",
+      "server_port": 21154,
+      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn.local",
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "mbQXP2ASuHbF6ZPq"
+      }
     },
     {
       "type": "shadowsocks",
-      "tag": "ase-node_77947c31",
-      "server": "54.36.174.140",
-      "server_port": 443,
+      "tag": "ase-node_a32ddd60",
+      "server": "193.29.139.188",
+      "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
-      "password": "e5c65ph"
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
     },
     {
       "type": "vmess",
-      "tag": "ase-node_7a80d96e",
-      "server": "149.88.23.207",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "tag": "ase-node_f542aeac",
+      "server": "206.1.102.64",
+      "server_port": 8080,
+      "uuid": "184a0393-5c9e-403c-9be6-427b066308e1",
       "security": "auto",
       "alter_id": 0
     },
     {
       "type": "vless",
-      "tag": "ase-node_6281a2d2",
-      "server": "31.56.18.67",
-      "server_port": 2083,
-      "uuid": "0be0a2bf-aa20-4e52-aa5a-3d59d56b1582",
+      "tag": "ase-node_ac5b38c5",
+      "server": "87.242.127.176",
+      "server_port": 4510,
+      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "dege.underground.company",
+        "server_name": "9c99da.usecache.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM",
+          "short_id": "2d0c188798bae174"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_de8fd536",
+      "server": "79.175.136.238",
+      "server_port": 7879,
+      "uuid": "bd5ea9bc-16ec-408e-b933-4219ed022de1",
+      "tls": {
+        "enabled": true,
+        "server_name": "account.samsung.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "RAsD3YMZiEtRBEQ6hNpsyfVE9ro1M4H2AQ-CKbBjJGU",
-          "short_id": "7878a3f029e04e23"
+          "public_key": "0PVs0FZprxXi0bV-YX-SkyAx6a_9GHjSZ6hpCpa1lnE",
+          "short_id": "63ca289314edc51b"
         }
       }
     },
     {
-      "type": "vmess",
-      "tag": "ase-node_562dc2cc",
-      "server": "oc.imfun.fun",
-      "server_port": 18112,
-      "uuid": "ad45f8f6-0f0a-4cc4-b907-c4582407dc94",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_a0c6c268",
-      "server": "132.145.121.217",
-      "server_port": 18112,
-      "uuid": "ad45f8f6-0f0a-4cc4-b907-c4582407dc94",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
       "type": "vless",
-      "tag": "ase-node_804650a6",
-      "server": "172.104.49.9",
-      "server_port": 443,
-      "uuid": "d9677f03-95c1-4357-9b31-b35b732bd188",
+      "tag": "ase-node_75c1987a",
+      "server": "156.226.168.221",
+      "server_port": 35193,
+      "uuid": "35cbae61-ee10-4cb9-abb8-4950b35e9851",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "wSLW8DGUOMkRuCFWnBs31PYwBtvcHbBUGHu_dDTBYgc",
-          "short_id": "829330332af8c863"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_7b2203cf",
-      "server": "149.202.57.89",
-      "server_port": 443,
-      "uuid": "rgiw5k0gg5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rgiw5k0gg5-1492025789-direct.kheibarr.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
+          "public_key": "d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE",
+          "short_id": "e8daed2d"
         }
       }
     }
