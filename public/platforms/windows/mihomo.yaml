@@ -5,140 +5,229 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_1df9da04
+- name: ase-node_9eae5ce4
+  type: trojan
+  server: 66.23.203.21
+  port: 59689
+  password: ae7eb4dwyaz25pxwgq59
+  udp: true
+  tls: true
+  skip-cert-verify: true
+- name: ase-node_60ac956e
   type: vless
-  server: 15.204.97.219
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 23.166.40.27
+  port: 443
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: fuck.rkn
+  servername: s880.gogocs.xyz
+- name: ase-node_1002f3d8
+  type: vless
+  server: 31.59.182.130
+  port: 443
+  uuid: f580778d-8e05-4d88-8724-802eccf4ceff
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: meowgenicslab.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: F7enjoJVna8sj4M9KPqNkN1ATXeflVNx9SHnn4lpAkY
+    short-id: 5f37b7c5e2cc31a3
+- name: ase-node_954b40fd
+  type: vless
+  server: 31.59.182.129
+  port: 443
+  uuid: f580778d-8e05-4d88-8724-802eccf4ceff
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: meowgenicslab.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: F7enjoJVna8sj4M9KPqNkN1ATXeflVNx9SHnn4lpAkY
+    short-id: 5f37b7c5e2cc31a3
+- name: ase-node_c907816f
+  type: vless
+  server: 31.59.182.131
+  port: 443
+  uuid: f580778d-8e05-4d88-8724-802eccf4ceff
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: meowgenicslab.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: F7enjoJVna8sj4M9KPqNkN1ATXeflVNx9SHnn4lpAkY
+    short-id: 5f37b7c5e2cc31a3
+- name: ase-node_f45e669d
+  type: vless
+  server: 31.59.182.132
+  port: 443
+  uuid: f580778d-8e05-4d88-8724-802eccf4ceff
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: meowgenicslab.net
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: F7enjoJVna8sj4M9KPqNkN1ATXeflVNx9SHnn4lpAkY
+    short-id: 5f37b7c5e2cc31a3
+- name: ase-node_42d42982
+  type: vless
+  server: 193.135.137.12
+  port: 8443
+  uuid: b7df9363-087b-48f7-a4ca-6e988ebf7f35
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: amd.com
+  client-fingerprint: edge
+  reality-opts:
+    public-key: aV7fW5RmH-i6HzOiqnFlMwV_ZgfuutMpeWWfEaJBsTM
+    short-id: 5bfa1416
+- name: ase-node_7cbffb32
+  type: vless
+  server: 2.26.254.223
+  port: 8444
+  uuid: ef8c7169-87fc-49ad-be91-1f3984ab446d
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: DQGwrxOgoiyBDrbdFUofP88FGtxHDA2duzNXKkyxaig
+    short-id: 6ba85179e30d4fc2
+- name: ase-node_1695b75f
+  type: vless
+  server: 152.233.71.81
+  port: 443
+  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: brointelengence.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: ase-node_87dcf0db
-  type: ss
-  server: 20.107.216.3
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 8qKJlc2Z6lo64bUq
-  udp: true
-- name: ase-node_974777c6
-  type: ss
-  server: 13.135.199.253
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: ase-node_9f0cc0d2
-  type: hysteria2
-  server: finkawwwbroy5.qcloud.surf
-  port: 20326
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: finkawwwbroy5.qcloud.surf
-- name: ase-node_303925a6
+    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+    short-id: 1c3e8241a8743df9
+- name: ase-node_a0670bdb
   type: vmess
-  server: 88.198.91.100
-  port: 443
-  uuid: cd14445a-a30a-4973-b68a-0437a9379b2c
+  server: 154.64.239.22
+  port: 26421
+  uuid: 9fa732d6-dcd6-47bb-c255-094bad71765d
   alterId: 0
   cipher: auto
   udp: true
-- name: ase-node_7ee0375b
+- name: ase-node_270ae470
+  type: vmess
+  server: 54.37.131.126
+  port: 80
+  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
+  alterId: 0
+  cipher: none
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+- name: ase-node_6afa022c
   type: hysteria2
-  server: qcloudge1.exitvpn.shop
-  port: 20270
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: qcloudge1.exitvpn.shop
-- name: ase-node_22484673
-  type: trojan
-  server: de-bots4.h1cloud.net
-  port: 25267
-  password: happybirthdaydaniel
-  udp: true
-  tls: true
-  sni: t.me/FuckTheWall
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-- name: ase-node_3d08da49
-  type: vless
-  server: 103.193.173.51
-  port: 39485
-  uuid: 25b3faeb-89b0-4dff-b0a3-0e70997dc962
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.icloud.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: pzmFiyOtVaKJpJlXYC_hJcDw0hiPvPZ661uZn4NO0Xs
-    short-id: b9
-- name: ase-node_cce8470f
-  type: hysteria2
-  server: 177.3.220.103
-  port: 20326
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: finkawwwbroy5.qcloud.surf
-- name: ase-node_a2afd07f
-  type: vless
-  server: 13.251.110.152
-  port: 32134
-  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: buylite.music.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
-    short-id: 6c6c7c97
-- name: ase-node_dd31ff73
-  type: ss
-  server: 94.184.42.18
-  port: 8880
-  cipher: chacha20-ietf-poly1305
-  password: AWVyUgWWLc4G47GNo_bx2w
-  udp: true
-- name: ase-node_71df2420
-  type: trojan
-  server: 83.217.222.170
+  server: 3.75.178.53
   port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-de-002.fastervpn.world
+  skip-cert-verify: true
+- name: ase-node_5760bfc9
+  type: hysteria2
+  server: 3.77.57.250
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-de-002.fastervpn.world
+  skip-cert-verify: true
+- name: ase-node_2ae71891
+  type: trojan
+  server: 185.114.72.31
+  port: 2053
   password: humanity
   udp: true
   tls: true
-  sni: www.pleadcourt.org
-  client-fingerprint: unsafe
+  sni: www.calmlunch.com
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /assignment
+- name: ase-node_edf77b76
+  type: vmess
+  server: 219.79.237.176
+  port: 30829
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  udp: true
+- name: ase-node_3329fdd3
+  type: ss
+  server: 40.113.154.234
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: y7KeRTzmH0vXT2kp
+  udp: true
+- name: ase-node_33c571c4
+  type: vmess
+  server: 219.79.237.176
+  port: 30836
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  udp: true
+- name: ase-node_15754a22
+  type: vless
+  server: 51.75.67.209
+  port: 80
+  uuid: fcdb24e3-5e66-4c45-b89e-ac9441f4dcda
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
     headers:
-      Host: www.pleadcourt.org
-- name: ase-node_b5a5cdb3
-  type: hysteria2
-  server: 177.3.222.231
-  port: 20270
-  password: 8bd04756-3beb-4348-82c9-d35453df50ce
-  sni: qcloudge1.exitvpn.shop
+      Host: free.sahanwickramasinghe.me
+- name: ase-node_326f5054
+  type: vless
+  server: 2.29.96.126
+  port: 25633
+  uuid: ec572cf0-1337-4c51-b4ec-ff2f538c1f4c
+  udp: true
+  tls: true
+  servername: www.icloud.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: YLIRYJ8UkT0nSSgxJr7YckNuXnokVyEs2G6thNyx1GE
+    short-id: 200811f031ae7463
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_1df9da04
-  - ase-node_87dcf0db
-  - ase-node_974777c6
-  - ase-node_9f0cc0d2
-  - ase-node_303925a6
-  - ase-node_7ee0375b
-  - ase-node_22484673
-  - ase-node_3d08da49
-  - ase-node_cce8470f
-  - ase-node_a2afd07f
-  - ase-node_dd31ff73
-  - ase-node_71df2420
-  - ase-node_b5a5cdb3
+  - ase-node_9eae5ce4
+  - ase-node_60ac956e
+  - ase-node_1002f3d8
+  - ase-node_954b40fd
+  - ase-node_c907816f
+  - ase-node_f45e669d
+  - ase-node_42d42982
+  - ase-node_7cbffb32
+  - ase-node_1695b75f
+  - ase-node_a0670bdb
+  - ase-node_270ae470
+  - ase-node_6afa022c
+  - ase-node_5760bfc9
+  - ase-node_2ae71891
+  - ase-node_edf77b76
+  - ase-node_3329fdd3
+  - ase-node_33c571c4
+  - ase-node_15754a22
+  - ase-node_326f5054
 rules:
 - MATCH,PROXY
