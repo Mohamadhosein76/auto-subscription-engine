@@ -5,169 +5,23 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_a8503fa4
-  type: vless
-  server: 216.234.140.15
-  port: 47832
-  uuid: 6b042879-f382-46ce-8965-866186eb7e33
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: hDRm-rHVu-ClNhBhPfp-JUGtFM91NGjlhVf-JjnPCnI
-    short-id: 058ea2b1
-- name: ase-node_9ddf9f51
-  type: vless
-  server: 194.77.220.248
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_67d48742
-  type: vless
-  server: 87.121.47.183
+- name: ase-node_9d89725d
+  type: ss
+  server: 15.175.213.130
   port: 443
-  uuid: 5538eaaa-ac3d-4414-a1f5-280212949ed9
+  cipher: aes-256-cfb
+  password: amazonskr05
   udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 1cdinfo.chaosnetwork.app
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-- name: ase-node_ac24dbcb
-  type: vless
-  server: 152.53.185.244
+- name: ase-node_e1907091
+  type: ss
+  server: 20.164.209.198
   port: 443
-  uuid: 5538eaaa-ac3d-4414-a1f5-280212949ed9
+  cipher: chacha20-ietf-poly1305
+  password: IdBspBchqpInOZFK
   udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: demethod.chaosnetwork.app
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-- name: ase-node_cefaee64
-  type: vless
-  server: 152.53.186.202
-  port: 443
-  uuid: 5538eaaa-ac3d-4414-a1f5-280212949ed9
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deinfo.chaosnetwork.app
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-- name: ase-node_d3b818ce
-  type: vless
-  server: 87.121.47.183
-  port: 443
-  uuid: 5538eaaa-ac3d-4414-a1f5-280212949ed9
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 1cdinfo.chaosnetwork.app
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-- name: ase-node_0a65bdd3
-  type: vless
-  server: 152.53.185.244
-  port: 443
-  uuid: 5538eaaa-ac3d-4414-a1f5-280212949ed9
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: demethod.chaosnetwork.app
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-- name: ase-node_d92b3990
-  type: vless
-  server: 152.53.186.202
-  port: 443
-  uuid: 5538eaaa-ac3d-4414-a1f5-280212949ed9
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deinfo.chaosnetwork.app
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
-- name: ase-node_98bf2ded
-  type: vless
-  server: 152.233.71.81
-  port: 443
-  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: brointelengence.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    short-id: 1c3e8241a8743df9
-- name: ase-node_1fa66965
-  type: vless
-  server: 31.59.217.164
-  port: 443
-  uuid: 4b09d40d-e36a-47c3-baa4-e6bf551b3183
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.adobe.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: kOkILS7UXUQDNPLYn4SQ65kMIWKXNOttV5Kddw4ZqTo
-    short-id: 1625a2a79d01328f
-- name: ase-node_137319a6
-  type: vless
-  server: 194.77.220.248
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_b14e11b2
-  type: vless
-  server: 194.77.220.66
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_16aac85e
-  type: vless
-  server: 103.180.20.132
-  port: 20007
-  uuid: 4fcd1f98-0f62-467e-9516-8df807386953
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: h67BY8lUGUOtatqfbLJ8pgxS-bYXqODnS_aBIRUrIDw
-    short-id: 22b82cf5d70ea10e
-- name: ase-node_7aa15a4a
-  type: vless
-  server: 178.83.45.253
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_6da9f733
-  type: vless
-  server: 82.47.63.172
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_c2b9c5cc
-  type: vless
-  server: 82.47.63.172
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_357a1f69
+- name: ase-node_ae3b798f
   type: trojan
-  server: 46.62.204.134
+  server: 95.85.32.57
   port: 443
   password: humanity
   udp: true
@@ -179,69 +33,123 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
-- name: ase-node_0f667d9d
-  type: vless
-  server: 194.77.220.66
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_36e054b6
-  type: vless
-  server: 178.83.45.253
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_cf7d84fb
+- name: ase-node_141b6d26
   type: trojan
-  server: 89.150.34.41
-  port: 2053
+  server: 168.235.125.93
+  port: 443
   password: humanity
   udp: true
   tls: true
-  sni: www.calmlunch.com
-  skip-cert-verify: true
+  sni: www.pleadcourt.org
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
   network: ws
   ws-opts:
     path: /assignment
     headers:
-      Host: www.calmlunch.com
-- name: ase-node_b3b935c3
-  type: vless
-  server: 31.59.140.189
+      Host: www.pleadcourt.org
+- name: ase-node_ccad778b
+  type: trojan
+  server: 178.128.45.156
   port: 443
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  password: humanity
   udp: true
-  flow: xtls-rprx-vision
   tls: true
-  servername: nl1.aiage.work
-  client-fingerprint: random
-  reality-opts:
-    public-key: vSa3rWZfq5OftXO2RSgggbTOxbHlWGTLpP8bNDki3wk
-    short-id: adcbde41b1cf27ba
+  sni: www.pleadcourt.org
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: ase-node_472d4bed
+  type: trojan
+  server: 167.172.61.197
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.volumeroot.com
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: ase-node_01869ad5
+  type: trojan
+  server: 138.68.131.253
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: ase-node_1fbb409a
+  type: trojan
+  server: 95.85.54.197
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: ase-node_570ce7b6
+  type: trojan
+  server: 151.236.14.87
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.volumeroot.com
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: ase-node_fb0845e5
+  type: trojan
+  server: 188.166.42.149
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.volumeroot.com
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_a8503fa4
-  - ase-node_9ddf9f51
-  - ase-node_67d48742
-  - ase-node_ac24dbcb
-  - ase-node_cefaee64
-  - ase-node_d3b818ce
-  - ase-node_0a65bdd3
-  - ase-node_d92b3990
-  - ase-node_98bf2ded
-  - ase-node_1fa66965
-  - ase-node_137319a6
-  - ase-node_b14e11b2
-  - ase-node_16aac85e
-  - ase-node_7aa15a4a
-  - ase-node_6da9f733
-  - ase-node_c2b9c5cc
-  - ase-node_357a1f69
-  - ase-node_0f667d9d
-  - ase-node_36e054b6
-  - ase-node_cf7d84fb
-  - ase-node_b3b935c3
+  - ase-node_9d89725d
+  - ase-node_e1907091
+  - ase-node_ae3b798f
+  - ase-node_141b6d26
+  - ase-node_ccad778b
+  - ase-node_472d4bed
+  - ase-node_01869ad5
+  - ase-node_1fbb409a
+  - ase-node_570ce7b6
+  - ase-node_fb0845e5
 rules:
 - MATCH,PROXY
