@@ -1,119 +1,208 @@
 {
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "ase-node_567c6a05",
-      "server": "169.40.42.202",
+      "type": "shadowsocks",
+      "tag": "ase-node_0d6be2ea",
+      "server": "216.105.168.18",
       "server_port": 443,
-      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "short_id": "c39cc7310a"
-        }
-      }
+      "method": "chacha20-ietf-poly1305",
+      "password": "bQZl7HDxSabr1FurTYQHFU"
     },
     {
-      "type": "hysteria2",
-      "tag": "ase-node_f36d18f9",
-      "server": "208.69.78.217",
-      "server_port": 21154,
-      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn.local",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "mbQXP2ASuHbF6ZPq"
-      }
+      "type": "vless",
+      "tag": "ase-node_4d450556",
+      "server": "3.20.126.177",
+      "server_port": 10101,
+      "uuid": "VPNSaint"
     },
     {
       "type": "shadowsocks",
-      "tag": "ase-node_a32ddd60",
-      "server": "193.29.139.188",
-      "server_port": 8080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+      "tag": "ase-node_ef6cebad",
+      "server": "3.144.84.214",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
-      "type": "vmess",
-      "tag": "ase-node_f542aeac",
-      "server": "206.1.102.64",
-      "server_port": 8080,
-      "uuid": "184a0393-5c9e-403c-9be6-427b066308e1",
-      "security": "auto",
-      "alter_id": 0
+      "type": "shadowsocks",
+      "tag": "ase-node_c25124e3",
+      "server": "3.138.123.136",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
     },
     {
       "type": "vless",
-      "tag": "ase-node_ac5b38c5",
-      "server": "87.242.127.176",
-      "server_port": 4510,
-      "uuid": "c3db7657-88ce-42a6-b998-1e0364b277ac",
+      "tag": "ase-node_09a6ecc1",
+      "server": "198.23.169.170",
+      "server_port": 443,
+      "uuid": "64c05afc-ce81-4ba0-b697-afa04da1427e",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "9c99da.usecache.net",
+        "server_name": "download-porter.hoyoverse.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM",
-          "short_id": "2d0c188798bae174"
+          "public_key": "FOl1qibUWpTggolWp30DD7VQ9_xKHZPEPVQs0sQs3gI",
+          "short_id": "2128e27b"
         }
       }
     },
     {
-      "type": "vless",
-      "tag": "ase-node_de8fd536",
-      "server": "79.175.136.238",
-      "server_port": 7879,
-      "uuid": "bd5ea9bc-16ec-408e-b933-4219ed022de1",
-      "tls": {
-        "enabled": true,
-        "server_name": "account.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "0PVs0FZprxXi0bV-YX-SkyAx6a_9GHjSZ6hpCpa1lnE",
-          "short_id": "63ca289314edc51b"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "ase-node_5e03476c",
+      "server": "37.27.253.60",
+      "server_port": 39221,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Pzlcb_PeV3uRgiC2NNoNKw"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_0cc54356",
+      "server": "b2a2.velqixa.ir",
+      "server_port": 39221,
+      "method": "chacha20-ietf-poly1305",
+      "password": "Pzlcb_PeV3uRgiC2NNoNKw"
     },
     {
       "type": "vless",
-      "tag": "ase-node_75c1987a",
-      "server": "156.226.168.221",
-      "server_port": 35193,
-      "uuid": "35cbae61-ee10-4cb9-abb8-4950b35e9851",
+      "tag": "ase-node_a722f619",
+      "server": "195.72.166.251",
+      "server_port": 443,
+      "uuid": "64c05afc-ce81-4ba0-b697-afa04da1427e",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.lloydsbankinggroup.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE",
-          "short_id": "e8daed2d"
+          "public_key": "RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk",
+          "short_id": "25349b36802f"
         }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_f5143097",
+      "server": "185.253.116.33",
+      "server_port": 14430,
+      "uuid": "aee7ae19-672f-49d8-8a92-aa7cdfc89f89",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "185.253.116.33"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_40be1861",
+      "server": "199.232.78.170",
+      "server_port": 443,
+      "uuid": "XpnTeam-6",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "Appxdn.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_02d0c6e4",
+      "server": "178.83.45.137",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_03a64d20",
+      "server": "191.101.157.146",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_56853a9d",
+      "server": "199.232.78.160",
+      "server_port": 443,
+      "uuid": "XpnTeam-6",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "Appxdn.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_b353f0d8",
+      "server": "212.74.39.244",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_5abc2564",
+      "server": "212.74.39.244",
+      "server_port": 8080,
+      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_c51cb04e",
+      "server": "191.101.157.146",
+      "server_port": 8080,
+      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_dacb2c20",
+      "server": "178.83.45.137",
+      "server_port": 8080,
+      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_c3e61c7a",
+      "server": "43.108.103.167",
+      "server_port": 123,
+      "uuid": "35aa0fda-175a-4aec-c468-0231dee1a121",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "http",
+        "path": "/"
       }
     }
   ]

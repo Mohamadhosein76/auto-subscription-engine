@@ -308,13 +308,6 @@
       "prefix": "104.18.0.0/20",
       "source": "cymru_whois"
     },
-    "104.18.12.149": {
-      "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-      "asn": 13335,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
-      "prefix": "104.18.0.0/20",
-      "source": "cymru_whois"
-    },
     "104.18.190.179": {
       "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
       "asn": 13335,
@@ -334,13 +327,6 @@
       "asn": 13335,
       "looked_up_at": "2026-10-06T21:50:31+00:00",
       "prefix": "104.18.32.0/24",
-      "source": "cymru_whois"
-    },
-    "104.18.34.245": {
-      "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-      "asn": 13335,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
-      "prefix": "104.18.34.0/24",
       "source": "cymru_whois"
     },
     "104.18.35.86": {
@@ -425,6 +411,13 @@
       "asn": 13335,
       "looked_up_at": "2026-10-14T19:37:13+00:00",
       "prefix": "104.18.0.0/20",
+      "source": "cymru_whois"
+    },
+    "104.19.150.163": {
+      "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+      "asn": 13335,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "104.19.144.0/20",
       "source": "cymru_whois"
     },
     "104.19.157.30": {
@@ -579,13 +572,6 @@
       "asn": 13335,
       "looked_up_at": "2026-10-07T08:51:01+00:00",
       "prefix": "104.21.0.0/20",
-      "source": "cymru_whois"
-    },
-    "104.21.42.129": {
-      "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-      "asn": 13335,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
-      "prefix": "104.21.32.0/20",
       "source": "cymru_whois"
     },
     "104.21.48.18": {
@@ -984,13 +970,6 @@
       "as_name": "HKTIMS-AP - HKT Limited, HK",
       "asn": 4760,
       "looked_up_at": "2026-10-09T16:27:33+00:00",
-      "prefix": "119.236.32.0/19",
-      "source": "cymru_whois"
-    },
-    "119.236.62.104": {
-      "as_name": "HKTIMS-AP - HKT Limited, HK",
-      "asn": 4760,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
       "prefix": "119.236.32.0/19",
       "source": "cymru_whois"
     },
@@ -2023,6 +2002,13 @@
       "prefix": "150.251.158.0/24",
       "source": "cymru_whois"
     },
+    "151.101.38.6": {
+      "as_name": "FASTLY - Fastly, Inc., US",
+      "asn": 54113,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "151.101.0.0/16",
+      "source": "cymru_whois"
+    },
     "151.101.38.7": {
       "as_name": "FASTLY - Fastly, Inc., US",
       "asn": 54113,
@@ -2205,13 +2191,6 @@
       "prefix": "156.245.232.0/24",
       "source": "cymru_whois"
     },
-    "157.148.7.55": {
-      "as_name": "UNICOM-GuangZhou-IDC - China Unicom Guangdong IP network, CN",
-      "asn": 136958,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
-      "prefix": "157.148.7.0/24",
-      "source": "cymru_whois"
-    },
     "157.228.128.59": {
       "as_name": "FIRSTSERVER-FL-AS - FIRST SERVER LIMITED, GB",
       "asn": 204339,
@@ -2265,6 +2244,13 @@
       "as_name": "AMAZON-02 - Amazon.com, Inc., US",
       "asn": 16509,
       "looked_up_at": "2026-10-13T23:32:55+00:00",
+      "prefix": "16.106.0.0/17",
+      "source": "cymru_whois"
+    },
+    "16.106.41.216": {
+      "as_name": "AMAZON-02 - Amazon.com, Inc., US",
+      "asn": 16509,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
       "prefix": "16.106.0.0/17",
       "source": "cymru_whois"
     },
@@ -2357,6 +2343,13 @@
       "asn": 13335,
       "looked_up_at": "2026-10-10T07:21:16+00:00",
       "prefix": "162.159.91.0/24",
+      "source": "cymru_whois"
+    },
+    "162.19.192.89": {
+      "as_name": "OVH - OVH SAS, FR",
+      "asn": 16276,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "162.19.128.0/17",
       "source": "cymru_whois"
     },
     "162.248.73.162": {
@@ -3024,6 +3017,13 @@
       "prefix": "172.96.160.0/24",
       "source": "cymru_whois"
     },
+    "173.242.114.16": {
+      "as_name": "IT7NET - IT7 Networks Inc, CA",
+      "asn": 25820,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "173.242.112.0/22",
+      "source": "cymru_whois"
+    },
     "173.244.56.6": {
       "as_name": "GSLNETWORKS-AS-AP - GSL Networks Pty LTD, AU",
       "asn": 137409,
@@ -3122,6 +3122,13 @@
       "prefix": "177.3.220.0/24",
       "source": "cymru_whois"
     },
+    "177.3.220.147": {
+      "as_name": "PLAY2GO - PLAY2GO - FZCO, AE",
+      "asn": 219337,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "177.3.220.0/24",
+      "source": "cymru_whois"
+    },
     "177.3.222.231": {
       "as_name": "PLAY2GO - PLAY2GO - FZCO, AE",
       "asn": 219337,
@@ -3141,6 +3148,13 @@
       "asn": 215540,
       "looked_up_at": "2026-10-14T23:26:05+00:00",
       "prefix": "178.17.57.0/24",
+      "source": "cymru_whois"
+    },
+    "178.83.45.137": {
+      "as_name": "OVH - OVH SAS, FR",
+      "asn": 16276,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "178.83.45.0/24",
       "source": "cymru_whois"
     },
     "178.83.45.35": {
@@ -3232,6 +3246,13 @@
       "asn": 16509,
       "looked_up_at": "2026-10-07T01:44:24+00:00",
       "prefix": "18.156.0.0/14",
+      "source": "cymru_whois"
+    },
+    "18.162.113.36": {
+      "as_name": "AMAZON-02 - Amazon.com, Inc., US",
+      "asn": 16509,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "18.162.0.0/16",
       "source": "cymru_whois"
     },
     "18.163.195.21": {
@@ -3521,6 +3542,13 @@
       "prefix": "185.244.208.0/24",
       "source": "cymru_whois"
     },
+    "185.253.116.33": {
+      "as_name": "HZ-EU-AS - HZ Hosting Ltd, BG",
+      "asn": 59711,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "185.253.116.0/24",
+      "source": "cymru_whois"
+    },
     "185.255.179.166": {
       "as_name": "FORTIS-AS - Baykov Ilya Sergeevich, RU",
       "asn": 41745,
@@ -3609,6 +3637,13 @@
       "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
       "asn": 13335,
       "looked_up_at": "2026-10-11T20:31:31+00:00",
+      "prefix": "188.114.97.0/24",
+      "source": "cymru_whois"
+    },
+    "188.114.97.6": {
+      "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+      "asn": 13335,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
       "prefix": "188.114.97.0/24",
       "source": "cymru_whois"
     },
@@ -3721,6 +3756,13 @@
       "as_name": "OVH - OVH SAS, FR",
       "asn": 16276,
       "looked_up_at": "2026-10-11T02:07:36+00:00",
+      "prefix": "191.101.157.0/24",
+      "source": "cymru_whois"
+    },
+    "191.101.157.146": {
+      "as_name": "OVH - OVH SAS, FR",
+      "asn": 16276,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
       "prefix": "191.101.157.0/24",
       "source": "cymru_whois"
     },
@@ -4018,6 +4060,13 @@
       "prefix": "195.58.144.0/24",
       "source": "cymru_whois"
     },
+    "195.72.166.251": {
+      "as_name": "EUGameHost-LTD - EUGAMEHOST LTD, GB",
+      "asn": 203758,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "195.72.166.0/24",
+      "source": "cymru_whois"
+    },
     "196.240.125.251": {
       "as_name": "PacketExchange - Orion Network Limited, GB",
       "asn": 58065,
@@ -4060,6 +4109,13 @@
       "prefix": "198.200.32.0/19",
       "source": "cymru_whois"
     },
+    "198.23.169.170": {
+      "as_name": "AS-COLOCROSSING - HostPapa, US",
+      "asn": 36352,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "198.23.168.0/22",
+      "source": "cymru_whois"
+    },
     "198.251.78.29": {
       "as_name": "IONOS-AS - IONOS SE, DE",
       "asn": 8560,
@@ -4092,6 +4148,20 @@
       "as_name": "FASTLY - Fastly, Inc., US",
       "asn": 54113,
       "looked_up_at": "2026-10-06T17:06:15+00:00",
+      "prefix": "199.232.0.0/16",
+      "source": "cymru_whois"
+    },
+    "199.232.78.160": {
+      "as_name": "FASTLY - Fastly, Inc., US",
+      "asn": 54113,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "199.232.0.0/16",
+      "source": "cymru_whois"
+    },
+    "199.232.78.170": {
+      "as_name": "FASTLY - Fastly, Inc., US",
+      "asn": 54113,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
       "prefix": "199.232.0.0/16",
       "source": "cymru_whois"
     },
@@ -4431,13 +4501,6 @@
       "prefix": "212.100.171.0/24",
       "source": "cymru_whois"
     },
-    "212.135.211.79": {
-      "as_name": "CYBERVERSE-BACKBONE - CYBERVERSE LLC, US",
-      "asn": 216211,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
-      "prefix": "212.135.210.0/23",
-      "source": "cymru_whois"
-    },
     "212.183.88.136": {
       "as_name": "PORSCHE-AS - Porsche Informatik Gesellschaft m.b.H, AT",
       "asn": 29085,
@@ -4487,6 +4550,13 @@
       "prefix": "212.74.39.0/24",
       "source": "cymru_whois"
     },
+    "212.74.39.244": {
+      "as_name": "OVH - OVH SAS, FR",
+      "asn": 16276,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "212.74.39.0/24",
+      "source": "cymru_whois"
+    },
     "213.1.145.50": {
       "as_name": "BT-UK-AS - British Telecommunications Limited, GB",
       "asn": 2856,
@@ -4527,6 +4597,13 @@
       "asn": 209693,
       "looked_up_at": "2026-10-11T15:54:28+00:00",
       "prefix": "213.21.232.0/24",
+      "source": "cymru_whois"
+    },
+    "216.105.168.18": {
+      "as_name": "DEDICATED - Dedicated.com, US",
+      "asn": 63018,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "216.105.168.0/24",
       "source": "cymru_whois"
     },
     "216.106.183.35": {
@@ -4737,6 +4814,27 @@
       "asn": 16509,
       "looked_up_at": "2026-10-10T13:55:35+00:00",
       "prefix": "3.112.0.0/14",
+      "source": "cymru_whois"
+    },
+    "3.138.123.136": {
+      "as_name": "AMAZON-02 - Amazon.com, Inc., US",
+      "asn": 16509,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "3.136.0.0/13",
+      "source": "cymru_whois"
+    },
+    "3.144.84.214": {
+      "as_name": "AMAZON-02 - Amazon.com, Inc., US",
+      "asn": 16509,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "3.144.0.0/13",
+      "source": "cymru_whois"
+    },
+    "3.20.126.177": {
+      "as_name": "AMAZON-02 - Amazon.com, Inc., US",
+      "asn": 16509,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "3.20.0.0/14",
       "source": "cymru_whois"
     },
     "3.25.106.65": {
@@ -5229,13 +5327,6 @@
       "prefix": "35.80.0.0/12",
       "source": "cymru_whois"
     },
-    "36.139.117.41": {
-      "as_name": "CHINAMOBILE-CN - China Mobile Communications Group Co., Ltd., CN",
-      "asn": 9808,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
-      "prefix": "36.139.117.0/24",
-      "source": "cymru_whois"
-    },
     "36.227.223.234": {
       "as_name": "HINET - Data Communication Business Group, TW",
       "asn": 3462,
@@ -5276,6 +5367,13 @@
       "asn": 212238,
       "looked_up_at": "2026-10-04T00:55:49+00:00",
       "prefix": "37.19.198.0/23",
+      "source": "cymru_whois"
+    },
+    "37.27.253.60": {
+      "as_name": "HETZNER-AS - Hetzner Online GmbH, DE",
+      "asn": 24940,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "37.27.0.0/16",
       "source": "cymru_whois"
     },
     "37.49.230.85": {
@@ -5360,6 +5458,13 @@
       "asn": 4760,
       "looked_up_at": "2026-10-09T16:27:33+00:00",
       "prefix": "42.200.160.0/19",
+      "source": "cymru_whois"
+    },
+    "43.108.103.167": {
+      "as_name": "ALIBABA-CN-NET - Alibaba (US) Technology Co., Ltd., CN",
+      "asn": 45102,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "43.108.64.0/18",
       "source": "cymru_whois"
     },
     "43.110.51.10": {
@@ -5493,13 +5598,6 @@
       "asn": 16509,
       "looked_up_at": "2026-10-03T21:48:43+00:00",
       "prefix": "44.224.0.0/11",
-      "source": "cymru_whois"
-    },
-    "45.12.30.30": {
-      "as_name": "CLOUDFLARESPECTRUM - Cloudflare London, LLC, US",
-      "asn": 209242,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
-      "prefix": "45.12.30.0/23",
       "source": "cymru_whois"
     },
     "45.128.12.20": {
@@ -5775,6 +5873,13 @@
       "prefix": "47.238.0.0/16",
       "source": "cymru_whois"
     },
+    "47.238.94.29": {
+      "as_name": "ALIBABA-CN-NET - Alibaba (US) Technology Co., Ltd., CN",
+      "asn": 45102,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "47.238.0.0/16",
+      "source": "cymru_whois"
+    },
     "47.243.153.153": {
       "as_name": "ALIBABA-CN-NET - Alibaba (US) Technology Co., Ltd., CN",
       "asn": 45102,
@@ -5794,6 +5899,13 @@
       "asn": 45102,
       "looked_up_at": "2026-10-04T02:54:42+00:00",
       "prefix": "47.244.0.0/17",
+      "source": "cymru_whois"
+    },
+    "47.245.128.204": {
+      "as_name": "ALIBABA-CN-NET - Alibaba (US) Technology Co., Ltd., CN",
+      "asn": 45102,
+      "looked_up_at": "2026-10-15T01:41:56+00:00",
+      "prefix": "47.245.128.0/18",
       "source": "cymru_whois"
     },
     "47.250.135.244": {
@@ -7494,13 +7606,6 @@
       "as_name": "ASNET - Baxet Group Inc., US",
       "asn": 26383,
       "looked_up_at": "2026-10-10T01:04:59+00:00",
-      "prefix": "86.107.50.0/24",
-      "source": "cymru_whois"
-    },
-    "86.107.50.185": {
-      "as_name": "ASNET - Baxet Group Inc., US",
-      "asn": 26383,
-      "looked_up_at": "2026-10-01T00:34:59+00:00",
       "prefix": "86.107.50.0/24",
       "source": "cymru_whois"
     },

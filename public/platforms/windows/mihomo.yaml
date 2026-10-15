@@ -5,114 +5,206 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_567c6a05
-  type: vless
-  server: 169.40.42.202
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: ase-node_f36d18f9
-  type: hysteria2
-  server: 208.69.78.217
-  port: 21154
-  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
-  sni: vpn.local
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: mbQXP2ASuHbF6ZPq
-- name: ase-node_a32ddd60
+- name: ase-node_0d6be2ea
   type: ss
-  server: 193.29.139.188
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-- name: ase-node_6a891060
-  type: vmess
-  server: 213.156.152.22
-  port: 2083
-  uuid: c5ff0c78-b144-461d-910e-c1b8e8438726
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: e4yuzs04e4b4.dop666.com
-- name: ase-node_f542aeac
-  type: vmess
-  server: 206.1.102.64
-  port: 8080
-  uuid: 184a0393-5c9e-403c-9be6-427b066308e1
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_02c32564
-  type: trojan
-  server: 31.57.190.34
+  server: 216.105.168.18
   port: 443
-  password: humanity
+  cipher: chacha20-ietf-poly1305
+  password: bQZl7HDxSabr1FurTYQHFU
   udp: true
-  tls: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: ase-node_ac5b38c5
+- name: ase-node_4d450556
   type: vless
-  server: 87.242.127.176
-  port: 4510
-  uuid: c3db7657-88ce-42a6-b998-1e0364b277ac
+  server: 3.20.126.177
+  port: 10101
+  uuid: VPNSaint
+  udp: true
+- name: ase-node_ef6cebad
+  type: ss
+  server: 3.144.84.214
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: ase-node_c25124e3
+  type: ss
+  server: 3.138.123.136
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+- name: ase-node_09a6ecc1
+  type: vless
+  server: 198.23.169.170
+  port: 443
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: 9c99da.usecache.net
+  servername: download-porter.hoyoverse.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: hkvjyE8WMKHvdGfMta7PAIGz6HAv2WiXvWvAQmsE_DM
-    short-id: 2d0c188798bae174
-- name: ase-node_de8fd536
-  type: vless
-  server: 79.175.136.238
-  port: 7879
-  uuid: bd5ea9bc-16ec-408e-b933-4219ed022de1
+    public-key: FOl1qibUWpTggolWp30DD7VQ9_xKHZPEPVQs0sQs3gI
+    short-id: 2128e27b
+- name: ase-node_5e03476c
+  type: ss
+  server: 37.27.253.60
+  port: 39221
+  cipher: chacha20-ietf-poly1305
+  password: Pzlcb_PeV3uRgiC2NNoNKw
   udp: true
-  tls: true
-  servername: account.samsung.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0PVs0FZprxXi0bV-YX-SkyAx6a_9GHjSZ6hpCpa1lnE
-    short-id: 63ca289314edc51b
-- name: ase-node_75c1987a
+- name: ase-node_0cc54356
+  type: ss
+  server: b2a2.velqixa.ir
+  port: 39221
+  cipher: chacha20-ietf-poly1305
+  password: Pzlcb_PeV3uRgiC2NNoNKw
+  udp: true
+- name: ase-node_a722f619
   type: vless
-  server: 156.226.168.221
-  port: 35193
-  uuid: 35cbae61-ee10-4cb9-abb8-4950b35e9851
+  server: 195.72.166.251
+  port: 443
+  uuid: 64c05afc-ce81-4ba0-b697-afa04da1427e
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: www.lloydsbankinggroup.com
+  client-fingerprint: firefox
   reality-opts:
-    public-key: d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE
-    short-id: e8daed2d
+    public-key: RKDT6fVgcZS8Qfzhv5rbeHRIflA3UTKD_HNLJyOoUwk
+    short-id: 25349b36802f
+- name: ase-node_f5143097
+  type: vless
+  server: 185.253.116.33
+  port: 14430
+  uuid: aee7ae19-672f-49d8-8a92-aa7cdfc89f89
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 185.253.116.33
+- name: ase-node_00eb9eed
+  type: trojan
+  server: 199.232.78.160
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: google.com
+  skip-cert-verify: true
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/NLSus---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
+    headers:
+      Host: mitivpn--s2.global.ssl.fastly.net
+- name: ase-node_40be1861
+  type: vless
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-6
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: ase-node_02d0c6e4
+  type: vless
+  server: 178.83.45.137
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+- name: ase-node_03a64d20
+  type: vless
+  server: 191.101.157.146
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+- name: ase-node_56853a9d
+  type: vless
+  server: 199.232.78.160
+  port: 443
+  uuid: XpnTeam-6
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: ase-node_b353f0d8
+  type: vless
+  server: 212.74.39.244
+  port: 2053
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  udp: true
+- name: ase-node_05af4e56
+  type: trojan
+  server: 151.101.38.6
+  port: 443
+  password: mitivpn
+  udp: true
+  tls: true
+  sni: www.firefox.com
+  skip-cert-verify: true
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/NLSus---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
+    headers:
+      Host: mitivpn--s3.global.ssl.fastly.net
+- name: ase-node_5abc2564
+  type: vless
+  server: 212.74.39.244
+  port: 8080
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  udp: true
+- name: ase-node_c51cb04e
+  type: vless
+  server: 191.101.157.146
+  port: 8080
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  udp: true
+- name: ase-node_dacb2c20
+  type: vless
+  server: 178.83.45.137
+  port: 8080
+  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_567c6a05
-  - ase-node_f36d18f9
-  - ase-node_a32ddd60
-  - ase-node_6a891060
-  - ase-node_f542aeac
-  - ase-node_02c32564
-  - ase-node_ac5b38c5
-  - ase-node_de8fd536
-  - ase-node_75c1987a
+  - ase-node_0d6be2ea
+  - ase-node_4d450556
+  - ase-node_ef6cebad
+  - ase-node_c25124e3
+  - ase-node_09a6ecc1
+  - ase-node_5e03476c
+  - ase-node_0cc54356
+  - ase-node_a722f619
+  - ase-node_f5143097
+  - ase-node_00eb9eed
+  - ase-node_40be1861
+  - ase-node_02d0c6e4
+  - ase-node_03a64d20
+  - ase-node_56853a9d
+  - ase-node_b353f0d8
+  - ase-node_05af4e56
+  - ase-node_5abc2564
+  - ase-node_c51cb04e
+  - ase-node_dacb2c20
 rules:
 - MATCH,PROXY
