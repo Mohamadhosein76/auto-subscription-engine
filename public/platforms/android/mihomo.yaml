@@ -5,198 +5,89 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_0b9645ee
+- name: ase-node_7125cb81
   type: vless
-  server: 179.255.140.244
+  server: 31.77.114.114
   port: 443
-  uuid: 9f494aef-712d-4b4c-8130-f4e0902def28
+  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: www.bing.com
+  servername: api.vk.me
   client-fingerprint: chrome
   reality-opts:
-    public-key: DsPuscZooSV32qg3HfGnrGKXI36Iq3fl0BGqUEUsayM
-    short-id: '70738781'
-- name: ase-node_332be0c5
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    short-id: db04ce8bdb8900f1
+- name: ase-node_57980854
   type: vless
-  server: 85.155.242.37
+  server: 2.27.35.55
   port: 443
-  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: hu1.aiage.work
+  servername: addons.mozilla.org
   client-fingerprint: chrome
   reality-opts:
-    public-key: mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg
-    short-id: f8379ce795f2e5ed
-- name: ase-node_ce8a1c21
+    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
+    short-id: e696e744
+- name: ase-node_fb20fc18
   type: vless
-  server: 179.254.115.245
-  port: 25208
-  uuid: d54a7512-dda3-4218-8ae7-c591d300fd7c
+  server: 144.31.101.196
+  port: 33891
+  uuid: 1c794e75-bcd4-4a65-9f69-ed0a10f33d60
   udp: true
+  flow: xtls-rprx-vision
   tls: true
-  servername: www.microsoft.com
-  client-fingerprint: firefox
+  servername: browser.yandex.com
+  client-fingerprint: chrome
   reality-opts:
-    public-key: t7Ja5Wnzg5-vtS2ebmyBZzPI7-CbiGRjny1sNZ9WdV4
-    short-id: 3974c4eacd299c12
-- name: ase-node_f1a0d530
+    public-key: HXXIkFRPeRpluXJ7SOoUGf9EOq4Lw-oJpvg1W0UPbEw
+    short-id: 5bd7b68ca4c04443
+- name: ase-node_9654b068
   type: vless
-  server: 136.244.101.8
-  port: 443
-  uuid: 497f5381-3533-4c6a-939c-66eb3a7de108
+  server: 95.128.71.79
+  port: 14430
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   udp: true
-  tls: true
-  servername: cdn.topingr.ir
-  alpn:
-  - /--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/1.1
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /gropcdn
+    path: /vless
     headers:
-      Host: cdn.topingr.ir
-- name: ase-node_4dd6c7a9
-  type: ss
-  server: api.apira98.org
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: CM-_ISRcHPz4cetu7grgSEv0VpT5MTRE
-  udp: true
-- name: ase-node_7767facf
-  type: ss
-  server: 176.32.32.108
-  port: 18443
-  cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-  udp: true
-- name: ase-node_a31f954d
+      Host: 95.128.71.79
+- name: ase-node_8ed0da47
   type: vless
-  server: 194.77.220.205
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+  server: 1.162.132.47
+  port: 32134
+  uuid: 5b01dc2d-6892-49b8-8289-3f73a32e00e4
   udp: true
-- name: ase-node_2893c044
-  type: vless
-  server: 13.140.87.102
-  port: 443
-  uuid: 497f5381-3533-4c6a-939c-66eb3a7de108
-  udp: true
+  flow: xtls-rprx-vision
   tls: true
-  servername: cdn.topingr.ir
-  alpn:
-  - /--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/1.1
-  client-fingerprint: chrome
+  servername: buylite.music.apple.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: OdTELUjAUKO_qr-O-uihaAZJAhA8GyIWVI6CpozVCU4
+    short-id: 6c6c7c97
+- name: ase-node_aa1371be
+  type: vless
+  server: 178.172.227.124
+  port: 14430
+  uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
+  udp: true
   network: ws
   ws-opts:
-    path: /gropcdn
+    path: /vless
     headers:
-      Host: cdn.topingr.ir
-- name: ase-node_594d25ce
-  type: vless
-  server: 95.182.99.119
-  port: 443
-  uuid: 497f5381-3533-4c6a-939c-66eb3a7de108
-  udp: true
-  tls: true
-  servername: cdn.topingr.ir
-  alpn:
-  - /--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /gropcdn
-    headers:
-      Host: cdn.topingr.ir
-- name: ase-node_6e18c133
-  type: vless
-  server: 82.47.63.162
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_9fe68d7c
-  type: vless
-  server: 191.101.157.105
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_59fd8321
-  type: vless
-  server: 95.182.99.226
-  port: 443
-  uuid: 497f5381-3533-4c6a-939c-66eb3a7de108
-  udp: true
-  tls: true
-  servername: cdn.topingr.ir
-  alpn:
-  - /--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/NLSus--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/--@VPNine1--@VPNine1/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /gropcdn
-    headers:
-      Host: cdn.topingr.ir
-- name: ase-node_89e052ca
-  type: vless
-  server: 191.101.157.105
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_a4187ae5
-  type: vless
-  server: 82.47.63.162
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_40efee0c
-  type: vless
-  server: 194.77.220.205
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_62dc14b1
-  type: vless
-  server: 178.83.45.66
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_7ab0aa30
-  type: vless
-  server: 178.83.45.66
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_c91d0e97
-  type: ss
-  server: 206.1.99.116
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: CM-_ISRcHPz4cetu7grgSEv0VpT5MTRE
-  udp: true
+      Host: 178.172.227.124
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_0b9645ee
-  - ase-node_332be0c5
-  - ase-node_ce8a1c21
-  - ase-node_f1a0d530
-  - ase-node_4dd6c7a9
-  - ase-node_7767facf
-  - ase-node_a31f954d
-  - ase-node_2893c044
-  - ase-node_594d25ce
-  - ase-node_6e18c133
-  - ase-node_9fe68d7c
-  - ase-node_59fd8321
-  - ase-node_89e052ca
-  - ase-node_a4187ae5
-  - ase-node_40efee0c
-  - ase-node_62dc14b1
-  - ase-node_7ab0aa30
-  - ase-node_c91d0e97
+  - ase-node_7125cb81
+  - ase-node_57980854
+  - ase-node_fb20fc18
+  - ase-node_9654b068
+  - ase-node_8ed0da47
+  - ase-node_aa1371be
 rules:
 - MATCH,PROXY
