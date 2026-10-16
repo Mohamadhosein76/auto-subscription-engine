@@ -1,20 +1,181 @@
 {
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "ase-node_9d89725d",
-      "server": "15.175.213.130",
+      "type": "hysteria2",
+      "tag": "ase-node_a6b26d19",
+      "server": "179.255.104.98",
       "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "password": "lh92eQnxIpeg2odHHDg0SrcczqwS4e8Y",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl1.yuanshicheng.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_77d0f12a",
+      "server": "ees92.shhflow.xyz",
+      "server_port": 5443,
+      "password": "43212c32-01f2-4356-b216-67dc1c178262",
+      "tls": {
+        "enabled": true,
+        "server_name": "ees92.shhflow.xyz"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "ase-node_a006f2ae",
+      "server": "143.246.41.31",
+      "server_port": 5443,
+      "password": "43212c32-01f2-4356-b216-67dc1c178262",
+      "tls": {
+        "enabled": true,
+        "server_name": "ees92.shhflow.xyz"
+      }
     },
     {
       "type": "shadowsocks",
-      "tag": "ase-node_e1907091",
-      "server": "20.164.209.198",
+      "tag": "ase-node_f270c6f9",
+      "server": "20.234.202.46",
       "server_port": 443,
       "method": "chacha20-ietf-poly1305",
-      "password": "IdBspBchqpInOZFK"
+      "password": "y7KeRTzmH0vXT2kp"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_4ea8bd8c",
+      "server": "178.83.185.156",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_97c95ca0",
+      "server": "2.29.51.202",
+      "server_port": 56268,
+      "uuid": "9a53a545-53e3-4fce-a0ba-5cfc3c4e5a74",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_804fa7ec",
+      "server": "31.57.190.34",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.pleadcourt.org",
+        "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_081b19f1",
+      "server": "43.249.72.254",
+      "server_port": 443,
+      "uuid": "f02e4193-8d89-452f-93d7-c6b133e82b9e",
+      "tls": {
+        "enabled": true,
+        "server_name": "default.ssl.fastly.net",
+        "alpn": [
+          "h3",
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "henzoo.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_4921a7e6",
+      "server": "31.57.190.34",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.volumeroot.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.volumeroot.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_97d64759",
+      "server": "145.239.55.210",
+      "server_port": 80,
+      "uuid": "067fcd63-b215-4abd-8529-ae929a9971a9",
+      "security": "none",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.fortresshost.ir."
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_735947f5",
+      "server": "31.57.190.34",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.pleadcourt.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.pleadcourt.org"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "ase-node_711114ef",
+      "server": "46.101.110.34",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.volumeroot.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.volumeroot.com"
+        }
+      }
     }
   ]
 }

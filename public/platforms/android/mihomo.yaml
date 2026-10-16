@@ -5,37 +5,50 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_9d89725d
-  type: ss
-  server: 15.175.213.130
+- name: ase-node_a6b26d19
+  type: hysteria2
+  server: 179.255.104.98
   port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: ase-node_e1907091
+  password: lh92eQnxIpeg2odHHDg0SrcczqwS4e8Y
+  sni: dl1.yuanshicheng.com
+  skip-cert-verify: true
+- name: ase-node_77d0f12a
+  type: hysteria2
+  server: ees92.shhflow.xyz
+  port: 5443
+  password: 43212c32-01f2-4356-b216-67dc1c178262
+  sni: ees92.shhflow.xyz
+- name: ase-node_a006f2ae
+  type: hysteria2
+  server: 143.246.41.31
+  port: 5443
+  password: 43212c32-01f2-4356-b216-67dc1c178262
+  sni: ees92.shhflow.xyz
+- name: ase-node_f270c6f9
   type: ss
-  server: 20.164.209.198
+  server: 20.234.202.46
   port: 443
   cipher: chacha20-ietf-poly1305
-  password: IdBspBchqpInOZFK
+  password: y7KeRTzmH0vXT2kp
   udp: true
-- name: ase-node_ae3b798f
-  type: trojan
-  server: 95.85.32.57
-  port: 443
-  password: humanity
+- name: ase-node_4ea8bd8c
+  type: ss
+  server: 178.83.185.156
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  tls: true
-  sni: www.pleadcourt.org
-  client-fingerprint: unsafe
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: ase-node_141b6d26
+- name: ase-node_97c95ca0
+  type: vmess
+  server: 2.29.51.202
+  port: 56268
+  uuid: 9a53a545-53e3-4fce-a0ba-5cfc3c4e5a74
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_804fa7ec
   type: trojan
-  server: 168.235.125.93
+  server: 31.57.190.34
   port: 443
   password: humanity
   udp: true
@@ -43,71 +56,45 @@ proxies:
   sni: www.pleadcourt.org
   alpn:
   - http/1.1
-  client-fingerprint: unsafe
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
-- name: ase-node_ccad778b
-  type: trojan
-  server: 178.128.45.156
+- name: ase-node_081b19f1
+  type: vless
+  server: 43.249.72.254
   port: 443
-  password: humanity
+  uuid: f02e4193-8d89-452f-93d7-c6b133e82b9e
   udp: true
   tls: true
-  sni: www.pleadcourt.org
-  client-fingerprint: unsafe
+  servername: default.ssl.fastly.net
+  alpn:
+  - h3
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /assignment
+    path: /
     headers:
-      Host: www.pleadcourt.org
-- name: ase-node_472d4bed
+      Host: henzoo.global.ssl.fastly.net
+- name: ase-node_4921a7e6
   type: trojan
-  server: 167.172.61.197
+  server: 31.57.190.34
   port: 443
   password: humanity
   udp: true
   tls: true
   sni: www.volumeroot.com
-  client-fingerprint: unsafe
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: ase-node_01869ad5
-  type: trojan
-  server: 138.68.131.253
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.pleadcourt.org
-  alpn:
-  - http/1.1
-  client-fingerprint: unsafe
   network: ws
   ws-opts:
     path: /assignment
     headers:
-      Host: www.pleadcourt.org
-- name: ase-node_1fbb409a
+      Host: www.volumeroot.com
+- name: ase-node_d1da344d
   type: trojan
-  server: 95.85.54.197
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.pleadcourt.org
-  client-fingerprint: unsafe
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: ase-node_570ce7b6
-  type: trojan
-  server: 151.236.14.87
+  server: 152.42.130.189
   port: 443
   password: humanity
   udp: true
@@ -121,9 +108,77 @@ proxies:
     path: /assignment
     headers:
       Host: www.volumeroot.com
-- name: ase-node_fb0845e5
+- name: ase-node_97d64759
+  type: vmess
+  server: 145.239.55.210
+  port: 80
+  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  alterId: 0
+  cipher: none
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+- name: ase-node_735947f5
   type: trojan
-  server: 188.166.42.149
+  server: 31.57.190.34
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: ase-node_09ccd654
+  type: trojan
+  server: 57.128.179.254
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: wWw.Volumeroot.cOm.
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumerOot.coM.
+- name: ase-node_2ae73ea3
+  type: trojan
+  server: 94.237.18.53
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: wWw.Volumeroot.cOm.
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: ase-node_e2956df8
+  type: trojan
+  server: 146.185.174.59
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: wWw.Volumeroot.cOm.
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumerOot.coM.
+- name: ase-node_4c25b70c
+  type: trojan
+  server: 57.128.176.37
   port: 443
   password: humanity
   udp: true
@@ -131,6 +186,65 @@ proxies:
   sni: www.volumeroot.com
   alpn:
   - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: ase-node_5b87064e
+  type: trojan
+  server: 31.57.190.40
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: ase-node_711114ef
+  type: trojan
+  server: 46.101.110.34
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.volumeroot.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: ase-node_75e88ebc
+  type: trojan
+  server: 91.197.3.7
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.volumeroot.com
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: ase-node_9bb2d38c
+  type: trojan
+  server: 46.101.110.34
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.volumeroot.com
   client-fingerprint: unsafe
   network: ws
   ws-opts:
@@ -141,15 +255,25 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_9d89725d
-  - ase-node_e1907091
-  - ase-node_ae3b798f
-  - ase-node_141b6d26
-  - ase-node_ccad778b
-  - ase-node_472d4bed
-  - ase-node_01869ad5
-  - ase-node_1fbb409a
-  - ase-node_570ce7b6
-  - ase-node_fb0845e5
+  - ase-node_a6b26d19
+  - ase-node_77d0f12a
+  - ase-node_a006f2ae
+  - ase-node_f270c6f9
+  - ase-node_4ea8bd8c
+  - ase-node_97c95ca0
+  - ase-node_804fa7ec
+  - ase-node_081b19f1
+  - ase-node_4921a7e6
+  - ase-node_d1da344d
+  - ase-node_97d64759
+  - ase-node_735947f5
+  - ase-node_09ccd654
+  - ase-node_2ae73ea3
+  - ase-node_e2956df8
+  - ase-node_4c25b70c
+  - ase-node_5b87064e
+  - ase-node_711114ef
+  - ase-node_75e88ebc
+  - ase-node_9bb2d38c
 rules:
 - MATCH,PROXY
