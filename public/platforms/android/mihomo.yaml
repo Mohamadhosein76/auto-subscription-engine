@@ -5,164 +5,62 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_ba8a4621
+- name: ase-node_b75f0db9
   type: vless
-  server: 169.40.42.179
+  server: 67.209.184.133
   port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  uuid: 96ebc166-565c-474f-9712-7990b55c368a
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: ase-node_e77a1d5a
-  type: vless
-  server: 169.40.42.231
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
+  servername: www.bing.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: ase-node_50a113de
-  type: vmess
-  server: 154.64.239.22
-  port: 26421
-  uuid: 9fa732d6-dcd6-47bb-c255-094bad71765d
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_402765a6
-  type: vless
-  server: 169.40.42.212
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: ase-node_446e06b4
-  type: vless
-  server: 152.233.71.81
-  port: 443
-  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: brointelengence.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
-    short-id: 1c3e8241a8743df9
-- name: ase-node_36fafd9b
-  type: vless
-  server: 91.107.247.173
-  port: 2083
-  uuid: 7858128a-6b5e-4f86-9bff-52c1f1e6439d
-  udp: true
-  tls: true
-  servername: sino.bestsellers1.site
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-- name: ase-node_e19909d3
+    public-key: Tp015Ga5LodBwKs4z7Wz4hTvqeh8-4q1EQPZqvZfWR0
+    short-id: ad09494d431b2b92
+- name: ase-node_f6f34bcb
   type: hysteria2
-  server: 189.74.114.39
+  server: 189.74.114.2
   port: 54183
   password: 082f5694-9019-4110-b67b-8125dbb9bab8
   sni: outh.yandex-cloud.org
-- name: ase-node_4de6c08c
-  type: vless
-  server: 178.83.46.156
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_fb416a23
-  type: vless
-  server: 82.47.63.138
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_24cb959a
+- name: ase-node_909f173f
   type: hysteria2
-  server: 189.74.106.164
+  server: 189.74.106.162
   port: 54183
   password: 082f5694-9019-4110-b67b-8125dbb9bab8
   sni: outh.yandex-cloud.org
-- name: ase-node_837ef63c
-  type: vless
-  server: 169.40.32.2
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+- name: ase-node_bde16aa3
+  type: trojan
+  server: 78.17.171.62
+  port: 443
+  password: u93yPGuY2zgIsisJZKS2QzJzg
   udp: true
-- name: ase-node_95d335a7
-  type: vless
-  server: 178.83.45.226
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_e801bbf7
+  tls: true
+  sni: FREETOPLAY-2.TETRIS-GAME.WORLD
+- name: ase-node_4f621cef
   type: ss
-  server: 67.159.18.34
-  port: 17001
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+  server: 167.233.21.39
+  port: 39221
+  cipher: chacha20-ietf-poly1305
+  password: Pzlcb_PeV3uRgiC2NNoNKw
   udp: true
-- name: ase-node_1ba4c5aa
-  type: vless
-  server: 43.170.8.95
+- name: ase-node_5dd1eb48
+  type: hysteria2
+  server: 35.159.225.28
   port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: ase-node_b9835615
-  type: vless
-  server: 95.174.68.188
-  port: 14430
-  uuid: 965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 95.174.68.188
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-de-002.fastervpn.world
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_ba8a4621
-  - ase-node_e77a1d5a
-  - ase-node_50a113de
-  - ase-node_402765a6
-  - ase-node_446e06b4
-  - ase-node_36fafd9b
-  - ase-node_e19909d3
-  - ase-node_4de6c08c
-  - ase-node_fb416a23
-  - ase-node_24cb959a
-  - ase-node_837ef63c
-  - ase-node_95d335a7
-  - ase-node_e801bbf7
-  - ase-node_1ba4c5aa
-  - ase-node_b9835615
+  - ase-node_b75f0db9
+  - ase-node_f6f34bcb
+  - ase-node_909f173f
+  - ase-node_bde16aa3
+  - ase-node_4f621cef
+  - ase-node_5dd1eb48
 rules:
 - MATCH,PROXY
