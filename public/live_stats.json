@@ -2,26 +2,25 @@
   "mode": "discovery",
   "sources_total": 39,
   "sources_success": 7,
-  "sources_failed": 0,
-  "sources_skipped": 32,
-  "configs_received": 15816,
+  "sources_failed": 2,
+  "sources_skipped": 30,
+  "configs_received": 15914,
   "configs_unknown_protocol": 0,
-  "configs_invalid": 38,
-  "configs_valid": 11567,
+  "configs_invalid": 37,
+  "configs_valid": 11618,
   "duplicates_removed_during_dedup": 0,
-  "duplicates_removed": 4109,
-  "final_configs": 11567,
+  "duplicates_removed": 4154,
+  "final_configs": 11618,
   "count_by_protocol": {
-    "hysteria2": 52,
-    "ss": 2095,
-    "trojan": 784,
-    "vless": 4194,
-    "vmess": 4442
+    "hysteria2": 49,
+    "ss": 2098,
+    "trojan": 794,
+    "vless": 4232,
+    "vmess": 4445
   },
   "invalid_reasons": {
-    "validate: invalid host format": 25,
-    "validate: local or private host": 12,
-    "validate: missing password": 1
+    "validate: invalid host format": 24,
+    "validate: local or private host": 13
   },
   "sources": [
     {
@@ -33,14 +32,14 @@
       "ok": true,
       "status_code": 200,
       "error": null,
-      "byte_count": 3412,
-      "unique_proxies": 10,
+      "byte_count": 6372,
+      "unique_proxies": 20,
       "nested_sources_found": 0,
       "issues": 0,
-      "quality_before": 0.8567084788371481,
-      "quality_after": 0.8567089341485606,
+      "quality_before": 0.8570257426129045,
+      "quality_after": 0.8570266117288267,
       "skipped_reason": null,
-      "uri_count": 10
+      "uri_count": 20
     },
     {
       "source_id": "d5d88452f7cb23ebe54d",
@@ -51,14 +50,14 @@
       "ok": true,
       "status_code": 200,
       "error": null,
-      "byte_count": 104813,
-      "unique_proxies": 473,
+      "byte_count": 108867,
+      "unique_proxies": 479,
       "nested_sources_found": 16,
-      "issues": 2,
-      "quality_before": 0.7911509713247344,
-      "quality_after": 0.7911679160453421,
+      "issues": 5,
+      "quality_before": 0.791130459243084,
+      "quality_after": 0.7911310161170609,
       "skipped_reason": null,
-      "uri_count": 483
+      "uri_count": 494
     },
     {
       "source_id": "d55275670ddae43bf015",
@@ -69,14 +68,14 @@
       "ok": true,
       "status_code": 200,
       "error": null,
-      "byte_count": 1826117,
-      "unique_proxies": 4554,
+      "byte_count": 1835201,
+      "unique_proxies": 4569,
       "nested_sources_found": 0,
       "issues": 18,
-      "quality_before": 0.729302679090589,
-      "quality_after": 0.7292800512932825,
+      "quality_before": 0.7290763491261456,
+      "quality_after": 0.7290507585004176,
       "skipped_reason": null,
-      "uri_count": 7605
+      "uri_count": 7686
     },
     {
       "source_id": "a04365da7f6d6c3512da",
@@ -87,14 +86,14 @@
       "ok": true,
       "status_code": 200,
       "error": null,
-      "byte_count": 1199359,
-      "unique_proxies": 2867,
+      "byte_count": 1197662,
+      "unique_proxies": 2882,
       "nested_sources_found": 0,
       "issues": 26,
-      "quality_before": 0.7009343130111969,
-      "quality_after": 0.7009506640396356,
+      "quality_before": 0.7009706359243691,
+      "quality_after": 0.7009918413104365,
       "skipped_reason": null,
-      "uri_count": 3353
+      "uri_count": 3346
     },
     {
       "source_id": "1b7a7effe2ccb77920da",
@@ -106,11 +105,11 @@
       "status_code": 200,
       "error": null,
       "byte_count": 1399860,
-      "unique_proxies": 3693,
+      "unique_proxies": 3697,
       "nested_sources_found": 16,
       "issues": 56,
-      "quality_before": 0.69407877363263,
-      "quality_after": 0.6940740847886961,
+      "quality_before": 0.694070249810927,
+      "quality_after": 0.6940664748928529,
       "skipped_reason": null,
       "uri_count": 4048
     },
@@ -127,8 +126,8 @@
       "unique_proxies": 8,
       "nested_sources_found": 0,
       "issues": 0,
-      "quality_before": 0.503841961852861,
-      "quality_after": 0.5038378378378379,
+      "quality_before": 0.5038337801608579,
+      "quality_after": 0.5038297872340426,
       "skipped_reason": null,
       "uri_count": 15
     },
@@ -145,28 +144,10 @@
       "unique_proxies": 0,
       "nested_sources_found": 0,
       "issues": 0,
-      "quality_before": 0.37590587105281514,
-      "quality_after": 0.37590573543590644,
+      "quality_before": 0.37590560202522694,
+      "quality_after": 0.37590547076737424,
       "skipped_reason": null,
       "uri_count": 200
-    },
-    {
-      "source_id": "2048c8817c648479dd3b",
-      "name": "nested:87.249.132.97:2048c881",
-      "host": "87.249.132.97",
-      "depth": 1,
-      "origin": "nested",
-      "ok": false,
-      "status_code": null,
-      "error": null,
-      "byte_count": 0,
-      "unique_proxies": 0,
-      "nested_sources_found": 0,
-      "issues": 0,
-      "quality_before": 0.325,
-      "quality_after": 0.325,
-      "skipped_reason": "quarantined",
-      "uri_count": 0
     },
     {
       "source_id": "24816d33959e95e1baae",
@@ -259,9 +240,81 @@
       "uri_count": 0
     },
     {
-      "source_id": "3a3e71b9d5d02b7927fd",
-      "name": "nested:84.239.49.181:3a3e71b9",
-      "host": "84.239.49.181",
+      "source_id": "398d8fab935b260b2e45",
+      "name": "nested:138.199.35.215:398d8fab",
+      "host": "138.199.35.215",
+      "depth": 1,
+      "origin": "nested",
+      "ok": false,
+      "status_code": null,
+      "error": null,
+      "byte_count": 0,
+      "unique_proxies": 0,
+      "nested_sources_found": 0,
+      "issues": 0,
+      "quality_before": 0.325,
+      "quality_after": 0.325,
+      "skipped_reason": "quarantined",
+      "uri_count": 0
+    },
+    {
+      "source_id": "3ca7e2ec015828544090",
+      "name": "nested:146.70.221.18:3ca7e2ec",
+      "host": "146.70.221.18",
+      "depth": 1,
+      "origin": "nested",
+      "ok": false,
+      "status_code": null,
+      "error": null,
+      "byte_count": 0,
+      "unique_proxies": 0,
+      "nested_sources_found": 0,
+      "issues": 0,
+      "quality_before": 0.325,
+      "quality_after": 0.325,
+      "skipped_reason": "quarantined",
+      "uri_count": 0
+    },
+    {
+      "source_id": "3f7e71baf05cb3415def",
+      "name": "nested:149.36.51.161:3f7e71ba",
+      "host": "149.36.51.161",
+      "depth": 1,
+      "origin": "nested",
+      "ok": false,
+      "status_code": null,
+      "error": null,
+      "byte_count": 0,
+      "unique_proxies": 0,
+      "nested_sources_found": 0,
+      "issues": 0,
+      "quality_before": 0.325,
+      "quality_after": 0.325,
+      "skipped_reason": "quarantined",
+      "uri_count": 0
+    },
+    {
+      "source_id": "4df727bd601ee18b43a0",
+      "name": "nested:84.17.47.126:4df727bd",
+      "host": "84.17.47.126",
+      "depth": 1,
+      "origin": "nested",
+      "ok": false,
+      "status_code": null,
+      "error": null,
+      "byte_count": 0,
+      "unique_proxies": 0,
+      "nested_sources_found": 0,
+      "issues": 0,
+      "quality_before": 0.325,
+      "quality_after": 0.325,
+      "skipped_reason": "quarantined",
+      "uri_count": 0
+    },
+    {
+      "source_id": "594e76a784c68fb3a8b8",
+      "name": "nested:46.29.166.134:594e76a7",
+      "host": "46.29.166.134",
       "depth": 1,
       "origin": "nested",
       "ok": false,
@@ -349,9 +402,9 @@
       "uri_count": 0
     },
     {
-      "source_id": "7c7156e41e1f50e50db4",
-      "name": "nested:95.153.32.2:7c7156e4",
-      "host": "95.153.32.2",
+      "source_id": "7c57d1ce496a74192165",
+      "name": "nested:138.199.35.203:7c57d1ce",
+      "host": "138.199.35.203",
       "depth": 1,
       "origin": "nested",
       "ok": false,
@@ -406,78 +459,6 @@
       "source_id": "886bb725f4f3bfd10cb4",
       "name": "nested:149.50.216.65:886bb725",
       "host": "149.50.216.65",
-      "depth": 1,
-      "origin": "nested",
-      "ok": false,
-      "status_code": null,
-      "error": null,
-      "byte_count": 0,
-      "unique_proxies": 0,
-      "nested_sources_found": 0,
-      "issues": 0,
-      "quality_before": 0.325,
-      "quality_after": 0.325,
-      "skipped_reason": "quarantined",
-      "uri_count": 0
-    },
-    {
-      "source_id": "8d11aa21e7a3fc49ee78",
-      "name": "nested:84.17.47.125:8d11aa21",
-      "host": "84.17.47.125",
-      "depth": 1,
-      "origin": "nested",
-      "ok": false,
-      "status_code": null,
-      "error": null,
-      "byte_count": 0,
-      "unique_proxies": 0,
-      "nested_sources_found": 0,
-      "issues": 0,
-      "quality_before": 0.325,
-      "quality_after": 0.325,
-      "skipped_reason": "quarantined",
-      "uri_count": 0
-    },
-    {
-      "source_id": "919a22d00b075d8c16f3",
-      "name": "nested:84.239.49.218:919a22d0",
-      "host": "84.239.49.218",
-      "depth": 1,
-      "origin": "nested",
-      "ok": false,
-      "status_code": null,
-      "error": null,
-      "byte_count": 0,
-      "unique_proxies": 0,
-      "nested_sources_found": 0,
-      "issues": 0,
-      "quality_before": 0.325,
-      "quality_after": 0.325,
-      "skipped_reason": "quarantined",
-      "uri_count": 0
-    },
-    {
-      "source_id": "998fb26c3317b11b8c58",
-      "name": "nested:185.221.132.242:998fb26c",
-      "host": "185.221.132.242",
-      "depth": 1,
-      "origin": "nested",
-      "ok": false,
-      "status_code": null,
-      "error": null,
-      "byte_count": 0,
-      "unique_proxies": 0,
-      "nested_sources_found": 0,
-      "issues": 0,
-      "quality_before": 0.325,
-      "quality_after": 0.325,
-      "skipped_reason": "quarantined",
-      "uri_count": 0
-    },
-    {
-      "source_id": "a458e96a0f34d3b8df48",
-      "name": "nested:146.70.170.210:a458e96a",
-      "host": "146.70.170.210",
       "depth": 1,
       "origin": "nested",
       "ok": false,
@@ -565,6 +546,24 @@
       "uri_count": 0
     },
     {
+      "source_id": "bd1ee795d37b0f8bfe10",
+      "name": "nested:158.173.154.5:bd1ee795",
+      "host": "158.173.154.5",
+      "depth": 1,
+      "origin": "nested",
+      "ok": false,
+      "status_code": null,
+      "error": null,
+      "byte_count": 0,
+      "unique_proxies": 0,
+      "nested_sources_found": 0,
+      "issues": 0,
+      "quality_before": 0.325,
+      "quality_after": 0.325,
+      "skipped_reason": "quarantined",
+      "uri_count": 0
+    },
+    {
       "source_id": "c1c11cdbaaacf8ba53ab",
       "name": "nested:198.44.135.19:c1c11cdb",
       "host": "198.44.135.19",
@@ -619,9 +618,9 @@
       "uri_count": 0
     },
     {
-      "source_id": "cff90f4a41d6f5dda44a",
-      "name": "nested:84.239.49.38:cff90f4a",
-      "host": "84.239.49.38",
+      "source_id": "cbec01991938a0454e2b",
+      "name": "nested:146.70.123.98:cbec0199",
+      "host": "146.70.123.98",
       "depth": 1,
       "origin": "nested",
       "ok": false,
@@ -637,9 +636,9 @@
       "uri_count": 0
     },
     {
-      "source_id": "d34c1f29f6051d4b5ea4",
-      "name": "nested:84.239.49.59:d34c1f29",
-      "host": "84.239.49.59",
+      "source_id": "d22f3ad2b425322b2216",
+      "name": "nested:185.221.132.226:d22f3ad2",
+      "host": "185.221.132.226",
       "depth": 1,
       "origin": "nested",
       "ok": false,
@@ -655,45 +654,9 @@
       "uri_count": 0
     },
     {
-      "source_id": "d7cd4369f5f28cdebf9e",
-      "name": "nested:84.239.14.153:d7cd4369",
-      "host": "84.239.14.153",
-      "depth": 1,
-      "origin": "nested",
-      "ok": false,
-      "status_code": null,
-      "error": null,
-      "byte_count": 0,
-      "unique_proxies": 0,
-      "nested_sources_found": 0,
-      "issues": 0,
-      "quality_before": 0.325,
-      "quality_after": 0.325,
-      "skipped_reason": "quarantined",
-      "uri_count": 0
-    },
-    {
-      "source_id": "f058b7153138b399f4c3",
-      "name": "nested:84.239.49.202:f058b715",
-      "host": "84.239.49.202",
-      "depth": 1,
-      "origin": "nested",
-      "ok": false,
-      "status_code": null,
-      "error": null,
-      "byte_count": 0,
-      "unique_proxies": 0,
-      "nested_sources_found": 0,
-      "issues": 0,
-      "quality_before": 0.325,
-      "quality_after": 0.325,
-      "skipped_reason": "quarantined",
-      "uri_count": 0
-    },
-    {
-      "source_id": "f2d0d84dce6e1cba9e3e",
-      "name": "nested:84.17.47.150:f2d0d84d",
-      "host": "84.17.47.150",
+      "source_id": "efe8a77f33604a834b96",
+      "name": "nested:138.199.47.247:efe8a77f",
+      "host": "138.199.47.247",
       "depth": 1,
       "origin": "nested",
       "ok": false,
@@ -725,160 +688,190 @@
       "quality_after": 0.325,
       "skipped_reason": "quarantined",
       "uri_count": 0
+    },
+    {
+      "source_id": "22d131fbf2c2351f8730",
+      "name": "nested:159.13.44.228:22d131fb",
+      "host": "159.13.44.228",
+      "depth": 1,
+      "origin": "nested",
+      "ok": false,
+      "status_code": null,
+      "error": "SSLError: HTTPSConnectionPool(host='159.13.44.228', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: IP...",
+      "byte_count": 0,
+      "unique_proxies": 0,
+      "nested_sources_found": 0,
+      "issues": 0,
+      "quality_before": 0.325,
+      "quality_after": 0.325,
+      "skipped_reason": null,
+      "uri_count": 0
+    },
+    {
+      "source_id": "e141d8e59d6b1c98ee17",
+      "name": "nested:159.69.94.125:e141d8e5",
+      "host": "159.69.94.125",
+      "depth": 1,
+      "origin": "nested",
+      "ok": false,
+      "status_code": null,
+      "error": "SSLError: HTTPSConnectionPool(host='159.69.94.125', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: se...",
+      "byte_count": 0,
+      "unique_proxies": 0,
+      "nested_sources_found": 0,
+      "issues": 0,
+      "quality_before": 0.325,
+      "quality_after": 0.325,
+      "skipped_reason": null,
+      "uri_count": 0
     }
   ],
   "discovery": {
     "nested_sources_discovered": 32,
-    "sources_fetched": 7,
-    "sources_quarantined": 32,
-    "duplicates_removed_during_discovery": 4109
+    "sources_fetched": 9,
+    "sources_quarantined": 30,
+    "duplicates_removed_during_discovery": 4154
   },
-  "generated_at": "2026-10-18T00:17:05+00:00",
+  "generated_at": "2026-10-18T04:46:35+00:00",
   "pipeline": "live-connectivity",
   "base_candidates_sampled": 1500,
   "scheduler": {
     "seed": {
       "phase": "preflight",
       "budget": 1500,
-      "candidates_considered": 11567,
+      "candidates_considered": 11618,
       "selected": 1500,
-      "due_candidates": 10636,
+      "due_candidates": 10633,
       "due_selected": 1500,
       "early_fill_selected": 0,
-      "direct_ip_selected": 1273,
+      "direct_ip_selected": 1268,
       "selected_by_lane": {
-        "exploration": 532,
-        "flaky": 1,
-        "healthy": 6,
-        "recovery": 932,
-        "stale": 29
+        "exploration": 541,
+        "healthy": 2,
+        "recovery": 924,
+        "stale": 33
       },
       "selected_by_protocol": {
-        "hysteria2": 52,
-        "ss": 233,
-        "trojan": 235,
-        "vless": 490,
-        "vmess": 490
+        "hysteria2": 48,
+        "ss": 234,
+        "trojan": 238,
+        "vless": 491,
+        "vmess": 489
       },
       "selected_by_source": {
         "aliilapro": 436,
         "epodonios-all": 444,
-        "ermaozi": 233,
-        "mahdibland-sub-merge-base64": 379,
-        "pawdroid": 8
+        "ermaozi": 290,
+        "mahdibland-sub-merge-base64": 312,
+        "pawdroid": 18
       }
     },
     "preflight": {
       "phase": "preflight",
       "budget": 1500,
-      "candidates_considered": 1861,
+      "candidates_considered": 1874,
       "selected": 1500,
-      "due_candidates": 1841,
+      "due_candidates": 1868,
       "due_selected": 1500,
       "early_fill_selected": 0,
-      "direct_ip_selected": 1326,
+      "direct_ip_selected": 1362,
       "selected_by_lane": {
-        "exploration": 532,
-        "flaky": 1,
-        "healthy": 10,
-        "recovery": 924,
-        "stale": 33
+        "exploration": 548,
+        "healthy": 2,
+        "recovery": 911,
+        "stale": 39
       },
       "selected_by_protocol": {
-        "hysteria2": 69,
-        "ss": 234,
-        "trojan": 229,
-        "vless": 480,
-        "vmess": 488
+        "hysteria2": 62,
+        "ss": 232,
+        "trojan": 239,
+        "vless": 484,
+        "vmess": 483
       },
       "selected_by_source": {
-        "aliilapro": 402,
+        "aliilapro": 409,
         "epodonios-all": 444,
-        "ermaozi": 256,
-        "mahdibland-sub-merge-base64": 388,
-        "pawdroid": 10
+        "ermaozi": 313,
+        "mahdibland-sub-merge-base64": 307,
+        "pawdroid": 27
       }
     },
     "runtime": {
       "phase": "runtime",
       "budget": 400,
-      "candidates_considered": 1062,
+      "candidates_considered": 1003,
       "selected": 400,
-      "due_candidates": 1062,
+      "due_candidates": 1003,
       "due_selected": 400,
       "early_fill_selected": 0,
-      "direct_ip_selected": 352,
+      "direct_ip_selected": 388,
       "selected_by_lane": {
-        "exploration": 143,
-        "flaky": 1,
-        "healthy": 10,
-        "recovery": 233,
-        "stale": 13
+        "exploration": 197,
+        "recovery": 185,
+        "stale": 18
       },
       "selected_by_protocol": {
-        "hysteria2": 59,
-        "ss": 15,
-        "trojan": 68,
-        "vless": 130,
-        "vmess": 128
+        "hysteria2": 41,
+        "ss": 16,
+        "trojan": 78,
+        "vless": 133,
+        "vmess": 132
       },
       "selected_by_source": {
-        "aliilapro": 85,
+        "aliilapro": 103,
         "epodonios-all": 119,
         "ermaozi": 124,
-        "mahdibland-sub-merge-base64": 68,
-        "pawdroid": 4
+        "mahdibland-sub-merge-base64": 36,
+        "pawdroid": 18
       }
     }
   },
   "candidates_sampled": 1500,
   "ip_hunter": {
     "enabled": true,
-    "direct_inputs": 1273,
-    "hostname_inputs": 227,
-    "hosts_resolved": 153,
-    "hosts_unresolved": 23,
-    "variants_created": 366,
-    "current_dns_variants": 322,
-    "history_variants": 44,
+    "direct_inputs": 1268,
+    "hostname_inputs": 232,
+    "hosts_resolved": 162,
+    "hosts_unresolved": 25,
+    "variants_created": 380,
+    "current_dns_variants": 337,
+    "history_variants": 43,
     "non_public_addresses_skipped": 0,
     "variants_truncated": 21
   },
   "tcp_tested": 1500,
-  "tcp_passed": 1062,
+  "tcp_passed": 1003,
   "tcp_failure_reasons": {
-    "dns_failure": 7,
-    "network_error": 10,
-    "refused": 71,
-    "timeout": 350
+    "dns_failure": 5,
+    "network_error": 18,
+    "refused": 100,
+    "timeout": 374
   },
   "preflight_tested": 1500,
-  "preflight_passed": 1062,
+  "preflight_passed": 1003,
   "preflight_failure_reasons": {
-    "dns_failure": 7,
-    "network_error": 10,
-    "refused": 71,
-    "timeout": 350
+    "dns_failure": 5,
+    "network_error": 18,
+    "refused": 100,
+    "timeout": 374
   },
   "proxy_candidates": 400,
-  "proxy_tested": 117,
-  "proxy_not_tested": 283,
-  "proxy_live": 23,
+  "proxy_tested": 159,
+  "proxy_not_tested": 241,
+  "proxy_live": 47,
   "proxy_failure_reasons": {
-    "all_compatible_cores_failed": 93,
-    "no_compatible_runtime_core": 1
+    "all_compatible_cores_failed": 112
   },
   "runtime_candidates": 400,
-  "runtime_tested": 117,
-  "runtime_not_tested": 283,
-  "runtime_live": 23,
+  "runtime_tested": 159,
+  "runtime_not_tested": 241,
+  "runtime_live": 47,
   "runtime_failure_reasons": {
-    "all_compatible_cores_failed": 93,
-    "no_compatible_runtime_core": 1
+    "all_compatible_cores_failed": 112
   },
   "runtime_core_counts": {
-    "singbox": 14,
-    "xray": 9
+    "singbox": 33,
+    "xray": 14
   },
   "runtime_cores_available": [
     "hiddify",
@@ -886,25 +879,32 @@
     "singbox",
     "xray"
   ],
-  "live_total": 9,
-  "live_selected": 9,
-  "median_tcp_latency_ms": 109.1,
-  "median_proxy_latency_ms": 595.8,
-  "countries_discovered": 7,
+  "live_total": 32,
+  "live_selected": 32,
+  "median_tcp_latency_ms": 78.7,
+  "median_proxy_latency_ms": 475.0,
+  "countries_discovered": 15,
   "count_by_country": {
-    "DE": 3,
+    "BR": 1,
+    "DE": 8,
+    "FR": 1,
     "GB": 1,
-    "NL": 3,
-    "PL": 1,
-    "US": 1
+    "JP": 1,
+    "NL": 2,
+    "NO": 1,
+    "PL": 3,
+    "RU": 6,
+    "US": 8
   },
   "count_by_protocol_live": {
-    "ss": 2,
-    "vless": 7
+    "hysteria2": 4,
+    "ss": 1,
+    "vless": 23,
+    "vmess": 4
   },
-  "runtime_seconds": 875.9,
+  "runtime_seconds": 868.7,
   "status": "ok",
-  "history_entries": 29626,
+  "history_entries": 29858,
   "effective_config": {
     "preflight_budget": 1500,
     "runtime_budget": 400,
@@ -926,47 +926,47 @@
       "xray": "26.6.27"
     }
   },
-  "pre_security_live_total": 23,
-  "security_checked": 23,
-  "security_publishable": 9,
+  "pre_security_live_total": 47,
+  "security_checked": 47,
+  "security_publishable": 32,
   "security_allowed": 0,
-  "security_allowed_with_warnings": 9,
-  "security_quarantined": 0,
+  "security_allowed_with_warnings": 32,
+  "security_quarantined": 1,
   "security_blocked": 14,
-  "cloudflare_nodes_blocked": 12,
+  "cloudflare_nodes_blocked": 9,
   "asn_unknown_quarantined": 0,
   "spamhaus_drop_hits": 0,
-  "spamhaus_asndrop_hits": 2,
+  "spamhaus_asndrop_hits": 5,
   "feodo_hits": 0,
   "dns_anomalies": 0,
-  "tls_anomalies": 4,
+  "tls_anomalies": 5,
   "content_integrity_failures": 0,
-  "unique_asns": 10,
+  "unique_asns": 23,
   "top_asns_by_count": [
     {
       "asn": 13335,
-      "count": 12
+      "count": 9
     },
     {
-      "asn": 24940,
+      "asn": 16276,
+      "count": 8
+    },
+    {
+      "asn": 197165,
+      "count": 6
+    },
+    {
+      "asn": 906,
       "count": 2
     },
     {
-      "asn": 216071,
+      "asn": 54801,
       "count": 2
-    },
-    {
-      "asn": 57043,
-      "count": 1
-    },
-    {
-      "asn": 197462,
-      "count": 1
     }
   ],
   "security_feed_status": "fresh",
-  "security_feed_age": 2.6,
-  "universal_count": 5,
+  "security_feed_age": 7.1,
+  "universal_count": 20,
   "compatibility": {
     "enabled": true,
     "core_versions": {
@@ -981,86 +981,104 @@
       "hiddify": true,
       "mihomo": true
     },
-    "singbox_pass": 7,
-    "xray_tested": 9,
-    "xray_pass": 8,
-    "hiddify_tested": 9,
-    "hiddify_pass": 5,
-    "mihomo_tested": 9,
-    "mihomo_pass": 5,
-    "universal_pass": 5,
-    "mobile_safe_count": 4,
+    "singbox_pass": 24,
+    "xray_tested": 28,
+    "xray_pass": 27,
+    "hiddify_tested": 32,
+    "hiddify_pass": 30,
+    "mihomo_tested": 32,
+    "mihomo_pass": 24,
+    "universal_pass": 10,
+    "mobile_safe_count": 22,
     "feed_counts": {
-      "universal": 5,
-      "v2rayng": 8,
-      "hiddify": 5,
-      "nekobox": 7,
-      "mihomo": 5,
-      "singbox": 7,
-      "mobile-safe": 4,
-      "tcp": 9,
-      "udp": 0,
-      "ipv4": 8,
+      "universal": 10,
+      "v2rayng": 16,
+      "hiddify": 14,
+      "nekobox": 10,
+      "mihomo": 10,
+      "singbox": 10,
+      "mobile-safe": 22,
+      "tcp": 28,
+      "udp": 4,
+      "ipv4": 32,
       "ipv6": 0,
-      "port443": 3
+      "port443": 11
     },
     "per_protocol_compatibility": {
-      "ss": {
-        "total": 2,
+      "hysteria2": {
+        "total": 4,
         "universal": 0,
-        "xray_pass": 2,
-        "hiddify_pass": 0,
-        "mihomo_pass": 0
+        "xray_pass": 0,
+        "hiddify_pass": 4,
+        "mihomo_pass": 4
       },
-      "vless": {
-        "total": 14,
-        "universal": 5,
-        "xray_pass": 6,
-        "hiddify_pass": 5,
-        "mihomo_pass": 5
+      "ss": {
+        "total": 1,
+        "universal": 1,
+        "xray_pass": 1,
+        "hiddify_pass": 1,
+        "mihomo_pass": 1
       },
-      "vmess": {
-        "total": 7,
+      "trojan": {
+        "total": 1,
         "universal": 0,
         "xray_pass": 0,
         "hiddify_pass": 0,
         "mihomo_pass": 0
+      },
+      "vless": {
+        "total": 30,
+        "universal": 16,
+        "xray_pass": 22,
+        "hiddify_pass": 22,
+        "mihomo_pass": 16
+      },
+      "vmess": {
+        "total": 11,
+        "universal": 3,
+        "xray_pass": 4,
+        "hiddify_pass": 3,
+        "mihomo_pass": 3
       }
     },
     "failure_reasons": {
       "hiddify": {
-        "proxy_handshake_failed": 3,
+        "TLS_failure": 1,
         "timeout": 1
       },
       "mihomo": {
-        "TLS_failure": 4
+        "TLS_failure": 7,
+        "timeout": 1
       },
       "singbox": {
-        "timeout": 2
+        "TLS_failure": 1,
+        "proxy_handshake_failed": 6,
+        "timeout": 1
       },
       "xray": {
-        "TLS_failure": 1
+        "timeout": 1,
+        "unsupported_protocol": 4
       }
     },
     "median_latency_ms": {
-      "hiddify": 572.8,
-      "mihomo": 575.7,
-      "singbox": 590.0,
-      "xray": 591.8
+      "hiddify": 455.2,
+      "mihomo": 457.6,
+      "singbox": 454.6,
+      "xray": 457.6
     },
     "source_quality": [
       {
         "source_id": "dca83f2b40d2c4c7efe2",
         "source": "pawdroid",
         "host": "raw.githubusercontent.com",
-        "quality": 0.857,
+        "quality": 0.856,
         "fetch_success_rate": 1.0,
-        "verification_rate": 0.682,
+        "verification_rate": 0.68,
         "productivity": 1.0,
-        "proxies_seen": 1487,
-        "unique_proxies": 1486,
-        "proxy_passed": 229,
-        "published": 207,
+        "proxies_seen": 1527,
+        "unique_proxies": 1526,
+        "proxy_passed": 238,
+        "published": 216,
         "quarantined": false,
         "quarantined_until": null
       },
@@ -1068,14 +1086,14 @@
         "source_id": "d5d88452f7cb23ebe54d",
         "source": "ermaozi",
         "host": "raw.githubusercontent.com",
-        "quality": 0.791,
+        "quality": 0.792,
         "fetch_success_rate": 1.0,
-        "verification_rate": 0.545,
+        "verification_rate": 0.546,
         "productivity": 1.0,
-        "proxies_seen": 46360,
-        "unique_proxies": 44795,
-        "proxy_passed": 820,
-        "published": 809,
+        "proxies_seen": 47348,
+        "unique_proxies": 45753,
+        "proxy_passed": 847,
+        "published": 836,
         "quarantined": false,
         "quarantined_until": null
       },
@@ -1087,10 +1105,10 @@
         "fetch_success_rate": 1.0,
         "verification_rate": 0.482,
         "productivity": 1.0,
-        "proxies_seen": 942059,
-        "unique_proxies": 589911,
-        "proxy_passed": 1650,
-        "published": 1623,
+        "proxies_seen": 957431,
+        "unique_proxies": 599049,
+        "proxy_passed": 1655,
+        "published": 1628,
         "quarantined": false,
         "quarantined_until": null
       },
@@ -1098,14 +1116,14 @@
         "source_id": "a04365da7f6d6c3512da",
         "source": "aliilapro",
         "host": "raw.githubusercontent.com",
-        "quality": 0.701,
+        "quality": 0.702,
         "fetch_success_rate": 1.0,
-        "verification_rate": 0.373,
+        "verification_rate": 0.376,
         "productivity": 1.0,
-        "proxies_seen": 373193,
-        "unique_proxies": 312376,
-        "proxy_passed": 175,
-        "published": 175,
+        "proxies_seen": 379885,
+        "unique_proxies": 318140,
+        "proxy_passed": 181,
+        "published": 181,
         "quarantined": false,
         "quarantined_until": null
       },
@@ -1117,8 +1135,8 @@
         "fetch_success_rate": 1.0,
         "verification_rate": 0.341,
         "productivity": 1.0,
-        "proxies_seen": 508868,
-        "unique_proxies": 467046,
+        "proxies_seen": 516964,
+        "unique_proxies": 474440,
         "proxy_passed": 39,
         "published": 39,
         "quarantined": false,
@@ -1132,8 +1150,8 @@
         "fetch_success_rate": 1.0,
         "verification_rate": 0.0,
         "productivity": 1.0,
-        "proxies_seen": 1850,
-        "unique_proxies": 996,
+        "proxies_seen": 1880,
+        "unique_proxies": 1012,
         "proxy_passed": 0,
         "published": 0,
         "quarantined": false,
@@ -1147,7 +1165,7 @@
         "fetch_success_rate": 1.0,
         "verification_rate": 0.0,
         "productivity": 0.259,
-        "proxies_seen": 24388,
+        "proxies_seen": 24788,
         "unique_proxies": 4,
         "proxy_passed": 0,
         "published": 0,
@@ -1167,7 +1185,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T02:02:24+00:00"
+        "quarantined_until": "2026-10-18T08:31:59+00:00"
       },
       {
         "source_id": "5f0a84fc9de844daebae",
@@ -1286,7 +1304,7 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": true,
+        "quarantined": false,
         "quarantined_until": "2026-10-18T03:37:21+00:00"
       },
       {
@@ -1391,7 +1409,7 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": true,
+        "quarantined": false,
         "quarantined_until": "2026-10-18T03:37:23+00:00"
       },
       {
@@ -1481,8 +1499,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-07T10:38:36+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-18T08:31:59+00:00"
       },
       {
         "source_id": "bb8809fd3a5cb649a5f0",
@@ -1542,7 +1560,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T01:28:14+00:00"
+        "quarantined_until": "2026-10-18T12:31:59+00:00"
       },
       {
         "source_id": "982406ba4ec75b41eada",
@@ -1571,8 +1589,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-07T09:08:36+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-18T05:31:56+00:00"
       },
       {
         "source_id": "6d9ffa6c5c7e4b70df55",
@@ -1646,8 +1664,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-17T17:19:12+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-19T04:32:01+00:00"
       },
       {
         "source_id": "634acd89819c15b078a7",
@@ -1676,8 +1694,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-16T11:53:56+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-18T05:32:01+00:00"
       },
       {
         "source_id": "a458e96a0f34d3b8df48",
@@ -1781,8 +1799,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-16T01:29:22+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-19T04:31:56+00:00"
       },
       {
         "source_id": "62ab50f18e2a6bebbad5",
@@ -1842,7 +1860,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T01:28:14+00:00"
+        "quarantined_until": "2026-10-18T12:31:59+00:00"
       },
       {
         "source_id": "e1660d394cf579d45ecb",
@@ -1856,7 +1874,7 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": true,
+        "quarantined": false,
         "quarantined_until": "2026-10-18T01:19:12+00:00"
       },
       {
@@ -1992,7 +2010,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T01:02:24+00:00"
+        "quarantined_until": "2026-10-18T06:32:01+00:00"
       },
       {
         "source_id": "cdbb3984705be18b582f",
@@ -2051,8 +2069,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-13T00:58:54+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-18T08:31:56+00:00"
       },
       {
         "source_id": "92a3115b99a0706ca583",
@@ -2262,7 +2280,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T01:02:24+00:00"
+        "quarantined_until": "2026-10-18T06:32:01+00:00"
       },
       {
         "source_id": "77b931d36f7cba31823e",
@@ -2291,7 +2309,7 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": true,
+        "quarantined": false,
         "quarantined_until": "2026-10-18T03:37:21+00:00"
       },
       {
@@ -2381,8 +2399,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": null
+        "quarantined": true,
+        "quarantined_until": "2026-10-18T05:01:59+00:00"
       },
       {
         "source_id": "bf356a2f47395b5a0a3d",
@@ -2398,6 +2416,36 @@
         "published": 0,
         "quarantined": false,
         "quarantined_until": "2026-10-13T04:33:55+00:00"
+      },
+      {
+        "source_id": "22d131fbf2c2351f8730",
+        "source": "nested:159.13.44.228:22d131fb",
+        "host": "159.13.44.228",
+        "quality": 0.325,
+        "fetch_success_rate": 0.0,
+        "verification_rate": 0.5,
+        "productivity": 0.0,
+        "proxies_seen": 0,
+        "unique_proxies": 0,
+        "proxy_passed": 0,
+        "published": 0,
+        "quarantined": false,
+        "quarantined_until": null
+      },
+      {
+        "source_id": "e141d8e59d6b1c98ee17",
+        "source": "nested:159.69.94.125:e141d8e5",
+        "host": "159.69.94.125",
+        "quality": 0.325,
+        "fetch_success_rate": 0.0,
+        "verification_rate": 0.5,
+        "productivity": 0.0,
+        "proxies_seen": 0,
+        "unique_proxies": 0,
+        "proxy_passed": 0,
+        "published": 0,
+        "quarantined": false,
+        "quarantined_until": null
       },
       {
         "source_id": "6d052cfd7504882b6eb6",
@@ -2697,7 +2745,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T02:30:53+00:00"
+        "quarantined_until": "2026-10-18T20:31:59+00:00"
       },
       {
         "source_id": "d5aad516afd3d5100273",
@@ -2846,8 +2894,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-15T18:48:10+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-18T05:32:01+00:00"
       },
       {
         "source_id": "24ef6c97383b7b4955d9",
@@ -3162,7 +3210,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T01:02:24+00:00"
+        "quarantined_until": "2026-10-18T06:31:59+00:00"
       },
       {
         "source_id": "ef6c8c4e36f47f26a861",
@@ -3237,7 +3285,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T02:30:51+00:00"
+        "quarantined_until": "2026-10-18T20:31:56+00:00"
       },
       {
         "source_id": "3fdcb08cf8d820e9a186",
@@ -3612,7 +3660,7 @@
         "proxy_passed": 0,
         "published": 0,
         "quarantined": true,
-        "quarantined_until": "2026-10-18T02:30:53+00:00"
+        "quarantined_until": "2026-10-18T20:31:59+00:00"
       },
       {
         "source_id": "266f56f01ff7ca0b89c4",
@@ -3956,8 +4004,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-06T22:07:47+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-18T05:31:56+00:00"
       },
       {
         "source_id": "2b0021033464933d40af",
@@ -4211,7 +4259,7 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": true,
+        "quarantined": false,
         "quarantined_until": "2026-10-18T03:37:21+00:00"
       },
       {
@@ -4436,8 +4484,8 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": false,
-        "quarantined_until": "2026-10-13T13:47:17+00:00"
+        "quarantined": true,
+        "quarantined_until": "2026-10-18T08:31:56+00:00"
       },
       {
         "source_id": "e82faee7a68b8fcbf1c6",
@@ -5066,7 +5114,7 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": true,
+        "quarantined": false,
         "quarantined_until": "2026-10-18T02:02:24+00:00"
       },
       {
@@ -5141,7 +5189,7 @@
         "unique_proxies": 0,
         "proxy_passed": 0,
         "published": 0,
-        "quarantined": true,
+        "quarantined": false,
         "quarantined_until": "2026-10-18T02:02:24+00:00"
       },
       {
@@ -5296,20 +5344,20 @@
       }
     ]
   },
-  "singbox_pass": 7,
-  "xray_tested": 9,
-  "xray_pass": 8,
-  "hiddify_tested": 9,
-  "hiddify_pass": 5,
-  "mihomo_tested": 9,
-  "mihomo_pass": 5,
-  "mobile_safe_count": 7,
+  "singbox_pass": 24,
+  "xray_tested": 28,
+  "xray_pass": 27,
+  "hiddify_tested": 32,
+  "hiddify_pass": 30,
+  "mihomo_tested": 32,
+  "mihomo_pass": 24,
+  "mobile_safe_count": 28,
   "scoring_v2": {
     "schema_version": 1,
-    "scored_nodes": 23,
-    "global_score_min": 54,
-    "global_score_max": 74,
-    "global_score_median": 62,
+    "scored_nodes": 47,
+    "global_score_min": 50,
+    "global_score_max": 75,
+    "global_score_median": 71,
     "operator_evidence_nodes": {
       "fixed": 0,
       "irancell": 0,
@@ -5323,43 +5371,43 @@
       "rightel": 0
     },
     "client_scored_nodes": {
-      "hiddify": 9,
-      "mihomo": 9,
-      "nekobox": 9,
-      "singbox": 9,
-      "v2rayng": 9
+      "hiddify": 32,
+      "mihomo": 32,
+      "nekobox": 32,
+      "singbox": 32,
+      "v2rayng": 32
     },
     "operator_stale_after_minutes": 120
   },
   "feed_engine_v2": {
-    "candidate_nodes": 9,
+    "candidate_nodes": 32,
     "feed_counts": {
-      "clients/hiddify": 5,
-      "clients/mihomo": 5,
-      "clients/nekobox": 7,
-      "clients/singbox": 7,
-      "clients/universal": 5,
-      "clients/v2rayng": 8,
-      "networks/direct-ip": 8,
-      "networks/ipv4": 8,
+      "clients/hiddify": 30,
+      "clients/mihomo": 24,
+      "clients/nekobox": 24,
+      "clients/singbox": 24,
+      "clients/universal": 20,
+      "clients/v2rayng": 27,
+      "networks/direct-ip": 32,
+      "networks/ipv4": 32,
       "networks/ipv6": 0,
-      "networks/mobile-safe": 7,
-      "networks/port443": 3,
-      "networks/tcp": 9,
-      "networks/udp": 0,
-      "platforms/android/hiddify": 5,
-      "platforms/android/mihomo": 5,
-      "platforms/android/nekobox": 7,
-      "platforms/android/singbox": 7,
-      "platforms/android/v2rayng": 8,
-      "platforms/windows/hiddify": 5,
-      "platforms/windows/mihomo": 5,
-      "platforms/windows/nekobox": 7,
-      "platforms/windows/singbox": 7,
-      "platforms/windows/v2rayn": 8,
-      "profiles/max-compat": 9,
-      "profiles/recommended": 5,
-      "profiles/secure": 9
+      "networks/mobile-safe": 28,
+      "networks/port443": 11,
+      "networks/tcp": 28,
+      "networks/udp": 4,
+      "platforms/android/hiddify": 30,
+      "platforms/android/mihomo": 24,
+      "platforms/android/nekobox": 24,
+      "platforms/android/singbox": 24,
+      "platforms/android/v2rayng": 27,
+      "platforms/windows/hiddify": 30,
+      "platforms/windows/mihomo": 24,
+      "platforms/windows/nekobox": 24,
+      "platforms/windows/singbox": 24,
+      "platforms/windows/v2rayn": 27,
+      "profiles/max-compat": 32,
+      "profiles/recommended": 20,
+      "profiles/secure": 31
     },
     "operator_fresh_counts": {
       "fixed": 0,
@@ -5369,5 +5417,5 @@
     }
   },
   "publish_status": "published",
-  "engine_commit": "68d4875"
+  "engine_commit": "ab69a11"
 }
