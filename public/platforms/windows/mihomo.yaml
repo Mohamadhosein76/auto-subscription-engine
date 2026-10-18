@@ -5,154 +5,79 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_f29b3f86
+- name: ase-node_07072024
   type: vless
-  server: 195.123.235.177
+  server: 169.40.42.90
   port: 443
-  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: gateway.icloud.com
+  servername: yahoo.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-    short-id: c85d029f5e8eb393
-- name: ase-node_146bc48d
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: ase-node_8b579cdc
   type: vless
-  server: 157.228.155.184
+  server: 177.1.192.74
   port: 443
-  uuid: c39f95b5-64b5-4f7a-a93d-fa9e9cf24de8
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
   udp: true
   flow: xtls-rprx-vision
   tls: true
   servername: addons.mozilla.org
   client-fingerprint: chrome
   reality-opts:
-    public-key: uYU7UXkfNB-BEfjyrCUtRcN2JfFdlFWfMHCeX7bz4Qc
-    short-id: e022bfea
-- name: ase-node_7caed6fe
+    public-key: qC0g7Y0pwyLFTGAPG2zfZNuo64Cda695wdKgLU4KkF8
+    short-id: 770618b6
+- name: ase-node_a88d5b47
   type: vless
-  server: 191.101.157.37
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_aea14582
-  type: vless
-  server: 178.83.46.57
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_05ff628c
-  type: vless
-  server: 191.101.157.142
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_c1083608
-  type: vless
-  server: 178.83.46.57
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_245ae64e
-  type: vless
-  server: 191.101.157.142
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_34d9d908
-  type: vless
-  server: 82.47.63.24
-  port: 2053
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-  udp: true
-- name: ase-node_4bcaa564
-  type: vless
-  server: 191.101.157.37
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_eb5f3b5a
-  type: ss
-  server: 20.164.216.208
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: tM0sV3CrjAU0nokd
-  udp: true
-- name: ase-node_01eaee4e
-  type: vless
-  server: 82.47.63.24
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_2b38f829
-  type: vmess
-  server: 45.131.153.149
-  port: 443
-  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: de.zhou-yufan.com
-- name: ase-node_9b7244cf
-  type: vless
-  server: 31.76.227.60
-  port: 443
-  uuid: 05c8eabe-96af-4db2-bb2f-a24fa84344ba
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: assets-mi-29.spbstudentlife.com
-  client-fingerprint: randomized
-  reality-opts:
-    public-key: CcMEJ-JOS4clB3gXbc6wXgzkiJQbyNpKY90I8B6AqyU
-    short-id: 4c188683e2c14a3c
-- name: ase-node_4fa5b720
-  type: vmess
-  server: 87.120.106.130
+  server: 45.88.12.168
   port: 2083
-  uuid: 6fab89df-d5c3-4d73-8df5-897ca352bfe8
-  alterId: 0
-  cipher: auto
+  uuid: 5062e1a7-89aa-4bd0-be2a-4f4a88f6c325
   udp: true
   tls: true
-  servername: pqro5mlb4c88.dopwiz.com
+  servername: va.stream-room.com
   alpn:
-  - h2
   - http/1.1
-  client-fingerprint: firefox
-- name: ase-node_1c1bf4ba
-  type: trojan
-  server: 45.87.41.18
-  port: 443
-  password: humanity
-  udp: true
-  tls: true
-  sni: www.calmlunch.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /assignment
+    path: /vless-ws
+- name: ase-node_408669f2
+  type: vless
+  server: 23.81.36.148
+  port: 1222
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  udp: true
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+- name: ase-node_2d53a0f5
+  type: vless
+  server: 208.67.106.154
+  port: 443
+  uuid: 96ee55ac-d534-4502-878a-468c7896360b
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: _0fpFqEEuCso3B8K7AAcMjctwG_xfCxO2PdKzGd_-hg
+    short-id: c9677d3b7dea
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_f29b3f86
-  - ase-node_146bc48d
-  - ase-node_7caed6fe
-  - ase-node_aea14582
-  - ase-node_05ff628c
-  - ase-node_c1083608
-  - ase-node_245ae64e
-  - ase-node_34d9d908
-  - ase-node_4bcaa564
-  - ase-node_eb5f3b5a
-  - ase-node_01eaee4e
-  - ase-node_2b38f829
-  - ase-node_9b7244cf
-  - ase-node_4fa5b720
-  - ase-node_1c1bf4ba
+  - ase-node_07072024
+  - ase-node_8b579cdc
+  - ase-node_a88d5b47
+  - ase-node_408669f2
+  - ase-node_2d53a0f5
 rules:
 - MATCH,PROXY

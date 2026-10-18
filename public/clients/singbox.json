@@ -2,31 +2,47 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "ase-node_f29b3f86",
-      "server": "195.123.235.177",
+      "tag": "ase-node_07072024",
+      "server": "169.40.42.90",
       "server_port": 443,
-      "uuid": "729dd5f2-f5ff-4070-8c10-863eceded0b1",
+      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "server_name": "yahoo.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI",
-          "short_id": "c85d029f5e8eb393"
+          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "short_id": "c39cc7310a"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "ase-node_9af1fc2f",
+      "server": "ash.asan-ps.ir",
+      "server_port": 9443,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "Xm3v5BuIiFFXE6vjacf52w==:6waxS41RTmyXwISOjVfh2w=="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_217bf72d",
+      "server": "167.235.203.120",
+      "server_port": 9443,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "Xm3v5BuIiFFXE6vjacf52w==:6waxS41RTmyXwISOjVfh2w=="
+    },
+    {
       "type": "vless",
-      "tag": "ase-node_146bc48d",
-      "server": "157.228.155.184",
+      "tag": "ase-node_8b579cdc",
+      "server": "177.1.192.74",
       "server_port": 443,
-      "uuid": "c39f95b5-64b5-4f7a-a93d-fa9e9cf24de8",
+      "uuid": "4d852af3-a121-41aa-9aed-4ca40a6f7b4d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -37,93 +53,71 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "uYU7UXkfNB-BEfjyrCUtRcN2JfFdlFWfMHCeX7bz4Qc",
-          "short_id": "e022bfea"
+          "public_key": "qC0g7Y0pwyLFTGAPG2zfZNuo64Cda695wdKgLU4KkF8",
+          "short_id": "770618b6"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "ase-node_7caed6fe",
-      "server": "191.101.157.37",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_aea14582",
-      "server": "178.83.46.57",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_05ff628c",
-      "server": "191.101.157.142",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_c1083608",
-      "server": "178.83.46.57",
-      "server_port": 8080,
-      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_245ae64e",
-      "server": "191.101.157.142",
-      "server_port": 8080,
-      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_34d9d908",
-      "server": "82.47.63.24",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_4bcaa564",
-      "server": "191.101.157.37",
-      "server_port": 8080,
-      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_eb5f3b5a",
-      "server": "20.164.216.208",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "tM0sV3CrjAU0nokd"
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_01eaee4e",
-      "server": "82.47.63.24",
-      "server_port": 8080,
-      "uuid": "6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8"
-    },
-    {
-      "type": "vless",
-      "tag": "ase-node_9b7244cf",
-      "server": "31.76.227.60",
-      "server_port": 443,
-      "uuid": "05c8eabe-96af-4db2-bb2f-a24fa84344ba",
-      "flow": "xtls-rprx-vision",
+      "tag": "ase-node_a88d5b47",
+      "server": "45.88.12.168",
+      "server_port": 2083,
+      "uuid": "5062e1a7-89aa-4bd0-be2a-4f4a88f6c325",
       "tls": {
         "enabled": true,
-        "server_name": "assets-mi-29.spbstudentlife.com",
+        "server_name": "va.stream-room.com",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless-ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_408669f2",
+      "server": "23.81.36.148",
+      "server_port": 1222,
+      "uuid": "36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
+      "tls": {
+        "enabled": true,
+        "server_name": "play.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "CcMEJ-JOS4clB3gXbc6wXgzkiJQbyNpKY90I8B6AqyU",
-          "short_id": "4c188683e2c14a3c"
+          "public_key": "zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE",
+          "short_id": "a25d0f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_2d53a0f5",
+      "server": "208.67.106.154",
+      "server_port": 443,
+      "uuid": "96ee55ac-d534-4502-878a-468c7896360b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "_0fpFqEEuCso3B8K7AAcMjctwG_xfCxO2PdKzGd_-hg",
+          "short_id": "c9677d3b7dea"
         }
       }
     }
