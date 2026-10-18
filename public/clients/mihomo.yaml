@@ -5,91 +5,183 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_a4930800
+- name: ase-node_f1b35248
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_7363c4cd
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_fbdbcfb1
   type: vmess
   server: 84.17.41.2
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
-  cipher: auto
+  cipher: none
   udp: true
-- name: ase-node_32939c99
-  type: vmess
-  server: 169.197.142.22
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_31693e10
-  type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_9ab6739f
+- name: ase-node_bb20ab5a
   type: vmess
   server: 38.91.107.49
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
-  cipher: auto
+  cipher: none
   udp: true
-- name: ase-node_ec806d71
-  type: vmess
-  server: 67.220.85.46
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+- name: ase-node_a655b259
+  type: hysteria2
+  server: hy2.aspidnet.xyz
+  port: 443
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  sni: hy2.aspidnet.xyz
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+- name: ase-node_e2e949f3
+  type: trojan
+  server: 188.241.241.49
+  port: 443
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   udp: true
-- name: ase-node_d40aa44e
-  type: vmess
-  server: 149.88.23.202
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+  tls: true
+  sni: de6.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_dfb042fc
+  type: trojan
+  server: 188.241.241.102
+  port: 443
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   udp: true
-- name: ase-node_4a5ee998
+  tls: true
+  sni: de4.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_6dc8b33e
+  type: trojan
+  server: de8.dedushka.top
+  port: 443
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  udp: true
+  tls: true
+  sni: de8.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_847bfa56
+  type: trojan
+  server: de6.dedushka.top
+  port: 443
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  udp: true
+  tls: true
+  sni: de6.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_2069955c
+  type: trojan
+  server: pl2.dedushka.top
+  port: 443
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  udp: true
+  tls: true
+  sni: pl2.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_f059273d
+  type: trojan
+  server: 31.133.0.186
+  port: 443
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  udp: true
+  tls: true
+  sni: pl2.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_f6196a14
+  type: ss
+  server: 96.45.186.114
+  port: 8443
+  cipher: chacha20-ietf-poly1305
+  password: SScN2QK7mR9pV4xH
+  udp: true
+- name: ase-node_8c6079df
+  type: ss
+  server: 54.151.162.109
+  port: 8443
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  udp: true
+- name: ase-node_18f4f962
+  type: trojan
+  server: 46.62.204.134
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.volumeroot.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: ase-node_1e83fa29
+  type: trojan
+  server: 161.35.192.122
+  port: 443
+  password: humanity
+  udp: true
+  tls: true
+  sni: www.pleadcourt.org
+  alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: ase-node_77487406
   type: vless
-  server: 178.83.46.240
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
+  server: 51.38.71.147
+  port: 8443
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
   udp: true
-- name: ase-node_5f9b69d8
-  type: vless
-  server: 143.14.59.120
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_722318cb
-  type: vless
-  server: 140.233.177.17
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
-- name: ase-node_40a325d4
-  type: vless
-  server: 82.47.63.157
-  port: 8080
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
-  udp: true
+  tls: true
+  servername: node-uk.connectsuite.org
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_a4930800
-  - ase-node_32939c99
-  - ase-node_31693e10
-  - ase-node_9ab6739f
-  - ase-node_ec806d71
-  - ase-node_d40aa44e
-  - ase-node_4a5ee998
-  - ase-node_5f9b69d8
-  - ase-node_722318cb
-  - ase-node_40a325d4
+  - ase-node_f1b35248
+  - ase-node_7363c4cd
+  - ase-node_fbdbcfb1
+  - ase-node_bb20ab5a
+  - ase-node_a655b259
+  - ase-node_e2e949f3
+  - ase-node_dfb042fc
+  - ase-node_6dc8b33e
+  - ase-node_847bfa56
+  - ase-node_2069955c
+  - ase-node_f059273d
+  - ase-node_f6196a14
+  - ase-node_8c6079df
+  - ase-node_18f4f962
+  - ase-node_1e83fa29
+  - ase-node_77487406
 rules:
 - MATCH,PROXY
