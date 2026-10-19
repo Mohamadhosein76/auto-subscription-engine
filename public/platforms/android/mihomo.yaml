@@ -5,117 +5,38 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_6fa19080
-  type: hysteria2
-  server: 94.228.214.225
-  port: 443
-  password: 36cd82d2-50b1-400d-b520-2acc9a8a6b40
-  sni: nl.northvale.cloud
-  skip-cert-verify: true
-- name: ase-node_d3450a2a
-  type: hysteria2
-  server: nl.northvale.cloud
-  port: 443
-  password: 36cd82d2-50b1-400d-b520-2acc9a8a6b40
-  sni: nl.northvale.cloud
-  skip-cert-verify: true
-- name: ase-node_4e434d8d
-  type: hysteria2
-  server: 194.180.189.43
-  port: 443
-  password: 36cd82d2-50b1-400d-b520-2acc9a8a6b40
-  sni: fi.northvale.cloud
-  skip-cert-verify: true
-- name: ase-node_9d4401e4
-  type: hysteria2
-  server: fi.northvale.cloud
-  port: 443
-  password: 36cd82d2-50b1-400d-b520-2acc9a8a6b40
-  sni: fi.northvale.cloud
-  skip-cert-verify: true
-- name: ase-node_c7177b7c
-  type: vless
-  server: 47.253.226.114
-  port: 443
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+- name: ase-node_0bbcb781
+  type: vmess
+  server: 134.195.196.211
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-- name: ase-node_db6eea34
+- name: ase-node_939afff5
   type: trojan
-  server: de10.dedushka.top
+  server: pl2.dedushka.top
   port: 443
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   udp: true
   tls: true
-  sni: de10.dedushka.top
-  alpn:
-  - http/1.1
+  sni: pl2.dedushka.top
   client-fingerprint: chrome
-- name: ase-node_fded406d
+- name: ase-node_d0f110a9
   type: trojan
-  server: 188.241.241.236
+  server: 31.133.0.186
   port: 443
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   udp: true
   tls: true
-  sni: de10.dedushka.top
-  alpn:
-  - http/1.1
+  sni: pl2.dedushka.top
   client-fingerprint: chrome
-- name: ase-node_59199c5a
-  type: trojan
-  server: 86.54.42.16
-  port: 27613
-  password: lzi0ooaq8vgy1536
-  udp: true
-  tls: true
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-- name: ase-node_c0582f32
-  type: vmess
-  server: 8.219.97.17
-  port: 443
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: wjofhsqteueywxeq.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: wjofhsqteueywxeq.v.3dns.vip
-- name: ase-node_c397c661
-  type: vmess
-  server: 45.131.153.149
-  port: 443
-  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: de.zhou-yufan.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_6fa19080
-  - ase-node_d3450a2a
-  - ase-node_4e434d8d
-  - ase-node_9d4401e4
-  - ase-node_c7177b7c
-  - ase-node_db6eea34
-  - ase-node_fded406d
-  - ase-node_59199c5a
-  - ase-node_c0582f32
-  - ase-node_c397c661
+  - ase-node_0bbcb781
+  - ase-node_939afff5
+  - ase-node_d0f110a9
 rules:
 - MATCH,PROXY
