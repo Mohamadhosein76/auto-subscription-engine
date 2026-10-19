@@ -5,38 +5,87 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_0bbcb781
+- name: ase-node_534da374
+  type: vless
+  server: 69.48.201.136
+  port: 30016
+  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
+  udp: true
+  network: ws
+  ws-opts:
+    path: /usserver
+    headers:
+      Host: zoom.us
+- name: ase-node_e2f2d0b3
+  type: ss
+  server: 4.210.68.244
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: UUjphkQAh5BkOdbf
+  udp: true
+- name: ase-node_39f86877
+  type: vless
+  server: 92.119.166.36
+  port: 1080
+  uuid: 80ee276b-1eb4-4570-8757-1d9cd978f6fa
+  udp: true
+- name: ase-node_9be13459
   type: vmess
-  server: 134.195.196.211
+  server: rib9jxayoqjgn2kw.v.3dns.vip
+  port: 443
+  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: Rib9JXAYoqjGN2KW.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: Rib9JXAYoqjGN2KW.v.3dns.vip
+- name: ase-node_fb055c69
+  type: vmess
+  server: 149.88.23.207
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
   udp: true
-- name: ase-node_939afff5
-  type: trojan
-  server: pl2.dedushka.top
-  port: 443
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+- name: ase-node_27b1b443
+  type: vmess
+  server: ww11.levikogjgfdd.ir
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: none
   udp: true
-  tls: true
-  sni: pl2.dedushka.top
-  client-fingerprint: chrome
-- name: ase-node_d0f110a9
-  type: trojan
-  server: 31.133.0.186
-  port: 443
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+- name: ase-node_c3cb9d56
+  type: vmess
+  server: 149.88.23.207
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  sni: pl2.dedushka.top
-  client-fingerprint: chrome
+- name: ase-node_2ce5260b
+  type: ss
+  server: 102.133.227.3
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: 93F6FFBh3CZiBUsG
+  udp: true
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_0bbcb781
-  - ase-node_939afff5
-  - ase-node_d0f110a9
+  - ase-node_534da374
+  - ase-node_e2f2d0b3
+  - ase-node_39f86877
+  - ase-node_9be13459
+  - ase-node_fb055c69
+  - ase-node_27b1b443
+  - ase-node_c3cb9d56
+  - ase-node_2ce5260b
 rules:
 - MATCH,PROXY

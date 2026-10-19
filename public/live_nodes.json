@@ -1,21 +1,21 @@
 [
   {
-    "safe_id": "node_b8c4552f9f66",
+    "safe_id": "node_5561eac9f662",
     "protocol": "vless",
     "status": "live",
-    "selected": false,
-    "country_code": "CA",
-    "country_name": "Canada",
-    "resolved_ip": "188.114.98.0",
-    "preflight_resolved_ip": "188.114.98.0",
-    "tcp_latency_ms": 12.5,
-    "proxy_latency_ms": 136.8,
+    "selected": true,
+    "country_code": "US",
+    "country_name": "United States",
+    "resolved_ip": "195.123.235.177",
+    "preflight_resolved_ip": "195.123.235.177",
+    "tcp_latency_ms": 8.1,
+    "proxy_latency_ms": 100.1,
     "success_ratio": 0.667,
     "runtime_core": "xray",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "188.114.98.0"
+        "195.123.235.177"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -26,14 +26,240 @@
         "xray"
       ],
       "success_count": 4,
-      "latency_p95_ms": 188.4,
-      "jitter_ms": 47.9
+      "latency_p95_ms": 116.8,
+      "jitter_ms": 15.7
+    },
+    "score": 75,
+    "source": "epodonios-all",
+    "asn": 204957,
+    "as_name": "GREENFLOID-AS - ROUTE 95 LLC, US",
+    "prefix": "195.123.232.0/22",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "fail",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "fail",
+    "mihomo_compatible": "fail",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": false,
+    "compatibility_score": 65,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 443,
+      "port_443": true,
+      "tls": true,
+      "reality": true,
+      "websocket": false,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "xray": 175.806558999966
+    },
+    "compat_failure_categories": {
+      "singbox": "core_startup_failed",
+      "hiddify": "core_startup_failed",
+      "mihomo": "TLS_failure"
+    },
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 75,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 100.1,
+          "p95_ms": 116.8,
+          "jitter_ms": 15.7
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": 100,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 175.8
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_a0ca0817cc45",
+    "protocol": "vless",
+    "status": "live",
+    "selected": false,
+    "country_code": "CA",
+    "country_name": "Canada",
+    "resolved_ip": "162.159.135.234",
+    "preflight_resolved_ip": "162.159.135.234",
+    "tcp_latency_ms": 2.1,
+    "proxy_latency_ms": 113.3,
+    "success_ratio": 0.667,
+    "runtime_core": "xray",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "162.159.135.234"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "xray",
+      "attempted_cores": [
+        "singbox",
+        "xray"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 131.6,
+      "jitter_ms": 16.4
     },
     "score": 63,
-    "source": "epodonios-all",
+    "source": "pawdroid",
     "asn": 13335,
     "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-    "prefix": "188.114.98.0/24",
+    "prefix": "162.159.128.0/19",
     "reputation_hits": [],
     "dns_status": "ip_literal",
     "tls_status": "ok",
@@ -72,9 +298,9 @@
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 136.8,
-          "p95_ms": 188.4,
-          "jitter_ms": 47.9
+          "latency_ms": 113.3,
+          "p95_ms": 131.6,
+          "jitter_ms": 16.4
         }
       },
       "reliability": {
@@ -203,22 +429,22 @@
     }
   },
   {
-    "safe_id": "node_861ed79e80bf",
+    "safe_id": "node_ea4927b773ef",
     "protocol": "vless",
     "status": "live",
     "selected": false,
     "country_code": "CA",
     "country_name": "Canada",
-    "resolved_ip": "104.18.37.127",
-    "preflight_resolved_ip": "104.18.37.127",
-    "tcp_latency_ms": 12.2,
-    "proxy_latency_ms": 176.4,
+    "resolved_ip": "172.67.118.45",
+    "preflight_resolved_ip": "172.67.118.45",
+    "tcp_latency_ms": 7.1,
+    "proxy_latency_ms": 121.6,
     "success_ratio": 0.667,
     "runtime_core": "xray",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "104.18.37.127"
+        "172.67.118.45"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -229,14 +455,14 @@
         "xray"
       ],
       "success_count": 4,
-      "latency_p95_ms": 186.6,
-      "jitter_ms": 56.0
+      "latency_p95_ms": 197.3,
+      "jitter_ms": 65.4
     },
-    "score": 62,
+    "score": 63,
     "source": "epodonios-all",
     "asn": 13335,
     "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-    "prefix": "104.18.37.0/24",
+    "prefix": "172.67.112.0/20",
     "reputation_hits": [],
     "dns_status": "ip_literal",
     "tls_status": "ok",
@@ -258,7 +484,7 @@
     "scores": {
       "schema_version": 1,
       "global": {
-        "score": 62,
+        "score": 63,
         "confidence": 78
       },
       "connectivity": {
@@ -271,13 +497,13 @@
         }
       },
       "latency": {
-        "score": 99,
+        "score": 100,
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 176.4,
-          "p95_ms": 186.6,
-          "jitter_ms": 56.0
+          "latency_ms": 121.6,
+          "p95_ms": 197.3,
+          "jitter_ms": 65.4
         }
       },
       "reliability": {
@@ -406,22 +632,256 @@
     }
   },
   {
-    "safe_id": "node_ea8a1845b34c",
+    "safe_id": "node_534da3746f88",
     "protocol": "vless",
+    "status": "live",
+    "selected": true,
+    "country_code": "US",
+    "country_name": "United States",
+    "resolved_ip": "69.48.201.136",
+    "preflight_resolved_ip": "69.48.201.136",
+    "tcp_latency_ms": 28.6,
+    "proxy_latency_ms": 157.4,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "69.48.201.136"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 200.4,
+      "jitter_ms": 60.6
+    },
+    "score": 75,
+    "source": "epodonios-all",
+    "asn": 8560,
+    "as_name": "IONOS-AS - IONOS SE, DE",
+    "prefix": "69.48.200.0/21",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "pass",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "pass",
+    "mihomo_compatible": "pass",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": true,
+    "compatibility_score": 87,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 30016,
+      "port_443": false,
+      "tls": false,
+      "reality": false,
+      "websocket": true,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "singbox": 179.0495599998394,
+      "xray": 214.05353299996932,
+      "hiddify": 192.0711829998254,
+      "mihomo": 200.2067089999855
+    },
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 75,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 157.4,
+          "p95_ms": 200.4,
+          "jitter_ms": 60.6
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 100,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "hiddify",
+            "core_success_rate": 1.0,
+            "latency_ms": 192.1
+          }
+        },
+        "mihomo": {
+          "score": 100,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "mihomo",
+            "core_success_rate": 1.0,
+            "latency_ms": 200.2
+          }
+        },
+        "nekobox": {
+          "score": 100,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 179.0
+          }
+        },
+        "singbox": {
+          "score": 100,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 179.0
+          }
+        },
+        "v2rayng": {
+          "score": 100,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 214.1
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_4abe7f196157",
+    "protocol": "vmess",
     "status": "live",
     "selected": false,
     "country_code": "CA",
     "country_name": "Canada",
-    "resolved_ip": "188.114.98.0",
-    "preflight_resolved_ip": "188.114.98.0",
-    "tcp_latency_ms": 8.4,
-    "proxy_latency_ms": 176.5,
+    "resolved_ip": null,
+    "preflight_resolved_ip": "172.67.187.145",
+    "tcp_latency_ms": 2.0,
+    "proxy_latency_ms": 162.6,
     "success_ratio": 0.667,
     "runtime_core": "xray",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "188.114.98.0"
+        "172.67.187.145",
+        "104.21.7.133",
+        "2606:4700:3031::6815:785",
+        "2606:4700:3031::ac43:bb91"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -432,8 +892,436 @@
         "xray"
       ],
       "success_count": 4,
-      "latency_p95_ms": 197.2,
-      "jitter_ms": 31.5
+      "latency_p95_ms": 683.3,
+      "jitter_ms": 176.6
+    },
+    "score": 63,
+    "source": "epodonios-all",
+    "asn": 13335,
+    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+    "prefix": "104.21.0.0/20",
+    "reputation_hits": [],
+    "dns_status": "ok",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "block",
+    "security_risk_score": 100,
+    "security_reasons": [
+      "cloudflare_network_forbidden"
+    ],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": null,
+    "xray_compatible": null,
+    "hiddify_compatible": null,
+    "mihomo_compatible": null,
+    "universal_compatible": false,
+    "compatibility_score": 0,
+    "network_profile": {},
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 63,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 162.6,
+          "p95_ms": 683.3,
+          "jitter_ms": 176.6
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 0,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "block",
+        "details": {
+          "risk_score": 100,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "xray"
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_a83a15e2c2be",
+    "protocol": "vless",
+    "status": "live",
+    "selected": true,
+    "country_code": "US",
+    "country_name": "United States",
+    "resolved_ip": "181.214.152.137",
+    "preflight_resolved_ip": "181.214.152.137",
+    "tcp_latency_ms": 34.7,
+    "proxy_latency_ms": 165.7,
+    "success_ratio": 0.667,
+    "runtime_core": "xray",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "181.214.152.137"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "xray",
+      "attempted_cores": [
+        "singbox",
+        "xray"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 170.5,
+      "jitter_ms": 7.3
+    },
+    "score": 74,
+    "source": "epodonios-all",
+    "asn": 397423,
+    "as_name": "TIER-NET - Tier.Net Technologies LLC, US",
+    "prefix": "181.214.152.0/24",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "fail",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "fail",
+    "mihomo_compatible": "fail",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": false,
+    "compatibility_score": 60,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 51104,
+      "port_443": false,
+      "tls": true,
+      "reality": true,
+      "websocket": false,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "xray": 699.4867839998733
+    },
+    "compat_failure_categories": {
+      "singbox": "core_startup_failed",
+      "hiddify": "core_startup_failed",
+      "mihomo": "TLS_failure"
+    },
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 74,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 99,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 165.7,
+          "p95_ms": 170.5,
+          "jitter_ms": 7.3
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 699.5
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_3c132f92481f",
+    "protocol": "vless",
+    "status": "live",
+    "selected": false,
+    "country_code": "CA",
+    "country_name": "Canada",
+    "resolved_ip": "188.114.98.0",
+    "preflight_resolved_ip": "188.114.98.0",
+    "tcp_latency_ms": 1.8,
+    "proxy_latency_ms": 183.8,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "188.114.98.0"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 413.4,
+      "jitter_ms": 229.0
     },
     "score": 62,
     "source": "epodonios-all",
@@ -478,9 +1366,9 @@
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 176.5,
-          "p95_ms": 197.2,
-          "jitter_ms": 31.5
+          "latency_ms": 183.8,
+          "p95_ms": 413.4,
+          "jitter_ms": 229.0
         }
       },
       "reliability": {
@@ -609,22 +1497,22 @@
     }
   },
   {
-    "safe_id": "node_0bbcb7812f53",
-    "protocol": "vmess",
+    "safe_id": "node_90a0e18a4256",
+    "protocol": "vless",
     "status": "live",
-    "selected": true,
+    "selected": false,
     "country_code": "CA",
     "country_name": "Canada",
-    "resolved_ip": "134.195.196.211",
-    "preflight_resolved_ip": "134.195.196.211",
-    "tcp_latency_ms": 44.4,
-    "proxy_latency_ms": 192.2,
+    "resolved_ip": "172.67.155.65",
+    "preflight_resolved_ip": "172.67.155.65",
+    "tcp_latency_ms": 1.8,
+    "proxy_latency_ms": 245.3,
     "success_ratio": 0.667,
     "runtime_core": "singbox",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "134.195.196.211"
+        "172.67.155.65"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -634,855 +1522,14 @@
         "singbox"
       ],
       "success_count": 4,
-      "latency_p95_ms": 5002.8,
-      "jitter_ms": 3229.2
-    },
-    "score": 74,
-    "source": "aliilapro",
-    "asn": 62563,
-    "as_name": "AS-GLOBALTELEHOST - GLOBALTELEHOST Corp., CA",
-    "prefix": "134.195.196.0/24",
-    "reputation_hits": [],
-    "dns_status": "ip_literal",
-    "tls_status": "ok",
-    "content_integrity_status": "warning",
-    "security_status": "allow_with_warnings",
-    "security_risk_score": 20,
-    "security_reasons": [],
-    "security_checks_complete": true,
-    "asn_diversity_excluded": false,
-    "singbox_compatible": "pass",
-    "xray_compatible": "pass",
-    "hiddify_compatible": "pass",
-    "mihomo_compatible": "pass",
-    "compat_verified_at": "2026-10-19T20:11:38+00:00",
-    "universal_compatible": true,
-    "compatibility_score": 88,
-    "network_profile": {
-      "ipv4": true,
-      "ipv6": false,
-      "tcp": true,
-      "udp": false,
-      "port": 18000,
-      "port_443": false,
-      "tls": false,
-      "reality": false,
-      "websocket": false,
-      "grpc": false,
-      "direct_ip": true,
-      "hostname": false,
-      "udp_dependency": false
-    },
-    "compat_latency_ms": {
-      "singbox": 185.71849599993584,
-      "xray": 203.2852960001037,
-      "hiddify": 195.38783099983448,
-      "mihomo": 193.73210599997037
-    },
-    "scores": {
-      "schema_version": 1,
-      "global": {
-        "score": 74,
-        "confidence": 78
-      },
-      "connectivity": {
-        "score": 67,
-        "confidence": 100,
-        "evidence_count": 4,
-        "status": "live",
-        "details": {
-          "success_ratio": 0.667
-        }
-      },
-      "latency": {
-        "score": 99,
-        "confidence": 100,
-        "evidence_count": 1,
-        "details": {
-          "latency_ms": 192.2,
-          "p95_ms": 5002.8,
-          "jitter_ms": 3229.2
-        }
-      },
-      "reliability": {
-        "score": 50,
-        "confidence": 10,
-        "evidence_count": 1,
-        "status": "warming_up",
-        "details": {
-          "rolling_success_rate": 1.0
-        }
-      },
-      "freshness": {
-        "score": 100,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "fresh",
-        "fresh": true,
-        "details": {
-          "age_minutes": 1
-        }
-      },
-      "security": {
-        "score": 80,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "allow_with_warnings",
-        "details": {
-          "risk_score": 20,
-          "checks_complete": true
-        }
-      },
-      "operators": {
-        "fixed": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Fixed ISP Probe",
-            "network_type": "fixed"
-          }
-        },
-        "irancell": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Irancell",
-            "network_type": "mobile"
-          }
-        },
-        "mci": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "MCI",
-            "network_type": "mobile"
-          }
-        },
-        "rightel": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Rightel",
-            "network_type": "mobile"
-          }
-        }
-      },
-      "clients": {
-        "hiddify": {
-          "score": 100,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "hiddify",
-            "core_success_rate": 1.0,
-            "latency_ms": 195.4
-          }
-        },
-        "mihomo": {
-          "score": 100,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "mihomo",
-            "core_success_rate": 1.0,
-            "latency_ms": 193.7
-          }
-        },
-        "nekobox": {
-          "score": 100,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "singbox",
-            "core_success_rate": 1.0,
-            "latency_ms": 185.7
-          }
-        },
-        "singbox": {
-          "score": 100,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "singbox",
-            "core_success_rate": 1.0,
-            "latency_ms": 185.7
-          }
-        },
-        "v2rayng": {
-          "score": 100,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "xray",
-            "core_success_rate": 1.0,
-            "latency_ms": 203.3
-          }
-        }
-      }
-    }
-  },
-  {
-    "safe_id": "node_7c5e89fce30d",
-    "protocol": "vmess",
-    "status": "live",
-    "selected": false,
-    "country_code": "CA",
-    "country_name": "Canada",
-    "resolved_ip": "172.64.229.21",
-    "preflight_resolved_ip": "172.64.229.21",
-    "tcp_latency_ms": 10.0,
-    "proxy_latency_ms": 208.7,
-    "success_ratio": 0.667,
-    "runtime_core": "xray",
-    "verification": {
-      "transport": "tcp",
-      "resolved_ips": [
-        "172.64.229.21"
-      ],
-      "ipv4_preflight": true,
-      "ipv6_preflight": false,
-      "mode": "native",
-      "runtime_core": "xray",
-      "attempted_cores": [
-        "singbox",
-        "xray"
-      ],
-      "success_count": 4,
-      "latency_p95_ms": 228.3,
-      "jitter_ms": 13.6
-    },
-    "score": 62,
-    "source": "aliilapro",
-    "asn": 13335,
-    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-    "prefix": "172.64.229.0/24",
-    "reputation_hits": [],
-    "dns_status": "ip_literal",
-    "tls_status": "ok",
-    "content_integrity_status": "warning",
-    "security_status": "block",
-    "security_risk_score": 100,
-    "security_reasons": [
-      "cloudflare_network_forbidden"
-    ],
-    "security_checks_complete": true,
-    "asn_diversity_excluded": false,
-    "singbox_compatible": null,
-    "xray_compatible": null,
-    "hiddify_compatible": null,
-    "mihomo_compatible": null,
-    "universal_compatible": false,
-    "compatibility_score": 0,
-    "network_profile": {},
-    "scores": {
-      "schema_version": 1,
-      "global": {
-        "score": 62,
-        "confidence": 78
-      },
-      "connectivity": {
-        "score": 67,
-        "confidence": 100,
-        "evidence_count": 4,
-        "status": "live",
-        "details": {
-          "success_ratio": 0.667
-        }
-      },
-      "latency": {
-        "score": 98,
-        "confidence": 100,
-        "evidence_count": 1,
-        "details": {
-          "latency_ms": 208.7,
-          "p95_ms": 228.3,
-          "jitter_ms": 13.6
-        }
-      },
-      "reliability": {
-        "score": 50,
-        "confidence": 10,
-        "evidence_count": 1,
-        "status": "warming_up",
-        "details": {
-          "rolling_success_rate": 1.0
-        }
-      },
-      "freshness": {
-        "score": 100,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "fresh",
-        "fresh": true,
-        "details": {
-          "age_minutes": 1
-        }
-      },
-      "security": {
-        "score": 0,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "block",
-        "details": {
-          "risk_score": 100,
-          "checks_complete": true
-        }
-      },
-      "operators": {
-        "fixed": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Fixed ISP Probe",
-            "network_type": "fixed"
-          }
-        },
-        "irancell": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Irancell",
-            "network_type": "mobile"
-          }
-        },
-        "mci": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "MCI",
-            "network_type": "mobile"
-          }
-        },
-        "rightel": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Rightel",
-            "network_type": "mobile"
-          }
-        }
-      },
-      "clients": {
-        "hiddify": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "hiddify"
-          }
-        },
-        "mihomo": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "mihomo"
-          }
-        },
-        "nekobox": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "singbox"
-          }
-        },
-        "singbox": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "singbox"
-          }
-        },
-        "v2rayng": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "xray"
-          }
-        }
-      }
-    }
-  },
-  {
-    "safe_id": "node_92c87d1cffa6",
-    "protocol": "vmess",
-    "status": "live",
-    "selected": false,
-    "country_code": "CA",
-    "country_name": "Canada",
-    "resolved_ip": "104.21.7.133",
-    "preflight_resolved_ip": "104.21.7.133",
-    "tcp_latency_ms": 14.3,
-    "proxy_latency_ms": 217.0,
-    "success_ratio": 0.667,
-    "runtime_core": "xray",
-    "verification": {
-      "transport": "tcp",
-      "resolved_ips": [
-        "104.21.7.133"
-      ],
-      "ipv4_preflight": true,
-      "ipv6_preflight": false,
-      "mode": "native",
-      "runtime_core": "xray",
-      "attempted_cores": [
-        "singbox",
-        "xray"
-      ],
-      "success_count": 4,
-      "latency_p95_ms": 311.7,
-      "jitter_ms": 47.3
+      "latency_p95_ms": 444.3,
+      "jitter_ms": 343.1
     },
     "score": 62,
     "source": "epodonios-all",
     "asn": 13335,
     "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-    "prefix": "104.21.0.0/20",
-    "reputation_hits": [],
-    "dns_status": "ip_literal",
-    "tls_status": "ok",
-    "content_integrity_status": "warning",
-    "security_status": "block",
-    "security_risk_score": 100,
-    "security_reasons": [
-      "cloudflare_network_forbidden"
-    ],
-    "security_checks_complete": true,
-    "asn_diversity_excluded": false,
-    "singbox_compatible": null,
-    "xray_compatible": null,
-    "hiddify_compatible": null,
-    "mihomo_compatible": null,
-    "universal_compatible": false,
-    "compatibility_score": 0,
-    "network_profile": {},
-    "scores": {
-      "schema_version": 1,
-      "global": {
-        "score": 62,
-        "confidence": 78
-      },
-      "connectivity": {
-        "score": 67,
-        "confidence": 100,
-        "evidence_count": 4,
-        "status": "live",
-        "details": {
-          "success_ratio": 0.667
-        }
-      },
-      "latency": {
-        "score": 98,
-        "confidence": 100,
-        "evidence_count": 1,
-        "details": {
-          "latency_ms": 217.0,
-          "p95_ms": 311.7,
-          "jitter_ms": 47.3
-        }
-      },
-      "reliability": {
-        "score": 50,
-        "confidence": 10,
-        "evidence_count": 1,
-        "status": "warming_up",
-        "details": {
-          "rolling_success_rate": 1.0
-        }
-      },
-      "freshness": {
-        "score": 100,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "fresh",
-        "fresh": true,
-        "details": {
-          "age_minutes": 1
-        }
-      },
-      "security": {
-        "score": 0,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "block",
-        "details": {
-          "risk_score": 100,
-          "checks_complete": true
-        }
-      },
-      "operators": {
-        "fixed": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Fixed ISP Probe",
-            "network_type": "fixed"
-          }
-        },
-        "irancell": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Irancell",
-            "network_type": "mobile"
-          }
-        },
-        "mci": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "MCI",
-            "network_type": "mobile"
-          }
-        },
-        "rightel": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Rightel",
-            "network_type": "mobile"
-          }
-        }
-      },
-      "clients": {
-        "hiddify": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "hiddify"
-          }
-        },
-        "mihomo": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "mihomo"
-          }
-        },
-        "nekobox": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "singbox"
-          }
-        },
-        "singbox": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "singbox"
-          }
-        },
-        "v2rayng": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "xray"
-          }
-        }
-      }
-    }
-  },
-  {
-    "safe_id": "node_3063230193be",
-    "protocol": "vmess",
-    "status": "live",
-    "selected": false,
-    "country_code": "CA",
-    "country_name": "Canada",
-    "resolved_ip": "172.67.187.145",
-    "preflight_resolved_ip": "172.67.187.145",
-    "tcp_latency_ms": 10.3,
-    "proxy_latency_ms": 218.7,
-    "success_ratio": 0.667,
-    "runtime_core": "xray",
-    "verification": {
-      "transport": "tcp",
-      "resolved_ips": [
-        "172.67.187.145"
-      ],
-      "ipv4_preflight": true,
-      "ipv6_preflight": false,
-      "mode": "native",
-      "runtime_core": "xray",
-      "attempted_cores": [
-        "singbox",
-        "xray"
-      ],
-      "success_count": 4,
-      "latency_p95_ms": 299.4,
-      "jitter_ms": 39.2
-    },
-    "score": 62,
-    "source": "epodonios-all",
-    "asn": 13335,
-    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-    "prefix": "172.67.176.0/20",
-    "reputation_hits": [],
-    "dns_status": "ip_literal",
-    "tls_status": "ok",
-    "content_integrity_status": "warning",
-    "security_status": "block",
-    "security_risk_score": 100,
-    "security_reasons": [
-      "cloudflare_network_forbidden"
-    ],
-    "security_checks_complete": true,
-    "asn_diversity_excluded": false,
-    "singbox_compatible": null,
-    "xray_compatible": null,
-    "hiddify_compatible": null,
-    "mihomo_compatible": null,
-    "universal_compatible": false,
-    "compatibility_score": 0,
-    "network_profile": {},
-    "scores": {
-      "schema_version": 1,
-      "global": {
-        "score": 62,
-        "confidence": 78
-      },
-      "connectivity": {
-        "score": 67,
-        "confidence": 100,
-        "evidence_count": 4,
-        "status": "live",
-        "details": {
-          "success_ratio": 0.667
-        }
-      },
-      "latency": {
-        "score": 98,
-        "confidence": 100,
-        "evidence_count": 1,
-        "details": {
-          "latency_ms": 218.7,
-          "p95_ms": 299.4,
-          "jitter_ms": 39.2
-        }
-      },
-      "reliability": {
-        "score": 50,
-        "confidence": 10,
-        "evidence_count": 1,
-        "status": "warming_up",
-        "details": {
-          "rolling_success_rate": 1.0
-        }
-      },
-      "freshness": {
-        "score": 100,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "fresh",
-        "fresh": true,
-        "details": {
-          "age_minutes": 1
-        }
-      },
-      "security": {
-        "score": 0,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "block",
-        "details": {
-          "risk_score": 100,
-          "checks_complete": true
-        }
-      },
-      "operators": {
-        "fixed": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Fixed ISP Probe",
-            "network_type": "fixed"
-          }
-        },
-        "irancell": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Irancell",
-            "network_type": "mobile"
-          }
-        },
-        "mci": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "MCI",
-            "network_type": "mobile"
-          }
-        },
-        "rightel": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Rightel",
-            "network_type": "mobile"
-          }
-        }
-      },
-      "clients": {
-        "hiddify": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "hiddify"
-          }
-        },
-        "mihomo": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "mihomo"
-          }
-        },
-        "nekobox": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "singbox"
-          }
-        },
-        "singbox": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "singbox"
-          }
-        },
-        "v2rayng": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "fresh": true,
-          "details": {
-            "core": "xray"
-          }
-        }
-      }
-    }
-  },
-  {
-    "safe_id": "node_0b2c68440b45",
-    "protocol": "vmess",
-    "status": "live",
-    "selected": false,
-    "country_code": "CA",
-    "country_name": "Canada",
-    "resolved_ip": "104.17.136.198",
-    "preflight_resolved_ip": "104.17.136.198",
-    "tcp_latency_ms": 13.4,
-    "proxy_latency_ms": 223.1,
-    "success_ratio": 0.667,
-    "runtime_core": "xray",
-    "verification": {
-      "transport": "tcp",
-      "resolved_ips": [
-        "104.17.136.198"
-      ],
-      "ipv4_preflight": true,
-      "ipv6_preflight": false,
-      "mode": "native",
-      "runtime_core": "xray",
-      "attempted_cores": [
-        "singbox",
-        "xray"
-      ],
-      "success_count": 4,
-      "latency_p95_ms": 252.9,
-      "jitter_ms": 21.3
-    },
-    "score": 62,
-    "source": "aliilapro",
-    "asn": 13335,
-    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-    "prefix": "104.17.128.0/20",
+    "prefix": "172.67.144.0/20",
     "reputation_hits": [],
     "dns_status": "ip_literal",
     "tls_status": "ok",
@@ -1521,9 +1568,9 @@
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 223.1,
-          "p95_ms": 252.9,
-          "jitter_ms": 21.3
+          "latency_ms": 245.3,
+          "p95_ms": 444.3,
+          "jitter_ms": 343.1
         }
       },
       "reliability": {
@@ -1652,22 +1699,22 @@
     }
   },
   {
-    "safe_id": "node_2a08e0c0b9aa",
-    "protocol": "vless",
+    "safe_id": "node_e2f2d0b3c0bd",
+    "protocol": "ss",
     "status": "live",
-    "selected": false,
-    "country_code": "CA",
-    "country_name": "Canada",
-    "resolved_ip": "104.18.43.174",
-    "preflight_resolved_ip": "104.18.43.174",
-    "tcp_latency_ms": 11.3,
-    "proxy_latency_ms": 269.3,
+    "selected": true,
+    "country_code": "IE",
+    "country_name": "Ireland",
+    "resolved_ip": "4.210.68.244",
+    "preflight_resolved_ip": "4.210.68.244",
+    "tcp_latency_ms": 76.5,
+    "proxy_latency_ms": 252.2,
     "success_ratio": 0.667,
     "runtime_core": "singbox",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "104.18.43.174"
+        "4.210.68.244"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -1677,14 +1724,245 @@
         "singbox"
       ],
       "success_count": 4,
-      "latency_p95_ms": 529.6,
-      "jitter_ms": 284.9
+      "latency_p95_ms": 307.2,
+      "jitter_ms": 29.0
+    },
+    "score": 74,
+    "source": "epodonios-all",
+    "asn": 8075,
+    "as_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+    "prefix": "4.208.0.0/12",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "pass",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "pass",
+    "mihomo_compatible": "pass",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": true,
+    "compatibility_score": 93,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 443,
+      "port_443": true,
+      "tls": false,
+      "reality": false,
+      "websocket": false,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "singbox": 233.2621119999203,
+      "xray": 241.8813050001063,
+      "hiddify": 236.51253499997438,
+      "mihomo": 221.79768799992416
+    },
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 74,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 96,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 252.2,
+          "p95_ms": 307.2,
+          "jitter_ms": 29.0
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "hiddify",
+            "core_success_rate": 1.0,
+            "latency_ms": 236.5
+          }
+        },
+        "mihomo": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "mihomo",
+            "core_success_rate": 1.0,
+            "latency_ms": 221.8
+          }
+        },
+        "nekobox": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 233.3
+          }
+        },
+        "singbox": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 233.3
+          }
+        },
+        "v2rayng": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 241.9
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_4fa137acaf12",
+    "protocol": "vless",
+    "status": "live",
+    "selected": false,
+    "country_code": "CA",
+    "country_name": "Canada",
+    "resolved_ip": "172.67.155.65",
+    "preflight_resolved_ip": "172.67.155.65",
+    "tcp_latency_ms": 2.1,
+    "proxy_latency_ms": 259.2,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "172.67.155.65"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 429.8,
+      "jitter_ms": 294.6
     },
     "score": 62,
     "source": "epodonios-all",
     "asn": 13335,
     "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-    "prefix": "104.18.43.0/24",
+    "prefix": "172.67.144.0/20",
     "reputation_hits": [],
     "dns_status": "ip_literal",
     "tls_status": "ok",
@@ -1723,9 +2001,9 @@
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 269.3,
-          "p95_ms": 529.6,
-          "jitter_ms": 284.9
+          "latency_ms": 259.2,
+          "p95_ms": 429.8,
+          "jitter_ms": 294.6
         }
       },
       "reliability": {
@@ -1854,25 +2132,1502 @@
     }
   },
   {
-    "safe_id": "node_029ac88e166a",
-    "protocol": "vmess",
+    "safe_id": "node_48249e394088",
+    "protocol": "vless",
     "status": "live",
     "selected": false,
     "country_code": "CA",
     "country_name": "Canada",
+    "resolved_ip": "188.114.97.6",
+    "preflight_resolved_ip": "188.114.97.6",
+    "tcp_latency_ms": 1.9,
+    "proxy_latency_ms": 264.6,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "188.114.97.6"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 468.5,
+      "jitter_ms": 336.6
+    },
+    "score": 62,
+    "source": "epodonios-all",
+    "asn": 13335,
+    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+    "prefix": "188.114.97.0/24",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "block",
+    "security_risk_score": 100,
+    "security_reasons": [
+      "cloudflare_network_forbidden"
+    ],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": null,
+    "xray_compatible": null,
+    "hiddify_compatible": null,
+    "mihomo_compatible": null,
+    "universal_compatible": false,
+    "compatibility_score": 0,
+    "network_profile": {},
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 62,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 96,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 264.6,
+          "p95_ms": 468.5,
+          "jitter_ms": 336.6
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 0,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "block",
+        "details": {
+          "risk_score": 100,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "xray"
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_48015baa7081",
+    "protocol": "vless",
+    "status": "live",
+    "selected": false,
+    "country_code": "CA",
+    "country_name": "Canada",
+    "resolved_ip": "104.21.91.244",
+    "preflight_resolved_ip": "104.21.91.244",
+    "tcp_latency_ms": 8.5,
+    "proxy_latency_ms": 270.5,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "104.21.91.244"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 420.3,
+      "jitter_ms": 314.2
+    },
+    "score": 62,
+    "source": "epodonios-all",
+    "asn": 13335,
+    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+    "prefix": "104.21.80.0/20",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "block",
+    "security_risk_score": 100,
+    "security_reasons": [
+      "cloudflare_network_forbidden"
+    ],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": null,
+    "xray_compatible": null,
+    "hiddify_compatible": null,
+    "mihomo_compatible": null,
+    "universal_compatible": false,
+    "compatibility_score": 0,
+    "network_profile": {},
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 62,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 96,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 270.5,
+          "p95_ms": 420.3,
+          "jitter_ms": 314.2
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 0,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "block",
+        "details": {
+          "risk_score": 100,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "xray"
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_48e23746f4ff",
+    "protocol": "vless",
+    "status": "live",
+    "selected": false,
+    "country_code": "CA",
+    "country_name": "Canada",
+    "resolved_ip": "188.114.97.6",
+    "preflight_resolved_ip": "188.114.97.6",
+    "tcp_latency_ms": 7.4,
+    "proxy_latency_ms": 272.7,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "188.114.97.6"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 456.1,
+      "jitter_ms": 345.2
+    },
+    "score": 62,
+    "source": "epodonios-all",
+    "asn": 13335,
+    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+    "prefix": "188.114.97.0/24",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "block",
+    "security_risk_score": 100,
+    "security_reasons": [
+      "cloudflare_network_forbidden"
+    ],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": null,
+    "xray_compatible": null,
+    "hiddify_compatible": null,
+    "mihomo_compatible": null,
+    "universal_compatible": false,
+    "compatibility_score": 0,
+    "network_profile": {},
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 62,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 96,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 272.7,
+          "p95_ms": 456.1,
+          "jitter_ms": 345.2
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 0,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "block",
+        "details": {
+          "risk_score": 100,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "xray"
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_ec90909daa31",
+    "protocol": "vless",
+    "status": "live",
+    "selected": false,
+    "country_code": "CA",
+    "country_name": "Canada",
+    "resolved_ip": "172.67.155.65",
+    "preflight_resolved_ip": "172.67.155.65",
+    "tcp_latency_ms": 2.2,
+    "proxy_latency_ms": 294.0,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "172.67.155.65"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 407.6,
+      "jitter_ms": 251.5
+    },
+    "score": 62,
+    "source": "epodonios-all",
+    "asn": 13335,
+    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+    "prefix": "172.67.144.0/20",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "block",
+    "security_risk_score": 100,
+    "security_reasons": [
+      "cloudflare_network_forbidden"
+    ],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": null,
+    "xray_compatible": null,
+    "hiddify_compatible": null,
+    "mihomo_compatible": null,
+    "universal_compatible": false,
+    "compatibility_score": 0,
+    "network_profile": {},
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 62,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 95,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 294.0,
+          "p95_ms": 407.6,
+          "jitter_ms": 251.5
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 0,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "block",
+        "details": {
+          "risk_score": 100,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "xray"
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_39f86877a43a",
+    "protocol": "vless",
+    "status": "live",
+    "selected": true,
+    "country_code": "DE",
+    "country_name": "Germany",
+    "resolved_ip": "92.119.166.36",
+    "preflight_resolved_ip": "92.119.166.36",
+    "tcp_latency_ms": 94.0,
+    "proxy_latency_ms": 299.7,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "92.119.166.36"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 312.0,
+      "jitter_ms": 4.5
+    },
+    "score": 74,
+    "source": "epodonios-all",
+    "asn": 213535,
+    "as_name": "YOTTASRC - YottaSrc, SA",
+    "prefix": "92.119.166.0/24",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "pass",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "pass",
+    "mihomo_compatible": "pass",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": true,
+    "compatibility_score": 89,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 1080,
+      "port_443": false,
+      "tls": false,
+      "reality": false,
+      "websocket": false,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "singbox": 297.5653759999659,
+      "xray": 299.79931200000465,
+      "hiddify": 293.9646590000393,
+      "mihomo": 308.1089879999581
+    },
+    "parser_feature_unsupported": [
+      "refused:headerType:none"
+    ],
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 74,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 95,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 299.7,
+          "p95_ms": 312.0,
+          "jitter_ms": 4.5
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "hiddify",
+            "core_success_rate": 1.0,
+            "latency_ms": 294.0
+          }
+        },
+        "mihomo": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "mihomo",
+            "core_success_rate": 1.0,
+            "latency_ms": 308.1
+          }
+        },
+        "nekobox": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 297.6
+          }
+        },
+        "singbox": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 297.6
+          }
+        },
+        "v2rayng": {
+          "score": 99,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 299.8
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_9be13459436b",
+    "protocol": "vmess",
+    "status": "live",
+    "selected": true,
+    "country_code": "US",
+    "country_name": "United States",
     "resolved_ip": null,
-    "preflight_resolved_ip": "172.67.187.145",
-    "tcp_latency_ms": 10.8,
-    "proxy_latency_ms": 552.9,
+    "preflight_resolved_ip": "47.88.79.34",
+    "tcp_latency_ms": 65.5,
+    "proxy_latency_ms": 391.2,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "47.88.79.34"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 506.1,
+      "jitter_ms": 86.6
+    },
+    "score": 73,
+    "source": "epodonios-all",
+    "asn": 45102,
+    "as_name": "ALIBABA-CN-NET - Alibaba (US) Technology Co., Ltd., CN",
+    "prefix": "47.88.64.0/18",
+    "reputation_hits": [],
+    "dns_status": "ok",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "pass",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "pass",
+    "mihomo_compatible": "pass",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": true,
+    "compatibility_score": 81,
+    "network_profile": {
+      "ipv4": false,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 443,
+      "port_443": true,
+      "tls": true,
+      "reality": false,
+      "websocket": true,
+      "grpc": false,
+      "direct_ip": false,
+      "hostname": true,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "singbox": 990.8674499999961,
+      "xray": 543.0373940000663,
+      "hiddify": 1672.6898379999966,
+      "mihomo": 530.0764079997862
+    },
+    "parser_feature_unsupported": [
+      "vmess_json:skip-cert-verify"
+    ],
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 73,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 92,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 391.2,
+          "p95_ms": 506.1,
+          "jitter_ms": 86.6
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 89,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "hiddify",
+            "core_success_rate": 1.0,
+            "latency_ms": 1672.7
+          }
+        },
+        "mihomo": {
+          "score": 97,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "mihomo",
+            "core_success_rate": 1.0,
+            "latency_ms": 530.1
+          }
+        },
+        "nekobox": {
+          "score": 94,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 990.9
+          }
+        },
+        "singbox": {
+          "score": 94,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 990.9
+          }
+        },
+        "v2rayng": {
+          "score": 97,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 543.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_809222dff00e",
+    "protocol": "vless",
+    "status": "live",
+    "selected": false,
+    "country_code": "HR",
+    "country_name": "Croatia",
+    "resolved_ip": "2.56.175.179",
+    "preflight_resolved_ip": "2.56.175.179",
+    "tcp_latency_ms": 110.1,
+    "proxy_latency_ms": 401.7,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "2.56.175.179"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 1103.2,
+      "jitter_ms": 245.6
+    },
+    "score": 61,
+    "source": "epodonios-all",
+    "asn": 203273,
+    "as_name": "NetCraftersOU - NetCrafters OU, EE",
+    "prefix": "2.56.175.0/24",
+    "reputation_hits": [
+      "spamhaus_asndrop"
+    ],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "block",
+    "security_risk_score": 100,
+    "security_reasons": [
+      "spamhaus_asndrop_hit"
+    ],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": null,
+    "xray_compatible": null,
+    "hiddify_compatible": null,
+    "mihomo_compatible": null,
+    "universal_compatible": false,
+    "compatibility_score": 0,
+    "network_profile": {},
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 61,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 91,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 401.7,
+          "p95_ms": 1103.2,
+          "jitter_ms": 245.6
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 0,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "block",
+        "details": {
+          "risk_score": 100,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "xray"
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_075516271d69",
+    "protocol": "vless",
+    "status": "live",
+    "selected": true,
+    "country_code": "GB",
+    "country_name": "United Kingdom",
+    "resolved_ip": "205.237.110.254",
+    "preflight_resolved_ip": "205.237.110.254",
+    "tcp_latency_ms": 101.9,
+    "proxy_latency_ms": 442.6,
     "success_ratio": 0.667,
     "runtime_core": "xray",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "104.21.7.133",
-        "172.67.187.145",
-        "2606:4700:3031::ac43:bb91",
-        "2606:4700:3031::6815:785"
+        "205.237.110.254"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -1883,16 +3638,474 @@
         "xray"
       ],
       "success_count": 4,
-      "latency_p95_ms": 608.0,
-      "jitter_ms": 278.4
+      "latency_p95_ms": 442.6,
+      "jitter_ms": 9.5
+    },
+    "score": 73,
+    "source": "epodonios-all",
+    "asn": 25198,
+    "as_name": "ZetServers - INTERKVM HOST SRL, RO",
+    "prefix": "205.237.110.0/24",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "fail",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "fail",
+    "mihomo_compatible": "fail",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": false,
+    "compatibility_score": 65,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 443,
+      "port_443": true,
+      "tls": true,
+      "reality": true,
+      "websocket": false,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "xray": 430.19568699992305
+    },
+    "compat_failure_categories": {
+      "singbox": "proxy_handshake_failed",
+      "hiddify": "proxy_handshake_failed",
+      "mihomo": "TLS_failure"
+    },
+    "parser_feature_unsupported": [
+      "refused:headerType:none"
+    ],
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 73,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 90,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 442.6,
+          "p95_ms": 442.6,
+          "jitter_ms": 9.5
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": 98,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 430.2
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_f4f920dcad11",
+    "protocol": "vless",
+    "status": "live",
+    "selected": true,
+    "country_code": "HU",
+    "country_name": "Hungary",
+    "resolved_ip": "85.155.242.38",
+    "preflight_resolved_ip": "85.155.242.38",
+    "tcp_latency_ms": 104.5,
+    "proxy_latency_ms": 475.7,
+    "success_ratio": 0.667,
+    "runtime_core": "xray",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "85.155.242.38"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "xray",
+      "attempted_cores": [
+        "singbox",
+        "xray"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 523.9,
+      "jitter_ms": 80.5
+    },
+    "score": 72,
+    "source": "epodonios-all",
+    "asn": 62214,
+    "as_name": "RACKFOREST-AS - Rackforest Zrt., HU",
+    "prefix": "85.155.240.0/21",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "fail",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "fail",
+    "mihomo_compatible": "fail",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": false,
+    "compatibility_score": 65,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 443,
+      "port_443": true,
+      "tls": true,
+      "reality": true,
+      "websocket": false,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "xray": 543.4791830000449
+    },
+    "compat_failure_categories": {
+      "singbox": "core_startup_failed",
+      "hiddify": "core_startup_failed",
+      "mihomo": "TLS_failure"
+    },
+    "parser_feature_unsupported": [
+      "refused:headerType:none"
+    ],
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 72,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 89,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 475.7,
+          "p95_ms": 523.9,
+          "jitter_ms": 80.5
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": 0,
+          "confidence": 100,
+          "evidence_count": 1,
+          "status": "fail",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": 97,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 543.5
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_3e03a6057e51",
+    "protocol": "trojan",
+    "status": "live",
+    "selected": false,
+    "country_code": "CA",
+    "country_name": "Canada",
+    "resolved_ip": "188.114.97.6",
+    "preflight_resolved_ip": "188.114.97.6",
+    "tcp_latency_ms": 7.1,
+    "proxy_latency_ms": 496.2,
+    "success_ratio": 0.667,
+    "runtime_core": "xray",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "188.114.97.6"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "xray",
+      "attempted_cores": [
+        "singbox",
+        "xray"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 706.4,
+      "jitter_ms": 154.3
     },
     "score": 60,
-    "source": "epodonios-all",
+    "source": "aliilapro",
     "asn": 13335,
     "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
-    "prefix": "104.21.0.0/20",
+    "prefix": "188.114.97.0/24",
     "reputation_hits": [],
-    "dns_status": "ok",
+    "dns_status": "ip_literal",
     "tls_status": "ok",
     "content_integrity_status": "warning",
     "security_status": "block",
@@ -1925,13 +4138,13 @@
         }
       },
       "latency": {
-        "score": 86,
+        "score": 88,
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 552.9,
-          "p95_ms": 608.0,
-          "jitter_ms": 278.4
+          "latency_ms": 496.2,
+          "p95_ms": 706.4,
+          "jitter_ms": 154.3
         }
       },
       "reliability": {
@@ -2060,22 +4273,22 @@
     }
   },
   {
-    "safe_id": "node_a3c05a2b3775",
-    "protocol": "vless",
+    "safe_id": "node_fb055c691fae",
+    "protocol": "vmess",
     "status": "live",
-    "selected": false,
-    "country_code": "DE",
-    "country_name": "Germany",
-    "resolved_ip": "64.188.66.181",
-    "preflight_resolved_ip": "64.188.66.181",
-    "tcp_latency_ms": 126.6,
-    "proxy_latency_ms": 553.1,
+    "selected": true,
+    "country_code": "SG",
+    "country_name": "Singapore",
+    "resolved_ip": "149.88.23.207",
+    "preflight_resolved_ip": "149.88.23.207",
+    "tcp_latency_ms": 219.9,
+    "proxy_latency_ms": 675.7,
     "success_ratio": 0.667,
     "runtime_core": "singbox",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "64.188.66.181"
+        "149.88.23.207"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -2085,38 +4298,55 @@
         "singbox"
       ],
       "success_count": 4,
-      "latency_p95_ms": 625.9,
-      "jitter_ms": 38.1
+      "latency_p95_ms": 684.9,
+      "jitter_ms": 17.7
     },
-    "score": 60,
-    "source": "pawdroid",
-    "asn": 215439,
-    "as_name": "PLAY2GO-NET - PLAY2GO INTERNATIONAL LIMITED, GB",
-    "prefix": "64.188.64.0/22",
-    "reputation_hits": [
-      "spamhaus_asndrop"
-    ],
+    "score": 71,
+    "source": "aliilapro",
+    "asn": 212238,
+    "as_name": "CDNEXT - Datacamp Limited, GB",
+    "prefix": "149.88.23.0/24",
+    "reputation_hits": [],
     "dns_status": "ip_literal",
     "tls_status": "ok",
     "content_integrity_status": "warning",
-    "security_status": "block",
-    "security_risk_score": 100,
-    "security_reasons": [
-      "spamhaus_asndrop_hit"
-    ],
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
     "security_checks_complete": true,
     "asn_diversity_excluded": false,
-    "singbox_compatible": null,
-    "xray_compatible": null,
-    "hiddify_compatible": null,
-    "mihomo_compatible": null,
-    "universal_compatible": false,
-    "compatibility_score": 0,
-    "network_profile": {},
+    "singbox_compatible": "pass",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "pass",
+    "mihomo_compatible": "pass",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": true,
+    "compatibility_score": 90,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 18000,
+      "port_443": false,
+      "tls": false,
+      "reality": false,
+      "websocket": false,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "singbox": 674.2165139999088,
+      "xray": 671.7909740000323,
+      "hiddify": 668.6148519997914,
+      "mihomo": 673.0517850000979
+    },
     "scores": {
       "schema_version": 1,
       "global": {
-        "score": 60,
+        "score": 71,
         "confidence": 78
       },
       "connectivity": {
@@ -2129,13 +4359,13 @@
         }
       },
       "latency": {
-        "score": 86,
+        "score": 82,
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 553.1,
-          "p95_ms": 625.9,
-          "jitter_ms": 38.1
+          "latency_ms": 675.7,
+          "p95_ms": 684.9,
+          "jitter_ms": 17.7
         }
       },
       "reliability": {
@@ -2158,12 +4388,12 @@
         }
       },
       "security": {
-        "score": 0,
+        "score": 80,
         "confidence": 100,
         "evidence_count": 1,
-        "status": "block",
+        "status": "allow_with_warnings",
         "details": {
-          "risk_score": 100,
+          "risk_score": 20,
           "checks_complete": true
         }
       },
@@ -2211,75 +4441,85 @@
       },
       "clients": {
         "hiddify": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "hiddify"
+            "core": "hiddify",
+            "core_success_rate": 1.0,
+            "latency_ms": 668.6
           }
         },
         "mihomo": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "mihomo"
+            "core": "mihomo",
+            "core_success_rate": 1.0,
+            "latency_ms": 673.1
           }
         },
         "nekobox": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "singbox"
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 674.2
           }
         },
         "singbox": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "singbox"
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 674.2
           }
         },
         "v2rayng": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "xray"
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 671.8
           }
         }
       }
     }
   },
   {
-    "safe_id": "node_939afff57c4d",
-    "protocol": "trojan",
+    "safe_id": "node_c3cb9d564410",
+    "protocol": "vmess",
     "status": "live",
     "selected": true,
-    "country_code": "PL",
-    "country_name": "Poland",
-    "resolved_ip": null,
-    "preflight_resolved_ip": "31.133.0.186",
-    "tcp_latency_ms": 138.8,
-    "proxy_latency_ms": 592.8,
+    "country_code": "SG",
+    "country_name": "Singapore",
+    "resolved_ip": "149.88.23.207",
+    "preflight_resolved_ip": "149.88.23.207",
+    "tcp_latency_ms": 218.7,
+    "proxy_latency_ms": 677.9,
     "success_ratio": 0.667,
     "runtime_core": "singbox",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "31.133.0.186"
+        "149.88.23.207"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -2289,14 +4529,245 @@
         "singbox"
       ],
       "success_count": 4,
-      "latency_p95_ms": 651.6,
-      "jitter_ms": 38.4
+      "latency_p95_ms": 692.1,
+      "jitter_ms": 21.9
+    },
+    "score": 71,
+    "source": "aliilapro",
+    "asn": 212238,
+    "as_name": "CDNEXT - Datacamp Limited, GB",
+    "prefix": "149.88.23.0/24",
+    "reputation_hits": [],
+    "dns_status": "ip_literal",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "allow_with_warnings",
+    "security_risk_score": 20,
+    "security_reasons": [],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": "pass",
+    "xray_compatible": "pass",
+    "hiddify_compatible": "pass",
+    "mihomo_compatible": "pass",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
+    "universal_compatible": true,
+    "compatibility_score": 90,
+    "network_profile": {
+      "ipv4": true,
+      "ipv6": false,
+      "tcp": true,
+      "udp": false,
+      "port": 18000,
+      "port_443": false,
+      "tls": false,
+      "reality": false,
+      "websocket": false,
+      "grpc": false,
+      "direct_ip": true,
+      "hostname": false,
+      "udp_dependency": false
+    },
+    "compat_latency_ms": {
+      "singbox": 670.4683809998642,
+      "xray": 669.1523599999982,
+      "hiddify": 675.8555459998661,
+      "mihomo": 666.7282999999316
+    },
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 71,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 81,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 677.9,
+          "p95_ms": 692.1,
+          "jitter_ms": 21.9
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 80,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "allow_with_warnings",
+        "details": {
+          "risk_score": 20,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "hiddify",
+            "core_success_rate": 1.0,
+            "latency_ms": 675.9
+          }
+        },
+        "mihomo": {
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "mihomo",
+            "core_success_rate": 1.0,
+            "latency_ms": 666.7
+          }
+        },
+        "nekobox": {
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 670.5
+          }
+        },
+        "singbox": {
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 670.5
+          }
+        },
+        "v2rayng": {
+          "score": 96,
+          "confidence": 76,
+          "evidence_count": 1,
+          "status": "pass",
+          "fresh": true,
+          "details": {
+            "core": "xray",
+            "core_success_rate": 1.0,
+            "latency_ms": 669.2
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_27b1b4430659",
+    "protocol": "vmess",
+    "status": "live",
+    "selected": true,
+    "country_code": "SG",
+    "country_name": "Singapore",
+    "resolved_ip": null,
+    "preflight_resolved_ip": "149.88.23.207",
+    "tcp_latency_ms": 218.7,
+    "proxy_latency_ms": 682.9,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "149.88.23.207"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 837.5,
+      "jitter_ms": 54.2
     },
     "score": 71,
     "source": "epodonios-all",
-    "asn": 51290,
-    "as_name": "HOSTEAM-AS - BARTOSZ WASZAK trading as HOSTEAM S.C. TOMASZ GROSZEWSKI BARTOSZ WASZAK LUKASZ GROSZEWSKI, PL",
-    "prefix": "31.133.0.0/21",
+    "asn": 212238,
+    "as_name": "CDNEXT - Datacamp Limited, GB",
+    "prefix": "149.88.23.0/24",
     "reputation_hits": [],
     "dns_status": "ok",
     "tls_status": "ok",
@@ -2310,17 +4781,17 @@
     "xray_compatible": "pass",
     "hiddify_compatible": "pass",
     "mihomo_compatible": "pass",
-    "compat_verified_at": "2026-10-19T20:11:38+00:00",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
     "universal_compatible": true,
-    "compatibility_score": 93,
+    "compatibility_score": 81,
     "network_profile": {
       "ipv4": false,
       "ipv6": false,
       "tcp": true,
       "udp": false,
-      "port": 443,
-      "port_443": true,
-      "tls": true,
+      "port": 18000,
+      "port_443": false,
+      "tls": false,
       "reality": false,
       "websocket": false,
       "grpc": false,
@@ -2329,14 +4800,14 @@
       "udp_dependency": false
     },
     "compat_latency_ms": {
-      "singbox": 663.6762680000174,
-      "xray": 626.3534730001084,
-      "hiddify": 610.3779770000983,
-      "mihomo": 607.1828730000561
+      "singbox": 685.5293080000138,
+      "xray": 769.7807850001936,
+      "hiddify": 870.1161260000845,
+      "mihomo": 778.4893999998985
     },
     "parser_feature_unsupported": [
-      "param:headerType",
-      "refused:headerType:none"
+      "param:encryption",
+      "param:security"
     ],
     "scores": {
       "schema_version": 1,
@@ -2354,13 +4825,13 @@
         }
       },
       "latency": {
-        "score": 84,
+        "score": 81,
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 592.8,
-          "p95_ms": 651.6,
-          "jitter_ms": 38.4
+          "latency_ms": 682.9,
+          "p95_ms": 837.5,
+          "jitter_ms": 54.2
         }
       },
       "reliability": {
@@ -2436,7 +4907,7 @@
       },
       "clients": {
         "hiddify": {
-          "score": 97,
+          "score": 95,
           "confidence": 76,
           "evidence_count": 1,
           "status": "pass",
@@ -2444,11 +4915,11 @@
           "details": {
             "core": "hiddify",
             "core_success_rate": 1.0,
-            "latency_ms": 610.4
+            "latency_ms": 870.1
           }
         },
         "mihomo": {
-          "score": 97,
+          "score": 96,
           "confidence": 76,
           "evidence_count": 1,
           "status": "pass",
@@ -2456,7 +4927,7 @@
           "details": {
             "core": "mihomo",
             "core_success_rate": 1.0,
-            "latency_ms": 607.2
+            "latency_ms": 778.5
           }
         },
         "nekobox": {
@@ -2468,7 +4939,7 @@
           "details": {
             "core": "singbox",
             "core_success_rate": 1.0,
-            "latency_ms": 663.7
+            "latency_ms": 685.5
           }
         },
         "singbox": {
@@ -2480,11 +4951,11 @@
           "details": {
             "core": "singbox",
             "core_success_rate": 1.0,
-            "latency_ms": 663.7
+            "latency_ms": 685.5
           }
         },
         "v2rayng": {
-          "score": 97,
+          "score": 96,
           "confidence": 76,
           "evidence_count": 1,
           "status": "pass",
@@ -2492,29 +4963,29 @@
           "details": {
             "core": "xray",
             "core_success_rate": 1.0,
-            "latency_ms": 626.4
+            "latency_ms": 769.8
           }
         }
       }
     }
   },
   {
-    "safe_id": "node_d0f110a995db",
-    "protocol": "trojan",
+    "safe_id": "node_2ce5260ba840",
+    "protocol": "ss",
     "status": "live",
     "selected": true,
-    "country_code": "PL",
-    "country_name": "Poland",
-    "resolved_ip": "31.133.0.186",
-    "preflight_resolved_ip": "31.133.0.186",
-    "tcp_latency_ms": 139.1,
-    "proxy_latency_ms": 629.0,
+    "country_code": "ZA",
+    "country_name": "South Africa",
+    "resolved_ip": "102.133.227.3",
+    "preflight_resolved_ip": "102.133.227.3",
+    "tcp_latency_ms": 221.8,
+    "proxy_latency_ms": 751.6,
     "success_ratio": 0.667,
     "runtime_core": "singbox",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "31.133.0.186"
+        "102.133.227.3"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -2524,14 +4995,14 @@
         "singbox"
       ],
       "success_count": 4,
-      "latency_p95_ms": 1074.9,
-      "jitter_ms": 302.4
+      "latency_p95_ms": 839.8,
+      "jitter_ms": 151.8
     },
-    "score": 71,
+    "score": 70,
     "source": "epodonios-all",
-    "asn": 51290,
-    "as_name": "HOSTEAM-AS - BARTOSZ WASZAK trading as HOSTEAM S.C. TOMASZ GROSZEWSKI BARTOSZ WASZAK LUKASZ GROSZEWSKI, PL",
-    "prefix": "31.133.0.0/21",
+    "asn": 8075,
+    "as_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US",
+    "prefix": "102.133.128.0/17",
     "reputation_hits": [],
     "dns_status": "ip_literal",
     "tls_status": "ok",
@@ -2545,9 +5016,9 @@
     "xray_compatible": "pass",
     "hiddify_compatible": "pass",
     "mihomo_compatible": "pass",
-    "compat_verified_at": "2026-10-19T20:11:38+00:00",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
     "universal_compatible": true,
-    "compatibility_score": 99,
+    "compatibility_score": 95,
     "network_profile": {
       "ipv4": true,
       "ipv6": false,
@@ -2555,7 +5026,7 @@
       "udp": false,
       "port": 443,
       "port_443": true,
-      "tls": true,
+      "tls": false,
       "reality": false,
       "websocket": false,
       "grpc": false,
@@ -2564,248 +5035,10 @@
       "udp_dependency": false
     },
     "compat_latency_ms": {
-      "singbox": 615.765834000058,
-      "xray": 606.5742819998832,
-      "hiddify": 615.9506000001329,
-      "mihomo": 581.9782280000254
-    },
-    "parser_feature_unsupported": [
-      "param:headerType",
-      "refused:headerType:none"
-    ],
-    "scores": {
-      "schema_version": 1,
-      "global": {
-        "score": 71,
-        "confidence": 78
-      },
-      "connectivity": {
-        "score": 67,
-        "confidence": 100,
-        "evidence_count": 4,
-        "status": "live",
-        "details": {
-          "success_ratio": 0.667
-        }
-      },
-      "latency": {
-        "score": 83,
-        "confidence": 100,
-        "evidence_count": 1,
-        "details": {
-          "latency_ms": 629.0,
-          "p95_ms": 1074.9,
-          "jitter_ms": 302.4
-        }
-      },
-      "reliability": {
-        "score": 50,
-        "confidence": 10,
-        "evidence_count": 1,
-        "status": "warming_up",
-        "details": {
-          "rolling_success_rate": 1.0
-        }
-      },
-      "freshness": {
-        "score": 100,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "fresh",
-        "fresh": true,
-        "details": {
-          "age_minutes": 1
-        }
-      },
-      "security": {
-        "score": 80,
-        "confidence": 100,
-        "evidence_count": 1,
-        "status": "allow_with_warnings",
-        "details": {
-          "risk_score": 20,
-          "checks_complete": true
-        }
-      },
-      "operators": {
-        "fixed": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Fixed ISP Probe",
-            "network_type": "fixed"
-          }
-        },
-        "irancell": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Irancell",
-            "network_type": "mobile"
-          }
-        },
-        "mci": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "MCI",
-            "network_type": "mobile"
-          }
-        },
-        "rightel": {
-          "score": null,
-          "confidence": 0,
-          "evidence_count": 0,
-          "status": "unknown",
-          "details": {
-            "display_name": "Rightel",
-            "network_type": "mobile"
-          }
-        }
-      },
-      "clients": {
-        "hiddify": {
-          "score": 97,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "hiddify",
-            "core_success_rate": 1.0,
-            "latency_ms": 616.0
-          }
-        },
-        "mihomo": {
-          "score": 97,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "mihomo",
-            "core_success_rate": 1.0,
-            "latency_ms": 582.0
-          }
-        },
-        "nekobox": {
-          "score": 97,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "singbox",
-            "core_success_rate": 1.0,
-            "latency_ms": 615.8
-          }
-        },
-        "singbox": {
-          "score": 97,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "singbox",
-            "core_success_rate": 1.0,
-            "latency_ms": 615.8
-          }
-        },
-        "v2rayng": {
-          "score": 97,
-          "confidence": 76,
-          "evidence_count": 1,
-          "status": "pass",
-          "fresh": true,
-          "details": {
-            "core": "xray",
-            "core_success_rate": 1.0,
-            "latency_ms": 606.6
-          }
-        }
-      }
-    }
-  },
-  {
-    "safe_id": "node_7cc9605c569e",
-    "protocol": "vmess",
-    "status": "live",
-    "selected": true,
-    "country_code": "DE",
-    "country_name": "Germany",
-    "resolved_ip": "217.60.183.95",
-    "preflight_resolved_ip": "217.60.183.95",
-    "tcp_latency_ms": 175.1,
-    "proxy_latency_ms": 762.8,
-    "success_ratio": 0.667,
-    "runtime_core": "xray",
-    "verification": {
-      "transport": "tcp",
-      "resolved_ips": [
-        "217.60.183.95"
-      ],
-      "ipv4_preflight": true,
-      "ipv6_preflight": false,
-      "mode": "native",
-      "runtime_core": "xray",
-      "attempted_cores": [
-        "singbox",
-        "xray"
-      ],
-      "success_count": 4,
-      "latency_p95_ms": 2653.5,
-      "jitter_ms": 677.7
-    },
-    "score": 70,
-    "source": "aliilapro",
-    "asn": 197574,
-    "as_name": "EXPRESSHOST - ExpressHost Ltd, GB",
-    "prefix": "217.60.183.0/24",
-    "reputation_hits": [],
-    "dns_status": "ip_literal",
-    "tls_status": "ok",
-    "content_integrity_status": "warning",
-    "security_status": "allow_with_warnings",
-    "security_risk_score": 20,
-    "security_reasons": [],
-    "security_checks_complete": true,
-    "asn_diversity_excluded": false,
-    "singbox_compatible": "fail",
-    "xray_compatible": "pass",
-    "hiddify_compatible": "fail",
-    "mihomo_compatible": "fail",
-    "compat_verified_at": "2026-10-19T20:11:38+00:00",
-    "universal_compatible": false,
-    "compatibility_score": 55,
-    "network_profile": {
-      "ipv4": true,
-      "ipv6": false,
-      "tcp": true,
-      "udp": false,
-      "port": 33744,
-      "port_443": false,
-      "tls": false,
-      "reality": false,
-      "websocket": true,
-      "grpc": false,
-      "direct_ip": true,
-      "hostname": false,
-      "udp_dependency": false
-    },
-    "compat_latency_ms": {
-      "xray": 672.7169859998412
-    },
-    "compat_failure_categories": {
-      "singbox": "TLS_failure",
-      "hiddify": "TLS_failure",
-      "mihomo": "TLS_failure"
+      "singbox": 831.2922350000918,
+      "xray": 822.8486380000959,
+      "hiddify": 821.6265680000561,
+      "mihomo": 835.9308659998987
     },
     "scores": {
       "schema_version": 1,
@@ -2823,13 +5056,13 @@
         }
       },
       "latency": {
-        "score": 78,
+        "score": 79,
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 762.8,
-          "p95_ms": 2653.5,
-          "jitter_ms": 677.7
+          "latency_ms": 751.6,
+          "p95_ms": 839.8,
+          "jitter_ms": 151.8
         }
       },
       "reliability": {
@@ -2905,47 +5138,55 @@
       },
       "clients": {
         "hiddify": {
-          "score": 0,
-          "confidence": 100,
+          "score": 95,
+          "confidence": 76,
           "evidence_count": 1,
-          "status": "fail",
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "hiddify"
+            "core": "hiddify",
+            "core_success_rate": 1.0,
+            "latency_ms": 821.6
           }
         },
         "mihomo": {
-          "score": 0,
-          "confidence": 100,
+          "score": 95,
+          "confidence": 76,
           "evidence_count": 1,
-          "status": "fail",
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "mihomo"
+            "core": "mihomo",
+            "core_success_rate": 1.0,
+            "latency_ms": 835.9
           }
         },
         "nekobox": {
-          "score": 0,
-          "confidence": 100,
+          "score": 95,
+          "confidence": 76,
           "evidence_count": 1,
-          "status": "fail",
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "singbox"
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 831.3
           }
         },
         "singbox": {
-          "score": 0,
-          "confidence": 100,
+          "score": 95,
+          "confidence": 76,
           "evidence_count": 1,
-          "status": "fail",
+          "status": "pass",
           "fresh": true,
           "details": {
-            "core": "singbox"
+            "core": "singbox",
+            "core_success_rate": 1.0,
+            "latency_ms": 831.3
           }
         },
         "v2rayng": {
-          "score": 96,
+          "score": 95,
           "confidence": 76,
           "evidence_count": 1,
           "status": "pass",
@@ -2953,29 +5194,234 @@
           "details": {
             "core": "xray",
             "core_success_rate": 1.0,
-            "latency_ms": 672.7
+            "latency_ms": 822.8
           }
         }
       }
     }
   },
   {
-    "safe_id": "node_d187410ef287",
-    "protocol": "vless",
+    "safe_id": "node_a1d7b70423b0",
+    "protocol": "vmess",
+    "status": "live",
+    "selected": false,
+    "country_code": "CA",
+    "country_name": "Canada",
+    "resolved_ip": null,
+    "preflight_resolved_ip": "172.64.147.77",
+    "tcp_latency_ms": 2.0,
+    "proxy_latency_ms": 799.3,
+    "success_ratio": 0.667,
+    "runtime_core": "singbox",
+    "verification": {
+      "transport": "tcp",
+      "resolved_ips": [
+        "172.64.147.77",
+        "104.18.40.179",
+        "2a06:98c1:3103::ac40:934d",
+        "2606:4700:440a::6812:28b3"
+      ],
+      "ipv4_preflight": true,
+      "ipv6_preflight": false,
+      "mode": "native",
+      "runtime_core": "singbox",
+      "attempted_cores": [
+        "singbox"
+      ],
+      "success_count": 4,
+      "latency_p95_ms": 1464.3,
+      "jitter_ms": 240.6
+    },
+    "score": 58,
+    "source": "epodonios-all",
+    "asn": 13335,
+    "as_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+    "prefix": "104.18.40.0/24",
+    "reputation_hits": [],
+    "dns_status": "ok",
+    "tls_status": "ok",
+    "content_integrity_status": "warning",
+    "security_status": "block",
+    "security_risk_score": 100,
+    "security_reasons": [
+      "cloudflare_network_forbidden"
+    ],
+    "security_checks_complete": true,
+    "asn_diversity_excluded": false,
+    "singbox_compatible": null,
+    "xray_compatible": null,
+    "hiddify_compatible": null,
+    "mihomo_compatible": null,
+    "universal_compatible": false,
+    "compatibility_score": 0,
+    "network_profile": {},
+    "scores": {
+      "schema_version": 1,
+      "global": {
+        "score": 58,
+        "confidence": 78
+      },
+      "connectivity": {
+        "score": 67,
+        "confidence": 100,
+        "evidence_count": 4,
+        "status": "live",
+        "details": {
+          "success_ratio": 0.667
+        }
+      },
+      "latency": {
+        "score": 77,
+        "confidence": 100,
+        "evidence_count": 1,
+        "details": {
+          "latency_ms": 799.3,
+          "p95_ms": 1464.3,
+          "jitter_ms": 240.6
+        }
+      },
+      "reliability": {
+        "score": 50,
+        "confidence": 10,
+        "evidence_count": 1,
+        "status": "warming_up",
+        "details": {
+          "rolling_success_rate": 1.0
+        }
+      },
+      "freshness": {
+        "score": 100,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "fresh",
+        "fresh": true,
+        "details": {
+          "age_minutes": 1
+        }
+      },
+      "security": {
+        "score": 0,
+        "confidence": 100,
+        "evidence_count": 1,
+        "status": "block",
+        "details": {
+          "risk_score": 100,
+          "checks_complete": true
+        }
+      },
+      "operators": {
+        "fixed": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Fixed ISP Probe",
+            "network_type": "fixed"
+          }
+        },
+        "irancell": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Irancell",
+            "network_type": "mobile"
+          }
+        },
+        "mci": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "MCI",
+            "network_type": "mobile"
+          }
+        },
+        "rightel": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "details": {
+            "display_name": "Rightel",
+            "network_type": "mobile"
+          }
+        }
+      },
+      "clients": {
+        "hiddify": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "hiddify"
+          }
+        },
+        "mihomo": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "mihomo"
+          }
+        },
+        "nekobox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "singbox": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "singbox"
+          }
+        },
+        "v2rayng": {
+          "score": null,
+          "confidence": 0,
+          "evidence_count": 0,
+          "status": "unknown",
+          "fresh": true,
+          "details": {
+            "core": "xray"
+          }
+        }
+      }
+    }
+  },
+  {
+    "safe_id": "node_5903ae04073a",
+    "protocol": "vmess",
     "status": "live",
     "selected": true,
-    "country_code": "RU",
-    "country_name": "Russia",
-    "resolved_ip": "85.193.85.231",
-    "preflight_resolved_ip": "85.193.85.231",
-    "tcp_latency_ms": 154.1,
-    "proxy_latency_ms": 1330.7,
+    "country_code": "IN",
+    "country_name": "India",
+    "resolved_ip": "152.67.8.205",
+    "preflight_resolved_ip": "152.67.8.205",
+    "tcp_latency_ms": 239.6,
+    "proxy_latency_ms": 877.3,
     "success_ratio": 0.667,
     "runtime_core": "xray",
     "verification": {
       "transport": "tcp",
       "resolved_ips": [
-        "85.193.85.231"
+        "152.67.8.205"
       ],
       "ipv4_preflight": true,
       "ipv6_preflight": false,
@@ -2986,14 +5432,14 @@
         "xray"
       ],
       "success_count": 4,
-      "latency_p95_ms": 1593.1,
-      "jitter_ms": 172.1
+      "latency_p95_ms": 898.1,
+      "jitter_ms": 19.7
     },
-    "score": 66,
-    "source": "pawdroid",
-    "asn": 9123,
-    "as_name": "TimeWeb-AS - JSC _TIMEWEB_, RU",
-    "prefix": "85.193.85.0/24",
+    "score": 69,
+    "source": "aliilapro",
+    "asn": 31898,
+    "as_name": "ORACLE-BMC-31898 - Oracle Corporation, US",
+    "prefix": "152.67.0.0/20",
     "reputation_hits": [],
     "dns_status": "ip_literal",
     "tls_status": "ok",
@@ -3007,39 +5453,36 @@
     "xray_compatible": "pass",
     "hiddify_compatible": "fail",
     "mihomo_compatible": "fail",
-    "compat_verified_at": "2026-10-19T20:11:38+00:00",
+    "compat_verified_at": "2026-10-19T23:56:11+00:00",
     "universal_compatible": false,
-    "compatibility_score": 65,
+    "compatibility_score": 55,
     "network_profile": {
       "ipv4": true,
       "ipv6": false,
       "tcp": true,
       "udp": false,
-      "port": 443,
-      "port_443": true,
-      "tls": true,
-      "reality": true,
-      "websocket": false,
+      "port": 80,
+      "port_443": false,
+      "tls": false,
+      "reality": false,
+      "websocket": true,
       "grpc": false,
       "direct_ip": true,
       "hostname": false,
       "udp_dependency": false
     },
     "compat_latency_ms": {
-      "xray": 824.7161850001703
+      "xray": 864.8244010000781
     },
     "compat_failure_categories": {
-      "singbox": "proxy_handshake_failed",
-      "hiddify": "proxy_handshake_failed",
+      "singbox": "TLS_failure",
+      "hiddify": "TLS_failure",
       "mihomo": "TLS_failure"
     },
-    "parser_feature_unsupported": [
-      "refused:headerType:none"
-    ],
     "scores": {
       "schema_version": 1,
       "global": {
-        "score": 66,
+        "score": 69,
         "confidence": 78
       },
       "connectivity": {
@@ -3052,13 +5495,13 @@
         }
       },
       "latency": {
-        "score": 59,
+        "score": 74,
         "confidence": 100,
         "evidence_count": 1,
         "details": {
-          "latency_ms": 1330.7,
-          "p95_ms": 1593.1,
-          "jitter_ms": 172.1
+          "latency_ms": 877.3,
+          "p95_ms": 898.1,
+          "jitter_ms": 19.7
         }
       },
       "reliability": {
@@ -3182,7 +5625,7 @@
           "details": {
             "core": "xray",
             "core_success_rate": 1.0,
-            "latency_ms": 824.7
+            "latency_ms": 864.8
           }
         }
       }

@@ -1,43 +1,88 @@
 {
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "ase-node_534da374",
+      "server": "69.48.201.136",
+      "server_port": 30016,
+      "uuid": "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a",
+      "transport": {
+        "type": "ws",
+        "path": "/usserver",
+        "headers": {
+          "Host": "zoom.us"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_e2f2d0b3",
+      "server": "4.210.68.244",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "UUjphkQAh5BkOdbf"
+    },
+    {
+      "type": "vless",
+      "tag": "ase-node_39f86877",
+      "server": "92.119.166.36",
+      "server_port": 1080,
+      "uuid": "80ee276b-1eb4-4570-8757-1d9cd978f6fa"
+    },
+    {
       "type": "vmess",
-      "tag": "ase-node_0bbcb781",
-      "server": "134.195.196.211",
+      "tag": "ase-node_9be13459",
+      "server": "rib9jxayoqjgn2kw.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "9b31490d-190e-4ef1-af0a-7ccab3e7c3b5",
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "Rib9JXAYoqjGN2KW.v.3dns.vip"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "Host": "Rib9JXAYoqjGN2KW.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "ase-node_fb055c69",
+      "server": "149.88.23.207",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "security": "auto",
       "alter_id": 0
     },
     {
-      "type": "trojan",
-      "tag": "ase-node_939afff5",
-      "server": "pl2.dedushka.top",
-      "server_port": 443,
-      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl2.dedushka.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "type": "vmess",
+      "tag": "ase-node_27b1b443",
+      "server": "ww11.levikogjgfdd.ir",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "none",
+      "alter_id": 0
     },
     {
-      "type": "trojan",
-      "tag": "ase-node_d0f110a9",
-      "server": "31.133.0.186",
+      "type": "vmess",
+      "tag": "ase-node_c3cb9d56",
+      "server": "149.88.23.207",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "security": "auto",
+      "alter_id": 0
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "ase-node_2ce5260b",
+      "server": "102.133.227.3",
       "server_port": 443,
-      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
-      "tls": {
-        "enabled": true,
-        "server_name": "pl2.dedushka.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "method": "chacha20-ietf-poly1305",
+      "password": "93F6FFBh3CZiBUsG"
     }
   ]
 }

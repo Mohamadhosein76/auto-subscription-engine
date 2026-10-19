@@ -1,6 +1,6 @@
 {
   "attribution": "Spamhaus DROP/DROPv6/ASN-DROP data (c) The Spamhaus Project Ltd. https://www.spamhaus.org/drop/ - used in accordance with the Spamhaus data usage policy (attribution retained).",
-  "content_hash": "5696096cbfffb5d86f965fde2de8238ad094deb0b5687eb23137204a56cccfc9",
+  "content_hash": "a1fa7c82954cf3ee99b2cb70d95c85a963adb38fb33133a59969b54c5594532b",
   "entries": [
     245,
     2601,
@@ -275,7 +275,6 @@
     205745,
     205770,
     205884,
-    205997,
     206005,
     206127,
     206305,
@@ -437,6 +436,7 @@
     400522,
     400641,
     400992,
+    401142,
     401626,
     401696,
     401701,
@@ -445,12 +445,12 @@
     402647,
     403005
   ],
-  "entries_hash": "c8292bd04d696d1b98002978e9be2451324a8040489701cde3b89251cfc26232",
+  "entries_hash": "fa14cf9065e261fc6e090b92b1a4d92f0152601199285e1098badda7f42bc7b0",
   "entry_count": 442,
-  "expires_at": "2026-10-22T23:25:45+00:00",
-  "fetched_at": "2026-10-18T23:25:45+00:00",
+  "expires_at": "2026-10-23T23:55:34+00:00",
+  "fetched_at": "2026-10-19T23:55:34+00:00",
   "schema_version": 1,
   "source": "spamhaus_asndrop",
-  "source_version": "1792363442",
+  "source_version": "1792453442",
   "url": "https://www.spamhaus.org/drop/asndrop.json"
 }
