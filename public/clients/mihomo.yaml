@@ -5,242 +5,107 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_55d66ea7
-  type: hysteria2
-  server: 129.213.91.185
-  port: 35013
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  sni: 129.213.91.185
-  skip-cert-verify: true
-- name: ase-node_6fd54420
+- name: ase-node_3bc7a008
   type: trojan
-  server: blog.findlocaljobnetworkandbuildcommunityconnections.com
+  server: ca.tronsg.com
   port: 443
-  password: dba20dcb635e430fa4d3bfc303a149d2
+  password: Trojan@82164024
   udp: true
   tls: true
-  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: true
-- name: ase-node_7ffe10c8
-  type: trojan
-  server: 216.106.186.33
-  port: 443
-  password: f0eb8c92ce8946aaba856569cff1a16b
-  udp: true
-  tls: true
-  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
-- name: ase-node_e1e40a6d
-  type: trojan
-  server: 216.106.186.32
-  port: 443
-  password: dba20dcb635e430fa4d3bfc303a149d2
-  udp: true
-  tls: true
-  sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
-  skip-cert-verify: true
-- name: ase-node_ed06703f
-  type: trojan
-  server: resources.findlocaljobnetworkandbuildcommunityconnections.com
-  port: 443
-  password: f0eb8c92ce8946aaba856569cff1a16b
-  udp: true
-  tls: true
-  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
-- name: ase-node_961cbfc6
+  sni: ca.tronsg.com
+- name: ase-node_ef661df5
   type: vless
-  server: 51.45.54.244
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  server: 51.158.206.96
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   udp: true
-- name: ase-node_51be8a71
-  type: trojan
-  server: 13.231.115.29
-  port: 12019
-  password: bad06c3525a6eaee1757b34776b83892
-  udp: true
+  flow: xtls-rprx-vision
   tls: true
-  sni: ixigua.com
-  skip-cert-verify: true
-- name: ase-node_dd3058af
-  type: vmess
-  server: 13.140.91.117
-  port: 36154
-  uuid: 54327b73-3ce6-437d-9d00-3d6398d9f9f5
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_02f83b94
-  type: vmess
-  server: 13.140.91.117
-  port: 36154
-  uuid: b2fd9449-458a-4243-bbf9-5735070d6817
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_09fb64d5
-  type: ss
-  server: 13.140.91.117
-  port: 25111
-  cipher: 2022-blake3-aes-256-gcm
-  password: jNyPnuL1dS5CZLfr6AeO8/CtbUvT3MIOWAaSwoJlTkc=:OpjCKODVTBraYcv12EFPOaral+oiAPdOTlA0Dv9O+fE=
-  udp: true
-- name: ase-node_f76f5589
-  type: ss
-  server: 13.140.91.117
-  port: 25111
-  cipher: 2022-blake3-aes-256-gcm
-  password: jNyPnuL1dS5CZLfr6AeO8/CtbUvT3MIOWAaSwoJlTkc=:qKqgMJPzm/OIdljS+Q1vRGcQfIgAFGVr+dWGhkzEuaY=
-  udp: true
-- name: ase-node_18139d3a
-  type: trojan
-  server: de7.dedushka.top
-  port: 443
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  udp: true
-  tls: true
-  sni: de7.dedushka.top
-- name: ase-node_1b5f5289
-  type: trojan
-  server: de7.dedushka.top
-  port: 443
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  udp: true
-  tls: true
-  sni: de7.dedushka.top
-  alpn:
-  - http/1.1
-- name: ase-node_d98e7dec
-  type: trojan
-  server: 188.241.241.200
-  port: 443
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  udp: true
-  tls: true
-  sni: de7.dedushka.top
-  alpn:
-  - http/1.1
-- name: ase-node_11919f0a
-  type: ss
-  server: 78.135.77.110
-  port: 11700
-  cipher: aes-128-gcm
-  password: BI2omXgXduu95xATu5uaU3jn2Lpb9-qK
-  udp: true
-- name: ase-node_63314f4d
-  type: trojan
-  server: 188.241.241.200
-  port: 443
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  udp: true
-  tls: true
-  sni: de7.dedushka.top
-- name: ase-node_c2d67c40
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: ase-node_aee3e8ad
   type: vless
-  server: 45.144.234.157
-  port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  server: 51.77.217.70
+  port: 2053
+  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
   udp: true
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
+    short-id: bfe58beb41f1d09f
+- name: ase-node_da011dba
+  type: vless
+  server: 146.75.59.186
+  port: 443
+  uuid: eccc053a-7196-47cb-a4b5-f4b8bfd743d9
+  udp: true
+  tls: true
+  servername: firefox.com
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /vless
+    path: /?TELEGRAM--BYA--CHANEL---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM
     headers:
-      Host: 45.144.234.157
-- name: ase-node_2515b0ad
+      Host: copy_az_channel_NUFiLTER_4i.global.ssl.fastly.net.
+- name: ase-node_e88ce232
   type: trojan
-  server: 13.231.115.29
-  port: 12001
-  password: bad06c3525a6eaee1757b34776b83892
+  server: 188.241.241.236
+  port: 443
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   udp: true
   tls: true
-  sni: ixigua.com
-  skip-cert-verify: true
-- name: ase-node_4d5bc510
-  type: trojan
-  server: 35.79.226.34
-  port: 12001
-  password: bad06c3525a6eaee1757b34776b83892
+  sni: de10.dedushka.top
+  alpn:
+  - http/1.1
+- name: ase-node_64e24673
+  type: vless
+  server: 154.29.149.140
+  port: 41705
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: us1p1.xn--ghq880n3na965a.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA
+    short-id: e51285e3
+- name: ase-node_f9093f4b
+  type: vmess
+  server: 38.110.1.246
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: ase-node_9db39518
+  type: vless
+  server: 178.236.16.98
+  port: 35728
+  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
   udp: true
   tls: true
-  sni: ixigua.com
-  skip-cert-verify: true
-- name: ase-node_10b4155c
-  type: ss
-  server: 185.223.77.118
-  port: 5566
-  cipher: 2022-blake3-aes-128-gcm
-  password: 8NwabdWBXK1q1QaBhF69rw==:yPBUkgz9Y6Ad20RTktufkQ==
-  udp: true
-- name: ase-node_bf35da49
-  type: ss
-  server: tutua.azad0namah.ir
-  port: 5566
-  cipher: 2022-blake3-aes-128-gcm
-  password: 8NwabdWBXK1q1QaBhF69rw==:yPBUkgz9Y6Ad20RTktufkQ==
-  udp: true
-- name: ase-node_ceb2d0f1
-  type: trojan
-  server: 4c2d5151.266nets.com
-  port: 12001
-  password: bad06c3525a6eaee1757b34776b83892
-  udp: true
-  tls: true
-  sni: ixigua.com
-  skip-cert-verify: true
-- name: ase-node_dcf2a977
-  type: trojan
-  server: 47.129.13.88
-  port: 12001
-  password: bad06c3525a6eaee1757b34776b83892
-  udp: true
-  tls: true
-  sni: ixigua.com
-  skip-cert-verify: true
-- name: ase-node_0818a257
-  type: trojan
-  server: 47.129.134.235
-  port: 12019
-  password: bad06c3525a6eaee1757b34776b83892
-  udp: true
-  tls: true
-  sni: ixigua.com
-  skip-cert-verify: true
-- name: ase-node_87ea049f
-  type: trojan
-  server: 47.129.13.88
-  port: 12019
-  password: bad06c3525a6eaee1757b34776b83892
-  udp: true
-  tls: true
-  sni: ixigua.com
-  skip-cert-verify: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
+    short-id: 69a2
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_55d66ea7
-  - ase-node_6fd54420
-  - ase-node_7ffe10c8
-  - ase-node_e1e40a6d
-  - ase-node_ed06703f
-  - ase-node_961cbfc6
-  - ase-node_51be8a71
-  - ase-node_dd3058af
-  - ase-node_02f83b94
-  - ase-node_09fb64d5
-  - ase-node_f76f5589
-  - ase-node_18139d3a
-  - ase-node_1b5f5289
-  - ase-node_d98e7dec
-  - ase-node_11919f0a
-  - ase-node_63314f4d
-  - ase-node_c2d67c40
-  - ase-node_2515b0ad
-  - ase-node_4d5bc510
-  - ase-node_10b4155c
-  - ase-node_bf35da49
-  - ase-node_ceb2d0f1
-  - ase-node_dcf2a977
-  - ase-node_0818a257
-  - ase-node_87ea049f
+  - ase-node_3bc7a008
+  - ase-node_ef661df5
+  - ase-node_aee3e8ad
+  - ase-node_da011dba
+  - ase-node_e88ce232
+  - ase-node_64e24673
+  - ase-node_f9093f4b
+  - ase-node_9db39518
 rules:
 - MATCH,PROXY
