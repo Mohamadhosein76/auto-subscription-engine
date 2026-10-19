@@ -5,54 +5,58 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_3bc7a008
-  type: trojan
-  server: ca.tronsg.com
+- name: ase-node_6fa19080
+  type: hysteria2
+  server: 94.228.214.225
   port: 443
-  password: Trojan@82164024
-  udp: true
-  tls: true
-  sni: ca.tronsg.com
-- name: ase-node_ef661df5
+  password: 36cd82d2-50b1-400d-b520-2acc9a8a6b40
+  sni: nl.northvale.cloud
+  skip-cert-verify: true
+- name: ase-node_d3450a2a
+  type: hysteria2
+  server: nl.northvale.cloud
+  port: 443
+  password: 36cd82d2-50b1-400d-b520-2acc9a8a6b40
+  sni: nl.northvale.cloud
+  skip-cert-verify: true
+- name: ase-node_4e434d8d
+  type: hysteria2
+  server: 194.180.189.43
+  port: 443
+  password: 36cd82d2-50b1-400d-b520-2acc9a8a6b40
+  sni: fi.northvale.cloud
+  skip-cert-verify: true
+- name: ase-node_9d4401e4
+  type: hysteria2
+  server: fi.northvale.cloud
+  port: 443
+  password: 36cd82d2-50b1-400d-b520-2acc9a8a6b40
+  sni: fi.northvale.cloud
+  skip-cert-verify: true
+- name: ase-node_c7177b7c
   type: vless
-  server: 51.158.206.96
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  server: 47.253.226.114
+  port: 443
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
   udp: true
   flow: xtls-rprx-vision
   tls: true
-  servername: fuck.rkn
+  servername: www.cloudflare.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: ase-node_aee3e8ad
-  type: vless
-  server: 51.77.217.70
-  port: 2053
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-  udp: true
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-    short-id: bfe58beb41f1d09f
-- name: ase-node_da011dba
-  type: vless
-  server: 146.75.59.186
+    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+- name: ase-node_db6eea34
+  type: trojan
+  server: de10.dedushka.top
   port: 443
-  uuid: eccc053a-7196-47cb-a4b5-f4b8bfd743d9
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   udp: true
   tls: true
-  servername: firefox.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--BYA--CHANEL---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM---@V2ray_AM
-    headers:
-      Host: copy_az_channel_NUFiLTER_4i.global.ssl.fastly.net.
-- name: ase-node_e88ce232
+  sni: de10.dedushka.top
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_fded406d
   type: trojan
   server: 188.241.241.236
   port: 443
@@ -62,50 +66,56 @@ proxies:
   sni: de10.dedushka.top
   alpn:
   - http/1.1
-- name: ase-node_64e24673
-  type: vless
-  server: 154.29.149.140
-  port: 41705
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  servername: us1p1.xn--ghq880n3na965a.com
   client-fingerprint: chrome
-  reality-opts:
-    public-key: KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA
-    short-id: e51285e3
-- name: ase-node_f9093f4b
+- name: ase-node_59199c5a
+  type: trojan
+  server: 86.54.42.16
+  port: 27613
+  password: lzi0ooaq8vgy1536
+  udp: true
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+- name: ase-node_c0582f32
   type: vmess
-  server: 38.110.1.246
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  server: 8.219.97.17
+  port: 443
+  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
   alterId: 0
   cipher: auto
   udp: true
-- name: ase-node_9db39518
-  type: vless
-  server: 178.236.16.98
-  port: 35728
-  uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
+  tls: true
+  servername: wjofhsqteueywxeq.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: wjofhsqteueywxeq.v.3dns.vip
+- name: ase-node_c397c661
+  type: vmess
+  server: 45.131.153.149
+  port: 443
+  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
+  alterId: 0
+  cipher: auto
   udp: true
   tls: true
-  servername: yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
-    short-id: 69a2
+  servername: de.zhou-yufan.com
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_3bc7a008
-  - ase-node_ef661df5
-  - ase-node_aee3e8ad
-  - ase-node_da011dba
-  - ase-node_e88ce232
-  - ase-node_64e24673
-  - ase-node_f9093f4b
-  - ase-node_9db39518
+  - ase-node_6fa19080
+  - ase-node_d3450a2a
+  - ase-node_4e434d8d
+  - ase-node_9d4401e4
+  - ase-node_c7177b7c
+  - ase-node_db6eea34
+  - ase-node_fded406d
+  - ase-node_59199c5a
+  - ase-node_c0582f32
+  - ase-node_c397c661
 rules:
 - MATCH,PROXY
