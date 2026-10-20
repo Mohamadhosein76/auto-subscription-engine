@@ -5,87 +5,74 @@ mode: rule
 log-level: info
 unified-delay: true
 proxies:
-- name: ase-node_534da374
+- name: ase-node_62cc813f
   type: vless
-  server: 69.48.201.136
-  port: 30016
-  uuid: 03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a
+  server: 13.39.184.235
+  port: 22223
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   udp: true
-  network: ws
-  ws-opts:
-    path: /usserver
-    headers:
-      Host: zoom.us
-- name: ase-node_e2f2d0b3
+- name: ase-node_fe570206
   type: ss
-  server: 4.210.68.244
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: UUjphkQAh5BkOdbf
+  server: 146.70.147.91
+  port: 10815
+  cipher: aes-128-gcm
+  password: b98bf791703c12f897ae4576facc5a94
   udp: true
-- name: ase-node_39f86877
+- name: ase-node_3469f9e2
   type: vless
-  server: 92.119.166.36
-  port: 1080
-  uuid: 80ee276b-1eb4-4570-8757-1d9cd978f6fa
+  server: 103.75.118.228
+  port: 11452
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
   udp: true
-- name: ase-node_9be13459
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+- name: ase-node_e5fea457
   type: vmess
-  server: rib9jxayoqjgn2kw.v.3dns.vip
-  port: 443
-  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
+  server: dog-hk.kunlun01dns.com
+  port: 21021
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
+  udp: true
+- name: ase-node_1edab403
+  type: vless
+  server: 13.39.184.235
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+- name: ase-node_48d41bb5
+  type: trojan
+  server: 188.241.241.122
+  port: 443
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   udp: true
   tls: true
-  servername: Rib9JXAYoqjGN2KW.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: Rib9JXAYoqjGN2KW.v.3dns.vip
-- name: ase-node_fb055c69
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
+  sni: de2.dedushka.top
+  alpn:
+  - http/1.1
+- name: ase-node_a2aa209a
+  type: vless
+  server: 2.26.225.89
+  port: 8443
+  uuid: 51a1fd52-fd88-4905-a976-35e44be28e4b
   udp: true
-- name: ase-node_27b1b443
-  type: vmess
-  server: ww11.levikogjgfdd.ir
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: none
-  udp: true
-- name: ase-node_c3cb9d56
-  type: vmess
-  server: 149.88.23.207
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: ase-node_2ce5260b
-  type: ss
-  server: 102.133.227.3
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 93F6FFBh3CZiBUsG
-  udp: true
+  tls: true
+  servername: pl.flen-vpn.xyz
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
-  - ase-node_534da374
-  - ase-node_e2f2d0b3
-  - ase-node_39f86877
-  - ase-node_9be13459
-  - ase-node_fb055c69
-  - ase-node_27b1b443
-  - ase-node_c3cb9d56
-  - ase-node_2ce5260b
+  - ase-node_62cc813f
+  - ase-node_fe570206
+  - ase-node_3469f9e2
+  - ase-node_e5fea457
+  - ase-node_1edab403
+  - ase-node_48d41bb5
+  - ase-node_a2aa209a
 rules:
 - MATCH,PROXY

@@ -2,87 +2,69 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "ase-node_534da374",
-      "server": "69.48.201.136",
-      "server_port": 30016,
-      "uuid": "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a",
-      "transport": {
-        "type": "ws",
-        "path": "/usserver",
-        "headers": {
-          "Host": "zoom.us"
-        }
-      }
+      "tag": "ase-node_62cc813f",
+      "server": "13.39.184.235",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
     {
       "type": "shadowsocks",
-      "tag": "ase-node_e2f2d0b3",
-      "server": "4.210.68.244",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "UUjphkQAh5BkOdbf"
+      "tag": "ase-node_fe570206",
+      "server": "146.70.147.91",
+      "server_port": 10815,
+      "method": "aes-128-gcm",
+      "password": "b98bf791703c12f897ae4576facc5a94"
     },
     {
       "type": "vless",
-      "tag": "ase-node_39f86877",
-      "server": "92.119.166.36",
-      "server_port": 1080,
-      "uuid": "80ee276b-1eb4-4570-8757-1d9cd978f6fa"
-    },
-    {
-      "type": "vmess",
-      "tag": "ase-node_9be13459",
-      "server": "rib9jxayoqjgn2kw.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "9b31490d-190e-4ef1-af0a-7ccab3e7c3b5",
-      "security": "auto",
-      "alter_id": 0,
+      "tag": "ase-node_3469f9e2",
+      "server": "103.75.118.228",
+      "server_port": 11452,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "Rib9JXAYoqjGN2KW.v.3dns.vip"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "Host": "Rib9JXAYoqjGN2KW.v.3dns.vip"
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
         }
       }
     },
     {
       "type": "vmess",
-      "tag": "ase-node_fb055c69",
-      "server": "149.88.23.207",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "tag": "ase-node_e5fea457",
+      "server": "dog-hk.kunlun01dns.com",
+      "server_port": 21021,
+      "uuid": "9464ca40-dd75-3742-a628-d931a9f413b2",
       "security": "auto",
       "alter_id": 0
     },
     {
-      "type": "vmess",
-      "tag": "ase-node_27b1b443",
-      "server": "ww11.levikogjgfdd.ir",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "none",
-      "alter_id": 0
+      "type": "vless",
+      "tag": "ase-node_1edab403",
+      "server": "13.39.184.235",
+      "server_port": 22224,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
     },
     {
-      "type": "vmess",
-      "tag": "ase-node_c3cb9d56",
-      "server": "149.88.23.207",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "security": "auto",
-      "alter_id": 0
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "ase-node_2ce5260b",
-      "server": "102.133.227.3",
+      "type": "trojan",
+      "tag": "ase-node_48d41bb5",
+      "server": "188.241.241.122",
       "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "93F6FFBh3CZiBUsG"
+      "password": "4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA",
+      "tls": {
+        "enabled": true,
+        "server_name": "de2.dedushka.top",
+        "alpn": [
+          "http/1.1"
+        ]
+      }
     }
   ]
 }
